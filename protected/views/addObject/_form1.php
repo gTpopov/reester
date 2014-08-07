@@ -421,6 +421,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4">
                         <span id="floors-title" class="pull-right title">
