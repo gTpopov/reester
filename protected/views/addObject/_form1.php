@@ -796,7 +796,7 @@
 
                                       }',
                             'error'=>'js:function() { alert("Ошибка сервера. Перезагрузите страницу"); }'
-                        ),array( 'class' => "btn btn-warning pull-left"));
+                        ),array( 'class' => "btn btn-warning pull-left",'style'=>'margin-top:10px'));
                     ?>
                 <?php endif; ?>
             </div>
@@ -804,8 +804,7 @@
         <div class="col-md-7">
             <?php if(!file_exists("files/".Yii::app()->user->id."/logo".Yii::app()->user->id.".jpg")): ?>
                 <div class="col-md-12">
-                    <div class="col-first col-md-6" style="text-align:left;width:130px;">
-                    </div>
+                    <div class="col-first col-md-6" style="text-align:left;width:130px;"></div>
                     <div class="col-second col-md-6">
                         <div class="list-formats padding-horizontal-10-px" style="padding-top: 20px">
                             <b>Допустимые форматы:</b>
@@ -817,9 +816,7 @@
 
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <div class="row padding-horizontal-10-px">
-
-                        </div>
+                        <div class="row padding-horizontal-10-px"></div>
                     </div>
                 </div>
             <?php endif; ?>
