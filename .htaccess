@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 AddDefaultCharset UTF-8
 
 RewriteEngine on
@@ -9,3 +10,16 @@ RewriteRule . index.php
 
 
 
+=======
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
+
+
+
+>>>>>>> 27db7ffdd59cd18c3da6846b670609b8c6f7a6e2

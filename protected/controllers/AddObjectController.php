@@ -72,6 +72,11 @@ class AddObjectController extends Controller {
                     //Add data in table real_estate
                     $modelR->fk_house_id   = Yii::app()->db->lastInsertID;
                     $modelR->fk_uid        = Yii::app()->user->id;
+
+                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
+                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
+                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+
                     $modelR->general_area  = (int) $_POST['RealEstat']['general_area'];
                     $modelR->general_area  = (int) $_POST['RealEstat']['human_area'];
                     $modelR->kitchen_area  = (int) $_POST['RealEstat']['kitchen_area'];
@@ -111,15 +116,6 @@ class AddObjectController extends Controller {
                         'call_up'   => (string) $_POST['Users']['call_up']
                     ));
 
-                    /*
-                    $modelU->sub_email     = (string) $_POST['Users']['sub_email'];
-                    $modelU->skype         = (string) $_POST['Users']['skype'];
-                    $modelU->last_name     = (string) $_POST['Users']['last_name'];
-                    $modelU->phone         = (string) $_POST['Users']['phone'];
-                    $modelU->call_with     = (string) $_POST['Users']['call_with'];
-                    $modelU->call_up       = (string) $_POST['Users']['call_up'];
-
-                    $modelU->save();*/
 
                     $transaction->commit();
                 }
