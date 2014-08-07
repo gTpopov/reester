@@ -31,12 +31,16 @@
      *  @param object_type  - (Вторичная:6,   Строящаяся:7)
      *  @param obj_state    - (Аппартаменты:3,Квартира:4,Дом:5)
      */
-     function redirect() {
 
+    function redirect() {
 
          var object_type  = $('#app-fl-hs-btg label').children(':radio:checked').val(); // Аппартаменты, квартира, дом
          var obj_state    = $('#sch-budng-btg label').children(':radio:checked').val(); // Вторичная, строящиеся
          var sale_rent_op = $('#sale-rent-btg label').children(':radio:checked').val(); // Арендовать, Продать
+
+         $.cookie('object_type',object_type,{ expires:0, path: '/'});
+         $.cookie('obj_state',obj_state,{ expires:0, path: '/'});
+         $.cookie('sale_rent_op',sale_rent_op,{ expires:0, path: '/'});
 
          var param = sale_rent_op+'.'+obj_state+'.'+object_type;
 
