@@ -73,9 +73,9 @@ class AddObjectController extends Controller {
                     $modelR->fk_house_id   = Yii::app()->db->lastInsertID;
                     $modelR->fk_uid        = Yii::app()->user->id;
 
-                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?4:""; //Тип недвижимости
-                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?1:""; //Тип операции
-                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?7:""; //Рынок недвижимости:
+                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
+                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
+                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
 
                     $modelR->general_area  = (int) $_POST['RealEstat']['general_area'];
                     $modelR->general_area  = (int) $_POST['RealEstat']['human_area'];
