@@ -1,0 +1,182 @@
+/* general container settings */
+#o-a-title {
+    border-radius: 5px 5px 0 0;
+    padding: 36px 36px 24px 0;
+    margin-top: 20px;
+    border: 1px solid rgba(68, 83, 101, 0.1);
+    background: #FFF;
+}
+
+#o-a-title > div > h2{
+    font-weight: 300;
+    color: #3d618d;
+    padding-left: 50px;
+    padding-bottom: 0;
+    margin-top: -2px;
+}
+
+#sale-rent-btg,#app-fl-hs-btg{
+    margin-right: 5px;
+}
+
+#tot-con-o-a{
+    position: relative;
+    background: #FFF;
+    padding: 36px 36px 24px;
+    border-radius: 0 0 5px 5px;
+    -moz-box-shadow: 0 25px 45px rgba(68, 83, 101, 0.3);
+    -webkit-box-shadow: 0 25px 45px rgba(68, 83, 101, 0.3);
+    box-shadow: 0 25px 45px rgba(68, 83, 101, 0.3);
+    min-height: 500px;
+    border: 1px solid rgba(68, 83, 101, 0.1);
+    border-top: 0;
+    margin-bottom: 80px;
+}
+
+
+
+/* Sale of flats/apartments in new buildings */
+#add-obj-fl-ap-nw-sale{
+
+}
+
+#add-obj-fl-ap-nw-sale-title, #add-obj-fl-ap-nw-rent-title{
+    font-weight: 500;
+    border-bottom: 1px dotted #DDD;
+    padding-bottom: 10px;
+    color: #3d618d !important;
+}
+
+#add-obj-fl-ap-nw-sale-title small{
+    font-weight: 300;
+}
+label{
+    font-weight: normal;
+}
+
+
+/* first block "step 1" of adding object parameters */
+#step-one{
+    border: 1px solid #DDD;
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+
+#underground-title,
+#time-to-underground-title,
+#street-sq-prs-title,
+#building-number-title,
+#building-ma-s-pr-number-title,
+#building-corpus-title,
+#city-title,
+#state-title,
+#state-obj-title{
+    margin-top: 7px;
+}
+#underground-title label:first-letter,
+#time-to-underground-title label:first-letter,
+#street-sq-prs-title label:first-letter,
+#building-number-title label:first-letter,
+#building-ma-s-pr-number-title label:first-letter,
+#building-corpus-title label:first-letter,
+#city-title label:first-letter,
+#state-title label:first-letter,
+#state-obj-title label:first-letter{
+    text-transform: uppercase;
+}
+
+#time-to-underground-helper{
+    margin-top: 16px;
+    color: #999;
+    margin-left: 4px;
+}
+/* second block step two */
+.park{
+    width: 50%;
+}
+.plan{
+    width: 49%;
+}
+.plan label,.park label{
+    width: 50%;
+}
+.park > label:nth-child(2){
+    padding-left: 10px;
+}
+.dev-balk,.wc,.setts-r,.furnt{
+    width: 100%;
+}
+.dev-balk label{
+    width: 50%;
+}
+.setts-r label{
+    width: 25%;
+}
+
+.furnt label,.wc label{
+    width: 33.3%;
+}
+
+#step-two{
+    border: 1px solid #DDD;
+    padding: 20px 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.sq-m small{
+    margin-top: 18px;
+    color: #999;
+    margin-left: 4px;
+    float: left;
+}
+#object-title,
+#total-square-price,
+#living-square-price,
+#kitchen-square-price,
+#rooms-title,
+#isolated-rooms-title,
+#floors-title,
+#wall-material-title,
+#balcony-title,
+#state-title,
+#windows-title{
+    margin-top: 7px;
+}
+
+#object-title label:first-letter,
+#total-square-price label:first-letter,
+#living-square-price label:first-letter,
+#kitchen-square-price label:first-letter,
+#rooms-title label:first-letter,
+#isolated-rooms-title label:first-letter,
+#floors-title label:first-letter,
+#wall-material-title label:first-letter,
+#balcony-title label:first-letter,
+#state-title label:first-letter,
+#windows-title label:first-letter{
+    text-transform: uppercase;
+}
+
+/* step three */
+#step-three{
+    border: 1px solid #DDD;
+    padding: 20px 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+#price-title,
+#contact-face-title,
+#phone-title,
+#contact-face-title{
+    margin-top: 7px;
+}
+#price-title label:first-letter,
+#contact-face-title label:first-letter,
+#phone-title label:first-letter,
+#contact-face-title label:first-letter{
+    text-transform: uppercase;
+}
+
+.qq-upload-button{
+    background-color: #5cb85c !important;
+}

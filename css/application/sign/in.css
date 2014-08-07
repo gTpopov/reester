@@ -1,0 +1,61 @@
+#auth-form{
+    background-color: #f7f7f7;
+    padding: 10px 10px 15px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 0 25px rgba(68, 83, 101, 0.3);
+    -webkit-box-shadow: 0 0 25px rgba(68, 83, 101, 0.3);
+    box-shadow: 0 0 25px rgba(68, 83, 101, 0.3);
+}
+#alert-keeper{
+    padding: 0;
+}
+#title{
+    font-weight: 400;
+    border-bottom: 1px solid rgba(0,0,0,.051);
+    padding-bottom: 5px;
+}
+#remind-password{
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+    margin-left: 10px;
+}
+#sign-up-password{
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+}
+.title-form{
+    padding-left: 1px;
+    font-weight: 300;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.title-form:first-letter{
+    text-transform: uppercase;
+}
+.remember-me input{
+    margin-right: 2px;
+    vertical-align: 1px;
+}
+.remember-me{
+    margin-top: 3px;
+}
+.remember-me > label{
+    font-weight: 400;
+    margin-top: 2px;
+}
+.remember-me > label:first-letter{
+    text-transform: uppercase;
+}
+.form-control{
+    padding: 6px 4px !important;
+    box-shadow: none !important;
+}
+.buttons{
+    margin-top: 20px;
+}
+.note{
+    border-bottom: 1px solid rgba(0,0,0,.051);
+    padding-bottom: 8px;
+}

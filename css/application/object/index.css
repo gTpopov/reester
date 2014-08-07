@@ -1,0 +1,343 @@
+#wrapper > div.container > div:nth-child(3){
+    margin-bottom: 50px;
+}
+#place-line{
+    background: #ffcc33;
+    background: -moz-linear-gradient(top, #ffcc33 0%, #ffaa11 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffcc33), color-stop(100%, #ffaa11));
+    background: -webkit-linear-gradient(top, #ffcc33 0%, #ffaa11 100%);
+    background: -o-linear-gradient(top, #ffcc33 0%, #ffaa11 100%);
+    background: -ms-linear-gradient(top, #ffcc33 0%, #ffaa11 100%);
+    background: linear-gradient(to bottom, #ffcc33 0%, #ffaa11 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc33', endColorstr='#ffaa11', GradientType=0);
+    border: 0;
+    padding: 15px 20px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+#return-container{
+    padding-top: 11px;
+}
+#return-to-search{
+    text-decoration: underline;
+    color: #333;
+}
+#address{
+    margin-top: -10px;
+}
+
+#user-info{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border: 1px dashed #999;
+    border-radius: 2px;
+    padding-bottom: 6px;
+}
+#user-info-title{
+    margin-top: -12px;
+}
+#user-info-title span{
+    background-color: #FFF;
+}
+
+.title-part{
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 5px;
+}
+
+#user-fn, #user-phone{
+    font-size: 17px;
+}
+#user-email a{
+    font-size: 16px;
+}
+#user-email a{
+    color: #0066cc;
+    text-decoration: underline;
+}
+#social-like{
+    margin-top: -5px;
+}
+#social-like a{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 50px;
+}
+#social-like #vk{
+    background-image: url("/img/project-style/sprite.all.png");
+    background-position: -58px 0;
+    background-color: #4E729A;
+}
+#social-like #tw{
+    background-image: url("/img/project-style/sprite.all.png");
+    background-position: -113px 1px;
+    background-color: #0084B6;
+}
+#social-like #fb{
+    background-image: url("/img/project-style/sprite.all.png");
+    background-position: -3px 0;
+    background-color: #3b5998;
+}
+
+#search-again-container{
+    padding-top: 12px;
+}
+#search-again-container .glyphicon{
+    cursor: pointer;
+}
+
+#obj-underground-keeper, #about-params{
+    padding: 0;
+}
+#underground-marker{
+    margin-top: 4px;
+    margin-right: 4px;
+    float: left;
+}
+#underground-name{
+    font-style: italic;
+    color: #F00;
+}
+#underground-time-to{
+    font-style: italic;
+    color: #666;
+    font-size: 12px;
+}
+#obj-underground-keeper{
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-top: 24px;
+}
+#visual-info-in > div.sub-functions > span:nth-child(1){
+    margin-left: 0;
+}
+#total-price{
+    margin-top: 10px;
+    color: #000 !important;
+}
+
+#exchange{
+    margin-top: 20px;
+    text-align: right;
+}
+#exchange button{
+    text-shadow: 0 2px 3px rgba(0, 81, 49, 0.35);
+    border: 0 none !important;
+    font-weight: bold;
+    color: #fff;
+    background-color: #6ba83b;
+    background: -moz-linear-gradient(top, #b7e213, #4b8b3a);
+    background: -webkit-linear-gradient(top, #b7e213, #4b8b3a);
+    background: -o-linear-gradient(top, #b7e213, #4b8b3a);
+    background: -ms-linear-gradient(top, #b7e213, #4b8b3a);
+    background: linear-gradient(top, #b7e213, #4b8b3a);
+    -moz-box-shadow: 0 2px 3px -1px rgba(0, 108, 65, 0.45);
+    -webkit-box-shadow: 0 2px 3px -1px rgba(0, 108, 65, 0.45);
+    box-shadow: 0 2px 3px -1px rgba(0, 108, 65, 0.45);
+}
+#object-price{
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+#object-price .col-md-7{
+    padding-left: 0;
+}
+
+#visual-info-in{
+    padding: 0 !important;
+}
+#map{
+    height: 600px;
+    padding: 0 !important;
+}
+
+#photos-of-object,#object-info{
+    padding: 10px 0 !important;
+}
+
+.sub-functions .btn{
+    margin: 5px 5px;
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 1024px) {
+
+    #user-fn, #user-phone, #user-email{
+        margin-top: 3px;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 768px) {
+
+    #return-container{
+        padding-top: 0;
+    }
+    #user-info{
+        margin-top: 90px;
+        min-height: 50px;
+        padding-bottom: 40px;
+    }
+    #user-fn, #user-phone, #user-email a{
+        font-size: 14px !important;
+    }
+    #social-like{
+        padding: 0;
+    }
+    #object-detailed-info{
+        padding: 0;
+    }
+    #obj-underground-keeper{
+        text-align: center;
+    }
+    #underground-marker{
+        float: none;
+        vertical-align: 0;
+    }
+    #social-like #vk{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -59px 0;
+        background-color: #4E729A;
+    }
+    #social-like #tw{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -113px 1px;
+        background-color: #0084B6;
+    }
+    #social-like #fb{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -3px 0;
+        background-color: #3b5998;
+    }
+
+    #object-price{
+        margin-bottom: 10px;
+        min-height: 80px;
+    }
+    #exchange > button{
+        float: right;
+        margin-top: 19px;
+    }
+    #exchange{
+        margin-top: 0;
+        padding-right: 0;
+    }
+    #object-price .col-md-7{
+        float: left;
+    }
+
+    .sub-functions{
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width : 320px), (max-width : 360px)  {
+
+    #return-container, #post-seen-times, #post-advert-time,#search-again-container{
+        padding: 10px 0;
+        font-size: 20px;
+    }
+
+    #post-advert-time, #post-seen-times, #search-again-container{
+        display: none;
+    }
+    #user-info{
+        margin-top: 25px;
+    }
+    #user-info-title span{
+        font-size: 24px;
+        margin-left: 16px;
+    }
+    #user-fn,#user-phone,#user-email,#social-like{
+        text-align: center;
+        font-size: 20px !important;
+        margin-bottom: 10px;
+    }
+    #user-email a{
+        font-size: 17px !important;
+    }
+    #social-like{
+        margin-top: 14px;
+        margin-bottom: 0;
+    }
+
+    #social-like a{
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    #social-like #vk{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -57px 3px;
+        background-color: #4E729A;
+    }
+    #social-like #tw{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -110px 3px;
+        background-color: #0084B6;
+    }
+    #social-like #fb{
+        background-image: url("/img/project-style/sprite.all.png");
+        background-position: -1px 3px;
+        background-color: #3b5998;
+    }
+
+    #slide-down-full-info{
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 5px 4px 4px;
+        text-align: center;
+    }
+    #slide-down-full-info button{
+        border-radius: 2px;
+        border: 0;
+    }
+    #slide-down-full-info button span{
+        vertical-align: -1px;
+    }
+
+    .title-part, #object-price{
+        padding-bottom: 10px;
+        text-align: center !important;
+    }
+    #object-price{
+    }
+    #exchange > button{
+        margin: auto !important;
+        float: none !important;
+    }
+    #object-price > div.col-md-7, #exchange{
+        width: 100%;
+        text-align: center;
+    }
+    #underground-marker{
+        float: none;
+        vertical-align: 0;
+    }
+    #address,#obj-underground-keeper{
+        text-align: center;
+    }
+    #exchange{
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: -10px;
+    }
+    .sub-functions button{
+        width: 100%;
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
+    }
+
+    .sub-functions .btn{
+        width: 100%;
+        margin: 15px 0;
+        padding-top: 8px;
+    }
+
+}
