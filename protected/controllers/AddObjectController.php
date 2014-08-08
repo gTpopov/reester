@@ -43,7 +43,7 @@ class AddObjectController extends Controller {
             $modelR->attributes=$_POST['RealEstat'];
             $modelU->attributes=$_POST['Users'];
 
-            if($modelH->validate() || $modelR->validate() || $modelU->validate())
+            if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
 
                 /*
@@ -65,7 +65,7 @@ class AddObjectController extends Controller {
                     $modelH->district     = (int) $_POST['SHouse']['district'];
                     $modelH->region       = (int) $_POST['SHouse']['region'];
                     $modelH->undeground   = (int) $_POST['SHouse']['undeground'];
-                    $modelH->street       = 1; // доделать нужно
+                    $modelH->street       = isset($_POST['SHouse']['street'])?$_POST['SHouse']['street']:''; // доделать нужно
                     $modelH->metro_time   = (int) $_POST['SHouse']['metro_time'];
                     $modelH->metro_way    = (int) $_POST['SHouse']['metro_way'];
                     $modelH->house_number = (string) strip_tags(htmlspecialchars($_POST['SHouse']['house_number']));

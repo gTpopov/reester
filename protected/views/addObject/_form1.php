@@ -9,7 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
     'action'=>Yii::app()->createUrl('/addObject/index'),
-    //'enableClientValidation'=>true,
+    'enableClientValidation'=>true,
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
     )
@@ -37,8 +37,6 @@
                                         <a href="javascript:;" class="slct">Укажите город</a>
                                         <ul class="drop" id="listCity">
                                             <li><span data-value="1">Москва</span></li>
-                                            <li><span data-value="2">Питер</span></li>
-                                            <li><span data-value="3">Астрахань</span></li>
                                         </ul>
                                         <?php echo $form->hiddenField($modelH,'city',array('id'=>'selected-city','value'=>'')); ?>
                                         <?php echo $form->error($modelH,'city',array('class'=>'alert alert-danger')); ?>
