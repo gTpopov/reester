@@ -145,7 +145,7 @@ class RealEstat extends CActiveRecord
 			'status' => 'Состояние',
 			'sanitare' => 'Санузел',
 			'window' => 'Окна',
-			'period' => 'На срок',
+			'period' => 'На срок (для поиска)',
 			'lease' => 'На срок',
 			'prepayment' => 'Предоплата',
 			'stage' => 'Стадия стр.',

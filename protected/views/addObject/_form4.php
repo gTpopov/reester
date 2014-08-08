@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
-    'action'=>Yii::app()->createUrl('/addObject/index'),
+    'action'=>Yii::app()->createUrl('/addObject/Four'),
     //'enableClientValidation'=>true,
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
@@ -295,9 +295,9 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="total-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'general_area'); ?>
-                        </span>
+            <span id="total-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'general_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -315,9 +315,9 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="living-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'human_area'); ?>
-                        </span>
+            <span id="living-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'human_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -335,9 +335,9 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="kitchen-square-price" class="pull-left title">
-                             <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
-                        </span>
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -364,10 +364,10 @@
         </div>
         <div class="btn-group plan" data-toggle="buttons">
             <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Своб. план.
+                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="building-type" value="2"> Студия
+                <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
             </label>
         </div>
 
@@ -402,16 +402,16 @@
         <div style="margin-top: -10px; margin-bottom: 5px" class="text-center">Предоплата</div>
         <div class="btn-group setts-r" data-toggle="buttons">
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> 1 месяц
+                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="1"> 1 месяц
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> 1 + 1 месяц
+                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="2"> 1 + 1 месяц
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> 1 + 2 месяц
+                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="3"> 1 + 2 месяц
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Любая
+                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="0"> Любая
             </label>
         </div>
     </div>
@@ -452,7 +452,7 @@
                     <div class="select">
                         <a href="javascript:;" class="slct"> 1 </a>
                         <ul class="drop"></ul>
-                        <?php echo $form->hiddenField($modelH,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                        <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
                     </div>
                 </div>
             </div>
@@ -462,9 +462,9 @@
 
 <div class="row text-left padding-horizontal-10-px">
     <div class="col-md-4">
-                        <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'window'); ?>
-                        </span>
+        <span id="windows-title" class="pull-right title">
+            <?php echo $form->labelEx($modelR,'window'); ?>
+        </span>
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -630,8 +630,8 @@
                                             <li><span data-value="0">месяц</span></li>
                                             <li><span data-value="0">сутки</span></li>
                                         </ul>
-                                        <?php echo $form->hiddenField($modelU,'call_up',array('id'=>'selected-state','value'=>'120000')); ?>
-                                        <?php echo $form->error($modelU,'call_up',array('class'=>'alert alert-danger')); ?>
+                                        <?php echo $form->hiddenField($modelU,'lease',array('id'=>'selected-state','value'=>'120000')); ?>
+                                        <?php echo $form->error($modelU,'lease',array('class'=>'alert alert-danger')); ?>
                                     </div>
                                 </div>
                             </div>
@@ -641,10 +641,10 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group dev-balk" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <input id="ytbuilding-type" type="hidden" value="0" name="RealEstat[parking]"><input id="building-type" value="1" name="RealEstat[parking]" type="checkbox"> Долгосрочно
+                            <input id="ytbuilding-type" type="hidden" value="0" name="RealEstat[lease]"><input id="building-type" value="2" name="RealEstat[lease]" type="checkbox"> Долгосрочно
                         </label>
                         <label class="btn btn-primary">
-                            <input id="ytsecond-hand-type" type="hidden" value="0" name="RealEstat[place_cars]"><input id="second-hand-type" value="1" name="RealEstat[place_cars]" type="checkbox"> Посуточно
+                            <input id="ytsecond-hand-type" type="hidden" value="0" name="RealEstat[lease]"><input id="second-hand-type" value="1" name="RealEstat[lease]" type="checkbox"> Посуточно
                         </label>
                     </div>
                 </div>
