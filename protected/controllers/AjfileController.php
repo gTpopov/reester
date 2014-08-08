@@ -63,14 +63,14 @@ class AjfileController extends Controller {
             $connection = Yii::app()->db;
 
             $result = $connection->createCommand("
-                        SELECT s_street.name AS n, s_region.name AS r
+                        SELECT s_street.id, s_street.name AS n, s_region.name AS r
                     	FROM s_street,s_region
 						WHERE s_street.name LIKE '".$q."%' AND
 						      s_street.fk_region = s_region.id
 						ORDER BY s_street.name ASC")->queryAll();
 
             foreach($result as $val) {
-                echo $val['n']."|".$val['r']."\r\n";
+                echo trim($val['n'])."|".trim($val['r'])."|".trim($val['id'])."\r\n";
             }
 
             Yii::app()->end();

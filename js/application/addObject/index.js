@@ -57,8 +57,8 @@ $(function(){
 
 });
 
-// Ajax request ---
 
+// Ajax request ---
 
 $(function(){
 
@@ -77,9 +77,14 @@ $(function(){
             cashe: false,
             data: arrData,
             success: function(data)  {
-                $('.nameDistrict').html(data.nameDistrict);
-                $('#listDistrict').html(data.response);
-                //$('#listDistrict li').on('click',function(){ selRegion() });
+
+                if(data.check == 1) {
+                    $('.nameDistrict').html(data.nameDistrict);
+                    $('#listDistrict').html(data.response);
+                } else {
+                    $('.nameRegion,.nameMetro').html(data.nameDistrict);
+                    $('#listRegion,#listMetro').html('');
+                }
             },
             error: function() {
                 alert('Error system');
@@ -102,8 +107,14 @@ function selRegion(id) {
         cashe: false,
         data: arrData,
         success: function(data)  {
-            $('.nameRegion').html(data.nameDistrict);
-            $('#listRegion').html(data.response);
+            if(data.check == 1) {
+                $('.nameRegion').html(data.nameRegion);
+                $('#listRegion').html(data.response);
+            } else {
+                $('.nameRegion,.nameMetro').html(data.nameRegion);
+                $('#listRegion,#listMetro').html('');
+            }
+
         },
         error: function() {
             alert('Error system');
@@ -111,9 +122,36 @@ function selRegion(id) {
     });
 }
 
+// Function select metro
+function selMetro(id) {
+
+    var arrData = {};
+    arrData.act = 'metro';
+    arrData.metroID = id;
+
+    $.ajax({
+        url: "/aj/ajaxPlace.php",
+        type: 'get',
+        dataType: "json",
+        cashe: false,
+        data: arrData,
+        success: function(data)  {
+            $('.nameMetro').html(data.nameMetro);
+            $('#listMetro').html(data.response);
+        },
+        error: function() {
+            alert('Error system');
+        }
+    });
+}
+
+
+
+
+
 /*******************************/
 /*** include cod at files js ***/
-$(function(){
+$(function() {
 
     $("#streetID").autocomplete("/ajfile/street", {
         delay:10,
@@ -124,15 +162,22 @@ $(function(){
         cacheLength:1,
         selectFirst:true,
         formatItem:liFormatQuery,
-        maxItemsToShow:5
+        onItemSelect:fn,
+        maxItemsToShow:7
+        //width:245,
+        //extraParams: {act:"listCity"}
     });
 
 });
 
-function liFormatQuery (row, i, num) {
+function fn(id) {
+    //alert(id.extra[1]);
+    $("#SHouse_street").attr('value',id.extra[1]);
+}
 
-    //var result = row[0] + "<br>(<span class='qnt'>"+row[1]+"</span>)";
-    var result = row[0]+' '+row[1];
+function liFormatQuery (row, i, num) {
+    //var result = "<div onclick='fn("+row[2]+")'>"+row[0] + "<br>( <i>р-н. <span class='qnt'>"+row[1]+"</span></i> )</div>";
+    var result = row[0] + "<br>( <i>р-н. <span class='qnt'>"+row[1]+"</span></i> )";
     return result;
 }
 

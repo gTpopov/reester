@@ -2,10 +2,12 @@
     <?php
 
     Yii::app()->clientScript
-        ->registerScriptFile('/js/application/addObject/index.js')
-        ->registerScriptFile('/js/lib/jquery.autocomplete.js')
         ->registerScriptFile('/js/lib/jquery.cookie.js')
-        ->registerCssFile('/js/lib/autocomplete.css');
+        ->registerCssFile('/js/lib/autocomplete.css')
+        ->registerScriptFile('/js/lib/jquery.autocomplete.js')
+        ->registerScriptFile('/js/application/addObject/index.js');
+
+
 
     ?>
     <?php $this->beginContent('//layouts/main'); ?>

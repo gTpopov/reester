@@ -111,14 +111,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">Укажите станцию метро</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Вокзальная</span></li>
-                                        <li><span data-value="2">Хрещатик</span></li>
-                                        <li><span data-value="3">Минская</span></li>
-                                        <li><span data-value="4">Ясенево</span></li>
-                                        <li><span data-value="5">Арбатская</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameMetro">Укажите станцию метро</a>
+                                    <ul class="drop" id="listMetro"></ul>
                                     <?php echo $form->hiddenField($modelH,'undeground',array('id'=>'selected-underground-station','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'undeground',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -182,7 +176,8 @@
                     </div>
                     <div class="col-md-7">
                         <div class="row">
-                            <?php echo $form->textField($modelH,'street',array('id'=>'streetID','class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
+                            <input type="text" id="streetID" class="form-control" placeholder="улица / проспект / площадь Панаса Саксаганского">
+                            <?php echo $form->hiddenField($modelH,'street',array('value'=>'')); ?>
                             <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
