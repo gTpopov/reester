@@ -2360,3 +2360,58 @@ Stack trace:
 REQUEST_URI=/addObject/Four
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (220)
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/08 15:44:34 [error] [php] Undefined index: window (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php:201)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/Four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (201)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/08 15:45:05 [error] [php] Undefined index: window (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php:201)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/Four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (201)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/08 15:45:07 [error] [php] Undefined index: window (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php:201)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/Four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (201)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/08 15:45:45 [error] [php] Undefined index: store (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php:200)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/Four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (200)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/08 15:48:59 [error] [php] Undefined index: window (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php:201)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/Four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/AddObjectController.php (201)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)

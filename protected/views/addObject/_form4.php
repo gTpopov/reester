@@ -477,7 +477,7 @@
                             <li><span data-value="2">выходят на улицу</span></li>
                             <li><span data-value="3">выходят во двор и на улицу</span></li>
                         </ul>
-                        <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>1)); ?>
+                        <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>1)); ?>
                     </div>
                 </div>
             </div>
@@ -641,10 +641,10 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group dev-balk" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <input id="ytbuilding-type" type="hidden" value="0" name="RealEstat[lease]"><input id="building-type" value="2" name="RealEstat[lease]" type="checkbox"> Долгосрочно
+                            <input id="ytbuilding-type" type="radio" value="0" name="RealEstat[lease]"> Долгосрочно
                         </label>
                         <label class="btn btn-primary">
-                            <input id="ytsecond-hand-type" type="hidden" value="0" name="RealEstat[lease]"><input id="second-hand-type" value="1" name="RealEstat[lease]" type="checkbox"> Посуточно
+                            <input id="ytsecond-hand-type" type="radio" value="0" name="RealEstat[lease]"> Посуточно
                         </label>
                     </div>
                 </div>

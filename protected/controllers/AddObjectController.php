@@ -227,14 +227,21 @@ class AddObjectController extends Controller {
                     'call_with' => (string) $_POST['Users']['call_with'],
                     'call_up'   => (string) $_POST['Users']['call_up']
                 ));
+
+                if($transaction->commit()){
+                    echo 'weqweqwewqewqeqw !!!!!';
+                }
+
             }
             catch(Exception $e){
                 $transaction->rollback();
+
+                echo 'weqweqwewqewqeqw ?????';
             }
 
         }
         else {
-            print 'Incorrect';
+            echo 'weqweqwewqewqeqw ?????!!!!!';
         }
     }
 
