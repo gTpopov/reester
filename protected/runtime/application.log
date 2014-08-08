@@ -1456,3 +1456,11 @@ in D:\xampp\public_html\house\www\index.php (14)
 2014/08/07 22:58:27 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
 in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (37)
 in D:\xampp\public_html\house\www\index.php (14)
+2014/08/08 11:18:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
