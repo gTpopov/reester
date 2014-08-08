@@ -27,6 +27,13 @@ class AddObjectController extends Controller {
         $modelU->setScenario('addObjectOne');
 
 
+        //Delete cookie config ---
+        if(isset($_GET['reset'])) {
+            unset(Yii::app()->request->cookies['object_type']);
+            unset(Yii::app()->request->cookies['sale_rent_op']);
+            unset(Yii::app()->request->cookies['obj_state']);
+        }
+
 
 
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
