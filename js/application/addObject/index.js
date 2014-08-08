@@ -56,3 +56,91 @@ $(function(){
     });
 
 });
+
+// Ajax request ---
+
+
+$(function(){
+
+    // Function select districts
+
+    $('#listCity li').click(function(){
+
+        var arrData = {};
+        arrData.act = 'district';
+        arrData.cityID = $(this).children('span').attr('data-value');
+
+        $.ajax({
+            url: "/aj/ajaxPlace.php",
+            type: 'get',
+            dataType: "json",
+            cashe: false,
+            data: arrData,
+            success: function(data)  {
+                $('.nameDistrict').html(data.nameDistrict);
+                $('#listDistrict').html(data.response);
+                //$('#listDistrict li').on('click',function(){ selRegion() });
+            },
+            error: function() {
+                alert('Error system');
+            }
+        });
+    });
+});
+
+// Function select region
+function selRegion(id) {
+
+    var arrData = {};
+    arrData.act = 'region';
+    arrData.districtID = id;
+
+    $.ajax({
+        url: "/aj/ajaxPlace.php",
+        type: 'get',
+        dataType: "json",
+        cashe: false,
+        data: arrData,
+        success: function(data)  {
+            $('.nameRegion').html(data.nameDistrict);
+            $('#listRegion').html(data.response);
+        },
+        error: function() {
+            alert('Error system');
+        }
+    });
+}
+
+/*******************************/
+/*** include cod at files js ***/
+$(function(){
+
+    $("#streetID").autocomplete("/ajfile/street", {
+        delay:10,
+        minChars:2,
+        matchSubset:1,
+        autoFill:true,
+        matchContains:1,
+        cacheLength:1,
+        selectFirst:true,
+        formatItem:liFormatQuery,
+        maxItemsToShow:5
+    });
+
+});
+
+function liFormatQuery (row, i, num) {
+
+    //var result = row[0] + "<br>(<span class='qnt'>"+row[1]+"</span>)";
+    var result = row[0]+' '+row[1];
+    return result;
+}
+
+
+
+
+
+
+
+
+

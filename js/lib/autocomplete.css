@@ -38,7 +38,7 @@
     cursor: default;
 }
 .ac_loading {
-	background: #FFF url('/images/_upFiles.gif') no-repeat right 2px;
+	background: #FFF url('/img/project-style/_upFiles.gif') no-repeat right 7px;
 }
 .ac_results iframe {
 	display:none;/*sorry for IE5*/
@@ -54,8 +54,8 @@
 
 span.qnt {
     font-size:11px;
-    position: absolute;
-    right: 10px;
+   /* position: absolute;
+    right: 10px;*/
 
 }
 

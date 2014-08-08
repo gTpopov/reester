@@ -1,6 +1,6 @@
 <?php
-    //Yii::app()->getClientScript()->registerScriptFile( Yii::app()->baseUrl.'/js/lib/fusioncharts/fusioncharts.js');
-    //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/users/price/view-price.css');
+    //Yii::app()->getClientScript()->registerScriptFile( Yii::app()->baseUrl.'/js/lib/jquery.autocomplete.js');
+    //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
 ?>
 
 
@@ -61,20 +61,8 @@
                             <div class="contain-slct">
                                 <div id="underground-station" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct">Укажите округ</a>
-                                        <ul class="drop" id="listDistrict">
-                                            <li><span data-value="1">Центральный АО</span></li>
-                                            <li><span data-value="2">Северный АО</span></li>
-                                            <li><span data-value="3">Северо-Восточный АО</span></li>
-                                            <li><span data-value="4">Южный АО</span></li>
-                                            <li><span data-value="5">Юго-Восточный АО</span></li>
-                                            <li><span data-value="6">Восточный АО</span></li>
-                                            <li><span data-value="7">Юго-Западный АО</span></li>
-                                            <li><span data-value="8">Западный АО</span></li>
-                                            <li><span data-value="9">Северо-Западный АО</span></li>
-                                            <li><span data-value="10">Новомосковский АО</span></li>
-                                            <li><span data-value="11">Троицкий АО</span></li>
-                                        </ul>
+                                        <a href="javascript:;" class="slct nameDistrict">Укажите округ</a>
+                                        <ul class="drop" id="listDistrict"></ul>
                                         <?php echo $form->hiddenField($modelH,'district',array('id'=>'selected-state','value'=>'')); ?>
                                         <?php echo $form->error($modelH,'district',array('class'=>'alert alert-danger')); ?>
                                     </div>
@@ -96,14 +84,8 @@
                             <div class="contain-slct">
                                 <div id="underground-station" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct">Укажите район</a>
-                                        <ul class="drop">
-                                            <li><span data-value="1">Академический</span></li>
-                                            <li><span data-value="2">Алексеевский</span></li>
-                                            <li><span data-value="3">Алтуфьевский</span></li>
-                                            <li><span data-value="4">Арбат</span></li>
-                                            <li><span data-value="5">Аэропорт</span></li>
-                                        </ul>
+                                        <a href="javascript:;" class="slct nameRegion">Укажите район</a>
+                                        <ul class="drop" id="listRegion"></ul>
                                         <?php echo $form->hiddenField($modelH,'region',array('id'=>'selected-state-obj-city','value'=>'')); ?>
                                         <?php echo $form->error($modelH,'region',array('class'=>'alert alert-danger')); ?>
                                     </div>
@@ -200,7 +182,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="row">
-                            <?php echo $form->textField($modelH,'street',array('class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
+                            <?php echo $form->textField($modelH,'street',array('id'=>'streetID','class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
                             <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>

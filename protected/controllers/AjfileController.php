@@ -50,4 +50,30 @@ class AjfileController extends Controller {
             Yii::app()->end();
         }
     }
+
+    /**
+     * Return list cities
+     */
+    public function actionStreet() {
+
+        if(Yii::app()->request->isAjaxRequest)
+        {
+            $q = Yii::app()->request->getQuery('q');
+
+            $connection = Yii::app()->db;
+
+            $result = $connection->createCommand("
+                        SELECT s_street.name AS n, s_region.name AS r
+                    	FROM s_street,s_region
+						WHERE s_street.name LIKE '".$q."%' AND
+						      s_street.fk_region = s_region.id
+						ORDER BY s_street.name ASC")->queryAll();
+
+            foreach($result as $val) {
+                echo $val['n']."|".$val['r']."\r\n";
+            }
+
+            Yii::app()->end();
+        }
+    }
 } 
