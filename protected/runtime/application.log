@@ -1456,3 +1456,19 @@ in D:\xampp\public_html\house\www\index.php (14)
 2014/08/07 22:58:27 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
 in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (37)
 in D:\xampp\public_html\house\www\index.php (14)
+2014/08/08 05:51:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/08 05:51:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

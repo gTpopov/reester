@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 AddDefaultCharset UTF-8
 
 RewriteEngine on
@@ -8,18 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule . index.php
 
+#RewriteRule .* - [E=HTTP_IF_MODIFIED_SINCE:%{HTTP:If-Modified-Since}]
+#RewriteRule .* - [E=HTTP_IF_NONE_MATCH:%{HTTP:If-None-Match}]
 
 
-=======
-AddDefaultCharset UTF-8
-
-RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule . index.php
-
-
-
->>>>>>> 27db7ffdd59cd18c3da6846b670609b8c6f7a6e2
