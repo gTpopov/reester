@@ -18,7 +18,7 @@
 <div id="step-one" class="row">
     <h3 id="add-obj-fl-ap-nw-sale-title" class="no-margin col-md-12">
         Шаг 1
-        <small>расположение <i>(Комбинация: Строящаяся -> Квартира и Аппартаменты -> Продать)</i></small>
+        <small>расположение <i>(Комбинация: Продать -> Строящаяся -> Квартира и Аппартаменты)</i></small>
     </h3>
     <div class="col-md-12">
         <div class="row padding-horizontal-10-px">

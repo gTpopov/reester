@@ -72,7 +72,7 @@
                                     ),
                                     array(
                                         'label'   => '+ Добавить объект',
-                                        'url'     => array('/addObject/index?act=1'),
+                                        'url'     => array('/addObject/index?act=1&reset=1'),
                                         'linkOptions' => array('id'=>'add-advert')
                                     ),
                                 ),
