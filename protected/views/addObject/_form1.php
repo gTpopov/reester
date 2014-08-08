@@ -35,10 +35,10 @@
                                 <div id="underground-station" class="select-int">
                                     <div class="select">
                                         <a href="javascript:;" class="slct">Укажите город</a>
-                                        <ul class="drop">
-                                            <li><span data-value="1">Питер</span></li>
-                                            <li><span data-value="2">Казань</span></li>
-                                            <li><span data-value="3">Мурманск</span></li>
+                                        <ul class="drop" id="listCity">
+                                            <li><span data-value="1">Москва</span></li>
+                                            <li><span data-value="2">Питер</span></li>
+                                            <li><span data-value="3">Астрахань</span></li>
                                         </ul>
                                         <?php echo $form->hiddenField($modelH,'city',array('id'=>'selected-city','value'=>'')); ?>
                                         <?php echo $form->error($modelH,'city',array('class'=>'alert alert-danger')); ?>
@@ -62,12 +62,18 @@
                                 <div id="underground-station" class="select-int">
                                     <div class="select">
                                         <a href="javascript:;" class="slct">Укажите округ</a>
-                                        <ul class="drop">
-                                            <li><span data-value="1">Центральный</span></li>
-                                            <li><span data-value="2">Северный</span></li>
-                                            <li><span data-value="3">Северо-Восточный</span></li>
-                                            <li><span data-value="4">Восточный</span></li>
-                                            <li><span data-value="5">Юго-Восточный</span></li>
+                                        <ul class="drop" id="listDistrict">
+                                            <li><span data-value="1">Центральный АО</span></li>
+                                            <li><span data-value="2">Северный АО</span></li>
+                                            <li><span data-value="3">Северо-Восточный АО</span></li>
+                                            <li><span data-value="4">Южный АО</span></li>
+                                            <li><span data-value="5">Юго-Восточный АО</span></li>
+                                            <li><span data-value="6">Восточный АО</span></li>
+                                            <li><span data-value="7">Юго-Западный АО</span></li>
+                                            <li><span data-value="8">Западный АО</span></li>
+                                            <li><span data-value="9">Северо-Западный АО</span></li>
+                                            <li><span data-value="10">Новомосковский АО</span></li>
+                                            <li><span data-value="11">Троицкий АО</span></li>
                                         </ul>
                                         <?php echo $form->hiddenField($modelH,'district',array('id'=>'selected-state','value'=>'')); ?>
                                         <?php echo $form->error($modelH,'district',array('class'=>'alert alert-danger')); ?>
