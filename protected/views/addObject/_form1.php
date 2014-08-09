@@ -378,7 +378,7 @@
                     </div>
                 </div>
                 <div class="row padding-horizontal-10-px">
-                    <textarea class="form-control" placeholder="Перечислите мебель тут"></textarea>
+                    <?php echo $form->textArea($modelR, 'furniture',array('class'=>'col-md-12 form-control','placeholder'=>'Перечислите мебель тут')); ?>
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
@@ -498,7 +498,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <input type="text" class="form-control" placeholder="Застройщик">
+                            <?php echo $form->textField($modelR,'developer',array('class'=>'form-control','placeholder'=>'Застройщик')); ?>
                         </div>
                     </div>
                 </div>
