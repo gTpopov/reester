@@ -24,9 +24,6 @@ $(function(){
     $(function(){
         (function() {
             for(var i = 0; i < 6; i++){
-                /*if(i == 5){
-                    i = i+'+';
-                }*/
                 $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#rooms-number > div > ul');
             } delete i;
         }($));
@@ -42,7 +39,7 @@ $(function(){
         }($));
 
         (function() {
-                for(var i = 0; i < 71; i++){
+                for(var i = 1; i < 71; i++){
                     $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#floors-number > div > ul');
                     $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#floors-number-house > div > ul');
                 } delete i;
@@ -151,7 +148,7 @@ function selMetro(id) {
 
 
 /*******************************/
-/*** include cod at files js ***/
+/*** select streets ***/
 $(function() {
 
     $("#streetID").autocomplete("/ajfile/street", {

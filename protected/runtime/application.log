@@ -2528,3 +2528,599 @@ in D:\xampp\public_html\house\www\index.php (14)
 2014/08/08 22:19:11 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
 in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
 in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 05:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/09 05:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/09 06:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('favicon.ico')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:01:40 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:15:03 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:16:59 [error] [php] Undefined index: plan (D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php:93)
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CController.php(287): AddObjectController->runAction()
+#1 D:\xampp\public_html\house\framework\web\CController.php(266): AddObjectController->runActionWithFilters()
+#2 D:\xampp\public_html\house\framework\web\CWebApplication.php(283): AddObjectController->run()
+#3 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 D:\xampp\public_html\house\www\index.php(14): CWebApplication->run()
+REQUEST_URI=/addObject/index
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (93)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 08:18:06 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:19:55 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "floors" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (43)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (44)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/09 09:53:49 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\controllers\AddObjectController.php (45)
+in D:\xampp\public_html\house\www\index.php (14)
