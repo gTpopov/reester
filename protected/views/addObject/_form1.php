@@ -469,26 +469,6 @@
                     </div>
                 </div>
 
-                <div class="row text-left padding-horizontal-10-px">
-                    <div class="col-md-4">
-                        <span id="wall-material-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelH,'floors'); ?>
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="contain-slct">
-                                <div id="floors-number-house" class="select-int">
-                                    <div class="select">
-                                        <a href="javascript:;" class="slct"> Укажите этажность дома </a>
-                                        <ul class="drop"></ul>
-                                        <?php echo $form->hiddenField($modelH,'floors',array('id'=>'floors-number-house','value'=>'')); ?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="col-md-4">
