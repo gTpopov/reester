@@ -377,6 +377,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="row padding-horizontal-10-px">
+                    <textarea class="form-control" placeholder="Перечислите мебель тут"></textarea>
+                </div>
 
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group" data-toggle="buttons">
@@ -495,17 +498,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <div class="contain-slct">
-                                <div id="asdasdas-number" class="select-int">
-                                    <div class="select">
-                                        <a href="javascript:;" class="slct"> Застройщик </a>
-                                        <ul class="drop">
-                                            <li><span data-value="1">А может и не застройщик )</span></li>
-                                        </ul>
-                                        <?php echo $form->hiddenField($modelR,'deadline',array('id'=>'selected-windows','value'=>'')); ?>
-                                    </div>
-                                </div>
-                            </div>
+                            <input type="text" class="form-control" placeholder="Застройщик">
                         </div>
                     </div>
                 </div>
