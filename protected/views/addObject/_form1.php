@@ -411,7 +411,7 @@
 
             </div>
 
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-2">
 
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="col-md-4">
@@ -599,6 +599,11 @@
                 </div>
 
             </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <?php echo $form->textArea($modelR, 'add_info',array('class'=>'col-md-12 form-control','placeholder'=>'Дополнительное описание вашего объекта')); ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -735,9 +740,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-12" style="padding-right: 0;">
-                <?php echo $form->textArea($modelR, 'add_info',array('class'=>'col-md-12 form-control','placeholder'=>'Дополнительное описание вашего объекта')); ?>
             </div>
         </div>
     </div>
