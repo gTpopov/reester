@@ -28,6 +28,7 @@ $(function(){
             } delete i;
         }($));
 
+
         (function() {
             for(var i = 0; i < 25; i++){
                 if(i < 10){
