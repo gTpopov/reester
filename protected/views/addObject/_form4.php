@@ -100,9 +100,9 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-5">
-                                <span id="underground-title" class="pull-left title">
-                                    <?php echo $form->labelEx($modelH,'undeground'); ?>
-                                </span>
+                    <span id="underground-title" class="pull-left title">
+                        <?php echo $form->labelEx($modelH,'undeground'); ?>
+                    </span>
                 </div>
                 <div class="col-md-7">
                     <div class="row">
@@ -600,32 +600,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row padding-horizontal-10-px">
-                    <div class="col-md-4">
-                        <span id="phone-title" class="pull-left title">
-                            <?php echo $form->labelEx($modelU,'sub_email'); ?>
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com')); ?>
-                            <?php echo $form->error($modelU,'sub_email',array('class'=>'alert alert-danger')); ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="row padding-horizontal-10-px">
-                    <div class="col-md-4">
-                        <span id="contact-face-title" class="pull-left title">
-                            <?php echo $form->labelEx($modelU,'skype'); ?>
-                        </span>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <?php echo $form->textField($modelU,'skype',array('class'=>'form-control','placeholder'=>'Skype nickname')); ?>
-                            <?php echo $form->error($modelU,'skype',array('class'=>'alert alert-danger')); ?>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="col-md-6 col-md-offset-1">
                 <div class="row padding-horizontal-10-px">
@@ -679,6 +653,32 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row padding-horizontal-10-px">
+                    <div class="col-md-4">
+                        <span id="phone-title" class="pull-left title">
+                            <?php echo $form->labelEx($modelU,'sub_email'); ?>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com')); ?>
+                            <?php echo $form->error($modelU,'sub_email',array('class'=>'alert alert-danger')); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="row padding-horizontal-10-px">
+                    <div class="col-md-4">
+                        <span id="contact-face-title" class="pull-left title">
+                            <?php echo $form->labelEx($modelU,'skype'); ?>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <?php echo $form->textField($modelU,'skype',array('class'=>'form-control','placeholder'=>'Skype nickname')); ?>
+                            <?php echo $form->error($modelU,'skype',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
