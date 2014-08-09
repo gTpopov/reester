@@ -1,15 +1,15 @@
 <?php
-//Yii::app()->getClientScript()->registerScriptFile( Yii::app()->baseUrl.'/js/lib/fusioncharts/fusioncharts.js');
-//Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/users/price/view-price.css');
+//Yii::app()->getClientScript()->registerScriptFile( Yii::app()->baseUrl.'/js/lib/jquery.autocomplete.js');
+//Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
 ?>
 
 
 <div id="add-obj-fl-ap-nw-sale" class="col-md-12">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'registry-form',
-    'action'=>Yii::app()->createUrl('/addObject/Four'),
-    //'enableClientValidation'=>true,
+    'id'=>'add-object',
+    'action'=>Yii::app()->createUrl('/addObject/index'),
+    'enableClientValidation'=>true,
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
     )
@@ -18,7 +18,7 @@
 <div id="step-one" class="row">
 <h3 id="add-obj-fl-ap-nw-sale-title" class="no-margin col-md-12">
     Шаг 1
-    <small>расположение <i>(Комбинация: Аренда -> Вторичная -> Квартира и Аппартаменты)</i></small>
+    <small>расположение <i>(Комбинация: Продать -> Строящаяся -> Квартира и Аппартаменты)</i></small>
 </h3>
 <div class="col-md-12">
     <div class="row padding-horizontal-10-px">
@@ -34,11 +34,9 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">укажите город</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Питер</span></li>
-                                        <li><span data-value="2">Казань</span></li>
-                                        <li><span data-value="3">Мурманск</span></li>
+                                    <a href="javascript:;" class="slct">Укажите город</a>
+                                    <ul class="drop" id="listCity">
+                                        <li><span data-value="1">Москва</span></li>
                                     </ul>
                                     <?php echo $form->hiddenField($modelH,'city',array('id'=>'selected-city','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'city',array('class'=>'alert alert-danger')); ?>
@@ -61,14 +59,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">укажите округ</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Центральный</span></li>
-                                        <li><span data-value="2">Северный</span></li>
-                                        <li><span data-value="3">Северо-Восточный</span></li>
-                                        <li><span data-value="4">Восточный</span></li>
-                                        <li><span data-value="5">Юго-Восточный</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameDistrict">Укажите округ</a>
+                                    <ul class="drop" id="listDistrict"></ul>
                                     <?php echo $form->hiddenField($modelH,'district',array('id'=>'selected-state','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'district',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -90,14 +82,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">укажите район</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Академический</span></li>
-                                        <li><span data-value="2">Алексеевский</span></li>
-                                        <li><span data-value="3">Алтуфьевский</span></li>
-                                        <li><span data-value="4">Арбат</span></li>
-                                        <li><span data-value="5">Аэропорт</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameRegion">Укажите район</a>
+                                    <ul class="drop" id="listRegion"></ul>
                                     <?php echo $form->hiddenField($modelH,'region',array('id'=>'selected-state-obj-city','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'region',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -123,14 +109,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">укажите станцию метро</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Вокзальная</span></li>
-                                        <li><span data-value="2">Хрещатик</span></li>
-                                        <li><span data-value="3">Минская</span></li>
-                                        <li><span data-value="4">Ясенево</span></li>
-                                        <li><span data-value="5">Арбатская</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameMetro">Укажите станцию метро</a>
+                                    <ul class="drop" id="listMetro"></ul>
                                     <?php echo $form->hiddenField($modelH,'undeground',array('id'=>'selected-underground-station','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'undeground',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -153,7 +133,7 @@
                     <div class="row">
                         <div class="col-md-2">
                             <div class="row">
-                                <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','placeholder'=>'10')); ?>
+                                <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','maxlength'=>"2",'placeholder'=>'')); ?>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -164,13 +144,13 @@
                                 <div class="contain-slct">
                                     <div id="time-to-underground-station" class="select-int">
                                         <div class="select">
-                                            <a href="javascript:;" class="slct">пешком</a>
+                                            <a href="javascript:;" class="slct">Как добраться</a>
                                             <ul class="drop">
                                                 <li><span data-value="1">пешком</span></li>
                                                 <li><span data-value="2">на машине</span></li>
                                             </ul>
                                             <input type="hidden" id="selected-time-to-underground-station" />
-                                            <?php echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>1)); ?>
+                                            <?php echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +174,8 @@
                 </div>
                 <div class="col-md-7">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'street',array('class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
+                        <input type="text" id="streetID" class="form-control" placeholder="улица / проспект / площадь Панаса Саксаганского">
+                        <?php echo $form->hiddenField($modelH,'street',array('value'=>'')); ?>
                         <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
@@ -211,7 +192,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'house_number',array('class'=>'form-control','placeholder'=>'10')); ?>
+                        <?php echo $form->textField($modelH,'house_number',array('class'=>'form-control','placeholder'=>'10','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -228,7 +209,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'structur',array('class'=>'form-control','placeholder'=>'7')); ?>
+                        <?php echo $form->textField($modelH,'structur',array('class'=>'form-control','placeholder'=>'7','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -245,7 +226,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'housing',array('class'=>'form-control','placeholder'=>'12 Б')); ?>
+                        <?php echo $form->textField($modelH,'housing',array('class'=>'form-control','placeholder'=>'12 Б','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -275,9 +256,9 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="contain-slct">
-                    <div id="type-walls-number" class="select-int">
+                    <div id="wall-material-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> кирпичный </a>
+                            <a href="javascript:;" class="slct"> Укажите материал стен </a>
                             <ul class="drop">
                                 <li><span data-value="1">кирпичный</span></li>
                                 <li><span data-value="2">монолитный</span></li>
@@ -286,22 +267,46 @@
                                 <li><span data-value="5">дерево</span></li>
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>'')); ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="total-square-price" class="pull-left title">
-                <?php echo $form->labelEx($modelR,'general_area'); ?>
-            </span>
+                        <span id="wall-material-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelH,'floors'); ?>
+                        </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="floors-number-house" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите этажность дома </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelH,'floors',array('id'=>'floors-number-house','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+                        <span id="total-square-price" class="pull-left title">
+                            <?php echo $form->labelEx($modelR,'general_area'); ?>
+                        </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','value'=>'')); ?>
+                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'general_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -315,13 +320,13 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="living-square-price" class="pull-left title">
-                <?php echo $form->labelEx($modelR,'human_area'); ?>
-            </span>
+                        <span id="living-square-price" class="pull-left title">
+                            <?php echo $form->labelEx($modelR,'human_area'); ?>
+                        </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','value'=>'')); ?>
+                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'human_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -335,13 +340,13 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="kitchen-square-price" class="pull-left title">
-                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
-            </span>
+                        <span id="kitchen-square-price" class="pull-left title">
+                             <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
+                        </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','value'=>'')); ?>
+                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'kitchen_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -393,25 +398,7 @@
                 <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ. 214
-            </label>
-        </div>
-    </div>
-
-    <div class="row text-left padding-horizontal-10-px">
-        <div style="margin-top: -10px; margin-bottom: 5px" class="text-center">Предоплата</div>
-        <div class="btn-group setts-r" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="1"> 1 месяц
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="2"> 1 + 1 месяц
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="3"> 1 + 2 месяц
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="0"> Любая
+                <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
             </label>
         </div>
     </div>
@@ -419,146 +406,147 @@
 </div>
 <div class="col-md-6 col-md-offset-1">
 
-<div class="row padding-horizontal-10-px">
-    <div class="col-md-4">
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
                         <span id="rooms-title" class="pull-right title">
                            <?php echo $form->labelEx($modelR,'room'); ?>
                         </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="rooms-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> 1 </a>
-                        <ul class="drop"></ul>
-                        <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>1)); ?>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="rooms-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите количество комнат </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row padding-horizontal-10-px">
-    <div class="col-md-4">
-        <span id="floors-title" class="pull-right title">
-            <?php echo $form->labelEx($modelR,'store'); ?>
-        </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="floors-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> 1 </a>
-                        <ul class="drop"></ul>
-                        <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="row text-left padding-horizontal-10-px">
-    <div class="col-md-4">
-        <span id="windows-title" class="pull-right title">
-            <?php echo $form->labelEx($modelR,'window'); ?>
-        </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="windows-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> двор </a>
-                        <ul class="drop">
-                            <li><span data-value="1">выходят во двор</span></li>
-                            <li><span data-value="2">выходят на улицу</span></li>
-                            <li><span data-value="3">выходят во двор и на улицу</span></li>
-                        </ul>
-                        <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>1)); ?>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+                        <span id="floors-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelR,'store'); ?>
+                        </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="floors-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите этажность квартиры / аппарт.</a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="row text-left padding-horizontal-10-px">
-    <div class="col-md-4">
-    <span id="windows-title" class="pull-right title">
-        <?php echo $form->labelEx($modelH,'class_home'); ?>
-    </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="windows-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> эконом </a>
-                        <ul class="drop">
-                            <li><span data-value="1">эконом</span></li>
-                            <li><span data-value="2">бизнес</span></li>
-                            <li><span data-value="3">элитный</span></li>
-                        </ul>
-                        <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>1)); ?>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+                        <span id="windows-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelR,'window'); ?>
+                        </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="windows-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите выход окон </a>
+                            <ul class="drop">
+                                <li><span data-value="1">двор</span></li>
+                                <li><span data-value="2">улица</span></li>
+                                <li><span data-value="3">двор +улица</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="row text-left padding-horizontal-10-px">
-    <div class="col-md-4">
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+                        <span id="windows-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelH,'class_home'); ?>
+                        </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="windows-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите класс дома </a>
+                            <ul class="drop">
+                                <li><span data-value="1">эконом</span></li>
+                                <li><span data-value="2">бизнес</span></li>
+                                <li><span data-value="3">элитный</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
                         <span id="windows-title" class="pull-right title">
                             <?php echo $form->labelEx($modelR,'deadline'); ?>
                         </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="date-of-end-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> 2014 </a>
-                        <ul class="drop"></ul>
-                        <?php echo $form->hiddenField($modelR,'deadline',array('id'=>'selected-windows','value'=>'2014')); ?>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="date-of-end-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите срок сдачи </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'deadline',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="row text-left padding-horizontal-10-px">
-    <div class="col-md-4">
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
                         <span id="windows-title" class="pull-right title">
                             <?php echo $form->labelEx($modelR,'stage'); ?>
                         </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="windows-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> нулевой цикл </a>
-                        <ul class="drop">
-                            <li><span data-value="1">нулевой цикл</span></li>
-                            <li><span data-value="2">первые этажи</span></li>
-                            <li><span data-value="3">средние этажи</span></li>
-                            <li><span data-value="4">последние этажи</span></li>
-                            <li><span data-value="5">отделка</span></li>
-                            <li><span data-value="6">благоустройство</span></li>
-                            <li><span data-value="7">выдача ключей</span></li>
-                        </ul>
-                        <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>1)); ?>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="windows-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите стадию строительства </a>
+                            <ul class="drop">
+                                <li><span data-value="1">нулевой цикл</span></li>
+                                <li><span data-value="2">первые этажи</span></li>
+                                <li><span data-value="3">средние этажи</span></li>
+                                <li><span data-value="4">последние этажи</span></li>
+                                <li><span data-value="5">отделка</span></li>
+                                <li><span data-value="6">благоустройство</span></li>
+                                <li><span data-value="7">выдача ключей</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
@@ -572,7 +560,8 @@
             </label>
         </div>
     </div>
-    <div class="row text-left padding-horizontal-10-px" style="padding-top: 23px">
+
+    <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group setts-r" data-toggle="buttons">
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Клубный тип
@@ -590,6 +579,16 @@
     </div>
 </div>
 </div>
+<div class="row padding-horizontal-10-px">
+    <div class="btn-group dev-balk" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Долгосрочно
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'discount',array('id'=>'building-type','value'=>1)); ?> Посуточно
+        </label>
+    </div>
+</div>
 </div>
 </div>
 
@@ -602,50 +601,43 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="row padding-horizontal-10-px">
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <span id="price-title" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'Цена'); ?>
+                            <?php echo $form->labelEx($modelR,'price'); ?>
                         </span>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-3">
                         <div class="row">
-                            <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'120')); ?>
-                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
+                            <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'Цена за объект','maxlength'=>"13")); ?>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="row text-center">
-                            <small>
-                                <img style="vertical-align: -10px" src="/img/project-style/rur_middle_sign.png">
-                            </small>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="row">
-                            <div class="contain-slct">
-                                <div id="price-type-number" class="select-int">
-                                    <div class="select">
-                                        <a href="javascript:;" class="slct"> за период </a>
-                                        <ul class="drop">
-                                            <li><span data-value="0">месяц</span></li>
-                                            <li><span data-value="0">сутки</span></li>
-                                        </ul>
-                                        <?php echo $form->hiddenField($modelU,'lease',array('id'=>'selected-state','value'=>'120000')); ?>
-                                        <?php echo $form->error($modelU,'lease',array('class'=>'alert alert-danger')); ?>
-                                    </div>
-                                </div>
+                            <div class="select">
+                                <a href="javascript:;" class="slct"> За период </a>
+                                <ul class="drop">
+                                    <li><span data-value="1">месяц</span></li>
+                                    <li><span data-value="2">сутки</span></li>
+                                </ul>
+                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group dev-balk" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input id="ytbuilding-type" type="radio" value="0" name="RealEstat[lease]"> Долгосрочно
-                        </label>
-                        <label class="btn btn-primary">
-                            <input id="ytsecond-hand-type" type="radio" value="0" name="RealEstat[lease]"> Посуточно
-                        </label>
+                    <div class="col-md-2">
+                        <div class="row">
+                            <div class="select">
+                                <a href="javascript:;" class="slct"> <img style="vertical-align: -10px" src="/img/project-style/rur_middle_sign.png"> </a>
+                                <ul class="drop">
+                                    <li><span data-value="1"><img src="/img/project-style/rur_middle_sign.png"><span></li>
+                                    <li><span data-value="2">$</span></li>
+                                    <li><span data-value="3">&euro;</span></li>
+                                </ul>
+                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="padding-right: 0">
+                        <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
                 <div class="row padding-horizontal-10-px">
@@ -744,12 +736,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12" style="padding-right: 0;">
+                <?php echo $form->textArea($modelR, 'add_info',array('class'=>'col-md-12 form-control','placeholder'=>'Дополнительное описание вашего объекта')); ?>
+            </div>
         </div>
     </div>
 </div>
 
-
 <?php $this->endWidget(); ?>
 
-
 </div>
+
+

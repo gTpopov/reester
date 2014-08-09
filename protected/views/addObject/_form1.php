@@ -379,10 +379,9 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group park" data-toggle="buttons">
-
+                    <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
+                            <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
                         </label>
                     </div>
                     <div class="btn-group plan" data-toggle="buttons">
@@ -396,23 +395,13 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group dev-balk" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'covered_space',array('id'=>'second-hand-type','value'=>1)); ?> Огражденная территория
-                        </label>
-                        <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
-                        </label>
-                    </div>
-                </div>
-
-                <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group furnt" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
                         </label>
+
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
+                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
                         </label>
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
@@ -501,16 +490,18 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="col-md-4">
                         <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'deadline'); ?>
+                            <?php echo $form->labelEx($modelR,'Застройщик'); ?>
                         </span>
                     </div>
                     <div class="col-md-8">
                         <div class="row">
                             <div class="contain-slct">
-                                <div id="date-of-end-number" class="select-int">
+                                <div id="asdasdas-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> Укажите срок сдачи </a>
-                                        <ul class="drop"></ul>
+                                        <a href="javascript:;" class="slct"> Застройщик </a>
+                                        <ul class="drop">
+                                            <li><span data-value="1">А может и не застройщик )</span></li>
+                                        </ul>
                                         <?php echo $form->hiddenField($modelR,'deadline',array('id'=>'selected-windows','value'=>'')); ?>
                                     </div>
                                 </div>
@@ -522,7 +513,7 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="col-md-4">
                         <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'stage'); ?>
+                            Стадия строит.
                         </span>
                     </div>
                     <div class="col-md-8">
@@ -549,6 +540,27 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
+                    <div class="col-md-4">
+                        <span id="windows-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelR,'Срок сдачи'); ?>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="contain-slct">
+                                <div id="date-of-end-number" class="select-int">
+                                    <div class="select">
+                                        <a href="javascript:;" class="slct"> Выбирете срок сдачи </a>
+                                        <ul class="drop"></ul>
+                                        <?php echo $form->hiddenField($modelR,'deadline',array('id'=>'selected-windows','value'=>'')); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group wc" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
@@ -563,7 +575,7 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group setts-r" data-toggle="buttons">
+                    <div class="btn-group furnt" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Клубный тип
                         </label>
@@ -573,18 +585,16 @@
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'mortgage',array('id'=>'building-type','value'=>1)); ?> Ипотека
                         </label>
-                        <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'developer',array('id'=>'building-type','value'=>1)); ?> Застройщик
-                        </label>
                     </div>
                 </div>
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group setts-r" data-toggle="buttons">
+                    <div class="btn-group dev-balk" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'parking',array('id'=>'building-type','value'=>1)); ?> Паркинг
                         </label>
-
-
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'covered_space',array('id'=>'second-hand-type','value'=>1)); ?> Огражденная территория
+                        </label>
                     </div>
                 </div>
 
