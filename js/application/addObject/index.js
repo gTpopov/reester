@@ -23,7 +23,7 @@ $(function(){
 
     $(function(){
         (function() {
-            for(var i = 0; i < 6; i++){
+            for(var i = 1; i < 6; i++){
                 $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#rooms-number > div > ul');
             } delete i;
         }($));

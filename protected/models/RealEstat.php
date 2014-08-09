@@ -32,6 +32,7 @@
  * @property string $multimedia
  * @property string $deadline
  * @property string $developer
+ * @property string $isolated
  * @property string $fz_214
  * @property string $finished
  * @property string $cost_renting
@@ -140,6 +141,7 @@ class RealEstat extends CActiveRecord
 			'multimedia' => 'Мультимедиа',
 			'deadline' => 'Срок сдачи',
 			'developer' => 'Застройщик',
+            'isolated' => 'Изолированных',
 			'fz_214' => 'ФЗ 214',
 			'finished' => 'С отделкой',
             'cost_renting' => 'Стоимость аренды',
@@ -197,6 +199,7 @@ class RealEstat extends CActiveRecord
 		$criteria->compare('multimedia',$this->multimedia,true);
 		$criteria->compare('deadline',$this->deadline,true);
 		$criteria->compare('developer',$this->developer,true);
+        $criteria->compare('isolated',$this->isolated,true);
 		$criteria->compare('fz_214',$this->fz_214,true);
 		$criteria->compare('finished',$this->finished,true);
         $criteria->compare('cost_renting',$this->cost_renting,true);
