@@ -34,6 +34,7 @@
  * @property string $developer
  * @property string $fz_214
  * @property string $finished
+ * @property string $cost_renting
  * @property string $create_data
  * @property string $add_info
  * @property string $currency
@@ -141,6 +142,7 @@ class RealEstat extends CActiveRecord
 			'developer' => 'Застройщик',
 			'fz_214' => 'ФЗ 214',
 			'finished' => 'С отделкой',
+            'cost_renting' => 'Стоимость аренды',
 			'create_data' => 'Дата создания объявления',
 			'add_info' => 'Дополнительная информация',
 			'currency' => 'Валюта',
@@ -197,6 +199,7 @@ class RealEstat extends CActiveRecord
 		$criteria->compare('developer',$this->developer,true);
 		$criteria->compare('fz_214',$this->fz_214,true);
 		$criteria->compare('finished',$this->finished,true);
+        $criteria->compare('cost_renting',$this->cost_renting,true);
 		$criteria->compare('create_data',$this->create_data,true);
 		$criteria->compare('add_info',$this->add_info,true);
 		$criteria->compare('currency',$this->currency,true);
