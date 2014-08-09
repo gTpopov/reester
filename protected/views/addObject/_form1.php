@@ -736,7 +736,7 @@
                             <?php echo CHtml::submitButton('Добавить еще объект',array('class'=>'btn btn-info pull-right')); ?>
                         </div>
                         <div class="row padding-horizontal-10-px">
-                            <?php echo CHtml::submitButton('Добавить объект',array('class'=>'btn btn-block btn-success')); ?>
+                            <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>
                     </div>
                 </div>
