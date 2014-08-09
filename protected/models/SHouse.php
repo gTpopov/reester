@@ -62,8 +62,9 @@ class SHouse extends CActiveRecord
             array(
                 'metro_time',
                 'numerical',
-                'integerOnly'=>true,
-                'message' => '{attribute} должно быть числом'),
+                'on'         =>  self::SCENARIO_ADD_OBJECT_ONE,
+                'integerOnly'=> true,
+                'message'    => '{attribute} должно быть числом'),
 		);
 	}
 
@@ -90,7 +91,7 @@ class SHouse extends CActiveRecord
 			'housing' => 'Корпус',
 			'name_complex' => 'Жилой комплекс',
 			'year_commis' => 'Эксплуатация',
-			'floors' => 'Этажей',
+			'floors' => 'Этажность дома',
 			'metro_time' => 'До метро',
 			'metro_way' => 'Способ добраться до метро',
 			'year_built' => 'Год постройки',

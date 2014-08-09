@@ -1,6 +1,6 @@
 $(function(){
 
-    $('#SHouse_metro_time').bind("change keyup input click", function() {
+   /* $('#SHouse_metro_time').bind("change keyup input click", function() {
         if (this.value.match(/[^0-9]/g) || this.value.length > 2) {
             this.value = this.value.replace(/[^0-9]/g, '');
             this.value = this.value.substr(0,2);
@@ -18,15 +18,15 @@ $(function(){
             this.value = this.value.replace(/[^0-9]/g, '');
             this.value = this.value.substr(0,20);
         }
-    });
+    });*/
 
 
     $(function(){
         (function() {
             for(var i = 0; i < 6; i++){
-                if(i == 5){
+                /*if(i == 5){
                     i = i+'+';
-                }
+                }*/
                 $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#rooms-number > div > ul');
             } delete i;
         }($));
@@ -44,6 +44,7 @@ $(function(){
         (function() {
                 for(var i = 0; i < 71; i++){
                     $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#floors-number > div > ul');
+                    $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#floors-number-house > div > ul');
                 } delete i;
         }($));
 

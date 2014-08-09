@@ -94,6 +94,10 @@ class Users extends CActiveRecord
                 'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
                 'message' => '{attribute} не заполнен'
             ),
+            array('sub_email', 'email',
+                'on'      => self::SCENARIO_ADD_OBJECT_ONE,
+                'message' => '{attribute} содержит ошибку'
+            ),
 
 
 
