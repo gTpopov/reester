@@ -33,8 +33,17 @@
     margin-bottom: 80px;
 }
 
-
-
+.add-photo-container{
+    background-color: #DDD;
+    width: 20px;
+    text-align: center;
+    border-radius: 50px;
+    color: #002d64;
+    cursor: pointer;
+}
+.deletePhoto{
+    color: #F00;
+}
 /* Sale of flats/apartments in new buildings */
 #add-obj-fl-ap-nw-sale{
 

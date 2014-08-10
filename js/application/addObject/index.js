@@ -36,7 +36,11 @@ $(function(){
 
 
     $('.add-photo-container').on('click', function () {
-        $('<div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"> </div>').insertAfter($(this).parent('.photo-item'))
+        if($('.photo-item').length < 7){
+
+            $('<div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"><span class="pull-left add-photo-container">+</span></div>').insertAfter($(this).parent('.photo-item'))
+            $(this).addClass('deletePhoto');
+        }
     });
 
 });
