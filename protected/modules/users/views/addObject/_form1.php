@@ -723,13 +723,8 @@
             </div>
         </div>
         <div class="row" style="margin-top: 15px;border-top: 1px solid #ebebeb;padding-top: 15px;">
-            <div class="col-md-5">
-                <input type="file" name="photo[]">
-                <input type="file" name="photo[]">
-                <input type="file" name="photo[]">
-                <input type="file" name="photo[]">
-                <input type="file" name="photo[]">
-                <input type="file" name="photo[]">
+            <div class="col-md-5 photos-container">
+                <div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"> <span style="color: #005fbd; cursor: pointer; margin-top: 2px" class="glyphicon glyphicon-plus-sign pull-left add-photo-container"></span></div>
 
                 <div class="col-md-12" style="padding-left: 0;">
                     <div class="col-first col-md-12" style="text-align:left;width:190px;padding-left: 0;">

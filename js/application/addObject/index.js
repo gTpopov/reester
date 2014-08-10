@@ -1,25 +1,5 @@
 $(function(){
 
-   /* $('#SHouse_metro_time').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9]/g) || this.value.length > 2) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            this.value = this.value.substr(0,2);
-        }
-    });
-
-    $('#SHouse_house_number, #SHouse_structur,#RealEstat_general_area,#RealEstat_human_area,#RealEstat_kitchen_area').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9]/g) || this.value.length > 4) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            this.value = this.value.substr(0,4);
-        }
-    });
-    $('#RealEstat_price').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9]/g) || this.value.length > 20) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-            this.value = this.value.substr(0,20);
-        }
-    });*/
-
 
     $(function(){
         (function() {
@@ -52,6 +32,11 @@ $(function(){
             } delete i;
         }($));
 
+    });
+
+
+    $('.add-photo-container').on('click', function () {
+        $('<div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"> </div>').insertAfter($(this).parent('.photo-item'))
     });
 
 });

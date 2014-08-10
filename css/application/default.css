@@ -76,7 +76,12 @@ html, body {
     background-color: #005fbd;
     color: #FFF;
 }
-
+.sign{
+    list-style-type: none;
+}
+.sign li a{
+    color: #FFF !important;
+}
 
 #add-advert{
     border-color: rgba(225,255,255,0.3)!important;

@@ -31,10 +31,35 @@
                             <span class="title">до:</span>
                             <span class="result-value"><b>129 456 <img class="rur" src="/img/project-style/rur_sign.png"></b></span>
                         </span>
-                        <span class="sign pull-right">
-                            <a href="/sign/in">Вход</a> <span class="mobile-hide">&centerdot;</span>
-                            <a href="/sign/up">Регистрация</a>
-                        </span>
+                        <?php
+                            $this->widget('zii.widgets.CMenu', array(
+                                'encodeLabel' => false,
+                                'items'       => array(
+                                    array(
+                                        'label'   => 'Вход',
+                                        'url'     => array('/sign/in'),
+                                        'linkOptions' => array('id'=>'enter'),
+                                        'visible' => Yii::app()->user->isGuest
+                                    ),
+                                    array(
+                                        'label'   => 'Регистрация',
+                                        'url'     => array('/sign/up'),
+                                        'linkOptions' => array('id'=>'signup'),
+                                        'visible' => Yii::app()->user->isGuest
+                                    ),
+                                    array(
+                                        'label'   => 'Выход',
+                                        'url'     => array('/sign/out'),
+                                        'linkOptions' => array('id'=>'exit'),
+                                        'visible' => !Yii::app()->user->isGuest
+                                    ),
+                                ),
+                                'htmlOptions' => array(
+                                    'class' => 'sign navbar-nav navbar-right pull-right',
+                                    'id'    => 'enter-reg-exit'
+                                ),
+                            ));
+                        ?>
                     </span>
                 </div>
             </div>

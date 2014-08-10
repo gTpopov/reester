@@ -3132,3 +3132,50 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/08/10 18:59:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/addObject/index?act=4&reset=1
+---
+2014/08/10 19:08:12 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.isGuest" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CModule.php(105): CComponent->__get('isGuest')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/layouts/main.php(42): CModule->__get('isGuest')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Applications/X...', Array, true)
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('    <div id="o-...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('    <div id="o-...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(206): COutputProcessor->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/layouts/add-object.php(53): CBaseController->endContent()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(784): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(154): CController->render('index', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('index')
+#19 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('users/addObject...')
+#20 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#22 {main}
+REQUEST_URI=/users/addObject/index?act=1&reset=1
+HTTP_REFERER=http://reester.dev/users/default/index
+---
+2014/08/10 19:15:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "out".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(270): CController->missingAction('out')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('out')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('sign/out')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/sign/out
+HTTP_REFERER=http://reester.dev/users/addObject/index?act=1&reset=1
+---
