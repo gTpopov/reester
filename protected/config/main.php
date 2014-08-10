@@ -23,6 +23,7 @@ return array(
 
 	'components'=>array(
         'mailer' => array('class'=>'PHPMailer'),
+        'photo'  => array('class'=>'AddPhoto'),
 		'user'=>array(
 			'allowAutoLogin'=>true,
             'class' => 'WebUser',

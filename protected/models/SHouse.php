@@ -91,7 +91,7 @@ class SHouse extends CActiveRecord
 			'housing' => 'Корпус',
 			'name_complex' => 'Жилой комплекс',
 			'year_commis' => 'Эксплуатация',
-			'floors' => 'Этажность дома',
+			'floors' => 'Этажность',
 			'metro_time' => 'До метро',
 			'metro_way' => 'Способ добраться до метро',
 			'year_built' => 'Год постройки',

@@ -4,13 +4,14 @@ class AjfileController extends Controller {
 
     public function filters() {
         return array(
-            'ajaxOnly + upload, delete',
+            'ajaxOnly + upload, delete, street',
         );
     }
 
     /**
      * Upload logo user
      */
+    /*
     public function actionUpload() {
 
         if(Yii::app()->request->isAjaxRequest)
@@ -27,11 +28,12 @@ class AjfileController extends Controller {
 
             Yii::app()->end();
         }
-    }
+    }*/
 
     /**
      * Delete logo user
      */
+    /*
     public function actionDelete() {
 
         if(Yii::app()->request->isAjaxRequest)
@@ -50,6 +52,7 @@ class AjfileController extends Controller {
             Yii::app()->end();
         }
     }
+    */
 
     /**
      * Return list cities
