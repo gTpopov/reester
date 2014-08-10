@@ -13,7 +13,6 @@
 
         ?>
         <title><?= CHtml::encode($this->pageTitle); ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -28,12 +27,13 @@
                         </span><br class="mobile-show">
                         <span id="flats-price-from-to-in">
                             <span class="title">Стоимость кв. метра от:</span>
-                            <span class="result-value"><b>12 300 <img class="rur" src="../../../img/project-style/rur_sign.png"></b></span>
+                            <span class="result-value"><b>12 300 <img class="rur" src="/img/project-style/rur_sign.png"></b></span>
                             <span class="title">до:</span>
-                            <span class="result-value"><b>129 456 <img class="rur" src="../../../img/project-style/rur_sign.png"></b></span>
+                            <span class="result-value"><b>129 456 <img class="rur" src="/img/project-style/rur_sign.png"></b></span>
                         </span>
                         <span class="sign pull-right">
-                            <a href="/sign/exit">Выход</a> <span class="mobile-hide">&centerdot;</span>
+                            <a href="/sign/in">Вход</a> <span class="mobile-hide">&centerdot;</span>
+                            <a href="/sign/up">Регистрация</a>
                         </span>
                     </span>
                 </div>
@@ -49,7 +49,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/index/index"></a>
+                        <a class="navbar-brand" href="/index/index"><?php print Yii::app()->name; ?><br><small>Жилая недвижимость</small></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,9 +70,15 @@
                                         'label'   => 'Тарифы',
                                         'url'     => array('/registration/index'),
                                     ),
+                                    array(
+                                        'label'   => '+ Добавить объект',
+                                        'url'     => array('/users/addObject/index?act=1&reset=1'),
+                                        'linkOptions' => array('id'=>'add-advert')
+                                    ),
                                 ),
                                 'htmlOptions' => array(
-                                    'class' => 'nav navbar-nav navbar-right'
+                                    'class' => 'nav navbar-nav navbar-right',
+                                    'id'    => 'tool-top-menu'
                                 ),
                             ));
                         ?>
@@ -91,6 +97,21 @@
                 <div class="sub-footer-menu"></div>
             </div>
         </div>
+
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/application/jquery.nicescroll.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("html,.drop").niceScroll({
+                    cursoropacitymin:0,
+                    cursoropacitymax:1,
+                    touchbehavior:false,
+                    cursorwidth:"5px",
+                    cursorcolor:"#454648",
+                    cursorborder:"1px solid #454648",
+                    cursorborderradius:"5px"
+                });
+            });
+        </script>
 
     </body>
 </html>
