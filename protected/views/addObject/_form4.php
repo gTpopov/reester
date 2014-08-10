@@ -554,9 +554,9 @@
                     <div class="col-md-1">
                         <div class="row">
                             <div class="select text-center">
-                                <a href="javascript:;" class="slct"> <img style="vertical-align: -2px" src="/img/project-style/rur_middle_sign.png"> </a>
+                                <a href="javascript:;" class="slct"> P </a>
                                 <ul class="drop">
-                                    <li style="padding-left: 0"><span data-value="1"><img style="vertical-align: -2px" src="/img/project-style/rur_middle_sign.png"><span></li>
+                                    <li style="padding-left: 0"><span data-value="1">P<span></li>
                                     <li style="padding-left: 0"><span data-value="2">$</span></li>
                                     <li style="padding-left: 0"><span data-value="3">&euro;</span></li>
                                 </ul>
