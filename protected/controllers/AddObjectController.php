@@ -11,9 +11,32 @@ class AddObjectController extends Controller {
     public $layout = '//layouts/add-object';
 
     /*
+     * Function convert files into an array
+     */
+    /*public	function UpdateArrayFILES($r = '')
+    {
+        if(!$r){ return; }
+        if(!is_array($_FILES) || !count($_FILES)){ return; }
+        $temp = $_FILES[$r];
+        foreach($temp['name'] as $key => $value){
+            if(!$temp['name'][$key]){ continue; }
+            $RESULT[$key]['name']     = $temp['name'][$key];
+            $RESULT[$key]['size']     = $temp['size'][$key];
+            $RESULT[$key]['tmp_name'] = $temp['tmp_name'][$key];
+            $RESULT[$key]['type']     = $temp['type'][$key];
+            $RESULT[$key]['error']    = $temp['error'][$key];
+        }
+        if(isset($RESULT) && !empty($RESULT)) {
+            return $RESULT;
+        }
+        else { return $RESULT = "";  }
+    }*/
+
+    /*
      * Action step one
      */
     public function actionIndex(){
+
 
         // Model fot table s_house
         $modelH = new SHouse();
@@ -34,8 +57,6 @@ class AddObjectController extends Controller {
             unset(Yii::app()->request->cookies['sale_rent_op']);
             unset(Yii::app()->request->cookies['obj_state']);
         }
-
-
 
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
         {
@@ -78,8 +99,11 @@ class AddObjectController extends Controller {
 
                     $modelH->save();
 
+                    $IDObject = Yii::app()->db->lastInsertID; //ID s_house table
+                    //Yii::app()->session['IDObject'] = $IDObject;
+
                     //Add data in table real_estate
-                    $modelR->fk_house_id   = Yii::app()->db->lastInsertID;
+                    $modelR->fk_house_id   = $IDObject;
                     $modelR->fk_uid        = Yii::app()->user->id;
 
                     $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
@@ -95,7 +119,7 @@ class AddObjectController extends Controller {
                     $modelR->covered_space = (int) $_POST['RealEstat']['covered_space']; //++
                     $modelR->balcony       = (int) $_POST['RealEstat']['balcony']; //++
                     $modelR->finished      = (int) $_POST['RealEstat']['finished']; //++
-                    $modelR->furniture     = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['furniture'])); //++
+                    //$modelR->furniture     = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['furniture'])); //++
                     $modelR->fz_214        = (int) $_POST['RealEstat']['fz_214']; //++
                     $modelR->room          = (int) $_POST['RealEstat']['room']; //++
                     $modelR->store         = (int) $_POST['RealEstat']['store']; //++
@@ -109,14 +133,14 @@ class AddObjectController extends Controller {
                     $modelR->developer     = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['developer'])); //++
                     $modelR->price         = (int) $_POST['RealEstat']['price']; //++
                     $modelR->currency      = (int) $_POST['RealEstat']['currency']; //++
-                    $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //++
+                    //$modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //++
                     $modelR->create_data   = date('Y-m-d'); //++
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //++
 
                     $modelR->save();
 
-                    //Update data in table users
 
+                    //Update data in table users
                     Users::model()->updateByPk(Yii::app()->user->id, array(
                         'sub_email' => (string) $_POST['Users']['sub_email'],
                         'skype'     => (string) $_POST['Users']['skype'],
@@ -126,12 +150,29 @@ class AddObjectController extends Controller {
                         'call_up'   => (string) $_POST['Users']['call_up']
                     ));
 
+                    //Create folder for upload images
+                    if(!file_exists('files/'.Yii::app()->user->id.'/'.$IDObject.'')) {
+                        mkdir('files/'.Yii::app()->user->id.'/'.$IDObject);
+                    }
+
+                    #### Script upload files ---
+
+                    if(isset($_FILES['photo']))
+                    {
+                        if(!Yii::app()->photo->UploadPhoto('photo',$IDObject)) {
+                            print 'Error upload photos';
+                        } else {
+
+                            print 'Success';
+                        }
+                    }
 
                     $transaction->commit();
                 }
                 catch(Exception $e){
                     $transaction->rollback();
                 }
+                //unset(Yii::app()->session['IDObject']);
 
             }
             else {

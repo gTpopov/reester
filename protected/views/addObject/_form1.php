@@ -10,9 +10,8 @@
     'id'=>'add-object',
     'action'=>Yii::app()->createUrl('/addObject/index'),
     'enableClientValidation'=>true,
-    'clientOptions'=>array(
-        'validateOnSubmit'=>true,
-    )
+    'clientOptions'=>array('validateOnSubmit'=>true),
+    'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 <div id="step-one" class="row">
@@ -280,9 +279,30 @@
                             <div class="contain-slct">
                                 <div id="floors-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> Укажите этажность квартиры / аппарт.</a>
+                                        <a href="javascript:;" class="slct">Укажите этаж квартиры</a>
                                         <ul class="drop"></ul>
                                         <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row padding-horizontal-10-px">
+                    <div class="col-md-4">
+                        <span id="floors-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelH,'floors'); ?>
+                        </span>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="contain-slct">
+                                <div id="floors-number" class="select-int">
+                                    <div class="select">
+                                        <a href="javascript:;" class="slct">Укажите этажность дома</a>
+                                        <ul class="drop"></ul>
+                                        <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +321,7 @@
                             <div class="contain-slct">
                                 <div id="windows-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> Укажите выход окон </a>
+                                        <a href="javascript:;" class="slct"> Укажите расположение окон </a>
                                         <ul class="drop">
                                             <li><span data-value="1">двор</span></li>
                                             <li><span data-value="2">улица</span></li>
@@ -376,9 +396,6 @@
                             </small>
                         </div>
                     </div>
-                </div>
-                <div class="row padding-horizontal-10-px">
-                    <?php echo $form->textArea($modelR, 'furniture',array('class'=>'col-md-12 form-control','placeholder'=>'Перечислите мебель тут')); ?>
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
@@ -570,12 +587,6 @@
                         </label>
                     </div>
                 </div>
-
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <?php echo $form->textArea($modelR, 'add_info',array('class'=>'col-md-12 form-control','placeholder'=>'Дополнительное описание вашего объекта')); ?>
-                </div>
             </div>
         </div>
     </div>
@@ -602,20 +613,15 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                            <div class="select">
-                                <a href="javascript:;" class="slct"> Рубль </a>
-                                <ul class="drop" style="width: 81px;">
-                                    <li><span data-value="1">Рубль</span></li>
-                                    <li><span data-value="2">Доллар</span></li>
-                                    <li><span data-value="3">Евро</span></li>
-                                </ul>
-                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
-                            </div>
-                        <!--<div class="row text-center">
-                            <small>
-                                <img style="vertical-align: -10px" src="/img/project-style/rur_middle_sign.png">
-                            </small>
-                        </div>-->
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Рубль </a>
+                            <ul class="drop" style="width: 81px;">
+                                <li><span data-value="1">Рубль</span></li>
+                                <li><span data-value="2">Доллар</span></li>
+                                <li><span data-value="3">Евро</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="row padding-horizontal-10-px">
@@ -700,6 +706,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;border-top: 1px solid #ebebeb;padding-top: 15px;">
+            <div class="col-md-5">
+                <img width="117" src="/img/project-style/settings_img_additional_info.png" id="prss">
+                <img width="117" src="/img/project-style/settings_img_additional_info.png" id="prss">
+                <img width="117" src="/img/project-style/settings_img_additional_info.png" id="prss">
+
+                <input type="file" name="photo[]">
+                <input type="file" name="photo[]">
+                <input type="file" name="photo[]">
+                <input type="file" name="photo[]">
+                <input type="file" name="photo[]">
+                <input type="file" name="photo[]">
+            </div>
+            <div class="col-md-6 col-md-offset-1">
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4">
                     </div>
@@ -717,6 +739,8 @@
         </div>
     </div>
 </div>
+
+
 
 <?php $this->endWidget(); ?>
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -741,7 +765,6 @@
         </div>
         <div class="col-md-3">
             <div class="row text-center padding-horizontal-10-px">
-                <button class="btn btn-info btn-block" id="addFoto" style="margin-bottom: 10px; width: 200px">Загрузить</button>
                 <script>
                     $(function(){
                         if($('#prss').length > 0){
@@ -834,21 +857,5 @@
     </div>
 </div>
 </div>
-
-
-<script type="text/javascript">
-
-    $(function(){
-
-        $('#addFoto').click(function(){
-
-            $('#logoDataEdit').slideToggle(100);
-
-        });
-    });
-
-</script>
-
-    <?php $this->endWidget(); ?>
-
+<?php $this->endWidget(); ?>
 
