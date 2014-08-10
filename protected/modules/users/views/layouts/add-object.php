@@ -21,7 +21,7 @@
                 <label class="btn btn-primary">
                     <input type="radio" name="market" id="second-hand-type" value="6"> Вторичная
                 </label>
-                <label class="btn btn-primary active">
+                <label class="btn btn-primary">
                     <input type="radio" name="market" id="building-type" value="7"> Строящаяся
                 </label>
             </div>
@@ -29,7 +29,7 @@
                 <label class="btn btn-primary">
                     <input type="radio" name="estate" id="appart-type" value="3"> Аппартаменты
                 </label>
-                <label class="btn btn-primary active">
+                <label class="btn btn-primary">
                     <input type="radio" name="estate" id="flat-type" value="4"> Квартира
                 </label>
                 <label class="btn btn-primary">
@@ -37,7 +37,7 @@
                 </label>
             </div>
             <div id="sale-rent-btg" class="btn-group pull-right" data-toggle="buttons">
-                <label class="btn btn-primary active">
+                <label class="btn btn-primary">
                     <input type="radio" name="operation" id="sale-option" value="1"> Продать
                 </label>
                 <label class="btn btn-primary">
