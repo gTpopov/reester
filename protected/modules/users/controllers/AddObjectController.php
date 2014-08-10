@@ -165,8 +165,7 @@ class AddObjectController extends Controller {
 
                     $transaction->commit();
 
-                    //print 'Yes';
-                    $this->redirect('/users/default/index');
+                    $this->redirect('/users/ListObject/index');
                 }
                 catch(Exception $e){
                     $transaction->rollback();
