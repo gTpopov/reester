@@ -4,33 +4,32 @@ class ListObjectController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+
+        $connection = Yii::app()->db;
+
+        $count=$connection->createCommand("SELECT COUNT(apart_id) FROM real_estate WHERE fk_uid = ".Yii::app()->user->id."")->queryScalar();
+        $sql="SELECT apart_id,type_estate,operations,market FROM real_estate WHERE fk_uid = ".Yii::app()->user->id."";
+
+        $dataProvider = new CSqlDataProvider($sql, array(
+            'keyField'=>'apart_id',
+            'totalItemCount'=>$count,
+            'sort'=>array(
+                //'attributes'=>array('price','brend'),
+                //'defaultOrder'=>'price ASC',
+            ),
+            'pagination'=>array(
+                'pageSize'=>3,
+            ),
+        ));
+
+
+
+        $this->render('index',array(
+            'dataProvider'=>!empty($dataProvider)?$dataProvider:null,
+        ));
+
+
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
 }

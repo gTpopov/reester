@@ -11,28 +11,6 @@ class AddObjectController extends Controller {
     public $layout = '/layouts/add-object';
 
     /*
-     * Function convert files into an array
-     */
-    /*public	function UpdateArrayFILES($r = '')
-    {
-        if(!$r){ return; }
-        if(!is_array($_FILES) || !count($_FILES)){ return; }
-        $temp = $_FILES[$r];
-        foreach($temp['name'] as $key => $value){
-            if(!$temp['name'][$key]){ continue; }
-            $RESULT[$key]['name']     = $temp['name'][$key];
-            $RESULT[$key]['size']     = $temp['size'][$key];
-            $RESULT[$key]['tmp_name'] = $temp['tmp_name'][$key];
-            $RESULT[$key]['type']     = $temp['type'][$key];
-            $RESULT[$key]['error']    = $temp['error'][$key];
-        }
-        if(isset($RESULT) && !empty($RESULT)) {
-            return $RESULT;
-        }
-        else { return $RESULT = "";  }
-    }*/
-
-    /*
      * Action step one
      */
     public function actionIndex(){
@@ -75,7 +53,8 @@ class AddObjectController extends Controller {
                 print_r($_POST['RealEstat']);
                 print '<hr>';
                 print_r($_POST['Users']);
-                print '<pre>';*/
+                print '<pre>';
+                */
 
                 $connection = Yii::app()->db;
 
@@ -154,17 +133,13 @@ class AddObjectController extends Controller {
                     }
 
                     #### Script upload files ---
-                    if(isset($_FILES['photo']))
-                    {
+                    if(isset($_FILES['photo'])) {
                         if(!Yii::app()->photo->UploadPhoto('photo',$IDObject)) {
-
                             Yii::app()->user->setFlash('failed-add',"Ошибка загрузи фотографий");
-
                         }
                     }
 
                     $transaction->commit();
-
                     $this->redirect('/users/ListObject/index');
                 }
                 catch(Exception $e){
@@ -176,7 +151,6 @@ class AddObjectController extends Controller {
             }
         }
 
-        //Yii::app()->user->setFlash('success-add',"Объект успешно добавлен");
         //Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
 
         $this->render('index',array(
