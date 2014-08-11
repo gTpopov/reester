@@ -413,12 +413,10 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group" data-toggle="buttons">
+                    <div class="btn-group wc" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
                         </label>
-                    </div>
-                    <div class="btn-group plan" data-toggle="buttons">
                         <label class="btn btn-primary text-center">
                             <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
                         </label>
@@ -601,7 +599,7 @@
                     </div>
                 </div>
                 <div class="row text-left padding-horizontal-10-px">
-                    <?php echo $form->textArea($modelR,'add_info',array('rows'=>3, 'cols'=>50,'placeholder'=>'Укажите дополнителдьную информацию...')); ?>
+                    <?php echo $form->textArea($modelR,'add_info',array('class'=>'form-control', 'cols'=>50,'placeholder'=>'Укажите дополнительную информацию об объекте')); ?>
                 </div>
 
             </div>
