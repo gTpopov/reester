@@ -36,7 +36,7 @@ $(function(){
 
 
     $('.add-photo-container').on('click', function () {
-        if($('.photo-item').length < 7){
+        if($('.photo-item').length < 6){
 
             $('<div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"><span class="pull-left add-photo-container">+</span></div>').insertAfter($(this).parent('.photo-item'))
             $(this).addClass('deletePhoto');

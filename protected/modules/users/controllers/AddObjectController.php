@@ -105,7 +105,7 @@ class AddObjectController extends Controller {
                     $modelR->developer     = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['developer'])); //++
                     $modelR->price         = (int) $_POST['RealEstat']['price']; //++
                     $modelR->currency      = (int) $_POST['RealEstat']['currency']; //++
-                    //$modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //++
+                    $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //++
                     $modelR->create_data   = date('Y-m-d'); //++
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //++
 

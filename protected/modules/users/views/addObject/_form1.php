@@ -429,20 +429,18 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group furnt" data-toggle="buttons">
+                    <div class="btn-group wc" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
-                        </label>
-
-                        <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
+                            <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
                         </label>
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
+                            <input type="radio" name="RealEstat[sanitare]" id="building-type" value="2"> Совмещенный
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="3"> 2+ санузла
                         </label>
                     </div>
                 </div>
-
             </div>
 
             <div class="col-md-5 col-md-offset-2">
@@ -565,20 +563,6 @@
                 </div>
 
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group wc" data-toggle="buttons">
-                        <label class="btn btn-primary">
-                            <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="RealEstat[sanitare]" id="building-type" value="2"> Совмещенный
-                        </label>
-                        <label class="btn btn-primary">
-                            <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="3"> 2+ санузла
-                        </label>
-                    </div>
-                </div>
-
-                <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group furnt" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Клубный тип
@@ -601,6 +585,25 @@
                         </label>
                     </div>
                 </div>
+
+                <div class="row text-left padding-horizontal-10-px">
+                    <div class="btn-group furnt" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
+                        </label>
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
+                        </label>
+                    </div>
+                </div>
+                <div class="row text-left padding-horizontal-10-px">
+                    <?php echo $form->textArea($modelR,'add_info',array('rows'=>3, 'cols'=>50,'placeholder'=>'Укажите дополнителдьную информацию...')); ?>
+                </div>
+
             </div>
         </div>
     </div>
