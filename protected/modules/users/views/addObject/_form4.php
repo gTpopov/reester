@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
-    'action'=>Yii::app()->createUrl('/addObject/index'),
+    'action'=>Yii::app()->createUrl('/users/addObject/four'),
     'enableClientValidation'=>true,
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
@@ -334,12 +334,14 @@
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group wc" data-toggle="buttons">
-            <label class="btn btn-primary">
+        <div class="btn-group plan" data-toggle="buttons">
+            <label style="width: 100%" class="btn btn-primary text-center">
                 <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
             </label>
-            <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
+        </div>
+        <div class="btn-group park" data-toggle="buttons">
+            <label class="btn btn-primary text-center active">
+                <input type="radio" name="RealEstat[plan]" checked="checked" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
                 <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
@@ -349,8 +351,8 @@
     </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
+            <label class="btn btn-primary active">
+                <input type="radio" name="RealEstat[sanitare]" checked="checked" id="second-hand-type" value="1"> Разд. санузел
             </label>
             <label class="btn btn-primary">
                 <input type="radio" name="RealEstat[sanitare]" id="building-type" value="2"> Совмещенный
@@ -571,13 +573,13 @@
                         <div class="row padding-horizontal-10-px">
                             <div class="btn-group wc" data-toggle="buttons">
                                 <label class="btn btn-primary">
-                                    <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> 1 месяц
+                                    <input type="radio" name="RealEstat[prepayment]" checked="checked" id="second-hand-type" value="1"> 1 месяц
+                                </label>
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="2"> 1 + 1 месяц
                                 </label>
                                 <label class="btn btn-primary">
-                                    <?php echo $form->checkBox($modelR,'discount',array('id'=>'building-type','value'=>1)); ?> 1 + 1 месяц
-                                </label>
-                                <label class="btn btn-primary">
-                                    <?php echo $form->checkBox($modelR,'discount',array('id'=>'building-type','value'=>1)); ?> 1 + 2 месяца
+                                    <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="3"> 1 + 2 месяца
                                 </label>
                             </div>
                         </div>
@@ -585,11 +587,11 @@
                     <div class="col-md-12">
                         <div class="row  padding-horizontal-10-px">
                             <div class="btn-group dev-balk" data-toggle="buttons">
-                                <label class="btn btn-primary">
-                                    <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Долгосрочно
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="RealEstat[lease]" checked="checked" id="second-hand-type" value="2"> Долгосрочно
                                 </label>
                                 <label class="btn btn-primary">
-                                    <?php echo $form->checkBox($modelR,'discount',array('id'=>'building-type','value'=>1)); ?> Посуточно
+                                    <input type="radio" name="RealEstat[lease]" id="second-hand-type" value="2"> Посуточно
                                 </label>
                             </div>
                         </div>

@@ -173,7 +173,13 @@ class AddObjectController extends Controller {
 
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
         {
-
+            print '<pre>';
+            print_r($_POST['SHouse']);
+            print '<hr>';
+            print_r($_POST['RealEstat']);
+            print '<hr>';
+            print_r($_POST['Users']);
+            print '<pre>';
         }
     }
 }
