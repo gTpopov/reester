@@ -26,9 +26,15 @@ if(isset($dataProvider)) {
                 //'headerHtmlOptions'=>array('width'=>400),
             ),
             array(
-                'name'=>'type_estate',
+                'name'=>'source',
                 'header'=> 'Фото',
-                'value' => '"<img src=\"/img/project-style/settings_img_additional_info.png\" width=\"75\">"',
+                //'value' => '"<img src=\"/img/project-style/settings_img_additional_info.png\" width=\"75\">"',
+                'value' => function($data,$row,$column){
+                        if(!empty($data["source"])) {
+                            return "<img src='/files/".Yii::app()->user->id."/".$data["id"]."/".$data["source"]."' width='75'>";
+                        }
+                        else { return "<img src='/img/project-style/settings_img_additional_info.png' width='75'>"; }
+                    },
                 'type' =>  'raw',
                 //'headerHtmlOptions'=>array('width'=>400),
             ),
