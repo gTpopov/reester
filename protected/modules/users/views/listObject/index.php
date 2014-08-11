@@ -15,7 +15,7 @@ if(isset($dataProvider)) {
     $this->widget('zii.widgets.grid.CGridView', array(
         'dataProvider'=>$dataProvider,
         'enablePagination' => true,
-        'emptyText'=>'',
+        'emptyText'=>'Not data',
         'summaryText' => "",
         'columns'=>array(
             array(
@@ -28,7 +28,6 @@ if(isset($dataProvider)) {
             array(
                 'name'=>'source',
                 'header'=> 'Фото',
-                //'value' => '"<img src=\"/img/project-style/settings_img_additional_info.png\" width=\"75\">"',
                 'value' => function($data,$row,$column){
                         if(!empty($data["source"])) {
                             return "<img src='/files/".Yii::app()->user->id."/".$data["id"]."/".$data["source"]."' width='75'>";
