@@ -28,28 +28,44 @@ if(isset($dataProvider)) {
             array(
                 'name'=>'type_estate',
                 'header'=> 'Фото',
-                'value' => '"<img src=\"/files/4/2/06d3bc740e8ba0c8f64427649f537269.jpg \" width=\"55\">"',
+                'value' => '"<img src=\"/img/project-style/settings_img_additional_info.png\" width=\"75\">"',
                 'type' =>  'raw',
                 //'headerHtmlOptions'=>array('width'=>400),
             ),
             array(
                 'name'=>'type_estate',
-                'header'=> 'Тип недвижимости',
-                'value' => '$data["type_estate"]',
-                'type' =>  'raw',
-                //'headerHtmlOptions'=>array('width'=>400),
+                'header'=>'Тип недвижимости',
+                'value' => function($data,$row,$column){
+                        // $data - это объект модель для текущей стройки
+                        // $row - это порядковый номер строчки начиная с нуля
+                        // $column - объект колонки, объект класса http://www.yiiframework.com/doc/api/1.1/CDataColumn/
+                        // $this - объект колонки, объект класса http://www.yiiframework.com/doc/api/1.1/CDataColumn/
+                        if($data["type_estate"]=="4") { return "квартира"; }
+                        else if ($data["type_estate"]=="3"){ return "аппартаменты"; }
+                        else { return "дом"; }
+                    },
+                'type' => 'raw',
+                //'cssClassExpression' =>'"td".$data["config_id"]',
+                //'htmlOptions' =>array('class'=>'$data[config_id]'),
+                //'headerHtmlOptions'=>array('width'=>150),
             ),
             array(
                 'name'=>'operations',
                 'header'=> 'Тип операции',
-                'value' => '$data["operations"]',
+                'value' => function($data,$row,$column){
+                        if($data["operations"]=="1") { return "продать"; }
+                        else { return "арендовать"; }
+                    },
                 'type' =>  'raw',
                 //'headerHtmlOptions'=>array('width'=>400),
             ),
             array(
                 'name'=>'market',
                 'header'=> 'Рынок недвижимости',
-                'value' => '$data["market"]',
+                'value' => function($data,$row,$column){
+                        if($data["market"]=="6") { return "вторичный рынок"; }
+                        else { return "строящиеся рынок"; }
+                    },
                 'type' =>  'raw',
                 //'headerHtmlOptions'=>array('width'=>400),
             ),
@@ -71,7 +87,7 @@ if(isset($dataProvider)) {
             'header'=>'',
             'cssFile'=>false,
         ),
-        'pagerCssClass'=>'pagination',
+        //'pagerCssClass'=>'pagination',
     ));
 }
 ?>
