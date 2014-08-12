@@ -32,6 +32,13 @@ $(function(){
             } delete i;
         }($));
 
+
+        (function() {
+            for(var i = 1890; i < 2026; i++){
+                $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#date-of-b-number > div > ul');
+            } delete i;
+        }($));
+
     });
 
     $('.add-photo-container').on('click', function () {

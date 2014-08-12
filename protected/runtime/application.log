@@ -3936,3 +3936,32 @@ Stack trace:
 REQUEST_URI=/sign/out
 HTTP_REFERER=http://reester.dev/users/
 ---
+2014/08/12 15:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/addObject/index
+---
+2014/08/12 16:03:33 [error] [php] Use of undefined constant php - assumed 'php' (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form1.php:480)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): AddObjectController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php(86): AddObjectController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): AddObjectController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): AddObjectController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): AddObjectController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(153): AddObjectController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): AddObjectController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/users/addObject/index?act=1&reset=1
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form1.php (480)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php (86)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (153)
