@@ -3630,3 +3630,35 @@ in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
 2014/08/11 22:09:07 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (38)
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/12 01:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/addObject/index
+---
+2014/08/12 01:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/12 10:49:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/addObject/index
+---
+2014/08/12 10:49:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

@@ -18,7 +18,7 @@
 <div id="step-one" class="row">
 <h3 id="add-obj-fl-ap-nw-sale-title" class="no-margin col-md-12">
     Шаг 1
-    <small>расположение <i>(Комбинация: Продать -> Строящаяся -> Квартира и Аппартаменты)</i></small>
+    <small>расположение</small>
 </h3>
 <div class="col-md-12">
     <div class="row padding-horizontal-10-px">
@@ -168,9 +168,9 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-5 text-right">
-                        <span id="street-sq-prs-title" class="pull-left col-md-12 title">
-                            <?php echo $form->labelEx($modelH,'street'); ?>
-                        </span>
+                    <span id="street-sq-prs-title" class="pull-left col-md-12 title">
+                        <?php echo $form->labelEx($modelH,'street'); ?>
+                    </span>
                 </div>
                 <div class="col-md-7">
                     <div class="row">
@@ -275,13 +275,13 @@
 
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="total-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'general_area'); ?>
-                        </span>
+            <span id="total-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'general_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
+                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'200')); ?>
                 <?php echo $form->error($modelR,'general_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -295,13 +295,13 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="living-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'human_area'); ?>
-                        </span>
+            <span id="living-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'human_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
+                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'150')); ?>
                 <?php echo $form->error($modelR,'human_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -315,13 +315,13 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="kitchen-square-price" class="pull-left title">
-                             <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
-                        </span>
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
+                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'30')); ?>
                 <?php echo $form->error($modelR,'kitchen_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -333,7 +333,20 @@
             </div>
         </div>
     </div>
-    <div class="row text-left padding-horizontal-10-px">
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelH,'name_complex'); ?>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <?php echo $form->textField($modelH,'name_complex',array('class'=>'form-control','placeholder'=>'напр. «Алые Паруса»')); ?>
+                <?php echo $form->error($modelH,'name_complex',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 0" class="row text-left padding-horizontal-10-px">
         <div class="btn-group plan" data-toggle="buttons">
             <label style="width: 100%" class="btn btn-primary text-center">
                 <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
@@ -364,8 +377,6 @@
     </div>
 </div>
 <div class="col-md-6 col-md-offset-1">
-
-
 
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
@@ -496,19 +507,31 @@
     </div>
 
 
+    <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
+        <div class="btn-group plan" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'multimedia',array('id'=>'building-type','value'=>1)); ?> Мультимедиа
+            </label>
+        </div>
+        <div class="btn-group park" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'house_applian',array('id'=>'building-type','value'=>1)); ?> Бытовая техника
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'temp_registry',array('id'=>'building-type','value'=>1)); ?> Врем. регистр.
+            </label>
+        </div>
+    </div>
     <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group setts-r" data-toggle="buttons">
+        <div class="btn-group dev-balk" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'club_type',array('id'=>'building-type','value'=>1)); ?> Клубный тип
+                <?php echo $form->checkBox($modelR,'covered_space',array('id'=>'building-type','value'=>1)); ?> Огражденная територия
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'discount',array('id'=>'building-type','value'=>1)); ?> Акции и скидки
-            </label>
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'mortgage',array('id'=>'building-type','value'=>1)); ?> Ипотека
-            </label>
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'developer',array('id'=>'building-type','value'=>1)); ?> Застройщик
+                <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'building-type','value'=>1)); ?> Машиноместо
             </label>
         </div>
     </div>
@@ -567,7 +590,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="row padding-horizontal-10-px text-center" style="padding-bottom: 0">
+                        <div class="row padding-horizontal-10-px text-center" style="padding-top: 36px">
                             Укажите информацию об предоплате
                         </div>
                         <div class="row padding-horizontal-10-px">
