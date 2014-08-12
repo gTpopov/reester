@@ -21,6 +21,7 @@
  * @property string $electricity
  * @property string $sewage
  * @property string $septic
+ * @property string $plot
  * @property string $class_home
  * @property string $city
  * @property string $district
@@ -114,6 +115,7 @@ class SHouse extends CActiveRecord
             'electricity' => 'Электричество',
             'sewage' => 'Канализация',
             'septic' => 'Септик',
+            'plot' => 'Площадь участка',
 			'class_home' => 'Класс дома',
 			'city' => 'Город',
 			'district' => 'Округ',
@@ -152,6 +154,7 @@ class SHouse extends CActiveRecord
         $criteria->compare('electricity',$this->electricity,true);
         $criteria->compare('sewage',$this->sewage,true);
         $criteria->compare('septic',$this->septic,true);
+        $criteria->compare('plot',$this->plot,true);
 		$criteria->compare('class_home',$this->class_home,true);
 		$criteria->compare('city',$this->city,true);
 		$criteria->compare('district',$this->district,true);
