@@ -3630,6 +3630,7 @@ in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
 2014/08/11 22:09:07 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (38)
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+<<<<<<< HEAD
 2014/08/12 01:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
 Stack trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
@@ -3661,4 +3662,266 @@ Stack trace:
 #2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
 #3 {main}
 REQUEST_URI=/favicon.ico
+=======
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "house_number" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "floors" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "type_house" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (36)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "room" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "store" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "developer" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "stage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "deadline" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "club_type" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "discount" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "mortgage" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "finished" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "fz_214" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (37)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (38)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "phone" of "Users".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (38)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (38)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:57:11 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\AddObjectController.php (38)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:58:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY apart_id LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY apart_id LIMIT 15.
+in D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php (97)
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php (41)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:58:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY apart_id LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY apart_id LIMIT 15' in D:\xampp\public_html\house\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\public_html\house\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\public_html\house\framework\web\CSqlDataProvider.php(105): CDbCommand->queryAll()
+#2 D:\xampp\public_html\house\framework\web\CDataProvider.php(137): CSqlDataProvider->fetchData()
+#3 D:\xampp\public_html\house\framework\zii\widgets\CBaseListView.php(108): CDataProvider->getData()
+#4 D:\xampp\public_html\house\framework\zii\widgets\grid\CGridView.php(289): CBaseListView->init()
+#5 D:\xampp\public_html\house\framework\web\CBaseController.php(148): CGridView->init()
+#6 D:\xampp\public_html\house\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#7 D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#8 D:\xampp\public_html\house\framework\web\CBaseController.php(127): require('D:\xampp\public...')
+#9 D:\xampp\public_html\house\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\public...', Array, true)
+#10 D:\xampp\public_html\house\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\public...', Array, true)
+#11 D:\xampp\public_html\house\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php(41): CController->render('index', Array)
+#13 D:\xampp\public_html\house\framework\web\actions\CInlineAction.php(50): ListObjectController->actionIndex()
+#14 D:\xampp\public_html\house\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 D:\xampp\public_html\house\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 D:\xampp\public_html\house\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\xampp\public_html\house\framework\web\CWebApplication.php(283): CController->run('index')
+#18 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('users/listObjec...')
+#19 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/users/listObject/index/sort/apart_id?ajax=yw0
+HTTP_REFERER=http://house/users/ListObject/index
+---
+2014/08/11 21:58:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY apart_id LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY apart_id LIMIT 15.
+in D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php (97)
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php (41)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:58:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY apart_id LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY apart_id LIMIT 15' in D:\xampp\public_html\house\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\public_html\house\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\public_html\house\framework\web\CSqlDataProvider.php(105): CDbCommand->queryAll()
+#2 D:\xampp\public_html\house\framework\web\CDataProvider.php(137): CSqlDataProvider->fetchData()
+#3 D:\xampp\public_html\house\framework\zii\widgets\CBaseListView.php(108): CDataProvider->getData()
+#4 D:\xampp\public_html\house\framework\zii\widgets\grid\CGridView.php(289): CBaseListView->init()
+#5 D:\xampp\public_html\house\framework\web\CBaseController.php(148): CGridView->init()
+#6 D:\xampp\public_html\house\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#7 D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#8 D:\xampp\public_html\house\framework\web\CBaseController.php(127): require('D:\xampp\public...')
+#9 D:\xampp\public_html\house\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\public...', Array, true)
+#10 D:\xampp\public_html\house\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\public...', Array, true)
+#11 D:\xampp\public_html\house\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php(41): CController->render('index', Array)
+#13 D:\xampp\public_html\house\framework\web\actions\CInlineAction.php(50): ListObjectController->actionIndex()
+#14 D:\xampp\public_html\house\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 D:\xampp\public_html\house\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 D:\xampp\public_html\house\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\xampp\public_html\house\framework\web\CWebApplication.php(283): CController->run('index')
+#18 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('users/listObjec...')
+#19 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/users/listObject/index/sort/apart_id?ajax=yw0
+HTTP_REFERER=http://house/users/ListObject/index
+---
+2014/08/11 21:58:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY type_estate LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY type_estate LIMIT 15.
+in D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php (97)
+in D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php (41)
+in D:\xampp\public_html\house\www\index.php (14)
+2014/08/11 21:58:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY type_estate LIMIT 15' at line 13. The SQL statement executed was: SELECT
+                r.apart_id,
+                r.type_estate,
+                r.operations,
+                r.market,
+                img.source,
+                h.id
+              FROM  real_estate AS r
+              INNER JOIN s_house  AS h   ON h.id = r.apart_id
+              INNER JOIN s_images AS img ON h.id = img.fk_house
+              WHERE r.fk_uid = 4
+              GROUP BY r.apart_id
+              ORDER BY r.apart_id DESC ORDER BY type_estate LIMIT 15' in D:\xampp\public_html\house\framework\db\CDbCommand.php:528
+Stack trace:
+#0 D:\xampp\public_html\house\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\public_html\house\framework\web\CSqlDataProvider.php(105): CDbCommand->queryAll()
+#2 D:\xampp\public_html\house\framework\web\CDataProvider.php(137): CSqlDataProvider->fetchData()
+#3 D:\xampp\public_html\house\framework\zii\widgets\CBaseListView.php(108): CDataProvider->getData()
+#4 D:\xampp\public_html\house\framework\zii\widgets\grid\CGridView.php(289): CBaseListView->init()
+#5 D:\xampp\public_html\house\framework\web\CBaseController.php(148): CGridView->init()
+#6 D:\xampp\public_html\house\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#7 D:\xampp\public_html\house\www\protected\modules\users\views\listObject\index.php(97): CBaseController->widget('zii.widgets.gri...', Array)
+#8 D:\xampp\public_html\house\framework\web\CBaseController.php(127): require('D:\xampp\public...')
+#9 D:\xampp\public_html\house\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\xampp\public...', Array, true)
+#10 D:\xampp\public_html\house\framework\web\CController.php(870): CBaseController->renderFile('D:\xampp\public...', Array, true)
+#11 D:\xampp\public_html\house\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#12 D:\xampp\public_html\house\www\protected\modules\users\controllers\ListObjectController.php(41): CController->render('index', Array)
+#13 D:\xampp\public_html\house\framework\web\actions\CInlineAction.php(50): ListObjectController->actionIndex()
+#14 D:\xampp\public_html\house\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 D:\xampp\public_html\house\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 D:\xampp\public_html\house\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\xampp\public_html\house\framework\web\CWebApplication.php(283): CController->run('index')
+#18 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('users/listObjec...')
+#19 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/users/listObject/index/sort/type_estate?ajax=yw0
+HTTP_REFERER=http://house/users/ListObject/index
+>>>>>>> c60da67216edf580c9eb097f6edc019cd22342a5
 ---
