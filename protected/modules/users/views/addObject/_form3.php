@@ -702,22 +702,38 @@
                             <?php echo $form->labelEx($modelR,'price'); ?>
                         </span>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div class="row">
                             <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'Цена за объект','maxlength'=>"13")); ?>
                             <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> Р </a>
-                            <ul class="drop">
-                                <li><span data-value="1">P</span></li>
-                                <li><span data-value="2">$</span></li>
-                                <li><span data-value="3">&euro;</span></li>
-                            </ul>
-                            <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                    <div class="col-md-1 col-md-offset-1">
+                        <div class="row">
+                            <div class="select">
+                                <a href="javascript:;" class="slct"> Р </a>
+                                <ul class="drop">
+                                    <li><span data-value="1">P</span></li>
+                                    <li><span data-value="2">$</span></li>
+                                    <li><span data-value="3">&euro;</span></li>
+                                </ul>
+                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row text-left padding-horizontal-10-px">
+                    <div class="btn-group wc" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'free_sale',array('id'=>'building-type','value'=>1)); ?> Свободная продажа
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Альтернатива
+                        </label>
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет
+                        </label>
                     </div>
                 </div>
                 <div class="row padding-horizontal-10-px">

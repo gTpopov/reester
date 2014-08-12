@@ -189,3 +189,7 @@ label{
 .qq-upload-button{
     background-color: #5cb85c !important;
 }
+
+#step-three > div > div:nth-child(1) > div.col-md-5 > div.row.text-left.padding-horizontal-10-px > div > label:nth-child(1){
+    padding-left: 6px;
+}
