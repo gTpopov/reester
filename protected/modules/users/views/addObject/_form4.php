@@ -4,15 +4,27 @@
 ?>
 
 
+<div id="alert-keeper" class="col-md-13">
+
+    <?php if(Yii::app()->user->hasFlash('failed-add')): ?>
+        <div class="col-md-12 alert alert-danger">
+            <h4 class="text-center">Произошла ошибка</h4>
+            <div class="text-center">
+                <?php echo Yii::app()->user->getFlash('failed-add'); ?>
+            </div>
+        </div>
+
+    <?php endif; ?>
+</div>
+
 <div id="add-obj-fl-ap-nw-sale" class="col-md-12">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
     'action'=>Yii::app()->createUrl('/users/addObject/four'),
     'enableClientValidation'=>true,
-    'clientOptions'=>array(
-        'validateOnSubmit'=>true,
-    )
+    'clientOptions'=>array('validateOnSubmit'=>true),
+    'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 <div id="step-one" class="row">
@@ -524,19 +536,30 @@
     </div>
 
 
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="windows-title" class="pull-right title">
+               С мебелью
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <?php echo $form->textField($modelR,'furniture',array('class'=>'form-control','placeholder'=>'напр. «Шифоньер, стол, кровать»')); ?>
+                <?php echo $form->error($modelR,'furniture',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+    </div>
+
     <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
         <div class="btn-group plan" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
-            </label>
-            <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'multimedia',array('id'=>'building-type','value'=>1)); ?> Мультимедиа
             </label>
-        </div>
-        <div class="btn-group park" data-toggle="buttons">
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'house_applian',array('id'=>'building-type','value'=>1)); ?> Бытовая техника
             </label>
+        </div>
+        <div class="btn-group park" data-toggle="buttons">
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'temp_registry',array('id'=>'building-type','value'=>1)); ?> Врем. регистр.
             </label>

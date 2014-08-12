@@ -33,8 +33,11 @@ class Users extends CActiveRecord
 
     const SCENARIO_REGISTRATION     = 'registration';
 
-    // Сценарий для формы 1 добавления объекта
+    // Scenario for form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
+
+    // Scenario for form 4 add objetc
+    const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
 
 
 

@@ -84,17 +84,17 @@
                                 'encodeLabel' => false,
                                 'items'       => array(
                                     array(
-                                        'label'   => 'Аналитика',
-                                        'url'     => array('/enter/index'),
+                                        'label'   => 'Список объектов',
+                                        'url'     => array('/users/ListObject/index'),
                                     ),
-                                    array(
+                                    /*array(
                                         'label'   => 'Услуги',
                                         'url'     => array('/enter/index'),
                                     ),
                                     array(
                                         'label'   => 'Тарифы',
                                         'url'     => array('/registration/index'),
-                                    ),
+                                    ),*/
                                     array(
                                         'label'   => '+ Добавить объект',
                                         'url'     => array('/users/addObject/index?act=1&reset=1'),
