@@ -2,7 +2,9 @@
 
 class ListObjectController extends Controller
 {
-	public function actionIndex()
+
+
+    public function actionIndex()
 	{
 
         $connection = Yii::app()->db;
@@ -41,6 +43,35 @@ class ListObjectController extends Controller
 
 
 	}
+
+
+    /**
+     * @return array action filters
+     */
+
+    public function filters()
+    {
+        return array( 'accessControl');
+    }
+
+    /**
+     * Specifies the access control rules.
+     * This method is used by the 'accessControl' filter.
+     * @return array access control rules
+     */
+    public function accessRules()
+    {
+        return array(
+
+            array('allow',
+                'actions'=>array('index'),
+                'users'=>array('@'),
+            ),
+            array('deny',
+                'users'=>array('*'),
+            ),
+        );
+    }
 
 
 }

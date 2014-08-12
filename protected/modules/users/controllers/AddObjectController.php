@@ -4,6 +4,7 @@ class AddObjectController extends Controller {
 
     public $layout = '/layouts/add-object';
 
+
    /*
     * Substitution in attribute STEP 3 (user contact)
     */
@@ -22,8 +23,6 @@ class AddObjectController extends Controller {
         );
 
    }
-
-
 
 
     /*
@@ -384,7 +383,33 @@ class AddObjectController extends Controller {
 
 
 
+    /**
+     * @return array action filters
+     */
 
+    public function filters()
+    {
+        return array( 'accessControl');
+    }
+
+    /**
+     * Specifies the access control rules.
+     * This method is used by the 'accessControl' filter.
+     * @return array access control rules
+     */
+    public function accessRules()
+    {
+        return array(
+
+            array('allow',
+                'actions'=>array('index', 'two', 'three', 'four'),
+                'users'=>array('@'),
+            ),
+            array('deny',
+                'users'=>array('*'),
+            ),
+        );
+    }
 
 
 
