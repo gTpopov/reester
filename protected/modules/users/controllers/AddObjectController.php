@@ -311,7 +311,6 @@ class AddObjectController extends Controller {
             'modelH'  => $modelH,
             'modelR'  => $modelR,
             'modelU'  => $modelU,
-            'userData'=> $this->substitution(),
         ));
     }
 }
