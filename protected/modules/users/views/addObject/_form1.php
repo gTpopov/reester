@@ -693,7 +693,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com','value'=>'test@mail.ru')); ?>
+                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com','value'=>$userData['sub_email'])); ?>
                             <?php echo $form->error($modelU,'sub_email',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -706,7 +706,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'skype',array('class'=>'form-control','placeholder'=>'Skype nickname')); ?>
+                            <?php echo $form->textField($modelU,'skype',array('class'=>'form-control','placeholder'=>'Skype nickname','value'=>$userData['skype'])); ?>
                             <?php echo $form->error($modelU,'skype',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -721,7 +721,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'last_name',array('class'=>'form-control','placeholder'=>'Василий Потапович Пупкин')); ?>
+                            <?php echo $form->textField($modelU,'last_name',array('class'=>'form-control','placeholder'=>'Василий Потапович Пупкин','value'=>$userData['last_name'])); ?>
                             <?php echo $form->error($modelU,'last_name',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -734,7 +734,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'phone',array('class'=>'form-control','placeholder'=>'+380 69 845 77 66')); ?>
+                            <?php echo $form->textField($modelU,'phone',array('class'=>'form-control','placeholder'=>'+380 69 845 77 66','value'=>$userData['phone'])); ?>
                             <?php echo $form->error($modelU,'phone',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -743,7 +743,7 @@
                             <div class="contain-slct">
                                 <div id="from-time-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> с </a>
+                                        <a href="javascript:;" class="slct"> <?php print !empty($userData['call_with'])?$userData['call_with']:'с'; ?></a>
                                         <ul class="drop"></ul>
                                         <?php echo $form->hiddenField($modelU,'call_with',array('id'=>'selected-state','value'=>'00')); ?>
                                         <?php echo $form->error($modelU,'call_with',array('class'=>'alert alert-danger')); ?>
@@ -757,7 +757,7 @@
                             <div class="contain-slct">
                                 <div id="to-time-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> до </a>
+                                        <a href="javascript:;" class="slct"> <?php print !empty($userData['call_up'])?$userData['call_up']:'до'; ?> </a>
                                         <ul class="drop"></ul>
                                         <?php echo $form->hiddenField($modelU,'call_up',array('id'=>'selected-state','value'=>'00')); ?>
                                         <?php echo $form->error($modelU,'call_up',array('class'=>'alert alert-danger')); ?>

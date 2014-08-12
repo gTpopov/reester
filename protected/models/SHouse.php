@@ -15,6 +15,12 @@
  * @property string $metro_way
  * @property string $year_built
  * @property string $part_house
+ * @property string $water
+ * @property string $heating
+ * @property string $gas
+ * @property string $electricity
+ * @property string $sewage
+ * @property string $septic
  * @property string $class_home
  * @property string $city
  * @property string $district
@@ -102,6 +108,12 @@ class SHouse extends CActiveRecord
 			'metro_way' => 'Способ добраться до метро',
 			'year_built' => 'Год постройки',
             'part_house' => 'Полдома',
+            'water' => 'Вода',
+            'heating' => 'Отопление',
+            'gas' => 'Газ',
+            'electricity' => 'Электричество',
+            'sewage' => 'Канализация',
+            'septic' => 'Септик',
 			'class_home' => 'Класс дома',
 			'city' => 'Город',
 			'district' => 'Округ',
@@ -134,6 +146,12 @@ class SHouse extends CActiveRecord
 		$criteria->compare('metro_way',$this->metro_way,true);
 		$criteria->compare('year_built',$this->year_built,true);
         $criteria->compare('part_house',$this->part_house,true);
+        $criteria->compare('water',$this->water,true);
+        $criteria->compare('heating',$this->heating,true);
+        $criteria->compare('gas',$this->gas,true);
+        $criteria->compare('electricity',$this->electricity,true);
+        $criteria->compare('sewage',$this->sewage,true);
+        $criteria->compare('septic',$this->septic,true);
 		$criteria->compare('class_home',$this->class_home,true);
 		$criteria->compare('city',$this->city,true);
 		$criteria->compare('district',$this->district,true);

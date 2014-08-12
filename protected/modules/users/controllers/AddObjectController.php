@@ -5,13 +5,21 @@ class AddObjectController extends Controller {
     public $layout = '/layouts/add-object';
 
    /*
-    * substitution in attribute STEP 3 (user contact)
+    * Substitution in attribute STEP 3 (user contact)
     */
     public function substitution() {
 
         $connection = Yii::app()->db;
-        $row = $connection->createCommand("SELECT  	last_name,sub_email,call_with,call_up,	phone,skype FROM user WHERE uid = ".Yii::app()->user->id."")->queryRow();
-        return array('sub_email'=>$row['']);
+        $row = $connection->createCommand("SELECT last_name,sub_email,call_with,call_up,phone,skype
+                                           FROM users WHERE uid = ".Yii::app()->user->id."")->queryRow();
+        return array(
+            'last_name'=> $row['last_name'],
+            'sub_email'=> $row['sub_email'],
+            'call_with'=> $row['call_with'],
+            'call_up'  => $row['call_up'],
+            'phone'    => $row['phone'],
+            'skype'    => $row['skype']
+        );
 
    }
 
@@ -158,14 +166,13 @@ class AddObjectController extends Controller {
                 Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
             }
         }
-        //Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
-
 
 
         $this->render('index',array(
             'modelH'  => $modelH,
             'modelR'  => $modelR,
             'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
         ));
     }
 
@@ -304,6 +311,7 @@ class AddObjectController extends Controller {
             'modelH'  => $modelH,
             'modelR'  => $modelR,
             'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
         ));
     }
 }
