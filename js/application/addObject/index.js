@@ -34,7 +34,6 @@ $(function(){
 
     });
 
-
     $('.add-photo-container').on('click', function () {
         if($('.photo-item').length < 6){
 
