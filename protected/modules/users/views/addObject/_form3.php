@@ -10,9 +10,8 @@
     'id'=>'registry-form',
     'action'=>Yii::app()->createUrl('/addObject/index'),
     //'enableClientValidation'=>true,
-    'clientOptions'=>array(
-        'validateOnSubmit'=>true,
-    )
+    'clientOptions'=>array('validateOnSubmit'=>true),
+    'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 <div id="step-one" class="row">

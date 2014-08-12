@@ -29,7 +29,7 @@ if(isset($dataProvider)) {
                 'name'=>'source',
                 'header'=> 'Фото',
                 'value' => function($data,$row,$column){
-                        if(!empty($data["source"])) {
+                        if(file_exists('files/'.Yii::app()->user->id.'/'.$data["id"].'/'.$data["source"].'')) {
                             return "<img src='/files/".Yii::app()->user->id."/".$data["id"]."/".$data["source"]."' width='75'>";
                         }
                         else { return "<img src='/img/project-style/settings_img_additional_info.png' width='75'>"; }

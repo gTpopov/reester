@@ -17,7 +17,7 @@ class ListObjectController extends Controller
                 h.id
               FROM  real_estate AS r
               INNER JOIN s_house  AS h   ON h.id = r.apart_id
-              INNER JOIN s_images AS img ON h.id = img.fk_house
+              INNER JOIN s_images AS img ON (h.id = img.fk_house OR h.id != img.fk_house)
               WHERE r.fk_uid = ".Yii::app()->user->id."
               GROUP BY r.apart_id
               ORDER BY r.apart_id DESC";
