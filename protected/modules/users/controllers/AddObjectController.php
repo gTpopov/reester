@@ -331,8 +331,8 @@ class AddObjectController extends Controller {
                     $modelR->price         = (int) $_POST['RealEstat']['price']; //+
                     $modelR->cost_renting  = (int) $_POST['RealEstat']['cost_renting']; //+
                     $modelR->currency      = (int) $_POST['RealEstat']['currency']; //+
-                    $modelR->prepayment    = (int) $_POST['RealEstat']['prepayment']; //+
-                    $modelR->lease         = (int) $_POST['RealEstat']['lease']; //+
+                    $modelR->prepayment    = isset($_POST['RealEstat']['prepayment'])?$_POST['RealEstat']['prepayment']:0; //+
+                    $modelR->lease         = isset($_POST['RealEstat']['lease'])?$_POST['RealEstat']['lease']:0; //+
                     $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
                     $modelR->create_data   = date('Y-m-d');
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
