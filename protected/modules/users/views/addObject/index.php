@@ -50,13 +50,13 @@
              window.location.replace('/users/addObject/index?act=1');
          }
          else if(param=='1.6.5') {
-             window.location.replace('/users/addObject/index?act=2');
+             window.location.replace('/users/addObject/two?act=2');
          }
          else if(param=='1.6.4' || param=='1.6.3') {
-             window.location.replace('/users/addObject/index?act=3');
+             window.location.replace('/users/addObject/three?act=3');
          }
          else if(param=='2.6.4' || param=='2.6.3') {
-             window.location.replace('/users/addObject/index?act=4');
+             window.location.replace('/users/addObject/four?act=4');
          }
          else {
              window.location.replace('/users/addObject/index?act=1');

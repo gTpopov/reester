@@ -178,6 +178,73 @@ class AddObjectController extends Controller {
 
 
     /*
+    * Action step three
+    */
+    public function actionTwo(){
+
+        // Model fot table s_house
+        $modelH = new SHouse();
+        $modelH->setScenario('addObjectOne');
+
+        // Model fot table real_estate
+        $modelR = new RealEstat();
+        $modelR->setScenario('addObjectOne');
+
+        // Model fot table user
+        $modelU = new Users();
+        $modelU->setScenario('addObjectOne');
+
+        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+
+
+
+        }
+
+
+        $this->render('index',array(
+            'modelH'  => $modelH,
+            'modelR'  => $modelR,
+            'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
+        ));
+    }
+
+
+    /*
+    * Action step three
+    */
+    public function actionThree(){
+
+        // Model fot table s_house
+        $modelH = new SHouse();
+        $modelH->setScenario('addObjectOne');
+
+        // Model fot table real_estate
+        $modelR = new RealEstat();
+        $modelR->setScenario('addObjectOne');
+
+        // Model fot table user
+        $modelU = new Users();
+        $modelU->setScenario('addObjectOne');
+
+        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+
+
+
+        }
+
+
+        $this->render('index',array(
+            'modelH'  => $modelH,
+            'modelR'  => $modelR,
+            'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
+        ));
+    }
+
+
+
+    /*
      * Action step four
      */
     public function actionFour(){
@@ -311,6 +378,16 @@ class AddObjectController extends Controller {
             'modelH'  => $modelH,
             'modelR'  => $modelR,
             'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
         ));
     }
+
+
+
+
+
+
+
+
+
 }
