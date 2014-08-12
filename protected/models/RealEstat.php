@@ -55,10 +55,15 @@
 class RealEstat extends CActiveRecord
 {
 
-    // Сценарий для формы 1 добавления объекта
+    // Scenario for form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
 
-    /**
+    // Scenario for form 4 add objetc
+    const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
+
+
+
+    /** ---
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
 	 * @return RealEstat the static model class
