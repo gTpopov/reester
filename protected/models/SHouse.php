@@ -14,6 +14,7 @@
  * @property string $metro_time
  * @property string $metro_way
  * @property string $year_built
+ * @property string $part_house
  * @property string $class_home
  * @property string $city
  * @property string $district
@@ -100,6 +101,7 @@ class SHouse extends CActiveRecord
 			'metro_time' => 'До метро',
 			'metro_way' => 'Способ добраться до метро',
 			'year_built' => 'Год постройки',
+            'part_house' => 'Полдома',
 			'class_home' => 'Класс дома',
 			'city' => 'Город',
 			'district' => 'Округ',
@@ -131,6 +133,7 @@ class SHouse extends CActiveRecord
 		$criteria->compare('metro_time',$this->metro_time,true);
 		$criteria->compare('metro_way',$this->metro_way,true);
 		$criteria->compare('year_built',$this->year_built,true);
+        $criteria->compare('part_house',$this->part_house,true);
 		$criteria->compare('class_home',$this->class_home,true);
 		$criteria->compare('city',$this->city,true);
 		$criteria->compare('district',$this->district,true);

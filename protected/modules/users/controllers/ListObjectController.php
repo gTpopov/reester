@@ -6,7 +6,6 @@ class ListObjectController extends Controller
 	{
 
         $connection = Yii::app()->db;
-
         $count=$connection->createCommand("SELECT COUNT(apart_id) FROM real_estate WHERE fk_uid = ".Yii::app()->user->id."")->queryScalar();
         $sql="SELECT
                 r.apart_id,

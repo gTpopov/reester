@@ -693,7 +693,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com')); ?>
+                            <?php echo $form->textField($modelU,'sub_email',array('class'=>'form-control','placeholder'=>'name@example.com','value'=>'test@mail.ru')); ?>
                             <?php echo $form->error($modelU,'sub_email',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
