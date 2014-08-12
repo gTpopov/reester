@@ -201,6 +201,23 @@
         </div>
     </div>
     <div class="row padding-horizontal-10-px">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-5 text-right">
+                        <span id="street-sq-prs-title" class="pull-left col-md-12 title">
+                            <?php echo $form->labelEx($modelH,'street'); ?>
+                        </span>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <?php echo $form->textField($modelH,'street',array('class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
+                        <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-6 text-right">
@@ -274,7 +291,7 @@
         <div class="col-md-8">
             <div class="row">
                 <div class="contain-slct">
-                    <div id="floors-number" class="select-int">
+                    <div id="wall-material-number" class="select-int">
                         <div class="select">
                             <a href="javascript:;" class="slct"> кирпичный </a>
                             <ul class="drop">
@@ -294,9 +311,29 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="total-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'general_area'); ?>
-                        </span>
+            <span id="rooms-title" class="pull-right title">
+               <?php echo $form->labelEx($modelR,'isolated'); ?>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="rooms-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct">Количество изолированных комнат </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="total-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'general_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -314,9 +351,9 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="living-square-price" class="pull-left title">
-                            <?php echo $form->labelEx($modelR,'human_area'); ?>
-                        </span>
+            <span id="living-square-price" class="pull-left title">
+                <?php echo $form->labelEx($modelR,'human_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -334,9 +371,9 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="kitchen-square-price" class="pull-left title">
-                             <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
-                        </span>
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
+            </span>
         </div>
         <div class="col-md-7">
             <div class="row">
@@ -349,6 +386,75 @@
                 <small>
                     m <sup>2</sup>
                 </small>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
+            </span>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','value'=>'')); ?>
+                <?php echo $form->error($modelR,'kitchen_area',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="row sq-m">
+                <small>
+                    m <sup>2</sup>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelH,'plot'); ?>
+            </span>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <?php echo $form->textField($modelH,'plot',array('class'=>'form-control','value'=>'')); ?>
+                <?php echo $form->error($modelH,'plot',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="row sq-m">
+                <small>
+                    m <sup>2</sup>
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+                <span id="windows-title" class="pull-right title">
+                    Состояние
+                </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="windows-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите состояние объекта </a>
+                            <ul class="drop">
+                                <li><span data-value="1">дизайнпроект</span></li>
+                                <li><span data-value="2">отличное состояние</span></li>
+                                <li><span data-value="3">свежий ремонт</span></li>
+                                <li><span data-value="4">среднее состояние</span></li>
+                                <li><span data-value="5">без отделки</span></li>
+                                <li><span data-value="6">первичная отделка</span></li>
+                                <li><span data-value="7">требует ремонт</span></li>
+                                <li><span data-value="8">косметический ремонт</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -382,21 +488,6 @@
         </div>
     </div>
 
-
-    <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group furnt" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
-            </label>
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
-            </label>
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
-            </label>
-        </div>
-    </div>
-
 </div>
 <div class="col-md-5 col-md-offset-1">
 
@@ -412,13 +503,7 @@
                 <div id="rooms-number" class="select-int">
                     <div class="select">
                         <a href="javascript:;" class="slct"> 1 </a>
-                        <ul class="drop">
-                            <li><span data-value="1">1</span></li>
-                            <li><span data-value="2">2</span></li>
-                            <li><span data-value="3">3</span></li>
-                            <li><span data-value="4">4</span></li>
-                            <li><span data-value="5">5</span></li>
-                        </ul>
+                        <ul class="drop"></ul>
                         <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>1)); ?>
                     </div>
                 </div>
@@ -429,7 +514,7 @@
 <div class="row padding-horizontal-10-px">
     <div class="col-md-4">
                         <span id="floors-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'store'); ?>
+                            <?php echo $form->labelEx($modelH,'floors'); ?>
                         </span>
     </div>
     <div class="col-md-8">
@@ -438,22 +523,8 @@
                 <div id="floors-number" class="select-int">
                     <div class="select">
                         <a href="javascript:;" class="slct"> 1 </a>
-                        <ul class="drop">
-                            <li><span data-value="1">1</span></li>
-                            <li><span data-value="2">2</span></li>
-                            <li><span data-value="3">3</span></li>
-                            <li><span data-value="4">4</span></li>
-                            <li><span data-value="5">5</span></li>
-                            <li><span data-value="6">6</span></li>
-                            <li><span data-value="7">7</span></li>
-                            <li><span data-value="8">8</span></li>
-                            <li><span data-value="9">9</span></li>
-                            <li><span data-value="10">10</span></li>
-                            <li><span data-value="11">11</span></li>
-                            <li><span data-value="12">12</span></li>
-                            <li><span data-value="13">13</span></li>
-                        </ul>
-                        <?php echo $form->hiddenField($modelH,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                        <ul class="drop"></ul>
+                        <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
                     </div>
                 </div>
             </div>
@@ -531,12 +602,24 @@
         </div>
     </div>
 </div>
-
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="windows-title" class="pull-right title">
+               С мебелью
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <?php echo $form->textField($modelR,'furniture',array('class'=>'form-control','placeholder'=>'напр. «Шифоньер, стол, кровать»')); ?>
+                <?php echo $form->error($modelR,'furniture',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+    </div>
 <div class="row text-left padding-horizontal-10-px">
     <div class="col-md-4">
-                        <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'stage'); ?>
-                        </span>
+        <span id="windows-title" class="pull-right title">
+            <?php echo $form->labelEx($modelR,'stage'); ?>
+        </span>
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -590,6 +673,19 @@
         </label>
     </div>
 </div>
+<div class="row text-left padding-horizontal-10-px">
+    <div class="btn-group wc" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelH,'part_house',array('id'=>'building-type','value'=>1)); ?> Часть дома
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
+        </label>
+    </div>
+</div>
 </div>
 </div>
 </div>
@@ -609,18 +705,38 @@
                             <?php echo $form->labelEx($modelR,'price'); ?>
                         </span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div class="row">
-                            <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'120')); ?>
+                            <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'Цена за объект','maxlength'=>"13")); ?>
                             <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
-                    <div class="col-md-1">
-                        <div class="row text-center">
-                            <small>
-                                <img style="vertical-align: -10px" src="/img/project-style/rur_middle_sign.png">
-                            </small>
+                    <div class="col-md-1 col-md-offset-1">
+                        <div class="row">
+                            <div class="select">
+                                <a href="javascript:;" class="slct"> Р </a>
+                                <ul class="drop">
+                                    <li><span data-value="1">P</span></li>
+                                    <li><span data-value="2">$</span></li>
+                                    <li><span data-value="3">&euro;</span></li>
+                                </ul>
+                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row text-left padding-horizontal-10-px">
+                    <div class="btn-group wc" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'free_sale',array('id'=>'building-type','value'=>1)); ?> Свободная продажа
+                        </label>
+
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Альтернатива
+                        </label>
+                        <label class="btn btn-primary">
+                            <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет
+                        </label>
                     </div>
                 </div>
                 <div class="row padding-horizontal-10-px">
@@ -650,7 +766,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-md-offset-1">
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4">
                         <span id="contact-face-title" class="pull-left title">
@@ -682,32 +798,7 @@
                                 <div id="from-time-number" class="select-int">
                                     <div class="select">
                                         <a href="javascript:;" class="slct"> <?php print !empty($userData['call_with'])?$userData['call_with']:'с'; ?></a>
-                                        <ul class="drop">
-                                            <li><span data-value="00">00</span></li>
-                                            <li><span data-value="01">01</span></li>
-                                            <li><span data-value="02">02</span></li>
-                                            <li><span data-value="03">03</span></li>
-                                            <li><span data-value="04">04</span></li>
-                                            <li><span data-value="05">05</span></li>
-                                            <li><span data-value="06">06</span></li>
-                                            <li><span data-value="07">07</span></li>
-                                            <li><span data-value="08">08</span></li>
-                                            <li><span data-value="09">09</span></li>
-                                            <li><span data-value="10">10</span></li>
-                                            <li><span data-value="11">11</span></li>
-                                            <li><span data-value="12">12</span></li>
-                                            <li><span data-value="13">13</span></li>
-                                            <li><span data-value="14">14</span></li>
-                                            <li><span data-value="15">15</span></li>
-                                            <li><span data-value="16">16</span></li>
-                                            <li><span data-value="17">17</span></li>
-                                            <li><span data-value="18">18</span></li>
-                                            <li><span data-value="19">19</span></li>
-                                            <li><span data-value="20">20</span></li>
-                                            <li><span data-value="21">21</span></li>
-                                            <li><span data-value="22">22</span></li>
-                                            <li><span data-value="23">23</span></li>
-                                        </ul>
+                                        <ul class="drop"></ul>
                                         <?php echo $form->hiddenField($modelU,'call_with',array('id'=>'selected-state','value'=>'00')); ?>
                                         <?php echo $form->error($modelU,'call_with',array('class'=>'alert alert-danger')); ?>
                                     </div>
@@ -720,33 +811,8 @@
                             <div class="contain-slct">
                                 <div id="to-time-number" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct"> <?php print !empty($userData['call_up'])?$userData['call_up']:'до'; ?> </a>
-                                        <ul class="drop">
-                                            <li><span data-value="00">00</span></li>
-                                            <li><span data-value="01">01</span></li>
-                                            <li><span data-value="02">02</span></li>
-                                            <li><span data-value="03">03</span></li>
-                                            <li><span data-value="04">04</span></li>
-                                            <li><span data-value="05">05</span></li>
-                                            <li><span data-value="06">06</span></li>
-                                            <li><span data-value="07">07</span></li>
-                                            <li><span data-value="08">08</span></li>
-                                            <li><span data-value="09">09</span></li>
-                                            <li><span data-value="10">10</span></li>
-                                            <li><span data-value="11">11</span></li>
-                                            <li><span data-value="12">12</span></li>
-                                            <li><span data-value="13">13</span></li>
-                                            <li><span data-value="14">14</span></li>
-                                            <li><span data-value="15">15</span></li>
-                                            <li><span data-value="16">16</span></li>
-                                            <li><span data-value="17">17</span></li>
-                                            <li><span data-value="18">18</span></li>
-                                            <li><span data-value="19">19</span></li>
-                                            <li><span data-value="20">20</span></li>
-                                            <li><span data-value="21">21</span></li>
-                                            <li><span data-value="22">22</span></li>
-                                            <li><span data-value="23">23</span></li>
-                                        </ul>
+                                        <a href="javascript:;" class="slct"> <?php print !empty($userData['call_up'])?$userData['call_up']:'до'; ?></a>
+                                        <ul class="drop"></ul>
                                         <?php echo $form->hiddenField($modelU,'call_up',array('id'=>'selected-state','value'=>'00')); ?>
                                         <?php echo $form->error($modelU,'call_up',array('class'=>'alert alert-danger')); ?>
                                     </div>
@@ -755,12 +821,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="row padding-horizontal-10-px">
-                    <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;border-top: 1px solid #ebebeb;padding-top: 15px;">
+            <div class="col-md-5 photos-container">
+                <div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"> <span class="pull-left add-photo-container">+</span></div>
+
+                <div class="col-md-12" style="padding-left: 0;">
+                    <div class="col-first col-md-12" style="text-align:left;width:190px;padding-left: 0;">
+                        <div class="list-formats padding-horizontal-10-px" style="padding-top: 20px">
+                            <b>Допустимые форматы:</b>
+                            <img src="/img/project-style/settings_logo_file_formats.png" width="117">
+                        </div>
                     </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-md-offset-1">
+                <div class="row padding-horizontal-10-px">
+                    <div class="col-md-4"></div>
                     <div class="col-md-8">
-                        <div class="row">
-                            <?php echo CHtml::submitButton('Добавить объект',array('class'=>'btn btn-block btn-primary')); ?>
+                        <div class="row padding-horizontal-10-px">
+                            <?php echo CHtml::resetButton('Очитсить форму',array('class'=>'btn btn-danger')); ?>
+                            <?php echo CHtml::submitButton('Добавить еще объект',array('class'=>'btn btn-info pull-right')); ?>
+                        </div>
+                        <div class="row padding-horizontal-10-px">
+                            <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>
                     </div>
                 </div>
@@ -770,6 +856,3 @@
 </div>
 
 <?php $this->endWidget(); ?>
-
-
-</div>

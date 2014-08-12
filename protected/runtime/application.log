@@ -3965,3 +3965,147 @@ REQUEST_URI=/users/addObject/index?act=1&reset=1
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form1.php (480)
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php (86)
 in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (153)
+2014/08/12 22:00:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "addObject/index".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('addObject/index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/addObject/index
+---
+2014/08/12 22:00:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/12 22:23:39 [error] [exception.CException] exception 'CException' with message 'Property "RealEstat.part_house" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/db/ar/CActiveRecord.php(145): CComponent->__get('part_house')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('part_house')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(1743): CHtml::resolveValue(Object(RealEstat), 'part_house')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CActiveForm.php(831): CHtml::activeCheckBox(Object(RealEstat), 'part_house', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form2.php(498): CActiveForm->checkBox(Object(RealEstat), 'part_house', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php(83): CController->renderPartial('_form2', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(175): CController->render('index', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('index')
+#24 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('users/addObject...')
+#25 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#27 {main}
+REQUEST_URI=/users/addObject/index?act=2&reset=1
+---
+2014/08/12 22:26:07 [error] [exception.CException] exception 'CException' with message 'Property "SHouse.part_house" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/db/ar/CActiveRecord.php(145): CComponent->__get('part_house')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('part_house')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(1743): CHtml::resolveValue(Object(SHouse), 'part_house')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CActiveForm.php(831): CHtml::activeCheckBox(Object(SHouse), 'part_house', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form2.php(498): CActiveForm->checkBox(Object(SHouse), 'part_house', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php(83): CController->renderPartial('_form2', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(175): CController->render('index', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('index')
+#24 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('users/addObject...')
+#25 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#27 {main}
+REQUEST_URI=/users/addObject/index?act=2&reset=1
+---
+2014/08/12 22:26:08 [error] [exception.CException] exception 'CException' with message 'Property "SHouse.part_house" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/db/ar/CActiveRecord.php(145): CComponent->__get('part_house')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('part_house')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(1743): CHtml::resolveValue(Object(SHouse), 'part_house')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CActiveForm.php(831): CHtml::activeCheckBox(Object(SHouse), 'part_house', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form2.php(498): CActiveForm->checkBox(Object(SHouse), 'part_house', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php(83): CController->renderPartial('_form2', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(175): CController->render('index', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('index')
+#24 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('users/addObject...')
+#25 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#27 {main}
+REQUEST_URI=/users/addObject/index?act=2&reset=1
+---
+2014/08/12 22:26:27 [error] [exception.CException] exception 'CException' with message 'Property "SHouse.part_house" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/db/ar/CActiveRecord.php(145): CComponent->__get('part_house')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(2529): CActiveRecord->__get('part_house')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/helpers/CHtml.php(1743): CHtml::resolveValue(Object(SHouse), 'part_house')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/widgets/CActiveForm.php(831): CHtml::activeCheckBox(Object(SHouse), 'part_house', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/_form2.php(498): CActiveForm->checkBox(Object(SHouse), 'part_house', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/views/addObject/index.php(83): CController->renderPartial('_form2', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php(175): CController->render('index', Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): AddObjectController->actionIndex()
+#15 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#22 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('index')
+#24 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('users/addObject...')
+#25 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#27 {main}
+REQUEST_URI=/users/addObject/index?act=2&reset=1
+---
