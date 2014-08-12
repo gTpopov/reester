@@ -707,16 +707,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="row padding-horizontal-10-px">
-                    <div class="col-md-4">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;border-top: 1px solid #ebebeb;padding-top: 15px;">
+            <div class="col-md-5 photos-container">
+                <div class="photo-item col-md-12 padding-horizontal-10-px"><input class="pull-left" type="file" name="photo[]"> <span class="pull-left add-photo-container">+</span></div>
+
+                <div class="col-md-12" style="padding-left: 0;">
+                    <div class="col-first col-md-12" style="text-align:left;width:190px;padding-left: 0;">
+                        <div class="list-formats padding-horizontal-10-px" style="padding-top: 20px">
+                            <b>Допустимые форматы:</b>
+                            <img src="/img/project-style/settings_logo_file_formats.png" width="117">
+                        </div>
                     </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-md-offset-1">
+                <div class="row padding-horizontal-10-px">
+                    <div class="col-md-4"></div>
                     <div class="col-md-8">
                         <div class="row padding-horizontal-10-px">
                             <?php echo CHtml::resetButton('Очитсить форму',array('class'=>'btn btn-danger')); ?>
                             <?php echo CHtml::submitButton('Добавить еще объект',array('class'=>'btn btn-info pull-right')); ?>
                         </div>
                         <div class="row padding-horizontal-10-px">
-                            <?php echo CHtml::submitButton('Добавить объект',array('class'=>'btn btn-block btn-success')); ?>
+                            <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>
                     </div>
                 </div>
