@@ -49,7 +49,7 @@
                                     ),
                                     array(
                                         'label'   => 'Выход',
-                                        'url'     => array('/sign/out'),
+                                        'url'     => array('/sign/exit'),
                                         'linkOptions' => array('id'=>'exit'),
                                         'visible' => !Yii::app()->user->isGuest
                                     ),
