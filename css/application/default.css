@@ -85,6 +85,9 @@ html, body {
 #enter-reg-exit{
     margin-right: 2px;
 }
+#enter-reg-exit li{
+    margin-left: 10px;
+}
 #add-advert{
     border-color: rgba(225,255,255,0.3)!important;
     border-radius: 4px !important;

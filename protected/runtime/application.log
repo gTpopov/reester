@@ -3925,3 +3925,14 @@ REQUEST_URI=/users/listObject/index/sort/type_estate?ajax=yw0
 HTTP_REFERER=http://house/users/ListObject/index
 >>>>>>> c60da67216edf580c9eb097f6edc019cd22342a5
 ---
+2014/08/12 12:58:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "out".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php:483
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(270): CController->missingAction('out')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): CController->run('out')
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('sign/out')
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/sign/out
+HTTP_REFERER=http://reester.dev/users/
+---
