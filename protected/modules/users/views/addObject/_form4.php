@@ -281,7 +281,7 @@
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'200')); ?>
+                <?php echo $form->textField($modelR,'general_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'general_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -301,7 +301,7 @@
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'150')); ?>
+                <?php echo $form->textField($modelR,'human_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'human_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -321,7 +321,7 @@
         </div>
         <div class="col-md-7">
             <div class="row">
-                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'','placeholder'=>'30')); ?>
+                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','maxlength'=>"5",'value'=>'')); ?>
                 <?php echo $form->error($modelR,'kitchen_area',array('class'=>'alert alert-danger')); ?>
             </div>
         </div>
@@ -353,8 +353,8 @@
             </label>
         </div>
         <div class="btn-group park" data-toggle="buttons">
-            <label class="btn btn-primary text-center active">
-                <input type="radio" name="RealEstat[plan]" checked="checked" id="second-hand-type" value="1"> Своб. план.
+            <label class="btn btn-primary text-center">
+                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
                 <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
@@ -364,8 +364,8 @@
     </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
-            <label class="btn btn-primary active">
-                <input type="radio" name="RealEstat[sanitare]" checked="checked" id="second-hand-type" value="1"> Разд. санузел
+            <label class="btn btn-primary">
+                <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
             </label>
             <label class="btn btn-primary">
                 <input type="radio" name="RealEstat[sanitare]" id="building-type" value="2"> Совмещенный
@@ -572,7 +572,7 @@
                                     <li><span data-value="1">месяц</span></li>
                                     <li><span data-value="2">сутки</span></li>
                                 </ul>
-                                <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
+                                <?php echo $form->hiddenField($modelR,'cost_renting',array('id'=>'selected-windows','value'=>'')); ?>
                             </div>
                         </div>
                     </div>
@@ -596,9 +596,9 @@
                         <div class="row padding-horizontal-10-px">
                             <div class="btn-group wc" data-toggle="buttons">
                                 <label class="btn btn-primary">
-                                    <input type="radio" name="RealEstat[prepayment]" checked="checked" id="second-hand-type" value="1"> 1 месяц
+                                    <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="1"> 1 месяц
                                 </label>
-                                <label class="btn btn-primary active">
+                                <label class="btn btn-primary">
                                     <input type="radio" name="RealEstat[prepayment]" id="second-hand-type" value="2"> 1 + 1 месяц
                                 </label>
                                 <label class="btn btn-primary">
@@ -610,11 +610,11 @@
                     <div class="col-md-12">
                         <div class="row  padding-horizontal-10-px">
                             <div class="btn-group dev-balk" data-toggle="buttons">
-                                <label class="btn btn-primary active">
-                                    <input type="radio" name="RealEstat[lease]" checked="checked" id="second-hand-type" value="2"> Долгосрочно
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="RealEstat[lease]" id="second-hand-type" value="2"> Долгосрочно
                                 </label>
                                 <label class="btn btn-primary">
-                                    <input type="radio" name="RealEstat[lease]" id="second-hand-type" value="2"> Посуточно
+                                    <input type="radio" name="RealEstat[lease]" id="second-hand-type" value="1"> Посуточно
                                 </label>
                             </div>
                         </div>

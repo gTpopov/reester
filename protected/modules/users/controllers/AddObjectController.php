@@ -144,7 +144,6 @@ class AddObjectController extends Controller {
                 Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
             }
         }
-
         //Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
 
         $this->render('index',array(
@@ -166,6 +165,7 @@ class AddObjectController extends Controller {
 
         // Model fot table real_estate
         $modelR = new RealEstat();
+        $modelR->setScenario('addObjectOne');
 
         // Model fot table user
         $modelU = new Users();
@@ -181,7 +181,9 @@ class AddObjectController extends Controller {
             print '<hr>';
             print_r($_POST['Users']);
             print '<pre>';
-/*
+
+
+            /*
             $connection = Yii::app()->db;
 
             $transaction=$connection->beginTransaction();
