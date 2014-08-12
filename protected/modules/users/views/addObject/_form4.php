@@ -590,6 +590,11 @@
                         </div>
                     </div>
                     <div class="col-md-12">
+                        <div class="row">
+                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
                         <div class="row padding-horizontal-10-px text-center" style="padding-top: 36px">
                             Укажите информацию об предоплате
                         </div>
@@ -617,11 +622,6 @@
                                     <input type="radio" name="RealEstat[lease]" id="second-hand-type" value="1"> Посуточно
                                 </label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row">
-                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
