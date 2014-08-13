@@ -261,6 +261,26 @@
 <div class="col-md-5">
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
+            <span id="rooms-title" class="pull-right title">
+               <?php echo $form->labelEx($modelR,'isolated'); ?>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="rooms-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> 0 </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
             <span id="floors-title" class="pull-right title">
                 <?php echo $form->labelEx($modelR,'store'); ?>
             </span>
@@ -314,27 +334,6 @@
                             <a href="javascript:;" class="slct"> Укажите количество комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="rooms-title" class="pull-right title">
-               <?php echo $form->labelEx($modelR,'isolated'); ?>
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <div class="contain-slct">
-                    <div id="rooms-number" class="select-int">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> 0 </a>
-                            <ul class="drop"></ul>
-                            <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
                         </div>
                     </div>
                 </div>
