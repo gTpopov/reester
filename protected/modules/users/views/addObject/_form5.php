@@ -606,6 +606,7 @@
             </label>
         </div>
     </div>
+
     <div class="row text-left padding-horizontal-10-px">
         <?php echo $form->textArea($modelR,'add_info',array('class'=>'form-control', 'cols'=>50,'placeholder'=>'Укажите дополнительную информацию об объекте')); ?>
     </div>
