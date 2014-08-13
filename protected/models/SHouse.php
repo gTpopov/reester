@@ -37,6 +37,12 @@ class SHouse extends CActiveRecord
     // Scenario for form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
 
+    // Scenario for form 2 add objetc
+    const SCENARIO_ADD_OBJECT_TWO   = 'addObjectTwo';
+
+    // Scenario for form 3 add objetc
+    const SCENARIO_ADD_OBJECT_THREE   = 'addObjectThree';
+
     // Scenario for form 4 add objetc
     const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
 
@@ -65,7 +71,7 @@ class SHouse extends CActiveRecord
 	 */
 	public function rules()
 	{
-        // ADD OBJECT ---
+        // ADD OBJECT FORM 1 ---
 		return array(
 			array(
                 'city, street, house_number, floors, type_house', 'required',

@@ -36,6 +36,12 @@ class Users extends CActiveRecord
     // Scenario for form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
 
+    // Scenario for form 2 add objetc
+    const SCENARIO_ADD_OBJECT_TWO   = 'addObjectTwo';
+
+    // Scenario for form 3 add objetc
+    const SCENARIO_ADD_OBJECT_THREE   = 'addObjectThree';
+
     // Scenario for form 4 add objetc
     const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
 
@@ -86,7 +92,7 @@ class Users extends CActiveRecord
                 'min'   => 7, 'max' => 32,
                 'message' => '{attribute} должен состоять от 7 до 32 символов'
             ),
-            // ADD OBJECT ---
+            // ADD OBJECT FORM 1 ---
             array(
                 'last_name, phone', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,

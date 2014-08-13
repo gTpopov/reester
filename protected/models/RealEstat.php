@@ -58,6 +58,12 @@ class RealEstat extends CActiveRecord
     // Scenario for form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
 
+    // Scenario for form 2 add objetc
+    const SCENARIO_ADD_OBJECT_TWO   = 'addObjectTwo';
+
+    // Scenario for form 3 add objetc
+    const SCENARIO_ADD_OBJECT_THREE   = 'addObjectThree';
+
     // Scenario for form 4 add objetc
     const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
 
@@ -86,7 +92,7 @@ class RealEstat extends CActiveRecord
 	 */
 	public function rules()
 	{
-        // ADD OBJECT ---
+        // ADD OBJECT FORM 1 ---
 		return array(
 			array('room, store, general_area, human_area, kitchen_area, deadline, stage, price', 'required',
                   'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
