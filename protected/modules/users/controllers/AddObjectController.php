@@ -377,6 +377,7 @@ class AddObjectController extends Controller {
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
 
+                /*
                 print '<pre>';
                 print_r($_POST['SHouse']);
                 print '<hr>';
@@ -384,6 +385,7 @@ class AddObjectController extends Controller {
                 print '<hr>';
                 print_r($_POST['Users']);
                 print '<pre>';
+                */
 
                 $connection = Yii::app()->db;
 
@@ -440,9 +442,10 @@ class AddObjectController extends Controller {
                     $modelR->price         = (int) $_POST['RealEstat']['price']; //+
                     $modelR->cost_renting  = (int) $_POST['RealEstat']['cost_renting']; //+
                     $modelR->currency      = (int) $_POST['RealEstat']['currency']; //+
-                    $modelR->prepayment    = (int) $_POST['RealEstat']['prepayment']; //+
+                    $modelR->prepayment    = isset($_POST['RealEstat']['prepayment'])?$_POST['RealEstat']['prepayment']:0; //+
+                    $modelR->lease         = isset($_POST['RealEstat']['lease'])?$_POST['RealEstat']['lease']:0; //+
                     $modelR->create_data   = date('Y-m-d');
-                    $modelR->lease         = (int) $_POST['RealEstat']['lease'] / (int) $_POST['RealEstat']['lease']; //+
+                    $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
 
                     $modelR->save();
 
@@ -505,10 +508,11 @@ class AddObjectController extends Controller {
 
         // Model fot table user
         $modelU = new Users();
-        $modelU->setScenario('addObjectFive');
+        $modelU->setScenario('addObjectOne');
 
 
-        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
+        {
 
             $modelH->attributes=$_POST['SHouse'];
             $modelR->attributes=$_POST['RealEstat'];
@@ -516,6 +520,7 @@ class AddObjectController extends Controller {
 
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
+
                 /*
                 print '<pre>';
                 print_r($_POST['SHouse']);
@@ -525,11 +530,107 @@ class AddObjectController extends Controller {
                 print_r($_POST['Users']);
                 print '<pre>';
                 */
+
+                $connection = Yii::app()->db;
+
+                $transaction=$connection->beginTransaction();
+                try
+                {
+                    //Add data in table s_house
+                    $modelH->city         = (int) $_POST['SHouse']['city']; //+
+                    $modelH->district     = (int) $_POST['SHouse']['district']; //+
+                    $modelH->region       = (int) $_POST['SHouse']['region']; //+
+                    $modelH->undeground   = (int) $_POST['SHouse']['undeground']; //+
+                    $modelH->street       = (int) $_POST['SHouse']['street']; //+
+                    $modelH->metro_time   = (int) $_POST['SHouse']['metro_time']; //+
+                    $modelH->metro_way    = (int) $_POST['SHouse']['metro_way']; //+
+                    $modelH->house_number = (string) strip_tags(htmlspecialchars($_POST['SHouse']['house_number'])); //+
+                    $modelH->structur     = (string) strip_tags(htmlspecialchars($_POST['SHouse']['structur'])); //+
+                    $modelH->housing      = (string) strip_tags(htmlspecialchars($_POST['SHouse']['housing'])); //+
+                    $modelH->type_house   = (int) $_POST['SHouse']['type_house']; //+
+                    $modelH->class_home   = (int) $_POST['SHouse']['class_home']; //+
+                    $modelH->name_complex = (string) strip_tags(htmlspecialchars($_POST['SHouse']['name_complex']));
+                    $modelH->floors       = (int) $_POST['SHouse']['floors']; //+
+                    $modelH->plot         = (string) strip_tags(htmlspecialchars($_POST['SHouse']['plot'])); //+
+                    $modelH->water        = (int) $_POST['SHouse']['water']; //+
+                    $modelH->heating      = (int) $_POST['SHouse']['heating']; //+
+                    $modelH->gas          = (int) $_POST['SHouse']['gas']; //+
+                    $modelH->electricity  = (int) $_POST['SHouse']['electricity']; //+
+                    $modelH->sewage       = (int) $_POST['SHouse']['sewage']; //+
+                    $modelH->septic       = (int) $_POST['SHouse']['septic']; //+
+                    $modelH->part_house   = (int) $_POST['SHouse']['part_house']; //+
+
+                    $modelH->save();
+
+                    $IDObject = Yii::app()->db->lastInsertID; //ID s_house table
+
+                    //Add data in table real_estate
+                    $modelR->fk_house_id   = $IDObject;
+                    $modelR->fk_uid        = Yii::app()->user->id;
+
+                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
+                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
+                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+
+                    $modelR->general_area  = (int) $_POST['RealEstat']['general_area']; //+
+                    $modelR->human_area    = (int) $_POST['RealEstat']['human_area']; //+
+                    $modelR->kitchen_area  = (int) $_POST['RealEstat']['kitchen_area']; //+
+                    $modelR->parking       = (int) $_POST['RealEstat']['parking']; //+
+                    $modelR->place_cars    = (int) $_POST['RealEstat']['place_cars']; //+
+                    $modelR->plan          = isset($_POST['RealEstat']['plan'])?$_POST['RealEstat']['plan']:0; //+
+                    $modelR->covered_space = (int) $_POST['RealEstat']['covered_space']; //+
+                    $modelR->balcony       = (int) $_POST['RealEstat']['balcony']; //+
+                    $modelR->discount      = (int) $_POST['RealEstat']['discount']; //+
+                    $modelR->furniture     = (int) $_POST['RealEstat']['furniture']; //+
+                    $modelR->room          = (int) $_POST['RealEstat']['room']; //+
+                    $modelR->isolated      = (int) $_POST['RealEstat']['isolated']; //+
+                    $modelR->status        = (int) $_POST['RealEstat']['status']; //+
+                    $modelR->window        = (int) $_POST['RealEstat']['window']; //+
+                    $modelR->sanitare      = isset($_POST['RealEstat']['sanitare'])?$_POST['RealEstat']['sanitare']:0; //+
+                    $modelR->prepayment    = isset($_POST['RealEstat']['prepayment'])?$_POST['RealEstat']['prepayment']:0; //+
+                    $modelR->lease         = isset($_POST['RealEstat']['lease'])?$_POST['RealEstat']['lease']:0; //+
+                    $modelR->mortgage      = (int) $_POST['RealEstat']['mortgage'];//+
+                    $modelR->price         = (int) $_POST['RealEstat']['price']; //+
+                    $modelR->cost_renting  = (int) $_POST['RealEstat']['cost_renting']; //+
+                    $modelR->currency      = (int) $_POST['RealEstat']['currency']; //+
+                    $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
+                    $modelR->create_data   = date('Y-m-d'); //+
+                    $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
+
+                    $modelR->save();
+
+                    //Update data in table users
+                    Users::model()->updateByPk(Yii::app()->user->id, array(
+                        'sub_email' => (string) $_POST['Users']['sub_email'],
+                        'skype'     => (string) $_POST['Users']['skype'],
+                        'phone'     => (string) $_POST['Users']['phone'],
+                        'last_name' => (string) $_POST['Users']['last_name'],
+                        'call_with' => (string) $_POST['Users']['call_with'],
+                        'call_up'   => (string) $_POST['Users']['call_up']
+                    ));
+
+                    //Create folder for upload images
+                    if(!file_exists('files/'.Yii::app()->user->id.'/'.$IDObject.'')) {
+                        mkdir('files/'.Yii::app()->user->id.'/'.$IDObject);
+                    }
+
+                    #### Script upload files ---
+                    if(isset($_FILES['photo'])) {
+                        if(!Yii::app()->photo->UploadPhoto('photo',$IDObject)) {
+                            Yii::app()->user->setFlash('failed-add',"Ошибка загрузи фотографий");
+                        }
+                    }
+
+                    $transaction->commit();
+                    $this->redirect('/users/ListObject/index');
+                }
+                catch(Exception $e){
+                    $transaction->rollback();
+                }
             }
             else {
                 Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
             }
-
         }
 
 
@@ -540,6 +641,8 @@ class AddObjectController extends Controller {
             'userData'=> $this->substitution(),
         ));
     }
+
+
 
 
 

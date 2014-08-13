@@ -419,26 +419,26 @@
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'water',array('id'=>'second-hand-type','value'=>0)); ?> Вода
+                <?php echo $form->checkBox($modelH,'water',array('id'=>'second-hand-type','value'=>1)); ?> Вода
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'heating',array('id'=>'second-hand-type','value'=>0)); ?> Отопление
+                <?php echo $form->checkBox($modelH,'heating',array('id'=>'second-hand-type','value'=>1)); ?> Отопление
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'gas',array('id'=>'second-hand-type','value'=>0)); ?> Газ
+                <?php echo $form->checkBox($modelH,'gas',array('id'=>'second-hand-type','value'=>1)); ?> Газ
             </label>
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'electricity',array('id'=>'second-hand-type','value'=>0)); ?> Электричество
+                <?php echo $form->checkBox($modelH,'electricity',array('id'=>'second-hand-type','value'=>1)); ?> Электричество
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'sewage',array('id'=>'second-hand-type','value'=>0)); ?> Цен. канализация
+                <?php echo $form->checkBox($modelH,'sewage',array('id'=>'second-hand-type','value'=>1)); ?> Цен. канализация
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'septic',array('id'=>'second-hand-type','value'=>0)); ?> Септик
+                <?php echo $form->checkBox($modelH,'septic',array('id'=>'second-hand-type','value'=>1)); ?> Септик
             </label>
         </div>
     </div>
@@ -599,10 +599,10 @@
         </div>
         <div class="btn-group plan" data-toggle="buttons">
             <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Своб. план.
+                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="building-type" value="2"> Студия
+                <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
             </label>
         </div>
     </div>

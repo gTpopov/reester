@@ -88,7 +88,7 @@ class SHouse extends CActiveRecord
 
             // ADD OBJECT FORM 5 ---
             array(
-                'city, street, house_number, floors, type_house', 'required',
+                'city, street, house_number, floors, type_house, plot', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_FIVE,
                 'message' => '{attribute} не заполнен(а)'
             ),
@@ -137,7 +137,7 @@ class SHouse extends CActiveRecord
             'electricity' => 'Электричество',
             'sewage' => 'Канализация',
             'septic' => 'Септик',
-            'plot' => 'Площадь участка',
+            'plot' => 'Площадь участ.',
 			'class_home' => 'Класс дома',
 			'city' => 'Город',
 			'district' => 'Округ',
