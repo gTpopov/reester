@@ -721,7 +721,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <?php echo $form->textField($modelU,'last_name',array('class'=>'form-control','placeholder'=>'Василий Потапович Пупкин','value'=>$userData['last_name'])); ?>
+                            <?php echo $form->textField($modelU,'last_name',array('class'=>'form-control','value'=>$userData['last_name'])); ?>
                             <?php echo $form->error($modelU,'last_name',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
