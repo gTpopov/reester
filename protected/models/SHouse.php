@@ -34,19 +34,20 @@
 class SHouse extends CActiveRecord
 {
 
-    // Scenario for form 1 add objetc
+    // Scenario for _form 1 add objetc
     const SCENARIO_ADD_OBJECT_ONE   = 'addObjectOne';
 
-    // Scenario for form 2 add objetc
+    // Scenario for _form 2 add objetc
     const SCENARIO_ADD_OBJECT_TWO   = 'addObjectTwo';
 
-    // Scenario for form 3 add objetc
+    // Scenario for _form 3 add objetc
     const SCENARIO_ADD_OBJECT_THREE   = 'addObjectThree';
 
-    // Scenario for form 4 add objetc
+    // Scenario for _form 4 add objetc
     const SCENARIO_ADD_OBJECT_FOUR   = 'addObjectFour';
 
-
+    // Scenario for _form 5 add objetc
+    const SCENARIO_ADD_OBJECT_FIVE   = 'addObjectFive';
 
     /**
 	 * Returns the static model of the specified AR class.
