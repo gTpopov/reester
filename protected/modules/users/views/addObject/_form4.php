@@ -261,9 +261,9 @@
 <div class="col-md-5">
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="floors-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'store'); ?>
-                        </span>
+            <span id="floors-title" class="pull-right title">
+                <?php echo $form->labelEx($modelR,'store'); ?>
+            </span>
         </div>
         <div class="col-md-8">
             <div class="row">
@@ -502,9 +502,9 @@
 
     <div class="row text-left padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'window'); ?>
-                        </span>
+            <span id="windows-title" class="pull-right title">
+                <?php echo $form->labelEx($modelR,'window'); ?>
+            </span>
         </div>
         <div class="col-md-8">
             <div class="row">
@@ -524,36 +524,6 @@
             </div>
         </div>
     </div>
-
-    <div class="row text-left padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="windows-title" class="pull-right title">
-                Состояние
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <div class="contain-slct">
-                    <div id="windows-number" class="select-int">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> Укажите состояние объекта</a>
-                            <ul class="drop">
-                                <li><span data-value="1">нулевой цикл</span></li>
-                                <li><span data-value="2">первые этажи</span></li>
-                                <li><span data-value="3">средние этажи</span></li>
-                                <li><span data-value="4">последние этажи</span></li>
-                                <li><span data-value="5">отделка</span></li>
-                                <li><span data-value="6">благоустройство</span></li>
-                                <li><span data-value="7">выдача ключей</span></li>
-                            </ul>
-                            <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>'')); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
