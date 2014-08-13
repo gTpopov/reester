@@ -21,7 +21,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
-    'action'=>Yii::app()->createUrl('/users/addObject/four'),
+    'action'=>Yii::app()->createUrl('/users/addObject/five'),
     'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
@@ -524,8 +524,8 @@
                                 <li><span data-value="2">улица</span></li>
                                 <li><span data-value="3">двор +улица</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>'')); ?>
-                            <?php echo $form->error($modelH,'window',array('class'=>'alert alert-danger')); ?>
+                            <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'window',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -558,6 +558,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group setts-r" data-toggle="buttons">

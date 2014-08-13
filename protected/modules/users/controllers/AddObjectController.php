@@ -550,7 +550,6 @@ class AddObjectController extends Controller {
                     $modelH->housing      = (string) strip_tags(htmlspecialchars($_POST['SHouse']['housing'])); //+
                     $modelH->type_house   = (int) $_POST['SHouse']['type_house']; //+
                     $modelH->class_home   = (int) $_POST['SHouse']['class_home']; //+
-                    $modelH->name_complex = (string) strip_tags(htmlspecialchars($_POST['SHouse']['name_complex']));
                     $modelH->floors       = (int) $_POST['SHouse']['floors']; //+
                     $modelH->plot         = (string) strip_tags(htmlspecialchars($_POST['SHouse']['plot'])); //+
                     $modelH->water        = (int) $_POST['SHouse']['water']; //+
@@ -599,6 +598,7 @@ class AddObjectController extends Controller {
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
 
                     $modelR->save();
+
 
                     //Update data in table users
                     Users::model()->updateByPk(Yii::app()->user->id, array(
