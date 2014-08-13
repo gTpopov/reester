@@ -528,7 +528,7 @@
     <div class="row text-left padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="windows-title" class="pull-right title">
-                Состояние
+                <?php echo $form->labelEx($modelR,'status'); ?>
             </span>
         </div>
         <div class="col-md-8">
