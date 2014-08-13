@@ -89,13 +89,13 @@ class SHouse extends CActiveRecord
             // ADD OBJECT FORM 4 ---
             array(
                 'city, street, house_number, floors, type_house, plot', 'required',
-                'on'      =>  self::SCENARIO_ADD_OBJECT_FIVE,
+                'on'      =>  self::SCENARIO_ADD_OBJECT_FOUR,
                 'message' => '{attribute} не заполнен(а)'
             ),
             array(
                 'metro_time',
                 'numerical',
-                'on'         =>  self::SCENARIO_ADD_OBJECT_FIVE,
+                'on'         =>  self::SCENARIO_ADD_OBJECT_FOUR,
                 'integerOnly'=> true,
                 'message'    => '{attribute} должно быть числом'
             ),
