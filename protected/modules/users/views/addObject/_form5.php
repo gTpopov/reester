@@ -146,6 +146,7 @@
                         <div class="col-md-2">
                             <div class="row">
                                 <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','maxlength'=>"2",'placeholder'=>'')); ?>
+                                <?php echo $form->error($modelH,'metro_time',array('class'=>'alert alert-danger')); ?>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -163,13 +164,17 @@
                                             </ul>
                                             <input type="hidden" id="selected-time-to-underground-station" />
                                             <?php echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
+                                            <?php echo $form->error($modelH,'metro_way',array('class'=>'alert alert-danger')); ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row"><?php echo $form->error($modelH,'metro_time',array('class'=>'alert alert-danger')); ?></div>
+                    <div class="row">
+                        <?php echo $form->error($modelH,'metro_time',array('class'=>'alert alert-danger')); ?>
+                        <?php echo $form->error($modelH,'metro_time',array('class'=>'alert alert-danger')); ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,6 +278,7 @@
                             <a href="javascript:;" class="slct"> 1 </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>1)); ?>
+                            <?php echo $form->error($modelR,'room',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -293,6 +299,7 @@
                             <a href="javascript:;" class="slct">Количество изолированных комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'isolated',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -382,7 +389,7 @@
     <div class="row text-left padding-horizontal-10-px">
         <div class="col-md-4">
                 <span id="windows-title" class="pull-right title">
-                    Состояние
+                    <?php echo $form->labelEx($modelR,'status'); ?>
                 </span>
         </div>
         <div class="col-md-8">
@@ -402,6 +409,7 @@
                                 <li><span data-value="8">косметический ремонт</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'status',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -470,6 +478,7 @@
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>1)); ?>
+                            <?php echo $form->error($modelH,'type_house',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -490,6 +499,7 @@
                             <a href="javascript:;" class="slct"> 1 </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'floors',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -514,7 +524,8 @@
                                 <li><span data-value="2">улица</span></li>
                                 <li><span data-value="3">двор +улица</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'window',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -540,6 +551,7 @@
                                 <li><span data-value="3">элитный</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>1)); ?>
+                            <?php echo $form->error($modelH,'class_home',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -619,6 +631,7 @@
                     <div class="col-md-4">
                         <div class="row">
                             <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'Цена за объект','maxlength'=>"13")); ?>
+                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -630,6 +643,7 @@
                                     <li><span data-value="2">сутки</span></li>
                                 </ul>
                                 <?php echo $form->hiddenField($modelR,'cost_renting',array('id'=>'selected-windows','value'=>'')); ?>
+                                <?php echo $form->error($modelR,'cost_renting',array('class'=>'alert alert-danger')); ?>
                             </div>
                         </div>
                     </div>

@@ -507,6 +507,7 @@ class AddObjectController extends Controller {
         $modelU = new Users();
         $modelU->setScenario('addObjectOne');
 
+
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
 
             $modelH->attributes=$_POST['SHouse'];
