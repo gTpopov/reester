@@ -376,7 +376,7 @@ class AddObjectController extends Controller {
 
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
-                /*
+
                 print '<pre>';
                 print_r($_POST['SHouse']);
                 print '<hr>';
@@ -384,7 +384,6 @@ class AddObjectController extends Controller {
                 print '<hr>';
                 print_r($_POST['Users']);
                 print '<pre>';
-                */
 
                 $connection = Yii::app()->db;
 
@@ -396,16 +395,16 @@ class AddObjectController extends Controller {
                     $modelH->district     = (int) $_POST['SHouse']['district']; //+
                     $modelH->region       = (int) $_POST['SHouse']['region']; //+
                     $modelH->undeground   = (int) $_POST['SHouse']['undeground']; //
-                    $modelH->street       = (int) $_POST['SHouse']['street']; //+
                     $modelH->metro_time   = (int) $_POST['SHouse']['metro_time']; //+
                     $modelH->metro_way    = (int) $_POST['SHouse']['metro_way']; //+
+                    $modelH->street       = (int) $_POST['SHouse']['street']; //+
                     $modelH->house_number = (string) strip_tags(htmlspecialchars($_POST['SHouse']['house_number'])); //+
                     $modelH->structur     = (string) strip_tags(htmlspecialchars($_POST['SHouse']['structur'])); //+
                     $modelH->housing      = (string) strip_tags(htmlspecialchars($_POST['SHouse']['housing'])); //+
+                    $modelH->floors       = (int) $_POST['SHouse']['floors']; //+
                     $modelH->name_complex = (string) strip_tags(htmlspecialchars($_POST['SHouse']['name_complex'])); //+
                     $modelH->type_house   = (int) $_POST['SHouse']['type_house']; //+
                     $modelH->class_home   = (int) $_POST['SHouse']['class_home']; //+
-                    $modelH->floors       = (int) $_POST['SHouse']['floors']; //+
 
                     $modelH->save();
 
@@ -419,30 +418,31 @@ class AddObjectController extends Controller {
                     $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
                     $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
 
-                    $modelR->general_area  = (int) $_POST['RealEstat']['general_area']; //+
-                    $modelR->human_area    = (int) $_POST['RealEstat']['human_area']; //+
-                    $modelR->kitchen_area  = (int) $_POST['RealEstat']['kitchen_area']; //+
-                    $modelR->place_cars    = (int) $_POST['RealEstat']['place_cars']; //+
-                    $modelR->plan          = isset($_POST['RealEstat']['plan'])?$_POST['RealEstat']['plan']:0; //+
-                    $modelR->covered_space = (int) $_POST['RealEstat']['covered_space']; //+
-                    $modelR->balcony       = (int) $_POST['RealEstat']['balcony']; //+
-                    $modelR->furniture     = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['furniture'])); //+
-                    $modelR->room          = (int) $_POST['RealEstat']['room']; //+
+                    $modelR->room          = (int) isset($_POST['RealEstat']['room'])?$_POST['RealEstat']['room']:0; //+
                     $modelR->isolated      = (int) $_POST['RealEstat']['isolated']; //+
-                    $modelR->multimedia    = (int) $_POST['RealEstat']['multimedia']; //+
+                    $modelR->store         = (int) isset($_POST['RealEstat']['store'])?$_POST['RealEstat']['store']:0; //+
+                    $modelR->general_area  = (int) isset($_POST['RealEstat']['general_area'])?$_POST['RealEstat']['general_area']:0; //+
+                    $modelR->human_area    = (int) isset($_POST['RealEstat']['human_area'])?$_POST['RealEstat']['human_area']:0; //+
+                    $modelR->kitchen_area  = (int) isset($_POST['RealEstat']['kitchen_area'])?$_POST['RealEstat']['kitchen_area']:0; //+
+                    $modelR->balcony       = (int) isset($_POST['RealEstat']['balcony'])?$_POST['RealEstat']['balcony']:0; //+
+                    $modelR->plan          = isset($_POST['RealEstat']['plan'])?$_POST['RealEstat']['plan']:0; //+
+                    $modelR->sanitare      = (int) $_POST['RealEstat']['sanitare']; //+
+                    $modelR->window        = (int) $_POST['RealEstat']['window']; //+
+                    $modelR->status        = (int) $_POST['RealEstat']['status']; //+
+                    $modelR->furniture     = (int) $_POST['RealEstat']['furniture']; //+
+                    $modelR->multimedia    = (int) isset($_POST['RealEstat']['multimedia'])?$_POST['RealEstat']['multimedia']:0; //+
                     $modelR->house_applian = (int) $_POST['RealEstat']['house_applian']; //+
                     $modelR->temp_registry = (int) $_POST['RealEstat']['temp_registry']; //+
-                    $modelR->window        = (int) $_POST['RealEstat']['window']; //+
-                    $modelR->stage         = (int) $_POST['RealEstat']['stage']; //+
-                    $modelR->sanitare      = isset($_POST['RealEstat']['sanitare'])?$_POST['RealEstat']['sanitare']:0; //+
+                    $modelR->covered_space = (int) isset($_POST['RealEstat']['covered_space']) ? $_POST['RealEstat']['covered_space']:0; //+
+                    $modelR->place_cars    = (int) isset($_POST['RealEstat']['place_cars']) ? $_POST['RealEstat']['place_cars']:0; //+
+                    $modelR->parking       = (int) isset($_POST['RealEstat']['parking'])?$_POST['RealEstat']['parking']:0; //+
+                    $modelR->add_info      = (int) $_POST['RealEstat']['add_info']; //+
                     $modelR->price         = (int) $_POST['RealEstat']['price']; //+
                     $modelR->cost_renting  = (int) $_POST['RealEstat']['cost_renting']; //+
                     $modelR->currency      = (int) $_POST['RealEstat']['currency']; //+
-                    $modelR->prepayment    = isset($_POST['RealEstat']['prepayment'])?$_POST['RealEstat']['prepayment']:0; //+
-                    $modelR->lease         = isset($_POST['RealEstat']['lease'])?$_POST['RealEstat']['lease']:0; //+
-                    $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
+                    $modelR->prepayment    = (int) $_POST['RealEstat']['prepayment']; //+
                     $modelR->create_data   = date('Y-m-d');
-                    $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
+                    $modelR->lease         = (int) $_POST['RealEstat']['lease'] / (int) $_POST['RealEstat']['lease']; //+
 
                     $modelR->save();
 

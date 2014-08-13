@@ -4149,3 +4149,905 @@ Stack trace:
 #27 {main}
 REQUEST_URI=/users/addObject/index?act=2&reset=1
 ---
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:34:47 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:40:05 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:15 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:41:29 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:27 [error] [php] Undefined index: stage (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php:435)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): AddObjectController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/users/addObject/four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (435)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:37 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:44:52 [error] [php] Undefined index: stage (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php:435)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(133): AddObjectController->runAction()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CInlineFilter.php(58): AddObjectController->filterAccessControl()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(291): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): AddObjectController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): AddObjectController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/users/addObject/four
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (435)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 16:45:03 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:01:09 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "district" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "region" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "undeground" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "metro_way" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "structur" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "housing" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "name_complex" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "class_home" of "SHouse".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (373)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "isolated" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "balcony" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "plan" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "sanitare" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "window" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "status" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "furniture" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "multimedia" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "house_applian" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "temp_registry" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "covered_space" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "place_cars" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "parking" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "add_info" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "cost_renting" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "currency" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "prepayment" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "lease" of "RealEstat".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (374)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "call_with" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "call_up" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
+2014/08/13 17:03:14 [warning] [application] Failed to set unsafe attribute "skype" of "Users".
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/modules/users/controllers/AddObjectController.php (375)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
