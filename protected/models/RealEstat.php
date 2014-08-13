@@ -130,6 +130,19 @@ class RealEstat extends CActiveRecord
                 'on'          =>  self::SCENARIO_ADD_OBJECT_FIVE,
                 'message'     => '{attribute} должно быть числом'),
 
+            // ADD OBJECT FORM 2 ---
+            array('room, general_area, human_area, kitchen_area, price', 'required',
+                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message' => '{attribute} не указана'),
+            array(
+                'general_area, human_area, kitchen_area, price',
+                'numerical',
+                'integerOnly' => true,
+                'on'          =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message'     => '{attribute} должно быть числом'),
+
+
+
 		);
 	}
 
