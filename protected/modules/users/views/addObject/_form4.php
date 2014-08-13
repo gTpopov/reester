@@ -291,7 +291,7 @@
                 <div class="contain-slct">
                     <div id="rooms-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> 0 </a>
+                            <a href="javascript:;" class="slct"> Количество изолированных комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
                         </div>
@@ -401,7 +401,7 @@
             </div>
         </div>
     </div>
-    <div style="margin-top: 0" class="row text-left padding-horizontal-10-px">
+    <div style="margin-top: 22px" class="row text-left padding-horizontal-10-px">
         <div class="btn-group plan" data-toggle="buttons">
             <label style="width: 100%" class="btn btn-primary text-center">
                 <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
@@ -591,13 +591,11 @@
             </label>
         </div>
     </div>
-</div>
-</div>
-</div>
-<div class="col-md-12">
-    <div class="row">
+    <div class="row text-left padding-horizontal-10-px">
         <?php echo $form->textArea($modelR, 'add_info',array('class'=>'col-md-12 form-control','placeholder'=>'Дополнительное описание вашего объекта')); ?>
     </div>
+</div>
+</div>
 </div>
 </div>
 
