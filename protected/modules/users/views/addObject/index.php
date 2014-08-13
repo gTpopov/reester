@@ -27,8 +27,12 @@
      * 2 - 6 - 4 - Аренда -> Вторичная -> Квартира
      * 2 - 6 - 3 - Аренда -> Вторичная -> Аппартаменты
      *
+     * _form5
+     * 2 - 6 - 5 - Аренда -> Вторичная -> Дом
+     *
+     *
      *  @param sale_rent_op - (Арендовать:2,Продать:1)
-     *  @param object_type  - (Вторичная:6,   Строящаяся:7)
+     *  @param object_type  - (Вторичная:6,Строящаяся:7)
      *  @param obj_state    - (Аппартаменты:3,Квартира:4,Дом:5)
      */
 
@@ -58,6 +62,9 @@
          else if(param=='2.6.4' || param=='2.6.3') {
              window.location.replace('/users/addObject/four?act=4');
          }
+         else if(param=='2.6.5') {
+             window.location.replace('/users/addObject/five?act=5');
+         }
          else {
              window.location.replace('/users/addObject/index?act=1');
          }
@@ -72,6 +79,9 @@
     if(isset($_GET['act'])) {
 
         switch($_GET['act']) {
+
+            // Комбинация: Вторичная -> Дом -> Аренда
+            case 5    : $this->renderPartial('_form5',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
 
             // Комбинация: Вторичная -> Квартиры и Аппартаменты -> Аренда
             case 4    : $this->renderPartial('_form4',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;

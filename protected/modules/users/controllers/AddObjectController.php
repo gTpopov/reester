@@ -490,6 +490,60 @@ class AddObjectController extends Controller {
 
 
 
+    /*
+    * Action step five (form 5)
+    */
+    public function actionFive(){
+
+        // Model fot table s_house
+        $modelH = new SHouse();
+        $modelH->setScenario('addObjectOne');
+
+        // Model fot table real_estate
+        $modelR = new RealEstat();
+        $modelR->setScenario('addObjectOne');
+
+        // Model fot table user
+        $modelU = new Users();
+        $modelU->setScenario('addObjectOne');
+
+        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+
+            $modelH->attributes=$_POST['SHouse'];
+            $modelR->attributes=$_POST['RealEstat'];
+            $modelU->attributes=$_POST['Users'];
+
+            if($modelH->validate() && $modelR->validate() && $modelU->validate())
+            {
+                /*
+                print '<pre>';
+                print_r($_POST['SHouse']);
+                print '<hr>';
+                print_r($_POST['RealEstat']);
+                print '<hr>';
+                print_r($_POST['Users']);
+                print '<pre>';
+                */
+            }
+            else {
+                Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
+            }
+
+        }
+
+
+        $this->render('index',array(
+            'modelH'  => $modelH,
+            'modelR'  => $modelR,
+            'modelU'  => $modelU,
+            'userData'=> $this->substitution(),
+        ));
+    }
+
+
+
+
+
     /**
      * @return array action filters
      */
@@ -509,7 +563,7 @@ class AddObjectController extends Controller {
         return array(
 
             array('allow',
-                'actions'=>array('index', 'two', 'three', 'four'),
+                'actions'=>array('index', 'two', 'three', 'four', 'five'),
                 'users'=>array('@'),
             ),
             array('deny',
