@@ -640,17 +640,11 @@
         </div>
     </div>
 
-    <div class="row text-left padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="windows-title" class="pull-right title">
-               С мебелью
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <?php echo $form->textField($modelR,'furniture',array('class'=>'form-control','placeholder'=>'напр. «Шифоньер, стол, кровать»')); ?>
-                <?php echo $form->error($modelR,'furniture',array('class'=>'alert alert-danger')); ?>
-            </div>
+    <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
+        <div class="btn-group wc" data-toggle="buttons">
+            <label style="width: 100%" class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
+            </label>
         </div>
     </div>
 
