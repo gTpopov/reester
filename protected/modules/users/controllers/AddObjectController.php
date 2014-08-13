@@ -492,8 +492,6 @@ class AddObjectController extends Controller {
     }
 
 
-
-
     /*
     * Action step five (form 5)
     */
@@ -521,16 +519,6 @@ class AddObjectController extends Controller {
 
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
-
-                /*
-                print '<pre>';
-                print_r($_POST['SHouse']);
-                print '<hr>';
-                print_r($_POST['RealEstat']);
-                print '<hr>';
-                print_r($_POST['Users']);
-                print '<pre>';
-                */
 
                 $connection = Yii::app()->db;
 

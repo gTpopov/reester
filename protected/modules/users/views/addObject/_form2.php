@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
-    'action'=>Yii::app()->createUrl('/addObject/two'),
+    'action'=>Yii::app()->createUrl('/addObject/two?act=2'),
     //'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true,),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),

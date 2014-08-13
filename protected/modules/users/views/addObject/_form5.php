@@ -21,7 +21,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
-    'action'=>Yii::app()->createUrl('/users/addObject/five'),
+    'action'=>Yii::app()->createUrl('/users/addObject/five?act=5'),
     'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
@@ -275,9 +275,9 @@
                 <div class="contain-slct">
                     <div id="rooms-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> 1 </a>
+                            <a href="javascript:;" class="slct"> Укажите количество комнат </a>
                             <ul class="drop"></ul>
-                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
                             <?php echo $form->error($modelR,'room',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -468,7 +468,7 @@
                 <div class="contain-slct">
                     <div id="wall-material-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> кирпичный </a>
+                            <a href="javascript:;" class="slct">Укажите материал стен</a>
                             <ul class="drop">
                                 <li><span data-value="1">кирпичный</span></li>
                                 <li><span data-value="2">монолитный</span></li>
@@ -477,7 +477,7 @@
                                 <li><span data-value="5">дерево</span></li>
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>'')); ?>
                             <?php echo $form->error($modelH,'type_house',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -496,7 +496,7 @@
                 <div class="contain-slct">
                     <div id="floors-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> 1 </a>
+                            <a href="javascript:;" class="slct">Укажите этажность дома</a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
                             <?php echo $form->error($modelH,'floors',array('class'=>'alert alert-danger')); ?>
@@ -518,7 +518,7 @@
                 <div class="contain-slct">
                     <div id="windows-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> двор </a>
+                            <a href="javascript:;" class="slct">Укажите расположение окон</a>
                             <ul class="drop">
                                 <li><span data-value="1">двор</span></li>
                                 <li><span data-value="2">улица</span></li>
@@ -544,13 +544,13 @@
                 <div class="contain-slct">
                     <div id="windows-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> эконом </a>
+                            <a href="javascript:;" class="slct">Укажите класс дома</a>
                             <ul class="drop">
                                 <li><span data-value="1">эконом</span></li>
                                 <li><span data-value="2">бизнес</span></li>
                                 <li><span data-value="3">элитный</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>'')); ?>
                             <?php echo $form->error($modelH,'class_home',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
@@ -644,7 +644,7 @@
                                     <li><span data-value="1">месяц</span></li>
                                     <li><span data-value="2">сутки</span></li>
                                 </ul>
-                                <?php echo $form->hiddenField($modelR,'cost_renting',array('id'=>'selected-windows','value'=>'')); ?>
+                                <?php echo $form->hiddenField($modelR,'cost_renting',array('id'=>'selected-windows','value'=>1)); ?>
                                 <?php echo $form->error($modelR,'cost_renting',array('class'=>'alert alert-danger')); ?>
                             </div>
                         </div>
@@ -660,11 +660,6 @@
                                 </ul>
                                 <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row">
-                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                     <div class="col-md-12">
