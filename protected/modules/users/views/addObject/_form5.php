@@ -548,26 +548,6 @@
     </div>
 
     <div class="row text-left padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="windows-title" class="pull-right title">
-                <?php echo $form->labelEx($modelH,'year_built'); ?>
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <div class="contain-slct">
-                    <div id="date-of-b-number" class="select-int">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> Укажите год постройки </a>
-                            <ul class="drop"></ul>
-                            <?php echo $form->hiddenField($modelH,'year_built',array('id'=>'selected-windows','value'=>'')); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group setts-r" data-toggle="buttons">
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelH,'part_house',array('id'=>'building-type','value'=>1)); ?> Часть дома
