@@ -4109,3 +4109,11 @@ Stack trace:
 #27 {main}
 REQUEST_URI=/users/addObject/index?act=2&reset=1
 ---
+2014/08/13 11:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
