@@ -415,7 +415,7 @@
 <div class="col-md-6 col-md-offset-1">
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="kitchen-square-price" class="pull-left title">
+            <span id="kitchen-square-price" class="pull-right title">
                  <?php echo $form->labelEx($modelH,'name_complex'); ?>
             </span>
         </div>

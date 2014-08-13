@@ -466,7 +466,7 @@
                                             <li><span data-value="7">требует ремонт</span></li>
                                             <li><span data-value="8">косметический ремонт</span></li>
                                         </ul>
-                                        <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                                        <?php /*echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>''));*/ ?>
                                     </div>
                                 </div>
                             </div>
@@ -477,13 +477,13 @@
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4">
                 <span id="kitchen-square-price" class="pull-left title">
-                     <? echo $form->labelEx($modelH,'name_complex'); ?>
+                     <?php echo $form->labelEx($modelH,'name_complex'); ?>
                 </span>
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <? echo $form->textField($modelH,'name_complex',array('class'=>'form-control','placeholder'=>'напр. «Алые Паруса»')); ?>
-                            <? echo $form->error($modelH,'name_complex',array('class'=>'alert alert-danger')); ?>
+                            <?php echo $form->textField($modelH,'name_complex',array('class'=>'form-control','placeholder'=>'напр. «Алые Паруса»')); ?>
+                            <?php echo $form->error($modelH,'name_complex',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
