@@ -259,7 +259,26 @@
 <div class="col-md-12">
 <div class="row">
 <div class="col-md-5">
-
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+                        <span id="floors-title" class="pull-right title">
+                            <?php echo $form->labelEx($modelR,'store'); ?>
+                        </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="floors-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct">Укажите этаж квартиры</a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="rooms-title" class="pull-right title">
@@ -362,19 +381,6 @@
             </div>
         </div>
     </div>
-    <div class="row padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="kitchen-square-price" class="pull-left title">
-                 <?php echo $form->labelEx($modelH,'name_complex'); ?>
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <?php echo $form->textField($modelH,'name_complex',array('class'=>'form-control','placeholder'=>'напр. «Алые Паруса»')); ?>
-                <?php echo $form->error($modelH,'name_complex',array('class'=>'alert alert-danger')); ?>
-            </div>
-        </div>
-    </div>
     <div style="margin-top: 0" class="row text-left padding-horizontal-10-px">
         <div class="btn-group plan" data-toggle="buttons">
             <label style="width: 100%" class="btn btn-primary text-center">
@@ -406,7 +412,19 @@
     </div>
 </div>
 <div class="col-md-6 col-md-offset-1">
-
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="kitchen-square-price" class="pull-left title">
+                 <?php echo $form->labelEx($modelH,'name_complex'); ?>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <?php echo $form->textField($modelH,'name_complex',array('class'=>'form-control','placeholder'=>'напр. «Алые Паруса»')); ?>
+                <?php echo $form->error($modelH,'name_complex',array('class'=>'alert alert-danger')); ?>
+            </div>
+        </div>
+    </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="wall-material-title" class="pull-right title">
