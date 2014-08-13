@@ -88,7 +88,7 @@ class RealEstat extends CActiveRecord
 	{
         // ADD OBJECT ---
 		return array(
-			array('general_area, human_area, kitchen_area, price', 'required',
+			array('room, store, general_area, human_area, kitchen_area, deadline, stage, price', 'required',
                   'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
                   'message' => '{attribute} не указана'),
             array(
@@ -159,7 +159,7 @@ class RealEstat extends CActiveRecord
 			'period' => 'На срок (для поиска)',
 			'lease' => 'На срок',
 			'prepayment' => 'Предоплата',
-			'stage' => 'Стадия стр.',
+			'stage' => 'Стадия строит.',
 			'fk_uid' => 'Fk Uid',
 			'fk_house_id' => 'Fk House',
 		);

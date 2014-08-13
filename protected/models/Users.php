@@ -88,7 +88,7 @@ class Users extends CActiveRecord
             ),
             // ADD OBJECT ---
             array(
-                'last_name', 'required',
+                'last_name, phone', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
                 'message' => '{attribute} не указано'
             ),
