@@ -72,8 +72,10 @@ class SHouse extends CActiveRecord
 	 */
 	public function rules()
 	{
-        // ADD OBJECT FORM 1 ---
+
 		return array(
+
+            // ADD OBJECT FORM 1 ---
 			array(
                 'city, street, house_number, floors, type_house', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
@@ -113,6 +115,21 @@ class SHouse extends CActiveRecord
                 'integerOnly'=> true,
                 'message'    => '{attribute} должно быть числом'
             ),
+
+            // ADD OBJECT FORM 2 ---
+            array(
+                'city, street, house_number, floors, type_house', 'required',
+                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message' => '{attribute} не заполнен(а)'
+            ),
+            array(
+                'metro_time',
+                'numerical',
+                'on'         =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'integerOnly'=> true,
+                'message'    => '{attribute} должно быть числом'),
+
+
 
 
 		);

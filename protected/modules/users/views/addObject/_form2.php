@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
-    'action'=>Yii::app()->createUrl('/addObject/two?act=2'),
+    'action'=>Yii::app()->createUrl('/users/addObject/two?act=2'),
     //'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true,),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
@@ -17,7 +17,7 @@
 <div id="step-one" class="row">
 <h3 id="add-obj-fl-ap-nw-sale-title" class="no-margin col-md-12">
     Шаг 1
-    <small>расположение <i>(Комбинация: Продать -> Вторичная -> Дом)</i></small>
+    <small>расположение</small>
 </h3>
 <div class="col-md-12">
     <div class="row padding-horizontal-10-px">
@@ -34,10 +34,8 @@
                             <div id="underground-station" class="select-int">
                                 <div class="select">
                                     <a href="javascript:;" class="slct">Укажите город</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Питер</span></li>
-                                        <li><span data-value="2">Казань</span></li>
-                                        <li><span data-value="3">Мурманск</span></li>
+                                    <ul class="drop" id="listCity">
+                                        <li><span data-value="1">Москва</span></li>
                                     </ul>
                                     <?php echo $form->hiddenField($modelH,'city',array('id'=>'selected-city','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'city',array('class'=>'alert alert-danger')); ?>
@@ -60,14 +58,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">Укажите округ</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Центральный</span></li>
-                                        <li><span data-value="2">Северный</span></li>
-                                        <li><span data-value="3">Северо-Восточный</span></li>
-                                        <li><span data-value="4">Восточный</span></li>
-                                        <li><span data-value="5">Юго-Восточный</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameDistrict">Укажите округ</a>
+                                    <ul class="drop" id="listDistrict"></ul>
                                     <?php echo $form->hiddenField($modelH,'district',array('id'=>'selected-state','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'district',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -89,14 +81,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">Укажите район</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Академический</span></li>
-                                        <li><span data-value="2">Алексеевский</span></li>
-                                        <li><span data-value="3">Алтуфьевский</span></li>
-                                        <li><span data-value="4">Арбат</span></li>
-                                        <li><span data-value="5">Аэропорт</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameRegion">Укажите район</a>
+                                    <ul class="drop" id="listRegion"></ul>
                                     <?php echo $form->hiddenField($modelH,'region',array('id'=>'selected-state-obj-city','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'region',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -122,14 +108,8 @@
                         <div class="contain-slct">
                             <div id="underground-station" class="select-int">
                                 <div class="select">
-                                    <a href="javascript:;" class="slct">Укажите станцию метро</a>
-                                    <ul class="drop">
-                                        <li><span data-value="1">Вокзальная</span></li>
-                                        <li><span data-value="2">Хрещатик</span></li>
-                                        <li><span data-value="3">Минская</span></li>
-                                        <li><span data-value="4">Ясенево</span></li>
-                                        <li><span data-value="5">Арбатская</span></li>
-                                    </ul>
+                                    <a href="javascript:;" class="slct nameMetro">Укажите станцию метро</a>
+                                    <ul class="drop" id="listMetro"></ul>
                                     <?php echo $form->hiddenField($modelH,'undeground',array('id'=>'selected-underground-station','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'undeground',array('class'=>'alert alert-danger')); ?>
                                 </div>
@@ -152,7 +132,7 @@
                     <div class="row">
                         <div class="col-md-2">
                             <div class="row">
-                                <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','placeholder'=>'10')); ?>
+                                <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','maxlength'=>"2",'placeholder'=>'')); ?>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -163,13 +143,13 @@
                                 <div class="contain-slct">
                                     <div id="time-to-underground-station" class="select-int">
                                         <div class="select">
-                                            <a href="javascript:;" class="slct">пешком</a>
+                                            <a href="javascript:;" class="slct">Как добраться</a>
                                             <ul class="drop">
                                                 <li><span data-value="1">пешком</span></li>
                                                 <li><span data-value="2">на машине</span></li>
                                             </ul>
                                             <input type="hidden" id="selected-time-to-underground-station" />
-                                            <?php echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>1)); ?>
+                                            <?php echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -193,7 +173,8 @@
                 </div>
                 <div class="col-md-7">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'street',array('class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
+                        <input type="text" id="streetID" class="form-control" placeholder="улица / проспект / площадь Панаса Саксаганского">
+                        <?php echo $form->hiddenField($modelH,'street',array('value'=>'')); ?>
                         <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
@@ -210,7 +191,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'house_number',array('class'=>'form-control','placeholder'=>'10')); ?>
+                        <?php echo $form->textField($modelH,'house_number',array('class'=>'form-control','placeholder'=>'10','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -227,7 +208,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'structur',array('class'=>'form-control','placeholder'=>'7')); ?>
+                        <?php echo $form->textField($modelH,'structur',array('class'=>'form-control','placeholder'=>'7','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -244,7 +225,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <?php echo $form->textField($modelH,'housing',array('class'=>'form-control','placeholder'=>'12 Б')); ?>
+                        <?php echo $form->textField($modelH,'housing',array('class'=>'form-control','placeholder'=>'12 Б','maxlength'=>"10")); ?>
                     </div>
                 </div>
                 <div style="padding-right: 0" class="col-md-12">
@@ -254,7 +235,6 @@
         </div>
     </div>
 </div>
-
 </div>
 
 <div id="step-two" class="row">
@@ -276,9 +256,10 @@
                 <div class="contain-slct">
                     <div id="rooms-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> 1 </a>
+                            <a href="javascript:;" class="slct"> Укажите количество комнат </a>
                             <ul class="drop"></ul>
-                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'room',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -299,6 +280,7 @@
                             <a href="javascript:;" class="slct">Количество изолированных комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'isolated',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -417,26 +399,26 @@
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'water',array('id'=>'second-hand-type','value'=>0)); ?> Вода
+                <?php echo $form->checkBox($modelH,'water',array('id'=>'second-hand-type','value'=>1)); ?> Вода
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'heating',array('id'=>'second-hand-type','value'=>0)); ?> Отопление
+                <?php echo $form->checkBox($modelH,'heating',array('id'=>'second-hand-type','value'=>1)); ?> Отопление
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'gas',array('id'=>'second-hand-type','value'=>0)); ?> Газ
+                <?php echo $form->checkBox($modelH,'gas',array('id'=>'second-hand-type','value'=>1)); ?> Газ
             </label>
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'electricity',array('id'=>'second-hand-type','value'=>0)); ?> Электричество
+                <?php echo $form->checkBox($modelH,'electricity',array('id'=>'second-hand-type','value'=>1)); ?> Электричество
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'sewage',array('id'=>'second-hand-type','value'=>0)); ?> Цен. канализация
+                <?php echo $form->checkBox($modelH,'sewage',array('id'=>'second-hand-type','value'=>1)); ?> Цен. канализация
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelH,'septic',array('id'=>'second-hand-type','value'=>0)); ?> Септик
+                <?php echo $form->checkBox($modelH,'septic',array('id'=>'second-hand-type','value'=>1)); ?> Септик
             </label>
         </div>
     </div>
@@ -466,7 +448,7 @@
                 <div class="contain-slct">
                     <div id="wall-material-number" class="select-int">
                         <div class="select">
-                            <a href="javascript:;" class="slct"> кирпичный </a>
+                            <a href="javascript:;" class="slct">Укажите материал стен</a>
                             <ul class="drop">
                                 <li><span data-value="1">кирпичный</span></li>
                                 <li><span data-value="2">монолитный</span></li>
@@ -475,7 +457,7 @@
                                 <li><span data-value="5">дерево</span></li>
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
-                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>1)); ?>
+                            <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>'')); ?>
                         </div>
                     </div>
                 </div>
@@ -493,7 +475,7 @@
             <div class="contain-slct">
                 <div id="floors-number" class="select-int">
                     <div class="select">
-                        <a href="javascript:;" class="slct"> 1 </a>
+                        <a href="javascript:;" class="slct">Укажите этажность дома</a>
                         <ul class="drop"></ul>
                         <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
                     </div>
@@ -514,13 +496,13 @@
             <div class="contain-slct">
                 <div id="windows-number" class="select-int">
                     <div class="select">
-                        <a href="javascript:;" class="slct"> двор </a>
+                        <a href="javascript:;" class="slct">Укажите расположение окон</a>
                         <ul class="drop">
                             <li><span data-value="1">двор</span></li>
                             <li><span data-value="2">улица</span></li>
                             <li><span data-value="3">двор +улица</span></li>
                         </ul>
-                        <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>1)); ?>
+                        <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>'')); ?>
                     </div>
                 </div>
             </div>
@@ -539,13 +521,13 @@
             <div class="contain-slct">
                 <div id="windows-number" class="select-int">
                     <div class="select">
-                        <a href="javascript:;" class="slct"> эконом </a>
+                        <a href="javascript:;" class="slct">Укажите класс дома </a>
                         <ul class="drop">
                             <li><span data-value="1">эконом</span></li>
                             <li><span data-value="2">бизнес</span></li>
                             <li><span data-value="3">элитный</span></li>
                         </ul>
-                        <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>1)); ?>
+                        <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>'')); ?>
                     </div>
                 </div>
             </div>
@@ -613,10 +595,10 @@
         </div>
         <div class="btn-group plan" data-toggle="buttons">
             <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Своб. план.
+                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="building-type" value="2"> Студия
+                <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
             </label>
         </div>
     </div>
@@ -665,11 +647,10 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group wc" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'free_sale',array('id'=>'building-type','value'=>1)); ?> Свободная продажа
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="1"> Свободная продажа
                         </label>
-
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Альтернатива
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="2"> Альтернатива
                         </label>
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет

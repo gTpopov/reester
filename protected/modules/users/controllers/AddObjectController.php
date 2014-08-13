@@ -183,11 +183,11 @@ class AddObjectController extends Controller {
 
         // Model fot table s_house
         $modelH = new SHouse();
-        $modelH->setScenario('addObjectOne');
+        $modelH->setScenario('addObjectTwo');
 
         // Model fot table real_estate
         $modelR = new RealEstat();
-        $modelR->setScenario('addObjectOne');
+        $modelR->setScenario('addObjectTwo');
 
         // Model fot table user
         $modelU = new Users();
@@ -195,7 +195,19 @@ class AddObjectController extends Controller {
 
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
 
+            $modelH->attributes=$_POST['SHouse'];
+            $modelR->attributes=$_POST['RealEstat'];
+            $modelU->attributes=$_POST['Users'];
 
+            if($modelH->validate() && $modelR->validate() && $modelU->validate())
+            {
+
+
+
+            }
+            else {
+                Yii::app()->user->setFlash('failed-add',"Проверьте правильность введенных данных");
+            }
 
         }
 
