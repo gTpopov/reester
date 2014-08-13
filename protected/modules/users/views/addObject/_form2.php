@@ -604,45 +604,39 @@
 </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="windows-title" class="pull-right title">
-               С мебелью
-            </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <?php echo $form->textField($modelR,'furniture',array('class'=>'form-control','placeholder'=>'напр. «Шифоньер, стол, кровать»')); ?>
-                <?php echo $form->error($modelR,'furniture',array('class'=>'alert alert-danger')); ?>
-            </div>
-        </div>
-    </div>
-<div class="row text-left padding-horizontal-10-px">
-    <div class="col-md-4">
         <span id="windows-title" class="pull-right title">
             <?php echo $form->labelEx($modelR,'stage'); ?>
         </span>
-    </div>
-    <div class="col-md-8">
-        <div class="row">
-            <div class="contain-slct">
-                <div id="building-number" class="select-int">
-                    <div class="select">
-                        <a href="javascript:;" class="slct"> нулевой цикл </a>
-                        <ul class="drop">
-                            <li><span data-value="1">нулевой цикл</span></li>
-                            <li><span data-value="2">первые этажи</span></li>
-                            <li><span data-value="3">средние этажи</span></li>
-                            <li><span data-value="4">последние этажи</span></li>
-                            <li><span data-value="5">отделка</span></li>
-                            <li><span data-value="6">благоустройство</span></li>
-                            <li><span data-value="7">выдача ключей</span></li>
-                        </ul>
-                        <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>1)); ?>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="building-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> нулевой цикл </a>
+                            <ul class="drop">
+                                <li><span data-value="1">нулевой цикл</span></li>
+                                <li><span data-value="2">первые этажи</span></li>
+                                <li><span data-value="3">средние этажи</span></li>
+                                <li><span data-value="4">последние этажи</span></li>
+                                <li><span data-value="5">отделка</span></li>
+                                <li><span data-value="6">благоустройство</span></li>
+                                <li><span data-value="7">выдача ключей</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>1)); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
+        <div class="btn-group wc" data-toggle="buttons">
+            <label style="width: 100%" class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
+            </label>
+        </div>
+    </div>
 <div class="row text-left padding-horizontal-10-px">
     <div class="btn-group wc" data-toggle="buttons">
         <label class="btn btn-primary">
