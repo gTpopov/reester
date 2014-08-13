@@ -262,6 +262,27 @@
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="rooms-title" class="pull-right title">
+               <?php echo $form->labelEx($modelR,'room'); ?>
+            </span>
+        </div>
+
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="rooms-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите количество комнат </a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="rooms-title" class="pull-right title">
                <?php echo $form->labelEx($modelR,'isolated'); ?>
             </span>
         </div>
@@ -313,27 +334,6 @@
                             <a href="javascript:;" class="slct"> Укажите этажность дома </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'floors',array('id'=>'floors-number-house','value'=>'')); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="rooms-title" class="pull-right title">
-               <?php echo $form->labelEx($modelR,'room'); ?>
-            </span>
-        </div>
-
-        <div class="col-md-8">
-            <div class="row">
-                <div class="contain-slct">
-                    <div id="rooms-number" class="select-int">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> Укажите количество комнат </a>
-                            <ul class="drop"></ul>
-                            <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
                         </div>
                     </div>
                 </div>
