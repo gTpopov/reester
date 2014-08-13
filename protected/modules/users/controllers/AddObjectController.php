@@ -193,7 +193,13 @@ class AddObjectController extends Controller {
         $modelU = new Users();
         $modelU->setScenario('addObjectOne');
 
-        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+        if(isset($_POST['SHouse'])    &&
+           isset($_POST['RealEstat']) &&
+           isset($_POST['Users'])     &&
+           isset(Yii::app()->request->cookies['object_type'])  &&
+           isset(Yii::app()->request->cookies['sale_rent_op']) &&
+           isset(Yii::app()->request->cookies['obj_state']))
+        {
 
             $modelH->attributes=$_POST['SHouse'];
             $modelR->attributes=$_POST['RealEstat'];
@@ -234,9 +240,9 @@ class AddObjectController extends Controller {
                     $modelR->fk_house_id   = $IDObject;
                     $modelR->fk_uid        = Yii::app()->user->id;
 
-                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
-                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
-                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+                    $modelR->type_estate  = Yii::app()->request->cookies['object_type']; //Тип недвижимости
+                    $modelR->operations   = Yii::app()->request->cookies['sale_rent_op']; //Тип операции
+                    $modelR->market       = Yii::app()->request->cookies['obj_state']; //Рынок недвижимости:
 
                     $modelR->general_area  = (int) $_POST['RealEstat']['general_area']; //+ *
                     $modelR->human_area    = (int) $_POST['RealEstat']['human_area']; //+ *
@@ -324,7 +330,13 @@ class AddObjectController extends Controller {
         $modelU = new Users();
         $modelU->setScenario('addObjectOne');
 
-        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
+        if(isset($_POST['SHouse'])    &&
+           isset($_POST['RealEstat']) &&
+           isset($_POST['Users'])     &&
+           isset(Yii::app()->request->cookies['object_type'])  &&
+           isset(Yii::app()->request->cookies['sale_rent_op']) &&
+           isset(Yii::app()->request->cookies['obj_state']))
+        {
 
             $modelH->attributes=$_POST['SHouse'];
             $modelR->attributes=$_POST['RealEstat'];
@@ -378,9 +390,9 @@ class AddObjectController extends Controller {
                     $modelR->fk_house_id   = $IDObject; //+
                     $modelR->fk_uid        = Yii::app()->user->id; //+
 
-                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
-                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
-                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+                    $modelR->type_estate  = Yii::app()->request->cookies['object_type']; //Тип недвижимости
+                    $modelR->operations   = Yii::app()->request->cookies['sale_rent_op']; //Тип операции
+                    $modelR->market       = Yii::app()->request->cookies['obj_state']; //Рынок недвижимости:
 
                     $modelR->room          = (int) isset($_POST['RealEstat']['room'])?$_POST['RealEstat']['room']:0; //+ *
                     $modelR->isolated      = (int) isset($_POST['RealEstat']['isolated'])?$_POST['RealEstat']['isolated']:0; //+ *
@@ -472,7 +484,12 @@ class AddObjectController extends Controller {
         $modelU = new Users();
         $modelU->setScenario('addObjectOne');
 
-        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
+        if(isset($_POST['SHouse']) &&
+           isset($_POST['RealEstat']) &&
+           isset($_POST['Users']) &&
+           isset(Yii::app()->request->cookies['object_type'])  &&
+           isset(Yii::app()->request->cookies['sale_rent_op']) &&
+           isset(Yii::app()->request->cookies['obj_state']))
         {
 
             $modelH->attributes=$_POST['SHouse'];
@@ -521,9 +538,9 @@ class AddObjectController extends Controller {
                     $modelR->fk_house_id   = $IDObject; //+
                     $modelR->fk_uid        = Yii::app()->user->id; //+
 
-                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
-                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
-                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+                    $modelR->type_estate  = Yii::app()->request->cookies['object_type']; //Тип недвижимости
+                    $modelR->operations   = Yii::app()->request->cookies['sale_rent_op']; //Тип операции
+                    $modelR->market       = Yii::app()->request->cookies['obj_state']; //Рынок недвижимости:
 
                     $modelR->room          = (int) isset($_POST['RealEstat']['room'])?$_POST['RealEstat']['room']:0; //+ *
                     $modelR->isolated      = (int) $_POST['RealEstat']['isolated']; //+ *
@@ -615,7 +632,12 @@ class AddObjectController extends Controller {
         $modelU->setScenario('addObjectOne');
 
 
-        if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users']))
+        if(isset($_POST['SHouse'])    &&
+           isset($_POST['RealEstat']) &&
+           isset($_POST['Users'])     &&
+           isset(Yii::app()->request->cookies['object_type'])  &&
+           isset(Yii::app()->request->cookies['sale_rent_op']) &&
+           isset(Yii::app()->request->cookies['obj_state']))
         {
 
             $modelH->attributes=$_POST['SHouse'];
@@ -661,9 +683,9 @@ class AddObjectController extends Controller {
                     $modelR->fk_house_id   = $IDObject;
                     $modelR->fk_uid        = Yii::app()->user->id;
 
-                    $modelR->type_estate  = isset(Yii::app()->request->cookies['object_type']->value)?Yii::app()->request->cookies['object_type']:4; //Тип недвижимости
-                    $modelR->operations   = isset(Yii::app()->request->cookies['sale_rent_op']->value)?Yii::app()->request->cookies['sale_rent_op']:1; //Тип операции
-                    $modelR->market       = isset(Yii::app()->request->cookies['obj_state']->value)?Yii::app()->request->cookies['obj_state']:7; //Рынок недвижимости:
+                    $modelR->type_estate  = Yii::app()->request->cookies['object_type']; //Тип недвижимости
+                    $modelR->operations   = Yii::app()->request->cookies['sale_rent_op']; //Тип операции
+                    $modelR->market       = Yii::app()->request->cookies['obj_state']; //Рынок недвижимости:
 
                     $modelR->general_area  = (int) $_POST['RealEstat']['general_area']; //+
                     $modelR->human_area    = (int) $_POST['RealEstat']['human_area']; //+

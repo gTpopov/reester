@@ -7,6 +7,11 @@ class ListObjectController extends Controller
     public function actionIndex()
 	{
 
+        // Delete cookie config ---
+        unset(Yii::app()->request->cookies['object_type']);
+        unset(Yii::app()->request->cookies['sale_rent_op']);
+        unset(Yii::app()->request->cookies['obj_state']);
+
         $connection = Yii::app()->db;
         $count=$connection->createCommand("SELECT COUNT(apart_id) FROM real_estate WHERE fk_uid = ".Yii::app()->user->id."")->queryScalar();
         $sql="SELECT
