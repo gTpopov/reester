@@ -95,7 +95,7 @@ class Users extends CActiveRecord
                 'min'   => 7, 'max' => 32,
                 'message' => '{attribute} должен состоять от 7 до 32 символов'
             ),
-            // ADD OBJECT FORM 1 ---
+            // ADD OBJECT FORM 1,2,3,4,5 ---
             array(
                 'last_name, phone', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,

@@ -497,15 +497,15 @@ class AddObjectController extends Controller {
 
         // Model fot table s_house
         $modelH = new SHouse();
-        $modelH->setScenario('addObjectOne');
+        $modelH->setScenario('addObjectFive');
 
         // Model fot table real_estate
         $modelR = new RealEstat();
-        $modelR->setScenario('addObjectOne');
+        $modelR->setScenario('addObjectFive');
 
         // Model fot table user
         $modelU = new Users();
-        $modelU->setScenario('addObjectOne');
+        $modelU->setScenario('addObjectFive');
 
 
         if(isset($_POST['SHouse']) && isset($_POST['RealEstat']) && isset($_POST['Users'])) {
