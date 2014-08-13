@@ -306,9 +306,9 @@
 
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-                        <span id="floors-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'store'); ?>
-                        </span>
+            <span id="floors-title" class="pull-right title">
+                <?php echo $form->labelEx($modelR,'store'); ?>
+            </span>
         </div>
         <div class="col-md-8">
             <div class="row">

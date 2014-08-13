@@ -201,23 +201,6 @@
         </div>
     </div>
     <div class="row padding-horizontal-10-px">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-5 text-right">
-                        <span id="street-sq-prs-title" class="pull-left col-md-12 title">
-                            <?php echo $form->labelEx($modelH,'street'); ?>
-                        </span>
-                </div>
-                <div class="col-md-7">
-                    <div class="row">
-                        <?php echo $form->textField($modelH,'street',array('class'=>'form-control','placeholder'=>'улица / проспект / площадь Панаса Саксаганского')); ?>
-                        <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-6 text-right">
@@ -392,26 +375,6 @@
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="kitchen-square-price" class="pull-left title">
-                 <?php echo $form->labelEx($modelR,'kitchen_area'); ?>
-            </span>
-        </div>
-        <div class="col-md-7">
-            <div class="row">
-                <?php echo $form->textField($modelR,'kitchen_area',array('class'=>'form-control','value'=>'')); ?>
-                <?php echo $form->error($modelR,'kitchen_area',array('class'=>'alert alert-danger')); ?>
-            </div>
-        </div>
-        <div class="col-md-1">
-            <div class="row sq-m">
-                <small>
-                    m <sup>2</sup>
-                </small>
-            </div>
-        </div>
-    </div>
-    <div class="row padding-horizontal-10-px">
-        <div class="col-md-4">
-            <span id="kitchen-square-price" class="pull-left title">
                  <?php echo $form->labelEx($modelH,'plot'); ?>
             </span>
         </div>
@@ -459,23 +422,30 @@
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group park" data-toggle="buttons">
+        <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'parking',array('id'=>'building-type','value'=>1)); ?> Паркинг
+                <?php echo $form->checkBox($modelH,'water',array('id'=>'second-hand-type','value'=>0)); ?> Вода
             </label>
             <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
+                <?php echo $form->checkBox($modelH,'heating',array('id'=>'second-hand-type','value'=>0)); ?> Отопление
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelH,'gas',array('id'=>'second-hand-type','value'=>0)); ?> Газ
             </label>
         </div>
-        <div class="btn-group plan" data-toggle="buttons">
-            <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Своб. план.
+    </div>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="btn-group wc" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelH,'electricity',array('id'=>'second-hand-type','value'=>0)); ?> Электричество
             </label>
             <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[parking]" id="building-type" value="2"> Студия
+                <?php echo $form->checkBox($modelH,'sewage',array('id'=>'second-hand-type','value'=>0)); ?> Цен. канализация
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelH,'septic',array('id'=>'second-hand-type','value'=>0)); ?> Септик
             </label>
         </div>
-
     </div>
     <div class="row text-left padding-horizontal-10-px">
         <div class="btn-group dev-balk" data-toggle="buttons">
@@ -559,9 +529,9 @@
 
 <div class="row text-left padding-horizontal-10-px">
     <div class="col-md-4">
-                        <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelH,'class_home'); ?>
-                        </span>
+        <span id="windows-title" class="pull-right title">
+            <?php echo $form->labelEx($modelH,'class_home'); ?>
+        </span>
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -584,9 +554,9 @@
 
 <div class="row text-left padding-horizontal-10-px">
     <div class="col-md-4">
-                        <span id="windows-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelR,'deadline'); ?>
-                        </span>
+        <span id="windows-title" class="pull-right title">
+            <?php echo $form->labelEx($modelR,'deadline'); ?>
+        </span>
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -602,41 +572,22 @@
         </div>
     </div>
 </div>
-    <div class="row text-left padding-horizontal-10-px">
-        <div class="col-md-4">
-        <span id="windows-title" class="pull-right title">
-            <?php echo $form->labelEx($modelR,'stage'); ?>
-        </span>
-        </div>
-        <div class="col-md-8">
-            <div class="row">
-                <div class="contain-slct">
-                    <div id="building-number" class="select-int">
-                        <div class="select">
-                            <a href="javascript:;" class="slct"> нулевой цикл </a>
-                            <ul class="drop">
-                                <li><span data-value="1">нулевой цикл</span></li>
-                                <li><span data-value="2">первые этажи</span></li>
-                                <li><span data-value="3">средние этажи</span></li>
-                                <li><span data-value="4">последние этажи</span></li>
-                                <li><span data-value="5">отделка</span></li>
-                                <li><span data-value="6">благоустройство</span></li>
-                                <li><span data-value="7">выдача ключей</span></li>
-                            </ul>
-                            <?php echo $form->hiddenField($modelR,'stage',array('id'=>'selected-windows','value'=>1)); ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="row text-left padding-horizontal-10-px">
+    <div class="btn-group setts-r" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelH,'part_house',array('id'=>'building-type','value'=>1)); ?> Часть дома
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
+        </label>
+        <label class="btn btn-primary">
+            <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
+        </label>
     </div>
-    <div style="margin-top: 3px" class="row text-left padding-horizontal-10-px">
-        <div class="btn-group wc" data-toggle="buttons">
-            <label style="width: 100%" class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'furniture',array('id'=>'building-type','value'=>1)); ?> С мебелью
-            </label>
-        </div>
-    </div>
+</div>
 <div class="row text-left padding-horizontal-10-px">
     <div class="btn-group wc" data-toggle="buttons">
         <label class="btn btn-primary">
@@ -667,19 +618,24 @@
         </label>
     </div>
 </div>
-<div class="row text-left padding-horizontal-10-px">
-    <div class="btn-group wc" data-toggle="buttons">
-        <label class="btn btn-primary">
-            <?php echo $form->checkBox($modelR,'finished',array('id'=>'building-type','value'=>1)); ?> С отделкой
-        </label>
-        <label class="btn btn-primary">
-            <?php echo $form->checkBox($modelH,'part_house',array('id'=>'building-type','value'=>1)); ?> Часть дома
-        </label>
-        <label class="btn btn-primary">
-            <?php echo $form->checkBox($modelR,'fz_214',array('id'=>'building-type','value'=>1)); ?> ФЗ 214
-        </label>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="btn-group park" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'parking',array('id'=>'building-type','value'=>1)); ?> Паркинг
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Машиноместо
+            </label>
+        </div>
+        <div class="btn-group plan" data-toggle="buttons">
+            <label class="btn btn-primary text-center">
+                <input type="radio" name="RealEstat[parking]" id="second-hand-type" value="1"> Своб. план.
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="RealEstat[parking]" id="building-type" value="2"> Студия
+            </label>
+        </div>
     </div>
-</div>
 </div>
 </div>
 </div>

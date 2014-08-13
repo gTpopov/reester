@@ -382,6 +382,35 @@
             </div>
         </div>
     </div>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="windows-title" class="pull-right title">
+                Состояние
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="windows-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct"> Укажите состояние объекта </a>
+                            <ul class="drop">
+                                <li><span data-value="1">дизайнпроект</span></li>
+                                <li><span data-value="2">отличное состояние</span></li>
+                                <li><span data-value="3">свежий ремонт</span></li>
+                                <li><span data-value="4">среднее состояние</span></li>
+                                <li><span data-value="5">без отделки</span></li>
+                                <li><span data-value="6">первичная отделка</span></li>
+                                <li><span data-value="7">требует ремонт</span></li>
+                                <li><span data-value="8">косметический ремонт</span></li>
+                            </ul>
+                            <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div style="margin-top: 0" class="row text-left padding-horizontal-10-px">
         <div class="btn-group plan" data-toggle="buttons">
             <label style="width: 100%" class="btn btn-primary text-center">
@@ -478,7 +507,26 @@
             </div>
         </div>
     </div>
-
+    <div class="row padding-horizontal-10-px">
+        <div class="col-md-4">
+            <span id="floors-title" class="pull-right title">
+                <?php echo $form->labelEx($modelR,'store'); ?>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <div class="contain-slct">
+                    <div id="floors-number" class="select-int">
+                        <div class="select">
+                            <a href="javascript:;" class="slct">Укажите этаж квартиры</a>
+                            <ul class="drop"></ul>
+                            <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="wall-material-title" class="pull-right title">
@@ -549,12 +597,15 @@
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group dev-balk" data-toggle="buttons">
+        <div class="btn-group wc" data-toggle="buttons">
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'covered_space',array('id'=>'building-type','value'=>1)); ?> Огражденная територия
             </label>
             <label class="btn btn-primary">
                 <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'building-type','value'=>1)); ?> Машиноместо
+            </label>
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'parking',array('id'=>'building-type','value'=>1)); ?> Паркинг
             </label>
         </div>
     </div>
