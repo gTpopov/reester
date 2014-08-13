@@ -88,6 +88,21 @@ class SHouse extends CActiveRecord
                 'integerOnly'=> true,
                 'message'    => '{attribute} должно быть числом'),
 
+
+            // ADD OBJECT FORM 2 ---
+            array(
+                'city, street, house_number, floors, type_house, plot, year_built', 'required',
+                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message' => '{attribute} не заполнен(а)'
+            ),
+            array(
+                'metro_time',
+                'numerical',
+                'on'         =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'integerOnly'=> true,
+                'message'    => '{attribute} должно быть числом'),
+
+
             // ADD OBJECT FORM 4 ---
             array(
                 'city, street, house_number, floors, type_house', 'required',
@@ -114,20 +129,6 @@ class SHouse extends CActiveRecord
                 'integerOnly'=> true,
                 'message'    => '{attribute} должно быть числом'
             ),
-
-            // ADD OBJECT FORM 2 ---
-            array(
-                'city, street, house_number, floors, type_house', 'required',
-                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
-                'message' => '{attribute} не заполнен(а)'
-            ),
-            array(
-                'metro_time',
-                'numerical',
-                'on'         =>  self::SCENARIO_ADD_OBJECT_TWO,
-                'integerOnly'=> true,
-                'message'    => '{attribute} должно быть числом'),
-
 
 
 
@@ -168,7 +169,7 @@ class SHouse extends CActiveRecord
             'electricity' => 'Электричество',
             'sewage' => 'Канализация',
             'septic' => 'Септик',
-            'plot' => 'Площадь участ.',
+            'plot' => 'Площадь уч.',
 			'class_home' => 'Класс дома',
 			'city' => 'Город',
 			'district' => 'Округ',

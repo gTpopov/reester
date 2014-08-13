@@ -95,8 +95,10 @@ class RealEstat extends CActiveRecord
 	 */
 	public function rules()
 	{
-        // ADD OBJECT FORM 1 ---
+
 		return array(
+
+            // ADD OBJECT FORM 1 ---
 			array('room, store, general_area, human_area, kitchen_area, deadline, stage, price', 'required',
                   'on'      =>  self::SCENARIO_ADD_OBJECT_ONE,
                   'message' => '{attribute} не указана'),
@@ -106,6 +108,19 @@ class RealEstat extends CActiveRecord
                 'integerOnly' => true,
                 'on'          =>  self::SCENARIO_ADD_OBJECT_ONE,
                 'message'     => '{attribute} должно быть числом'),
+
+
+            // ADD OBJECT FORM 2 ---
+            array('room, store, general_area, human_area, kitchen_area, status, stage, price', 'required',
+                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message' => '{attribute} не указана'),
+            array(
+                'general_area, human_area, kitchen_area, price',
+                'numerical',
+                'integerOnly' => true,
+                'on'          =>  self::SCENARIO_ADD_OBJECT_TWO,
+                'message'     => '{attribute} должно быть числом'),
+
 
             // ADD OBJECT FORM 4 ---
             array('room, store, general_area, human_area, kitchen_area, status, stage, price', 'required',
@@ -132,18 +147,6 @@ class RealEstat extends CActiveRecord
                 'integerOnly' => true,
                 'on'          =>  self::SCENARIO_ADD_OBJECT_FIVE,
                 'message'     => '{attribute} должно быть числом'),
-
-            // ADD OBJECT FORM 2 ---
-            array('room, general_area, human_area, kitchen_area, price', 'required',
-                'on'      =>  self::SCENARIO_ADD_OBJECT_TWO,
-                'message' => '{attribute} не указана'),
-            array(
-                'general_area, human_area, kitchen_area, price',
-                'numerical',
-                'integerOnly' => true,
-                'on'          =>  self::SCENARIO_ADD_OBJECT_TWO,
-                'message'     => '{attribute} должно быть числом'),
-
 
 
 		);

@@ -173,7 +173,7 @@
                 </div>
                 <div class="col-md-7">
                     <div class="row">
-                        <input type="text" id="streetID" class="form-control" placeholder="улица / проспект / площадь Панаса Саксаганского">
+                        <input type="text" id="streetID" class="form-control" placeholder="улица / проспект / уплощадь Панаса Саксаганского">
                         <?php echo $form->hiddenField($modelH,'street',array('value'=>'')); ?>
                         <?php echo $form->error($modelH,'street',array('class'=>'alert alert-danger')); ?>
                     </div>
