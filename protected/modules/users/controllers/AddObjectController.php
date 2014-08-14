@@ -208,9 +208,6 @@ class AddObjectController extends Controller {
 
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
-                //print Yii::app()->request->cookies['object_type'];
-                //print Yii::app()->request->cookies['sale_rent_op'];
-                //print Yii::app()->request->cookies['obj_state'];
 
                 $connection = Yii::app()->db;
 
@@ -303,13 +300,11 @@ class AddObjectController extends Controller {
                             Yii::app()->user->setFlash('failed-add',"Ошибка загрузи фотографий");
                         }
                     }
-                    print 111;
                     $transaction->commit();
                     $this->redirect('/users/ListObject/index');
                 }
                 catch(Exception $e){
                     $transaction->rollback();
-                    print 333;
                 }
             }
             else {
