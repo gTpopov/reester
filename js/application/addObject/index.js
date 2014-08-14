@@ -4,7 +4,11 @@ $(function(){
     $(function(){
         (function() {
             for(var i = 1; i < 6; i++){
-                $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#rooms-number > div > ul');
+                if(i == 5){
+                    $('<li><span data-value="'+i+'">'+i+'+</span></li>').appendTo('#rooms-number > div > ul');
+                }else{
+                    $('<li><span data-value="'+i+'">'+i+'</span></li>').appendTo('#rooms-number > div > ul');
+                }
             } delete i;
         }($));
 
