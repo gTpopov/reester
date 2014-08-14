@@ -3,13 +3,26 @@
 //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/users/price/view-price.css');
 ?>
 
+<div id="alert-keeper" class="col-md-13">
+
+    <?php if(Yii::app()->user->hasFlash('failed-add')): ?>
+        <div class="col-md-12 alert alert-danger">
+            <h4 class="text-center">Произошла ошибка</h4>
+            <div class="text-center">
+                <?php echo Yii::app()->user->getFlash('failed-add'); ?>
+            </div>
+        </div>
+
+    <?php endif; ?>
+</div>
+
 
 <div id="add-obj-fl-ap-nw-sale" class="col-md-12">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
     'action'=>Yii::app()->createUrl('/users/addObject/two?act=2'),
-    //'enableClientValidation'=>true,
+    'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true,),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
@@ -349,7 +362,7 @@
     </div>
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
-            <span id="kitchen-square-price" class="pull-left title">
+            <span id="kitchen-square-price" class="pull-right title">
                  <?php echo $form->labelEx($modelH,'plot'); ?>
             </span>
         </div>
@@ -370,7 +383,7 @@
     <div class="row text-left padding-horizontal-10-px">
         <div class="col-md-4">
                 <span id="windows-title" class="pull-right title">
-                    Состояние
+                    <?php echo $form->labelEx($modelR,'status'); ?>
                 </span>
         </div>
         <div class="col-md-8">
@@ -390,6 +403,7 @@
                                 <li><span data-value="8">косметический ремонт</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'status',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -458,6 +472,7 @@
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'type_house',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -466,9 +481,9 @@
     </div>
 <div class="row padding-horizontal-10-px">
     <div class="col-md-4">
-                        <span id="floors-title" class="pull-right title">
-                            <?php echo $form->labelEx($modelH,'floors'); ?>
-                        </span>
+        <span id="floors-title" class="pull-right title">
+            <?php echo $form->labelEx($modelH,'floors'); ?>
+        </span>
     </div>
     <div class="col-md-8">
         <div class="row">
@@ -478,6 +493,7 @@
                         <a href="javascript:;" class="slct">Укажите этажность дома</a>
                         <ul class="drop"></ul>
                         <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
+                        <?php echo $form->error($modelH,'floors',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
             </div>
@@ -502,7 +518,8 @@
                             <li><span data-value="2">улица</span></li>
                             <li><span data-value="3">двор +улица</span></li>
                         </ul>
-                        <?php echo $form->hiddenField($modelH,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                        <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                        <?php echo $form->error($modelR,'window',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
             </div>
@@ -528,6 +545,7 @@
                             <li><span data-value="3">элитный</span></li>
                         </ul>
                         <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>'')); ?>
+                        <?php echo $form->error($modelH,'class_home',array('class'=>'alert alert-danger')); ?>
                     </div>
                 </div>
             </div>
@@ -549,6 +567,7 @@
                             <a href="javascript:;" class="slct"> Укажите год постройки </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'year_built',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'year_built',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
