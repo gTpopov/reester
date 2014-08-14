@@ -209,6 +209,7 @@ class AddObjectController extends Controller {
             if($modelH->validate() && $modelR->validate() && $modelU->validate())
             {
 
+
                 $connection = Yii::app()->db;
 
                 $transaction=$connection->beginTransaction();
