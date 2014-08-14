@@ -438,14 +438,25 @@
         </div>
     </div>
     <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group plan" data-toggle="buttons">
-            <label style="width: 100%" class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
+        <div class="btn-group wc" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="1"> Разд. санузел
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="RealEstat[sanitare]" id="building-type" value="2"> Совмещенный
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="RealEstat[sanitare]" id="second-hand-type" value="3"> 2+ санузла
             </label>
         </div>
-        <div class="btn-group park" data-toggle="buttons">
+    </div>
+    <div class="row text-left padding-horizontal-10-px">
+        <div class="btn-group wc" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
+            </label>
             <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[plan]" id="building-type" value="1"> Своб. план.
+                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
             </label>
             <label class="btn btn-primary">
                 <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
@@ -655,12 +666,10 @@
                     </div>
                 </div>
                 <div class="row text-left padding-horizontal-10-px">
-                    <div class="btn-group plan" data-toggle="buttons">
-                        <label style="width: 100%" class="btn btn-primary">
+                    <div class="btn-group wc" data-toggle="buttons">
+                        <label class="btn btn-primary">
                             <input type="radio" name="RealEstat[free_sale]" id="building-type" value="1"> Свободная продажа
                         </label>
-                    </div>
-                    <div class="btn-group plan" data-toggle="buttons">
                         <label class="btn btn-primary">
                             <input type="radio" name="RealEstat[free_sale]" id="building-type" value="2"> Альтернатива
                         </label>
