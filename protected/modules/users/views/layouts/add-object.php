@@ -15,7 +15,7 @@
         <div class="row">
             <h2 class="pull-left">Добавление объекта</h2>
             <div id="sale-rent-btg" class="btn-group pull-right" data-toggle="buttons" style="margin-left: 5px;">
-                <input type="button" class="btn" value="Применить" onclick="redirect()">
+                <input type="button" class="btn btn-success" value="Применить" onclick="redirect()">
             </div>
             <div id="sch-budng-btg" class="btn-group pull-right" data-toggle="buttons">
                 <label class="btn btn-primary">

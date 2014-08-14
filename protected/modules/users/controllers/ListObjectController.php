@@ -36,7 +36,7 @@ class ListObjectController extends Controller
                 //'defaultOrder'=>'price ASC',
             ),
             'pagination'=>array(
-                'pageSize'=>15,
+                'pageSize'=>5,
             ),
         ));
 
