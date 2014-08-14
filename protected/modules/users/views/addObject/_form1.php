@@ -1,22 +1,23 @@
 <?php
     //Yii::app()->getClientScript()->registerScriptFile( Yii::app()->baseUrl.'/js/lib/jquery.autocomplete.js');
     //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
+    Yii::app()->clientScript->registerScriptFile('/js/application/addObject/_form1/index.js');
 ?>
 
-<script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('<?php echo 'Ждем...'; ?>'); }); }); </script>
+    <script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('Обработка'); }); }); </script>
 
-<div id="alert-keeper" class="col-md-13">
+    <div id="alert-keeper" class="col-md-13">
 
-    <?php if(Yii::app()->user->hasFlash('failed-add')): ?>
-        <div class="col-md-12 alert alert-danger">
-            <h4 class="text-center">Произошла ошибка</h4>
-            <div class="text-center">
-                <?php echo Yii::app()->user->getFlash('failed-add'); ?>
+        <?php if(Yii::app()->user->hasFlash('failed-add')): ?>
+            <div class="col-md-12 alert alert-danger">
+                <h4 class="text-center">Произошла ошибка</h4>
+                <div class="text-center">
+                    <?php echo Yii::app()->user->getFlash('failed-add'); ?>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
 
-    <?php endif; ?>
-</div>
+    </div>
 
 
 <div id="add-obj-fl-ap-nw-sale" class="col-md-12">
@@ -177,7 +178,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
     <div class="col-md-7">
         <div class="row padding-horizontal-10-px">
             <div class="col-md-12">
@@ -763,10 +764,9 @@
 
             </div>
             <div class="col-md-6 col-md-offset-1">
-                <div class="row padding-horizontal-10-px">
+                <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-8">
-                        <div class="row padding-horizontal-10-px"></div>
                         <div class="row padding-horizontal-10-px">
                             <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>
