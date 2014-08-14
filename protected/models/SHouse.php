@@ -102,6 +102,19 @@ class SHouse extends CActiveRecord
                 'integerOnly'=> true,
                 'message'    => '{attribute} должно быть числом'),
 
+            // ADD OBJECT FORM 3 ---
+            array(
+                'city, street, house_number, floors, type_house, year_built', 'required',
+                'on'      =>  self::SCENARIO_ADD_OBJECT_THREE,
+                'message' => '{attribute} не заполнен(а)'
+            ),
+            array(
+                'metro_time',
+                'numerical',
+                'on'         =>  self::SCENARIO_ADD_OBJECT_THREE,
+                'integerOnly'=> true,
+                'message'    => '{attribute} должно быть числом'),
+
 
             // ADD OBJECT FORM 4 ---
             array(

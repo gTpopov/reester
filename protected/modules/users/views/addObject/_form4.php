@@ -3,6 +3,8 @@
 //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
 ?>
 
+<script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('<?php echo 'Ждем...'; ?>'); }); }); </script>
+
 
 <div id="alert-keeper" class="col-md-13">
 
@@ -22,7 +24,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
     'action'=>Yii::app()->createUrl('/users/addObject/four?act=4'),
-    'enableClientValidation'=>true,
+    //'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
@@ -616,6 +618,7 @@
                     <div class="col-md-4">
                         <div class="row">
                             <?php echo $form->textField($modelR,'price',array('class'=>'form-control','placeholder'=>'Цена за объект','maxlength'=>"13")); ?>
+                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -641,11 +644,6 @@
                                 </ul>
                                 <?php echo $form->hiddenField($modelR,'currency',array('id'=>'selected-windows','value'=>1)); ?>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row">
-                            <?php echo $form->error($modelR,'price',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -781,10 +779,7 @@
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4"></div>
                     <div class="col-md-8">
-                        <div class="row padding-horizontal-10-px">
-                            <?php echo CHtml::resetButton('Очитсить форму',array('class'=>'btn btn-danger')); ?>
-                            <?php echo CHtml::submitButton('Добавить еще объект',array('class'=>'btn btn-info pull-right')); ?>
-                        </div>
+                        <div class="row padding-horizontal-10-px"></div>
                         <div class="row padding-horizontal-10-px">
                             <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>

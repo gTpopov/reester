@@ -3,6 +3,7 @@
 //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
 ?>
 
+<script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('<?php echo 'Ждем...'; ?>'); }); }); </script>
 
 <div id="alert-keeper" class="col-md-13">
 
@@ -23,7 +24,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'add-object',
     'action'=>Yii::app()->createUrl('/users/addObject/three?act=3'),
-    'enableClientValidation'=>true,
+    //'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
@@ -113,9 +114,9 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-5">
-                                <span id="underground-title" class="pull-left title">
-                                    <?php echo $form->labelEx($modelH,'undeground'); ?>
-                                </span>
+                    <span id="underground-title" class="pull-left title">
+                        <?php echo $form->labelEx($modelH,'undeground'); ?>
+                    </span>
                 </div>
                 <div class="col-md-7">
                     <div class="row">
@@ -147,6 +148,7 @@
                         <div class="col-md-2">
                             <div class="row">
                                 <?php echo $form->textField($modelH,'metro_time',array('class'=>'form-control','maxlength'=>"2",'placeholder'=>'')); ?>
+                                <?php echo $form->error($modelH,'metro_time',array('class'=>'alert alert-danger')); ?>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -249,7 +251,6 @@
         </div>
     </div>
 </div>
-
 </div>
 
 <div id="step-two" class="row">
@@ -260,8 +261,6 @@
 <div class="col-md-12">
 <div class="row">
 <div class="col-md-5">
-
-
     <div class="row padding-horizontal-10-px">
         <div class="col-md-4">
             <span id="rooms-title" class="pull-right title">
@@ -276,6 +275,7 @@
                             <a href="javascript:;" class="slct"> Укажите количество комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'room',array('id'=>'selected-room','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'room',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -297,6 +297,7 @@
                             <a href="javascript:;" class="slct">Количество изолированных комнат </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'isolated',array('id'=>'selected-room','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'isolated',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -318,6 +319,7 @@
                             <a href="javascript:;" class="slct">Укажите этаж квартиры</a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelR,'store',array('id'=>'selected-floors','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'store',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -339,6 +341,7 @@
                             <a href="javascript:;" class="slct">Укажите этажность дома</a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'floors',array('id'=>'selected-floors','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'floors',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -364,6 +367,7 @@
                                 <li><span data-value="3">двор +улица</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelR,'window',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'window',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -498,6 +502,7 @@
                                 <li><span data-value="6">природный кемень</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelH,'type_house',array('id'=>'selected-wall-material','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'type_house',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -523,6 +528,7 @@
                                 <li><span data-value="3">элитный</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelH,'class_home',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'class_home',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -544,6 +550,7 @@
                             <a href="javascript:;" class="slct"> Укажите год постройки </a>
                             <ul class="drop"></ul>
                             <?php echo $form->hiddenField($modelH,'year_built',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelH,'year_built',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -574,6 +581,7 @@
                                 <li><span data-value="8">косметический ремонт</span></li>
                             </ul>
                             <?php echo $form->hiddenField($modelR,'status',array('id'=>'selected-windows','value'=>'')); ?>
+                            <?php echo $form->error($modelR,'status',array('class'=>'alert alert-danger')); ?>
                         </div>
                     </div>
                 </div>
@@ -660,11 +668,10 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group wc" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'free_sale',array('id'=>'building-type','value'=>1)); ?> Свободная продажа
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="1"> Свободная продажа
                         </label>
-
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'place_cars',array('id'=>'second-hand-type','value'=>1)); ?> Альтернатива
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="2"> Альтернатива
                         </label>
                         <label class="btn btn-primary">
                             <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет
@@ -773,10 +780,7 @@
                 <div class="row padding-horizontal-10-px">
                     <div class="col-md-4"></div>
                     <div class="col-md-8">
-                        <div class="row padding-horizontal-10-px">
-                            <?php echo CHtml::resetButton('Очитсить форму',array('class'=>'btn btn-danger')); ?>
-                            <?php echo CHtml::submitButton('Добавить еще объект',array('class'=>'btn btn-info pull-right')); ?>
-                        </div>
+                        <div class="row padding-horizontal-10-px"></div>
                         <div class="row padding-horizontal-10-px">
                             <?php echo CHtml::submitButton('Разместить объект',array('class'=>'btn btn-block btn-success')); ?>
                         </div>
