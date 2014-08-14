@@ -6,6 +6,7 @@
 
     <script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('Обработка'); }); }); </script>
 
+
     <div id="alert-keeper" class="col-md-13">
 
         <?php if(Yii::app()->user->hasFlash('failed-add')): ?>
@@ -125,7 +126,9 @@
                             <div id="underground-station" class="select-int">
                                 <div class="select">
                                     <a href="javascript:;" class="slct nameMetro">Укажите станцию метро</a>
-                                    <ul class="drop" id="listMetro"></ul>
+                                    <ul class="drop" id="listMetro">
+                                        <?php echo $undeground; ?>
+                                    </ul>
                                     <?php echo $form->hiddenField($modelH,'undeground',array('id'=>'selected-underground-station','value'=>'')); ?>
                                     <?php echo $form->error($modelH,'undeground',array('class'=>'alert alert-danger')); ?>
                                 </div>

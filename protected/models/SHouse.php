@@ -104,7 +104,7 @@ class SHouse extends CActiveRecord
 
             // ADD OBJECT FORM 3 ---
             array(
-                'city, street, house_number, floors, type_house, year_built', 'required',
+                'city, street, house_number, floors, type_house', 'required',
                 'on'      =>  self::SCENARIO_ADD_OBJECT_THREE,
                 'message' => '{attribute} не заполнен(а)'
             ),

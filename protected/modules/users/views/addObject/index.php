@@ -81,23 +81,59 @@
         switch($_GET['act']) {
 
             // Комбинация: Вторичная -> Дом -> Аренда
-            case 5    : $this->renderPartial('_form5',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
+            case 5    : $this->renderPartial('_form5',array(
+                'modelH'     => $modelH,
+                'modelR'     => $modelR,
+                'modelU'     => $modelU,
+                'userData'   => $userData,
+                'undeground' => $undeground,
+            )); break;
 
             // Комбинация: Вторичная -> Квартиры и Аппартаменты -> Аренда
-            case 4    : $this->renderPartial('_form4',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
+            case 4    : $this->renderPartial('_form4',array(
+                'modelH'     => $modelH,
+                'modelR'     => $modelR,
+                'modelU'     => $modelU,
+                'userData'   => $userData,
+                'undeground' => $undeground,
+            )); break;
 
             // Комбинация: Вторичная -> Квартиры и Аппартаменты -> Продажа
-            case 3    : $this->renderPartial('_form3',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
+            case 3    : $this->renderPartial('_form3',array(
+                'modelH'     => $modelH,
+                'modelR'     => $modelR,
+                'modelU'     => $modelU,
+                'userData'   => $userData,
+                'undeground' => $undeground,
+            )); break;
 
             // Комбинация: Комбинация: Вторичная -> Дом -> Продать
-            case 2    : $this->renderPartial('_form2',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
+            case 2    : $this->renderPartial('_form2',array(
+                'modelH'     => $modelH,
+                'modelR'     => $modelR,
+                'modelU'     => $modelU,
+                'userData'   => $userData,
+                'undeground' => $undeground,
+            )); break;
 
             // Комбинация: Строящаяся -> Квартира и Аппартаменты -> Продать
-            default   : $this->renderPartial('_form1',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData)); break;
+            default   : $this->renderPartial('_form1',array(
+                'modelH'    => $modelH,
+                'modelR'    => $modelR,
+                'modelU'    => $modelU,
+                'userData'  => $userData,
+                'undeground'=> $undeground,
+            )); break;
         }
     }
     else {
-        $this->renderPartial('_form1',array('modelH' => $modelH, 'modelR'=>$modelR, 'modelU'=>$modelU, 'userData'=>$userData));
+        $this->renderPartial('_form1',array(
+            'modelH'    => $modelH,
+            'modelR'    => $modelR,
+            'modelU'    => $modelU,
+            'userData'  => $userData,
+            'undeground'=> $undeground,
+        ));
     }
 
 ?>

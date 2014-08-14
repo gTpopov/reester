@@ -41,7 +41,7 @@
     color: #002d64;
     cursor: pointer;
 }
-.deletePhoto{
+.deletePhoto, span.required{
     color: #F00;
 }
 /* Sale of flats/apartments in new buildings */
