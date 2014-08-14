@@ -452,19 +452,6 @@
             </label>
         </div>
     </div>
-    <div class="row text-left padding-horizontal-10-px">
-        <div class="btn-group wc" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <?php echo $form->checkBox($modelR,'balcony',array('id'=>'second-hand-type','value'=>1)); ?> Балкон / Лоджия
-            </label>
-            <label class="btn btn-primary text-center">
-                <input type="radio" name="RealEstat[plan]" id="second-hand-type" value="1"> Своб. план.
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="RealEstat[plan]" id="building-type" value="2"> Студия
-            </label>
-        </div>
-    </div>
 </div>
 
 <div class="col-md-5 col-md-offset-2">
