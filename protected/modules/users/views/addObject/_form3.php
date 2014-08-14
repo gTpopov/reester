@@ -670,15 +670,15 @@
                 <div class="row text-left padding-horizontal-10-px">
                     <div class="btn-group plan" data-toggle="buttons">
                         <label style="width: 100%" class="btn btn-primary">
-                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="1"> Свободная продажа
+                            <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет
                         </label>
                     </div>
                     <div class="btn-group plan" data-toggle="buttons">
                         <label class="btn btn-primary">
-                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="2"> Альтернатива
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="2"> Альтернат.
                         </label>
                         <label class="btn btn-primary">
-                            <?php echo $form->checkBox($modelR,'ownership',array('id'=>'building-type','value'=>1)); ?> Более 3х лет
+                            <input type="radio" name="RealEstat[free_sale]" id="building-type" value="1"> Своб. прод.
                         </label>
                     </div>
                 </div>
