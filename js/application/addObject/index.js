@@ -134,8 +134,8 @@ function selMetro(id) {
         cashe: false,
         data: arrData,
         success: function(data)  {
-            $('.nameMetro').html(data.nameMetro);
-            $('#listMetro').html(data.response);
+            //$('.nameMetro').html(data.nameMetro);
+            //$('#listMetro').html(data.response);
         },
         error: function() {
             alert('Error system');

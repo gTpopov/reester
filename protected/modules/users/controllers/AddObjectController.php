@@ -26,6 +26,20 @@ class AddObjectController extends Controller {
 
 
     /*
+     * List undeground
+     */
+    public function undeground() {
+
+        $connection = Yii::app()->db;
+        $row = $connection->createCommand("SELECT id,name FROM s_undeground ORDER BY name ASC")->queryAll();
+        $str = '';
+        foreach($row as $val) {
+            $str.='<li><span data-value="'.$val['id'].'">'.$val['name'].'</span></li>';
+        }
+        return $str;
+    }
+
+    /*
      * Action step one (form 1)
      */
     public function actionIndex(){
@@ -172,6 +186,7 @@ class AddObjectController extends Controller {
             'modelR'  => $modelR,
             'modelU'  => $modelU,
             'userData'=> $this->substitution(),
+            'undeground' => $this->undeground(),
         ));
     }
 
@@ -315,6 +330,7 @@ class AddObjectController extends Controller {
             'modelR'  => $modelR,
             'modelU'  => $modelU,
             'userData'=> $this->substitution(),
+            'undeground' => $this->undeground(),
         ));
     }
 
@@ -463,6 +479,7 @@ class AddObjectController extends Controller {
             'modelR'  => $modelR,
             'modelU'  => $modelU,
             'userData'=> $this->substitution(),
+            'undeground' => $this->undeground(),
         ));
     }
 
@@ -611,6 +628,7 @@ class AddObjectController extends Controller {
             'modelR'  => $modelR,
             'modelU'  => $modelU,
             'userData'=> $this->substitution(),
+            'undeground' => $this->undeground(),
         ));
     }
 
@@ -756,6 +774,7 @@ class AddObjectController extends Controller {
             'modelR'  => $modelR,
             'modelU'  => $modelU,
             'userData'=> $this->substitution(),
+            'undeground' => $this->undeground(),
         ));
     }
 
