@@ -3,7 +3,7 @@
 //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/js/lib/autocomplete.css');
 ?>
 
-<script type="text/javascript"> $(function(){ $(".btn").click(function(){ $(this).val('<?php echo 'Ждем...'; ?>'); }); }); </script>
+<script type="text/javascript"> $(function(){ $(":submit").click(function(){ $(this).val('<?php echo 'Ждем...'; ?>'); }); }); </script>
 
 <div id="alert-keeper" class="col-md-13">
 
