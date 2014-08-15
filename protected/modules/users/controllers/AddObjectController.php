@@ -817,8 +817,4 @@ class AddObjectController extends Controller {
         );
     }
 
-
-
-
-
 }

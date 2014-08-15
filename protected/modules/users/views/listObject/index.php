@@ -94,6 +94,7 @@ if(isset($dataProvider)) {
         ),
         //'pagerCssClass'=>'pagination',
     ));
+
 }
 ?>
 
