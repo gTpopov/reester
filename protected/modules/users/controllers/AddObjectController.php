@@ -288,6 +288,7 @@ class AddObjectController extends Controller {
                     $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
                     $modelR->create_data   = date('Y-m-d'); //+
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
+                    $modelR->photos        = (Yii::app()->photo->UploadPhoto('photo',$IDObject)==true)?'1':'0';
 
                     $modelR->save();
 
@@ -436,6 +437,7 @@ class AddObjectController extends Controller {
                     $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
                     $modelR->create_data   = date('Y-m-d'); //+
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
+                    $modelR->photos        = (Yii::app()->photo->UploadPhoto('photo',$IDObject)==true)?'1':'0';
 
                     $modelR->save();
 
@@ -587,6 +589,7 @@ class AddObjectController extends Controller {
                     $modelR->lease         = isset($_POST['RealEstat']['lease'])?$_POST['RealEstat']['lease']:0; //+ *
                     $modelR->create_data   = date('Y-m-d');
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+ **
+                    $modelR->photos        = (Yii::app()->photo->UploadPhoto('photo',$IDObject)==true)?'1':'0';
 
                     $modelR->save();
 
@@ -731,6 +734,7 @@ class AddObjectController extends Controller {
                     $modelR->add_info      = (string) strip_tags(htmlspecialchars($_POST['RealEstat']['add_info'])); //+
                     $modelR->create_data   = date('Y-m-d'); //+
                     $modelR->price_of_m2   = (int) $_POST['RealEstat']['price'] / (int) $_POST['RealEstat']['general_area']; //+
+                    $modelR->photos        = (Yii::app()->photo->UploadPhoto('photo',$IDObject)==true)?'1':'0';
 
                     $modelR->save();
 

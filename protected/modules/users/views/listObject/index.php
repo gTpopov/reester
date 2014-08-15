@@ -59,7 +59,7 @@ if(isset($dataProvider)) {
                 'header'=> 'Тип операции',
                 'value' => function($data,$row,$column){
                         if($data["operations"]=="1") { return "продать"; }
-                        else { return "арендовать"; }
+                        else { return "сдать"; }
                     },
                 'type' =>  'raw',
                 //'headerHtmlOptions'=>array('width'=>400),
