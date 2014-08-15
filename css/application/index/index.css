@@ -15,8 +15,25 @@
 select{
     cursor: pointer;
     border: 0;
+    background-color: #e3e3e3;
+    border-radius: 4px !important;
+    outline: none;
 }
-#top-panel > div:nth-child(3) > div > select{
-    margin-top: 5px;
-    float: right;
+#search-period{
+    width: 37.5%;
+    background-color: #FFF;
+}
+#select-floors-number{
+    height: 32px;
+    margin-top: 0;
+    width: 100%;
+}
+#add-obj-fl-ap-nw-sale > div:nth-child(6) > div:nth-child(2) > div.col-sm-8 > div > div:nth-child(2){
+    padding-left: 34px;
+}
+#state-of-object-select{
+    width: 100%;
+}
+#currency-select,#wall-type,#search-period,#state-of-object-select{
+    height: 34px;
 }

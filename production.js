@@ -2,13 +2,13 @@
 (function() {
   $(function() {
     var element, i, _i, _results;
-    element = $('#select-floors-size');
+    element = $('#select-floors-number');
     _results = [];
-    for (i = _i = 0; _i <= 5; i = ++_i) {
+    for (i = _i = 1; _i <= 5; i = ++_i) {
       if (i === 5) {
-        _results.push(element.appendTo("<option>" + i + "+</option>"));
+        _results.push(element.append("<option value='" + i + "'>" + i + "+</option>"));
       } else {
-        _results.push(element.appendTo("<option>" + i + "</option>"));
+        _results.push(element.append("<option value='" + i + "'>" + i + "</option>"));
       }
     }
     return _results;
