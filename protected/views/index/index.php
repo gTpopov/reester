@@ -66,7 +66,7 @@
         <br>
         <br>
         <br>
-        <div class="col-sm-12">
+        <div style="border-top: 1px solid #DDD"  class="col-sm-12">
             <div class="row padding-horizontal-10-px">
                 <div class="col-sm-2">
                     <div class="row" style="margin-top: -7px">
@@ -113,9 +113,14 @@
                 </div>
                 <div style="margin-top: 6px" class="col-sm-3">
                     <div class="row">
-                        <div class="col-sm-2" style="padding-top: 7px;" >цена</div>
-                        <div class="col-sm-4"><div class="row"><input type="text" class="form-control" placeholder="от"></div></div>
-                        <div class="col-sm-4"><div class="row"><input style="margin-left: 2px" type="text" class="form-control" placeholder="до"></div></div>
+                        <div class="col-sm-4">
+                            <select id="currency-select" style="margin-left: -25px">
+                                <option value="1">за объект</option>
+                                <option value="2">за кв.m</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3"><div class="row"><input type="text" class="form-control" placeholder="от"></div></div>
+                        <div class="col-sm-3"><div class="row"><input style="margin-left: 2px" type="text" class="form-control" placeholder="до"></div></div>
                         <div class="col-sm-1 text-left">
                             <select id="currency-select" style="margin-left: -10px">
                                 <option value="1">P</option>
@@ -126,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row padding-horizontal-10-px">
+            <div style="border-top: 1px solid #DDD"  class="row padding-horizontal-10-px">
                 <div class="col-sm-8">
                     <div class="row">
                         <h5 class="pull-left" style="font-weight: 400; padding-top: 3px">Материал стен</h5>
@@ -170,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row padding-horizontal-10-px">
+            <div style="border-top: 1px solid #DDD; padding-top: 15px" class="row padding-horizontal-10-px">
                 <div class="col-sm-8">
                     <div class="row">
                         <h5 class="pull-left" style="font-weight: 400; padding-top: 3px">Этажность и этаж</h5>
@@ -194,7 +199,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="row" style="margin-top: -10px">
+                    <div class="row" style="margin-top: -12px">
                         <span class="text-center col-sm-12"> Укажите состояние объекта: </span>
                         <select id="state-of-object-select">
                             <option value="0">любое</option>
@@ -210,7 +215,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row padding-horizontal-10-px">
+            <div style="border-top: 1px solid #DDD" class="row padding-horizontal-10-px">
                 <div class="col-sm-6">
                     <div class="row">
                         <h5 class="pull-left" style="font-weight: 400; padding-top: 3px">Санузел</h5>
