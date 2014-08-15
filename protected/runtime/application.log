@@ -5858,3 +5858,20 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/08/15 11:14:01 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php:58)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(10): IndexController->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (10)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php (14)
