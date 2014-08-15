@@ -97,14 +97,14 @@
                 <div style="margin-top: 6px" class="col-sm-3">
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-primary active">
-                            <input type="radio" name="options" id="option1" checked> Свободная планировка
+                            <input type="radio" name="options" id="option1" checked> Свободная план.
                         </label>
                         <label class="btn btn-primary">
                             <input type="radio" name="options" id="option2"> Студия
                         </label>
                     </div>
                 </div>
-                <div style="margin-top: 6px" class="col-sm-4">
+                <div style="margin-top: 6px; padding-left: 0; margin-left: -50px" class="col-sm-4">
                     <div class="col-sm-3" style="padding-top: 7px" >площадь</div>
                     <div class="col-sm-3"><div class="row"><input type="text" class="form-control" placeholder="от"></div></div>
                     <div class="col-sm-1 text-left" style="padding-left: 4px; padding-top: 15px; color: #999">m<sup>2</sup></div>
@@ -113,16 +113,16 @@
                 </div>
                 <div style="margin-top: 6px" class="col-sm-3">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" style="margin-right: 16px">
                             <select id="currency-select" style="margin-left: -25px">
-                                <option value="1">за объект</option>
-                                <option value="2">за кв.m</option>
+                                <option value="1">цена за объект</option>
+                                <option value="2">цена за кв.m</option>
                             </select>
                         </div>
-                        <div class="col-sm-3"><div class="row"><input type="text" class="form-control" placeholder="от"></div></div>
+                        <div class="col-sm-3" style="margin-left: 10px"><div class="row"><input type="text" class="form-control" placeholder="от"></div></div>
                         <div class="col-sm-3"><div class="row"><input style="margin-left: 2px" type="text" class="form-control" placeholder="до"></div></div>
-                        <div class="col-sm-1 text-left">
-                            <select id="currency-select" style="margin-left: -10px">
+                        <div class="col-sm-1 text-left pull-right" style="margin-left: 20px; margin-top: -34px">
+                            <select id="currency-select">
                                 <option value="1">P</option>
                                 <option value="2">$</option>
                                 <option value="3">&euro;</option>
