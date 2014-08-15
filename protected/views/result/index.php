@@ -8,13 +8,27 @@ if(isset($dataProvider)) {
     $this->widget('zii.widgets.grid.CGridView', array(
         'dataProvider'=>$dataProvider,
         'enablePagination' => true,
-        'emptyText'=>'',
+        'emptyText'=>'Data empty',
         'summaryText' => "",
         'columns'=>array(
             array(
-                'name'=>'add_info',
-                'header'=> 'Результаты поиска',
-                'value' => '$data["add_info"]',
+                'name'=>'apartID',
+                'header'=> 'apartID',
+                'value' => '$data["apartID"]',
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>400),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'houseID',
+                'value' => '$data["houseID"]',
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>400),
+            ),
+            array(
+                'name'=>'userID',
+                'header'=> 'userID',
+                'value' => '$data["userID"]',
                 'type' =>  'raw',
                 'headerHtmlOptions'=>array('width'=>400),
             ),
