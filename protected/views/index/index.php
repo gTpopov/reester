@@ -7,7 +7,7 @@
 
         <div class="col-sm-12">
             <div class="row padding-horizontal-10-px">
-                <div class="col-sm-12"><div class="row"><h2 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 5px">Основные параметры фильтра</h2></div></div>
+                <div class="col-sm-12"><div class="row"><h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 5px">Основные параметры фильтра</h3></div></div>
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-2">
@@ -186,9 +186,9 @@
             <div class="row padding-horizontal-10-px">
                 <div class="col-sm-12">
                     <div class="row">
-                        <h2 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 15px">Дополнительные параметры фильтра
+                        <h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 10px">Дополнительные параметры фильтра
                             <small class="pull-right btn btn-info btn-sm" style="font-size: 14px; margin-top: 7px; cursor: pointer"> отобразить <span style="vertical-align: -1px; font-size: 12px" class="glyphicon glyphicon-arrow-down"></span></small>
-                        </h2>
+                        </h3>
                     </div>
                 </div>
 
