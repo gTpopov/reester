@@ -20,15 +20,16 @@ class ResultController extends Controller {
         $_POST['RealEstat']['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
         $_POST['RealEstat']['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
 
-        $_POST['RealEstat']['room']         = 4;    // кол-во комнат
+        $_POST['RealEstat']['room']         = 3;    // кол-во комнат
         $_POST['RealEstat']['general_area_from'] = 20;   // общая площадь min ++
-        $_POST['RealEstat']['general_area_to']   = 50;   // общая площадь max ++
-        $_POST['RealEstat']['price_of_m2_from']  = 20533;// стоимость за 1 м2 min ++
-        $_POST['RealEstat']['price_of_m2_to']    = 57533;// стоимость за 1 м2 max ++
-        $_POST['RealEstat']['price_from']        = 1000000;// стоимость объекта min ++
-        $_POST['RealEstat']['price_to']          = 2000000;// стоимость объекта max ++
-        $_POST['RealEstat']['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) +
-        $_POST['RealEstat']['plan']         = 1;    // студия - 2, своб.план - 1 +
+        $_POST['RealEstat']['general_area_to']   = 150;   // общая площадь max ++
+        $_POST['RealEstat']['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
+        $_POST['RealEstat']['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
+        $_POST['RealEstat']['price_from']        = 200000;// стоимость объекта min ++
+        $_POST['RealEstat']['price_to']          = 500000;// стоимость объекта max ++
+        $_POST['RealEstat']['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
+        $_POST['RealEstat']['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
+        $_POST['RealEstat']['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
         $_POST['RealEstat']['store']        = 5;    // этаж квартиры или аппартаментов +
         $_POST['RealEstat']['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей
         $_POST['RealEstat']['window']       = 3;    // 1-двор  2-улица 3-двор +улица
@@ -63,7 +64,13 @@ class ResultController extends Controller {
         ### --- END --- ###
 
         //Сохраняем переданные параметры фильтра в сессии
-        foreach($_POST as $key => $val) {
+        foreach($_POST['RealEstat'] as $key => $val) {
+            Yii::app()->session[''.$key.''] = $val;
+        }
+        foreach($_POST['SHouse'] as $key => $val) {
+            Yii::app()->session[''.$key.''] = $val;
+        }
+        foreach($_POST['Users'] as $key => $val) {
             Yii::app()->session[''.$key.''] = $val;
         }
 
@@ -72,99 +79,106 @@ class ResultController extends Controller {
 
         ### - BEGIN CONDITION ---
 
-        // Тип недвижимости
-        if(isset(Yii::app()->session['RealEstat']['type_estate'])){
-            $condition .= "r.type_estate = ".(int) Yii::app()->session['RealEstat']['type_estate']."";
+        // Тип недвижимости +
+        if(isset(Yii::app()->session['type_estate'])){
+            $condition .= "r.type_estate = ".(int) Yii::app()->session['type_estate']."";
         }
-        // Тип операции
-        if(isset(Yii::app()->session['RealEstat']['operations'])){
-            $condition .= " AND r.operations = ".(int) Yii::app()->session['RealEstat']['operations']."";
+        // Тип операции +
+        if(isset(Yii::app()->session['operations'])){
+            $condition .= " AND r.operations = ".(int) Yii::app()->session['operations']."";
         }
-        // Тип рынка
-        if(isset(Yii::app()->session['RealEstat']['market'])){
-            $condition .= " AND r.market = ".(int) Yii::app()->session['RealEstat']['market']."";
+        // Тип рынка +
+        if(isset(Yii::app()->session['market'])){
+            $condition .= " AND r.market = ".(int) Yii::app()->session['market']."";
         }
-        // Кол-во комнат
-        if(isset(Yii::app()->session['RealEstat']['room'])){
-            $condition .= " AND r.room = ".(int) Yii::app()->session['RealEstat']['room']."";
+        // Кол-во комнат +
+        if(isset(Yii::app()->session['room'])){
+            $condition .= " AND r.room = ".(int) Yii::app()->session['room']."";
         }
-        // Валюта
-        if(isset(Yii::app()->session['RealEstat']['currency'])){
-            $condition .= " AND r.currency = ".(int) Yii::app()->session['RealEstat']['currency']."";
+        // Валюта +
+        if(isset(Yii::app()->session['currency'])){
+            $condition .= " AND r.currency = ".(int) Yii::app()->session['currency']."";
         }
 
-        // Общая площадь
-        if(!empty(Yii::app()->session['RealEstat']['general_area_from']) || !empty(Yii::app()->session['RealEstat']['general_area_to']))
+        // Общая площадь +
+        if(!empty(Yii::app()->session['general_area_from']) || !empty(Yii::app()->session['general_area_to']))
         {
-            if(!empty(Yii::app()->session['RealEstat']['general_area_from']) && !empty(Yii::app()->session['RealEstat']['general_area_to']))
+            if(!empty(Yii::app()->session['general_area_from']) && !empty(Yii::app()->session['general_area_to']))
             {
-                $general_area_from   = intval(Yii::app()->session['RealEstat']['general_area_from']);
-                $general_area_to     = intval(Yii::app()->session['RealEstat']['general_area_to']);
+                $general_area_from   = intval(Yii::app()->session['general_area_from']);
+                $general_area_to     = intval(Yii::app()->session['general_area_to']);
                 $condition .= " AND r.general_area BETWEEN ".$general_area_from." AND ".$general_area_to."";
                 //print 'general_area_from && general_area_to';
             }
-            else if(!empty(Yii::app()->session['RealEstat']['general_area_from']) && empty(Yii::app()->session['RealEstat']['general_area_to']))
+            else if(!empty(Yii::app()->session['general_area_from']) && empty(Yii::app()->session['general_area_to']))
             {
-                $general_area_from = intval(Yii::app()->session['RealEstat']['general_area_from']);
+                $general_area_from = intval(Yii::app()->session['general_area_from']);
                 $condition .= " AND r.general_area >= ".$general_area_from."";
                 //print 'general_area_from - '.$general_area_from;
             }
-            if(empty(Yii::app()->session['RealEstat']['general_area_from']) && !empty(Yii::app()->session['RealEstat']['general_area_to']))
+            if(empty(Yii::app()->session['general_area_from']) && !empty(Yii::app()->session['general_area_to']))
             {
-                $general_area_to = intval(Yii::app()->session['RealEstat']['general_area_to']);
+                $general_area_to = intval(Yii::app()->session['general_area_to']);
                 $condition .= " AND r.general_area <=".$general_area_to."";
                 //print 'general_area_to';
             }
         }
 
 
-        // Цена за 1м2
-        if(!empty(Yii::app()->session['RealEstat']['price_of_m2_from']) || !empty(Yii::app()->session['RealEstat']['price_of_m2_to']))
+        // Цена за 1м2 +
+        if(!empty(Yii::app()->session['price_of_m2_from']) || !empty(Yii::app()->session['price_of_m2_to']))
         {
-            if(!empty(Yii::app()->session['RealEstat']['price_of_m2_from']) && !empty(Yii::app()->session['RealEstat']['price_of_m2_to']))
+            if(!empty(Yii::app()->session['price_of_m2_from']) && !empty(Yii::app()->session['price_of_m2_to']))
             {
-                $price_of_m2_from    = intval(Yii::app()->session['RealEstat']['price_of_m2_from']);
-                $price_of_m2_to      = intval(Yii::app()->session['RealEstat']['price_of_m2_to']);
+                $price_of_m2_from    = intval(Yii::app()->session['price_of_m2_from']);
+                $price_of_m2_to      = intval(Yii::app()->session['price_of_m2_to']);
                 $condition .= " AND r.price_of_m2 BETWEEN ".$price_of_m2_from." AND ".$price_of_m2_to."";
             }
-            else if(!empty(Yii::app()->session['RealEstat']['price_of_m2_from']) && empty(Yii::app()->session['RealEstat']['price_of_m2_to']))
+            else if(!empty(Yii::app()->session['price_of_m2_from']) && empty(Yii::app()->session['price_of_m2_to']))
             {
-                $price_of_m2_from = intval(Yii::app()->session['RealEstat']['price_of_m2_from']);
+                $price_of_m2_from = intval(Yii::app()->session['price_of_m2_from']);
                 $condition .= " AND r.price_of_m2 >= ".$price_of_m2_from."";
             }
-            if(empty(Yii::app()->session['RealEstat']['price_of_m2_from']) && !empty(Yii::app()->session['RealEstat']['price_of_m2_to']))
+            if(empty(Yii::app()->session['price_of_m2_from']) && !empty(Yii::app()->session['price_of_m2_to']))
             {
-                $price_of_m2_to = intval(Yii::app()->session['RealEstat']['price_of_m2_to']);
+                $price_of_m2_to = intval(Yii::app()->session['price_of_m2_to']);
                 $condition .= " AND r.price_of_m2 <=".$price_of_m2_to."";
             }
         }
 
 
-        // Цена за объект
-        if(!empty(Yii::app()->session['RealEstat']['price_from']) || !empty(Yii::app()->session['RealEstat']['price_to']))
+        // Цена за объект +
+        if(!empty(Yii::app()->session['price_from']) || !empty(Yii::app()->session['price_to']))
         {
-            if(!empty(Yii::app()->session['RealEstat']['price_from']) && !empty(Yii::app()->session['RealEstat']['price_to']))
+            if(!empty(Yii::app()->session['price_from']) && !empty(Yii::app()->session['price_to']))
             {
-                $price_from    = intval(Yii::app()->session['RealEstat']['price_from']);
-                $price_to      = intval(Yii::app()->session['RealEstat']['price_to']);
+                $price_from    = intval(Yii::app()->session['price_from']);
+                $price_to      = intval(Yii::app()->session['price_to']);
                 $condition .= " AND r.price BETWEEN ".$price_from." AND ".$price_to."";
             }
-            else if(!empty(Yii::app()->session['RealEstat']['price_from']) && empty(Yii::app()->session['RealEstat']['price_to']))
+            else if(!empty(Yii::app()->session['price_from']) && empty(Yii::app()->session['price_to']))
             {
-                $price_from = intval(Yii::app()->session['RealEstat']['price_from']);
+                $price_from = intval(Yii::app()->session['price_from']);
                 $condition .= " AND r.price >= ".$price_from."";
             }
-            if(empty(Yii::app()->session['RealEstat']['price_from']) && !empty(Yii::app()->session['RealEstat']['price_to']))
+            if(empty(Yii::app()->session['price_from']) && !empty(Yii::app()->session['price_to']))
             {
-                $price_to = intval(Yii::app()->session['RealEstat']['price_to']);
+                $price_to = intval(Yii::app()->session['price_to']);
                 $condition .= " AND r.price <=".$price_to."";
             }
         }
 
         // Свободная планировка, студия
-        if(isset(Yii::app()->session['RealEstat']['plan'])) {
-            $condition .= " AND r.plan = ".(int) Yii::app()->session['RealEstat']['plan']."";
+        if(isset(Yii::app()->session['plan'])) {
+
+            $plan = '';
+            foreach(Yii::app()->session['plan'] as $val_plan) {
+                $plan .= trim($val_plan.',');
+            }
+            $plan = substr($plan,0,strlen($plan)-1);
+            $condition .= " AND r.plan IN (".$plan.")";
         }
+
 
         //ЭТАЖНОСТЬ КВАРТИРЫ
         if(!isset(Yii::app()->session['level']) && (
