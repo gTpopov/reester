@@ -24,7 +24,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'registry-form',
     'action'=>Yii::app()->createUrl('/users/addObject/two?act=2'),
-    //'enableClientValidation'=>true,
+    'enableClientValidation'=>true,
     'clientOptions'=>array('validateOnSubmit'=>true,),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>

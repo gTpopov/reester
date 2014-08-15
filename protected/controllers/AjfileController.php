@@ -4,7 +4,7 @@ class AjfileController extends Controller {
 
     public function filters() {
         return array(
-            'ajaxOnly + upload, delete, street',
+            'ajaxOnly + street',
         );
     }
 

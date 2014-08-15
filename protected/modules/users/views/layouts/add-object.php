@@ -41,7 +41,7 @@
                     <input type="radio" name="operation" id="sale-option" value="1"> Продать
                 </label>
                 <label class="btn btn-primary">
-                    <input type="radio" name="operation" id="rent-option" value="2"> Арендовать
+                    <input type="radio" name="operation" id="rent-option" value="2"> Сдать
                 </label>
             </div>
         </div>
