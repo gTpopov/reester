@@ -187,14 +187,14 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 10px">Дополнительные параметры фильтра
-                            <small class="pull-right btn btn-info btn-sm" style="font-size: 14px; margin-top: 7px; cursor: pointer"> отобразить <span style="vertical-align: -1px; font-size: 12px" class="glyphicon glyphicon-arrow-down"></span></small>
+                            <small class="pull-right btn btn-info btn-sm" style="font-size: 14px; margin-top: 2px; cursor: pointer"> отобразить <span style="vertical-align: -1px; font-size: 12px" class="glyphicon glyphicon-arrow-down"></span></small>
                         </h3>
                     </div>
                 </div>
 
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-3" style="box-shadow: 0 0 13px rgba(68, 83, 101, 0.3); padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
+                        <div class="col-sm-3" style="border: 1px solid #DDD; padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
                             <h4 style="margin-top: 0; font-weight: 300" class="text-center">материал стен</h4>
                             <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
                                 <label class="btn btn-sm btn-block btn-primary">
@@ -233,7 +233,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-sm-4 col-sm-offset-1" style="box-shadow: 0 0 13px rgba(68, 83, 101, 0.3); padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
+                        <div class="col-sm-4 col-sm-offset-1" style="border: 1px solid #DDD;; padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
                             <h4 style="margin-top: 0; font-weight: 300" class="text-center">выбор этажа</h4>
                             <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
                                 <label class="btn btn-sm btn-primary" style="width: 50%">
@@ -285,7 +285,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-sm-3 col-sm-offset-1" style="box-shadow: 0 0 13px rgba(68, 83, 101, 0.3); padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
+                        <div class="col-sm-3 col-sm-offset-1" style="border: 1px solid #DDD;; padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
                             <h4 style="margin-top: 0; font-weight: 300" class="text-center">санузел</h4>
                             <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
                                 <label class="btn btn-sm btn-primary" style="width: 100%;">
