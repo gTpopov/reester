@@ -19,7 +19,10 @@
 #search-currency-type > div > a,
 #search-currency-type > div > ul li,
 #search-price-type > div > a,
-#search-price-type > div > ul li{
+#search-price-type > div > ul li,
+#search-object-state-settings > div > a,
+#search-object-state-settings > div > ul li
+{
     font-size: 13px !important;
     padding: 4px 10px !important;
     background-position: 97% 13px;
