@@ -11,6 +11,10 @@ class ResultController extends Controller {
 
         $connection = Yii::app()->db;
 
+        foreach(Yii::app()->session as $key=>$value) {
+            unset(Yii::app()->session[''.$key.'']);
+        }
+
 
         #### -- DATA PARAM --- ###
         #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1) ---
@@ -30,12 +34,12 @@ class ResultController extends Controller {
         $_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
         $_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
         $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
-        $_POST['level']        = 1;    // любой этаж
-        $_POST['level_from']   = 5;    // этаж квартиры от
-        $_POST['level_to']     = 10;   // этаж квартиры до
-        $_POST['level_last']   = 1;    // Не последний этаж
-        $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый)
-        $_POST['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей
+        $_POST['level']        = 1;    // любой этаж +
+        $_POST['level_from']   = 5;    // этаж квартиры от +
+        $_POST['level_to']     = 10;   // этаж квартиры до +
+        $_POST['level_last']   = 1;    // Не последний этаж +
+        $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
+        $_POST['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
         $_POST['window']       = 3;    // 1-двор  2-улица 3-двор +улица
         $_POST['balcony']      = 1;    // 1-лоджия или балкон
         $_POST['parking']      = 1;    // 1-паркинг
@@ -51,7 +55,6 @@ class ResultController extends Controller {
         $_POST['fz_214']       = 1;    // регистрация новостройки
         $_POST['finished']     = 1;    // с отделкой
         $_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото
-
         $_POST['floors']          = 15;   // этажность дома
         $_POST['city']            = 1;    // город
         $_POST['district']        = 7;    // округ
@@ -62,8 +65,7 @@ class ResultController extends Controller {
         $_POST['metro_way']       = 1;    // 1-пешком, 2-транспортом
         $_POST['class_home']      = 1;    // 1-эконом 2-бизнес 3-элитный
         $_POST['type_house']      = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень
-
-        $_POST['type_account']     = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор
+        $_POST['type_account']    = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор
 
         ### --- END --- ###
 
@@ -235,25 +237,6 @@ class ResultController extends Controller {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //print Yii::app()->session['RealEstat']['type_estate'];
-
-
         $count=$connection->createCommand("SELECT COUNT(r.apart_id) FROM real_estate AS r WHERE ".$condition."")->queryScalar();
 
         $sql="SELECT
@@ -279,6 +262,10 @@ class ResultController extends Controller {
                 'pageSize'=>3,
             ),
         ));
+
+        //echo '<pre>';
+        //print_r($_SESSION);
+        //echo '</pre>';
 
 
 
