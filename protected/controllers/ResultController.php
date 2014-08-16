@@ -17,10 +17,10 @@ class ResultController extends Controller {
 
 
         #### -- DATA PARAM --- ###
-        #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1) ---
+        #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1): 1 - 7 - 4(3)
 
         // Criteria Realty, Operation, Market
-        $_POST['type_estate'] = 4; // Тип недвижимости: 4 - квартира 3 - аппартаменты 5 - дом
+        $_POST['type_estate'] = 3; // Тип недвижимости: 4 - квартира 3 - аппартаменты 5 - дом
         $_POST['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
         $_POST['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
 
@@ -34,16 +34,16 @@ class ResultController extends Controller {
         $_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
         $_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
         $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
-        $_POST['level']        = 1;    // любой этаж +
-        $_POST['level_from']   = 5;    // этаж квартиры от +
+        //$_POST['level']        = 1;    // любой этаж +
+        $_POST['level_from']   = 1;    // этаж квартиры от +
         $_POST['level_to']     = 10;   // этаж квартиры до +
         $_POST['level_last']   = 1;    // Не последний этаж +
         $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
         $_POST['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
-        $_POST['window']       = 3;    // 1-двор  2-улица 3-двор +улица
-        $_POST['balcony']      = 1;    // 1-лоджия или балкон
-        $_POST['parking']      = 1;    // 1-паркинг
-        $_POST['place_cars']   = 1;    // 1-машиноместо
+        $_POST['window']       = 2;    // 1-двор  2-улица 3-двор +улица +
+        $_POST['balcony']      = 1;    // 1-лоджия или балкон +
+        $_POST['parking']      = 1;    // 1-паркинг +
+        $_POST['place_cars']   = 1;    // 1-машиноместо +
         $_POST['covered_space']= 1;    // 1-закрытая (огражденная) територия
         $_POST['club_type']    = 1;    // 1-клубного типа
         $_POST['discount']     = 1;    // 1-акции и скидки
@@ -69,6 +69,8 @@ class ResultController extends Controller {
 
         ### --- END --- ###
 
+
+
         //Сохраняем переданные параметры фильтра в сессии
         foreach($_POST as $key => $val) {
             Yii::app()->session[''.$key.''] = $val;
@@ -77,7 +79,7 @@ class ResultController extends Controller {
 
         $condition = '';
 
-        ### - BEGIN CONDITION ---
+        ### - BEGIN CONDITION SQL ---
 
         // Тип недвижимости +
         if(isset(Yii::app()->session['type_estate'])){
@@ -179,6 +181,31 @@ class ResultController extends Controller {
             $condition .= " AND r.plan IN (".$plan.")";
         }
 
+        // Окна +
+        if(isset(Yii::app()->session['window'])){
+            $condition .= " AND r.window = ".(int) Yii::app()->session['window']."";
+        }
+
+        // Балкон или лоджия +
+        if(isset(Yii::app()->session['balcony'])){
+            $condition .= " AND r.balcony = ".(int) Yii::app()->session['balcony']."";
+        }
+
+        // Паркинг +
+        if(isset(Yii::app()->session['parking'])){
+            $condition .= " AND r.parking = ".(int) Yii::app()->session['parking']."";
+        }
+
+        // Машиноместо +
+        if(isset(Yii::app()->session['place_cars'])){
+            $condition .= " AND r.place_cars = ".(int) Yii::app()->session['place_cars']."";
+        }
+
+        // Машиноместо +
+        if(isset(Yii::app()->session['covered_space'])){
+            $condition .= " AND r.covered_space = ".(int) Yii::app()->session['covered_space']."";
+        }
+
 
         //ЭТАЖНОСТЬ КВАРТИРЫ
         if(!isset(Yii::app()->session['level']) && (
@@ -237,20 +264,107 @@ class ResultController extends Controller {
         }
 
 
-        $count=$connection->createCommand("SELECT COUNT(r.apart_id) FROM real_estate AS r WHERE ".$condition."")->queryScalar();
+        #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1): 1 - 7 - 4(3)
+        if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 4 || Yii::app()->session['type_estate'] == 3)) &&
+           (isset(Yii::app()->session['operations'])  &&  Yii::app()->session['operations'] == 1) &&
+           (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 7))
+        {
+          $sql = "SELECT
+                    r.apart_id     AS apartID,
+                    r.type_estate  AS typeEstate,
+                    r.operations   AS operations,
+                    r.market       AS market,
+                    r.room         AS room,
+                    r.general_area AS generalArea,
+                    r.human_area   AS humanArea,
+                    r.kitchen_area AS kitchenArea,
+                    r.price_of_m2  AS priceM2,
+                    r.price        AS price,
+                    r.create_data  AS createData,
+                    r.store        AS store,
+                    r.deadline     AS deadline,
+                    r.photos       AS photos,
+                    r.window       AS window,
+                    r.balcony      AS balcony,
+                    r.parking      AS parking,
+                    r.place_cars   AS placeCars,
+                    r.covered_space AS coveredSpace,
 
-        $sql="SELECT
-                    r.apart_id AS apartID,
-                    h.id AS houseID,
-                    u.uid AS userID
+                    h.id           AS houseID,
+                    h.house_number AS houseNumber,
+                    h.floors       AS floors,
+
+                    u.uid          AS userID,
+                    u.sub_email    AS email,
+                    u.last_name    AS lastName,
+                    u.phone        AS phone,
+
+                    stage.name     AS stageName,
+                    currency.name  AS currencyName,
+                    thouse.name    AS typeHouse,
+                    city.name      AS cityName,
+                    street.name    AS streetName
+
 
               FROM real_estate AS r
-              INNER JOIN s_house AS h ON h.id = r.fk_house_id
-              INNER JOIN users AS u   ON r.fk_uid = u.uid
+              INNER JOIN s_house AS h            ON h.id = r.fk_house_id
+              INNER JOIN users AS u              ON r.fk_uid = u.uid
+              INNER JOIN s_currency AS currency  ON r.currency = currency.id
+              INNER JOIN s_stage  AS stage       ON r.stage = stage.id
+              INNER JOIN s_type_house AS thouse  ON h.type_house = thouse.id
+              INNER JOIN s_city  AS city         ON h.city = city.id
+              INNER JOIN s_street  AS street     ON h.street = street.id
 
               WHERE ".$condition."
               ORDER BY r.apart_id DESC";
 
+        }
+
+        //
+        // window.name    AS windowName
+        //
+        // INNER JOIN s_window AS window     ON r.window = window.id
+
+        #### --- Продать -> Вторичная -> Дом (Ф-2): 1 - 6 - 5
+        if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 5)) &&
+           (isset(Yii::app()->session['operations'])  &&  Yii::app()->session['operations'] == 1)   &&
+           (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 6))
+        {
+            // Новый SQL запрос
+        }
+
+
+        #### --- Продать -> Вторичная -> Квартира и Аппартаменты (Ф-3): 1 - 6 - 4(3)
+        if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 4 || Yii::app()->session['type_estate'] == 3)) &&
+           (isset(Yii::app()->session['operations'])  &&  Yii::app()->session['operations'] == 1) &&
+           (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 6))
+        {
+            // Новый SQL запрос
+        }
+
+
+
+        #### --- Аренда -> Вторичная -> Квартира и Аппартаменты (Ф-4): 2 - 6 - 4(3)
+        if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 4 || Yii::app()->session['type_estate'] == 3)) &&
+           (isset(Yii::app()->session['operations'])  &&  Yii::app()->session['operations'] == 2) &&
+           (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 6))
+        {
+            // Новый SQL запрос
+        }
+
+
+        #### --- Аренда -> Вторичная -> Дом (Ф-5): 2 - 6 - 5
+        if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 5)) &&
+           (isset(Yii::app()->session['operations'])  &&  Yii::app()->session['operations'] == 2)   &&
+           (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 6))
+        {
+            // Новый SQL запрос
+        }
+
+
+
+
+        $count=$connection->createCommand("SELECT COUNT(r.apart_id) FROM real_estate AS r WHERE ".$condition."")->queryScalar();
         $dataProvider = new CSqlDataProvider($sql, array(
             'keyField'=>'apartID',
             'totalItemCount'=>$count,
@@ -259,7 +373,7 @@ class ResultController extends Controller {
                 //'defaultOrder'=>'price ASC',
             ),
             'pagination'=>array(
-                'pageSize'=>3,
+                'pageSize'=>5,
             ),
         ));
 
