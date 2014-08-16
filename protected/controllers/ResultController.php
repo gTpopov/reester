@@ -16,61 +16,59 @@ class ResultController extends Controller {
         #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1) ---
 
         // Criteria Realty, Operation, Market
-        $_POST['RealEstat']['type_estate'] = 4; // Тип недвижимости: 4 - квартира 3 - аппартаменты 5 - дом
-        $_POST['RealEstat']['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
-        $_POST['RealEstat']['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
+        $_POST['type_estate'] = 4; // Тип недвижимости: 4 - квартира 3 - аппартаменты 5 - дом
+        $_POST['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
+        $_POST['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
 
-        $_POST['RealEstat']['room']         = 3;    // кол-во комнат
-        $_POST['RealEstat']['general_area_from'] = 20;   // общая площадь min ++
-        $_POST['RealEstat']['general_area_to']   = 150;   // общая площадь max ++
-        $_POST['RealEstat']['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
-        $_POST['RealEstat']['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
-        $_POST['RealEstat']['price_from']        = 200000;// стоимость объекта min ++
-        $_POST['RealEstat']['price_to']          = 500000;// стоимость объекта max ++
-        $_POST['RealEstat']['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
-        $_POST['RealEstat']['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
-        $_POST['RealEstat']['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
-        $_POST['RealEstat']['store']        = 5;    // этаж квартиры или аппартаментов +
-        $_POST['RealEstat']['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей
-        $_POST['RealEstat']['window']       = 3;    // 1-двор  2-улица 3-двор +улица
-        $_POST['RealEstat']['balcony']      = 1;    // 1-лоджия или балкон
-        $_POST['RealEstat']['parking']      = 1;    // 1-паркинг
-        $_POST['RealEstat']['place_cars']   = 1;    // 1-машиноместо
-        $_POST['RealEstat']['covered_space']= 1;    // 1-закрытая (огражденная) територия
-        $_POST['RealEstat']['club_type']    = 1;    // 1-клубного типа
-        $_POST['RealEstat']['discount']     = 1;    // 1-акции и скидки
-        $_POST['RealEstat']['mortgage']     = 1;    // 1-для ипотеки
-        $_POST['RealEstat']['sanitare']     = 2;    // 1-раздельный 2-совмещенный 3-2+ санузла
-        $_POST['RealEstat']['create_data']  = '2014-08-14'; // Искать за (все время,сегодня,1 день,3 дня,неделя,месяц
-        $_POST['RealEstat']['deadline']     = 2017; // срок сдачи (н/р 2017)
-        $_POST['RealEstat']['developer']    = 'LTD House Big'; // застройщик
-        $_POST['RealEstat']['fz_214']       = 1;    // регистрация новостройки
-        $_POST['RealEstat']['finished']     = 1;    // с отделкой
-        $_POST['RealEstat']['photos']       = 1;    // 1-с фото, 0-отсутствие фото
+        $_POST['room']         = 3;    // кол-во комнат
+        $_POST['general_area_from'] = 20;   // общая площадь min ++
+        $_POST['general_area_to']   = 150;   // общая площадь max ++
+        $_POST['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
+        $_POST['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
+        $_POST['price_from']        = 200000;// стоимость объекта min ++
+        $_POST['price_to']          = 500000;// стоимость объекта max ++
+        $_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
+        $_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
+        $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
+        $_POST['level']        = 1;    // любой этаж
+        $_POST['level_from']   = 5;    // этаж квартиры от
+        $_POST['level_to']     = 10;   // этаж квартиры до
+        $_POST['level_last']   = 1;    // Не последний этаж
+        $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый)
+        $_POST['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей
+        $_POST['window']       = 3;    // 1-двор  2-улица 3-двор +улица
+        $_POST['balcony']      = 1;    // 1-лоджия или балкон
+        $_POST['parking']      = 1;    // 1-паркинг
+        $_POST['place_cars']   = 1;    // 1-машиноместо
+        $_POST['covered_space']= 1;    // 1-закрытая (огражденная) територия
+        $_POST['club_type']    = 1;    // 1-клубного типа
+        $_POST['discount']     = 1;    // 1-акции и скидки
+        $_POST['mortgage']     = 1;    // 1-для ипотеки
+        $_POST['sanitare']     = 2;    // 1-раздельный 2-совмещенный 3-2+ санузла
+        $_POST['create_data']  = '2014-08-14'; // Искать за (все время,сегодня,1 день,3 дня,неделя,месяц
+        $_POST['deadline']     = 2017; // срок сдачи (н/р 2017)
+        $_POST['developer']    = 'LTD House Big'; // застройщик
+        $_POST['fz_214']       = 1;    // регистрация новостройки
+        $_POST['finished']     = 1;    // с отделкой
+        $_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото
 
-        $_POST['SHouse']['floors']          = 15;   // этажность дома
-        $_POST['SHouse']['city']            = 1;    // город
-        $_POST['SHouse']['district']        = 7;    // округ
-        $_POST['SHouse']['region']          = 11;   // регион
-        $_POST['SHouse']['street']          = 1001; // улица
-        $_POST['SHouse']['undeground']      = 9;    // метро
-        $_POST['SHouse']['metro_time']      = 15;   // до метро
-        $_POST['SHouse']['metro_way']       = 1;    // 1-пешком, 2-транспортом
-        $_POST['SHouse']['class_home']      = 1;    // 1-эконом 2-бизнес 3-элитный
-        $_POST['SHouse']['type_house']      = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень
+        $_POST['floors']          = 15;   // этажность дома
+        $_POST['city']            = 1;    // город
+        $_POST['district']        = 7;    // округ
+        $_POST['region']          = 11;   // регион
+        $_POST['street']          = 1001; // улица
+        $_POST['undeground']      = 9;    // метро
+        $_POST['metro_time']      = 15;   // до метро
+        $_POST['metro_way']       = 1;    // 1-пешком, 2-транспортом
+        $_POST['class_home']      = 1;    // 1-эконом 2-бизнес 3-элитный
+        $_POST['type_house']      = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень
 
-        $_POST['Users']['type_account']     = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор
+        $_POST['type_account']     = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор
 
         ### --- END --- ###
 
         //Сохраняем переданные параметры фильтра в сессии
-        foreach($_POST['RealEstat'] as $key => $val) {
-            Yii::app()->session[''.$key.''] = $val;
-        }
-        foreach($_POST['SHouse'] as $key => $val) {
-            Yii::app()->session[''.$key.''] = $val;
-        }
-        foreach($_POST['Users'] as $key => $val) {
+        foreach($_POST as $key => $val) {
             Yii::app()->session[''.$key.''] = $val;
         }
 
@@ -195,19 +193,19 @@ class ResultController extends Controller {
                 {
                     $level_to   = intval(Yii::app()->session['level_to']);
                     $level_from = intval(Yii::app()->session['level_from']);
-                    $condition .= " AND t.store BETWEEN ".$level_from." AND ".$level_to."";
+                    $condition .= " AND r.store BETWEEN ".$level_from." AND ".$level_to."";
                     //print 'level_to && level_from';
                 }
                 else if(!empty(Yii::app()->session['level_to']) && empty(Yii::app()->session['level_from']))
                 {
                     $level_to   = intval(Yii::app()->session['level_to']);
-                    $condition .= " AND t.store <= ".$level_to."";
+                    $condition .= " AND r.store <= ".$level_to."";
                     //print 'level_to';
                 }
                 else if(empty(Yii::app()->session['level_to']) && !empty(Yii::app()->session['level_from']))
                 {
                     $level_from   = intval(Yii::app()->session['level_from']);
-                    $condition .= " AND t.store >= ".$level_from."";
+                    $condition .= " AND r.store >= ".$level_from."";
                     //print 'level_from';
                 }
             }
@@ -215,15 +213,23 @@ class ResultController extends Controller {
                 // НЕ ПОСЛЕДНИЙ ЭТАЖ
                 if(isset(Yii::app()->session['level_last']) && !isset(Yii::app()->session['level_first']))
                 {
-                    $condition .= " AND t.store < (SELECT MAX(store) FROM apartament)";
+                    $condition .= " AND r.store < (SELECT MAX(store)
+                                                   FROM real_estate
+                                                   WHERE type_estate = ".(int) Yii::app()->session['type_estate']." AND
+                                                         operations  = ".(int) Yii::app()->session['operations']."  AND
+                                                         market      = ".(int) Yii::app()->session['market'].")";
                 }
                 //КРОМЕ 1-ГО ЭТАЖА
                 else if(isset(Yii::app()->session['level_first']) && !isset(Yii::app()->session['level_last']))
                 {
-                    $condition .= " AND t.store > 1";
+                    $condition .= " AND r.store > 1";
                 }
                 else {
-                    $condition .= " AND t.store > 1 AND t.store < (SELECT MAX(store) FROM apartament)";
+                    $condition .= " AND r.store > 1 AND r.store < (SELECT MAX(store)
+                                                                   FROM real_estate
+                                                                   WHERE type_estate = ".(int) Yii::app()->session['type_estate']." AND
+                                                                         operations  = ".(int) Yii::app()->session['operations']."  AND
+                                                                         market      = ".(int) Yii::app()->session['market'].")";
                 }
             }
         }
