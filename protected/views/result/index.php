@@ -64,6 +64,23 @@ if(isset($dataProvider) && $act == 1) {
                         case 2 : $typeAccount = "представитель собственника"; break;
                         case 3 : $typeAccount = "риелтор";   break;
                     }
+                    switch($data["stageName"]) {
+                        case 1 : $stageName = "нулевой цикл";      break;
+                        case 2 : $stageName = "первые этажи";      break;
+                        case 3 : $stageName = "средние этажи";     break;
+                        case 4 : $stageName = "последние этажи";   break;
+                        case 5 : $stageName = "отделка";           break;
+                        case 6 : $stageName = "благоустройство";   break;
+                        case 7 : $stageName = "выдача ключей";     break;
+                    }
+                    switch($data["typeWall"]) {
+                        case 1 : $typeWall = "кирпичный";          break;
+                        case 2 : $typeWall = "монолитный";         break;
+                        case 3 : $typeWall = "монолитно-кирпичный";break;
+                        case 4 : $typeWall = "панельный";          break;
+                        case 5 : $typeWall = "дерево";             break;
+                        case 6 : $typeWall = "природный кемень";   break;
+                    }
 
 
                     $district = $connection->createCommand("
@@ -109,8 +126,8 @@ if(isset($dataProvider) && $act == 1) {
                             "<b>Общая площадь:</b> ".$data["generalArea"]."<br>".
                             "<b>Цена за м2:</b> ".$data["priceM2"]."<br>".
                             "<b>Цена объекта:</b> ".$data["price"]."<br>".
-                            "<b>Тип стен:</b> ".$data["typeHouse"]."<br>".
-                            "<b>Стадия строительства:</b> ".$data["stageName"]."<br>".
+                            "<b>Тип стен:</b> ".$typeWall."<br>".
+                            "<b>Стадия строительства:</b> ".$stageName."<br>".
                             "<b>Email:</b> ".$data["email"]."<br>".
                             "<b>Имя:</b> ".$data["lastName"]."<br>".
                             "<b>Phone:</b> ".$data["phone"]."<br>".

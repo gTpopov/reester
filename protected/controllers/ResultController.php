@@ -39,7 +39,9 @@ class ResultController extends Controller {
         $_POST['level_to']     = 10;   // этаж квартиры до +
         $_POST['level_last']   = 1;    // Не последний этаж +
         $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
-        $_POST['stage']        = 3;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
+        $_POST['stage'][0]     = 1;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
+        $_POST['stage'][1]     = 2;
+        $_POST['stage'][2]     = 3;
         $_POST['window']       = 2;    // 1-двор  2-улица 3-двор +улица +
         $_POST['balcony']      = 1;    // 1-лоджия или балкон +
         $_POST['parking']      = 1;    // 1-паркинг +
@@ -75,7 +77,9 @@ class ResultController extends Controller {
         $_POST['class_home'][0]   = 1;    // 1-эконом 2-бизнес 3-элитный +
         $_POST['class_home'][1]   = 2;
         $_POST['class_home'][3]   = 3;
-        $_POST['type_house']      = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень +
+        $_POST['type_house'][0]   = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень +
+        $_POST['type_house'][1]   = 2;
+        $_POST['type_house'][2]   = 3;
         $_POST['type_account'][0] = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор +
         $_POST['type_account'][2] = 2;
         $_POST['type_account'][3] = 3;
@@ -357,6 +361,18 @@ class ResultController extends Controller {
             $condition .= " AND h.floors = ".(int) Yii::app()->session['floors']."";
         }
 
+        //  Стадия строительства +
+        if(isset(Yii::app()->session['stage'])){
+
+            $stage_house = '';
+            foreach(Yii::app()->session['stage'] as $val_stage)
+            {
+                $stage_house .= trim($val_stage.',');
+            }
+            $stage_house = substr($stage_house,0,strlen($stage_house)-1);
+            $condition .= " AND r.stage IN (".$stage_house.")";
+        }
+
         //  Округ +
         if(isset(Yii::app()->session['district'])){
 
@@ -425,6 +441,18 @@ class ResultController extends Controller {
             $condition .= " AND h.class_home IN (".$class_home.")";
         }
 
+        // Тип стен дома
+        if(isset(Yii::app()->session['type_house'])) {
+
+            $type_house = '';
+            foreach(Yii::app()->session['type_house'] as $val_type_house) {
+                $type_house .= trim($val_type_house.',');
+            }
+            $type_house = substr($type_house,0,strlen($type_house)-1);
+            $condition .= " AND h.type_house IN (".$type_house.")";
+        }
+
+
         // Тип желаемой учетной записи
         if(isset(Yii::app()->session['type_account'])) {
 
@@ -473,6 +501,7 @@ class ResultController extends Controller {
                     r.fz_214       AS fz_214,
                     r.finished     AS finished,
                     r.photos       AS photos,
+                    r.stage        AS stageName,
 
                     h.id           AS houseID,
                     h.house_number AS houseNumber,
@@ -483,6 +512,7 @@ class ResultController extends Controller {
                     h.metro_time   AS metroTime,
                     h.metro_way    AS metroWay,
                     h.class_home   AS classHome,
+                    h.type_house   AS typeWall,
 
                     u.uid          AS userID,
                     u.sub_email    AS email,
@@ -490,9 +520,8 @@ class ResultController extends Controller {
                     u.phone        AS phone,
                     u.type_account AS typeAccount,
 
-                    stage.name     AS stageName,
+
                     currency.name  AS currencyName,
-                    thouse.name    AS typeHouse,
                     city.name      AS cityName,
                     street.name    AS streetName
 
@@ -501,8 +530,6 @@ class ResultController extends Controller {
               INNER JOIN s_house AS h            ON h.id = r.fk_house_id
               INNER JOIN users AS u              ON r.fk_uid = u.uid
               INNER JOIN s_currency AS currency  ON r.currency = currency.id
-              INNER JOIN s_stage  AS stage       ON r.stage = stage.id
-              INNER JOIN s_type_house AS thouse  ON h.type_house = thouse.id
               INNER JOIN s_city  AS city         ON h.city = city.id
               INNER JOIN s_street  AS street     ON h.street = street.id
 
