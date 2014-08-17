@@ -56,7 +56,7 @@ class ResultController extends Controller {
         $_POST['developer']    = 1;    // застройщик +
         $_POST['fz_214']       = 1;    // регистрация новостройки +
         $_POST['finished']     = 1;    // с отделкой +
-        $_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото +
+        //$_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото +
         $_POST['floors']          = 15;   // этажность дома +
         $_POST['city']            = 1;    // город +
         $_POST['district'][0]     = 98;   // округ +

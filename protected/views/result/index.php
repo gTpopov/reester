@@ -86,11 +86,22 @@ if(isset($dataProvider) && $act == 1) {
                     $developer = ($data["developer"]!='0')?$data["developer"]:'нет'; // застройщик
                     $fz_214    = ($data["fz_214"]!=0)?'есть':'нет'; // регистрация нвостройки
                     $finished  = ($data["finished"]!=0)?'есть':'нет'; // с отделкой
-                    $photos    = ($data["photos"]!=0)?'есть':'нет'; // с фото
                     $metroTime = ($data["metroTime"]!=0)?$data["metroTime"]:'нет'; // до метро
 
+                    if($data["photos"]!=0) {
 
-                    return "<b>Тип недвижимости:</b> ".$typeHouse."<br>".
+                        $img = $connection->createCommand("
+                        SELECT source FROM s_images WHERE fk_house = ".$data["houseID"]."")->queryRow();
+
+                        if(file_exists('files/'.Yii::app()->user->id.'/'.$data["houseID"].'/'.$img['source'].'')) {
+                            $photos = "<img width='50' src='/files/".Yii::app()->user->id."/".$data["houseID"]."/".$img['source']."'>";
+                        }
+                    } else {
+                        $photos = "<img width='50' src='/img/project-style/settings_img_additional_info.png'>";
+                    }
+
+                    return "<b>houseID:</b> ".$data["houseID"]."<br>".
+                            "<b>Тип недвижимости:</b> ".$typeHouse."<br>".
                             "<b>Операция:</b> ".$operations."<br>".
                             "<b>Рынок:</b> ".$market."<br>".
                             "<b>Валюта:</b> ".$data["currencyName"]."<br>".
