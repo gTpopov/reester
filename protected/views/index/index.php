@@ -83,14 +83,14 @@
                                     checksContainer = $('#checks-rooms-number').children('.row').children('.btn-group');
                                     _results = [];
                                     for (i = _i = 1; _i < 6; i = ++_i) {
-                                        _results.push(checksContainer.append("<label class='btn btn-sm btn-primary'><input type='checkbox' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "</label>"));
+                                        _results.push(checksContainer.append("<label class='btn btn-primary'><input type='checkbox' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "</label>"));
                                     }
                                     return _results;
                                 });
 
                             }).call(this);
                         </script>
-                        <div class="col-sm-4" style="padding-top: 3px">Комнат</div>
+                        <div class="col-sm-4" style="padding-top: 6px">Комнат</div>
                         <div id="checks-rooms-number" class="col-sm-8"><div class="row"><div class='btn-group' data-toggle='buttons'></div></div></div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     <div class="row padding-horizontal-10-px">
                         <div class="col-sm-2">
                             <div class="row text-right">
-                                <small style="vertical-align: -3px;">площадь</small>
+                                <small style="vertical-align: -6px;">площадь</small>
                             </div>
                         </div>
                         <div class="col-sm-3" style="padding-right: 0">
@@ -142,12 +142,12 @@
                             <input class="form-control fm-sm" placeholder="от">
                         </div>
                     </div>
-                    <div class="col-sm-3" style="padding-left: 0">
+                    <div class="col-sm-4" style="padding-left: 0">
                         <div class="padding-horizontal-10-px">
                             <input class="form-control fm-sm" placeholder="до">
                         </div>
                     </div>
-                    <div class="col-sm-2 text-left">
+                    <div class="col-sm-1 text-left">
                         <div class="row padding-horizontal-10-px">
                             <div class="contain-slct smm-sl">
                                 <div id="search-currency-type" class="select-int">
