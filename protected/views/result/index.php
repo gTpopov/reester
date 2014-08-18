@@ -13,8 +13,8 @@ function typeEstate($typeEstate){
 function operations($operations){
 
     switch($operations) {
-        case 1 : $operations = "продать";    break;
-        case 2 : $operations = "арендовать"; break;
+        case 1 : $operations = "продажа";    break;
+        case 2 : $operations = "аренда"; break;
     }
     return $operations;
 }
@@ -146,10 +146,12 @@ function fz_214($fz_214)             { return ($fz_214!=0)?'есть':'нет'; 
 function finished($finished)         { return ($finished!=0)?'есть':'нет'; } // с отделкой
 function metroTime($metroTime)       { return ($metroTime!=0)?$metroTime:'нет'; } // до метро
 
+?>
 
-
-
-
+<div style="width: 100%; height: 50px; background: #CCCCDD;border: 1px solid #a6a6a6;padding: 7px;">
+    <h4>Изменить параметры поиска</h4>
+</div>
+<?php
 #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1): 1 - 7 - 4(3)
 if(isset($dataProvider) && $act == 1) {
 
@@ -158,7 +160,7 @@ if(isset($dataProvider) && $act == 1) {
         'enablePagination' => true,
         'emptyText'=>'Data empty',
         'summaryText' => "",
-        'columns'=>array(
+        'columns'=> array(
             array(
                 'name'=>'apartID',
                 'header'=> 'ID',
@@ -258,26 +260,21 @@ if(isset($dataProvider) && $act == 1) {
                 'name'=>'houseID',
                 'header'=> 'Цена, P $ &euro;',
                 'value' => function($data,$row,$column){
+
                         return   $data["price"]." ".$data["currencyName"]."<br>".
-                                 $data["priceM2"]." ".$data["currencyName"]." за м2";
-                    },
-                'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>70),
-            ),
-            array(
-                'name'=>'houseID',
-                'header'=> 'Контакты',
-                'value' => function($data,$row,$column){
-                        return   $data["lastName"]."<br>".
+                                 $data["priceM2"]." ".$data["currencyName"]." за м2<br><br>".
+                                 operations($data["operations"])."<br>".
+                                 $data["lastName"]."<br>".
                                  $data["phone"]."<br>";
                     },
                 'type' =>  'raw',
                 'headerHtmlOptions'=>array('width'=>50),
+                'htmlOptions' => array('class'=>'test')
             ),
 
 
         ),
-        'pager' => array(
+        'pager'  => array(
             'firstPageLabel'=>'начало',
             'prevPageLabel'=>'&larr;',
             'nextPageLabel'=>'&rarr;',
@@ -287,6 +284,7 @@ if(isset($dataProvider) && $act == 1) {
             'cssFile'=>false,
         ),
         'pagerCssClass'=>'pagination',
+        'htmlOptions' => array('style'=>'padding:0;')
     ));
 }
 
