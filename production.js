@@ -2,13 +2,13 @@
 (function() {
   $(function() {
     var checksContainer, i, _i, _results;
-    checksContainer = $('#checks-rooms-number');
+    checksContainer = $('#checks-rooms-number').children('.row').children('.btn-group');
     _results = [];
     for (i = _i = 1; _i < 6; i = ++_i) {
       if (i === 5) {
-        _results.push(checksContainer.append("<div class='btn-group' data-toggle='buttons'><label class='btn btn-sm btn-primary'><input type='radio' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "+</label></div> <small>комнатную</small>"));
+        _results.push(checksContainer.append("<label class='btn btn-primary'><input type='radio' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "+</label>"));
       } else {
-        _results.push(checksContainer.append("<div class='btn-group bts-cont-mar-offset' data-toggle='buttons'><label class='btn btn-sm btn-primary'><input type='radio' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "</label></div>"));
+        _results.push(checksContainer.append("<label class='btn btn-primary'><input type='radio' name='floors-" + i + "-num' id='floors-" + i + "-num'>" + i + "</label>"));
       }
     }
     return _results;
