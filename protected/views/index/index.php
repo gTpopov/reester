@@ -49,22 +49,22 @@ Yii::app()->clientScript
             var param = sale_rent_op+'.'+obj_state+'.'+object_type;
 
             if(param=='1.7.4' || param=='1.7.3') {
-                window.location.replace('/users/addObject/index?act=1');
+                window.location.replace('/index?act=1');
             }
             else if(param=='1.6.5') {
-                window.location.replace('/users/addObject/two?act=2');
+                window.location.replace('/index/two?act=2');
             }
             else if(param=='1.6.4' || param=='1.6.3') {
-                window.location.replace('/users/addObject/three?act=3');
+                window.location.replace('/index/three?act=3');
             }
             else if(param=='2.6.4' || param=='2.6.3') {
-                window.location.replace('/users/addObject/four?act=4');
+                window.location.replace('/index/four?act=4');
             }
             else if(param=='2.6.5') {
-                window.location.replace('/users/addObject/five?act=5');
+                window.location.replace('/index/five?act=5');
             }
             else {
-                window.location.replace('/users/addObject/index?act=1');
+                window.location.replace('/index?act=1');
             }
         }
 

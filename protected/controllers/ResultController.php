@@ -25,7 +25,9 @@ class ResultController extends Controller {
         $_POST['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
         $_POST['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
 
-        $_POST['room']         = 3;    // кол-во комнат
+        $_POST['room'][0]     = 3;    // кол-во комнат
+        $_POST['room'][1]     = 2;
+        $_POST['room'][2]     = 1;
         $_POST['general_area_from'] = 20;   // общая площадь min ++
         $_POST['general_area_to']   = 150;   // общая площадь max ++
         $_POST['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
@@ -119,7 +121,12 @@ class ResultController extends Controller {
         }
         // Кол-во комнат +
         if(isset(Yii::app()->session['room'])){
-            $condition .= " AND r.room = ".(int) Yii::app()->session['room']."";
+            $list_room = '';
+            foreach(Yii::app()->session['room'] as $val_room) {
+                $list_room .= trim($val_room.',');
+            }
+            $list_room = substr($list_room,0,strlen($list_room)-1);
+            $condition .= " AND r.room IN (".$list_room.")";
         }
         // Валюта +
         if(isset(Yii::app()->session['currency'])){
@@ -447,7 +454,6 @@ class ResultController extends Controller {
             $condition .= " AND h.metro_way IN (".$metro_way.")";
         }
 
-
         // Класс дома
         if(isset(Yii::app()->session['class_home'])) {
 
@@ -483,6 +489,8 @@ class ResultController extends Controller {
         }
 
 
+
+        ###########################################################################
 
         #### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1): 1 - 7 - 4(3)
         if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 4 || Yii::app()->session['type_estate'] == 3)) &&
