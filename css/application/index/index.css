@@ -100,7 +100,9 @@
     border-radius: 2px;
     margin: 4px 0;
 }
-
+#dop > .col-sm-2{
+    margin: 0 15px;
+}
 #add-obj-fl-ap-nw-sale > div > div > div > div > label.btn-primary,
 #add-obj-fl-ap-nw-sale > div > div > div > div > div > label.btn-primary{
     background-color: #FFF !important;

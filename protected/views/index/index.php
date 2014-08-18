@@ -183,7 +183,7 @@
         </div>
 
         <div class="col-sm-12" style="margin-top: 10px">
-            <div class="row padding-horizontal-10-px">
+            <div id="dop" class="row padding-horizontal-10-px">
                 <div class="col-sm-12">
                     <div class="row">
                         <h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 10px">Дополнительные параметры фильтра
@@ -192,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h4 class="text-center">материал стен</h4>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="btn btn-sm btn-primary active">
@@ -292,7 +292,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h4 class="text-center">разное</h4>
                     <div class="row padding-horizontal-10-px" style="padding-top: 0">
                         <div class="btn-group" style="margin-top: 0px" data-toggle="buttons">
