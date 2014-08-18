@@ -3,8 +3,8 @@
 class ResultController extends Controller {
 
     /*
-     *  Обработка переданных данных
-     *  вывод результата
+     *  Filter block
+     *  Widget five
      */
 
     public function actionIndex(){
@@ -194,7 +194,7 @@ class ResultController extends Controller {
             }
         }
 
-        //ЭТАЖНОСТЬ КВАРТИРЫ
+        // Этажность квартиры
         if(!isset(Yii::app()->session['level']) && (
                 !empty(Yii::app()->session['level_to'])   ||
                 !empty(Yii::app()->session['level_from']) ||
@@ -312,7 +312,7 @@ class ResultController extends Controller {
             $condition .= " AND r.sanitare IN (".$sanitare.")";
         }
 
-        // ИСКАТЬ ЗА ПЕРИОД +
+        // Искать за период +
         if(isset(Yii::app()->session['create_data']) && Yii::app()->session['create_data']!=0)
         {
             $data = intval(Yii::app()->session['create_data']);
@@ -615,7 +615,7 @@ class ResultController extends Controller {
                 //'defaultOrder'=>'price ASC',
             ),
             'pagination'=>array(
-                'pageSize'=>2,
+                'pageSize'=>15,
             ),
         ));
 
