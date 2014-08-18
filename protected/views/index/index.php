@@ -122,8 +122,8 @@
                 <div class="col-sm-2">
                     <div class="row padding-horizontal-10-px">
                         <div class="btn-group" style="width: 100%" data-toggle="buttons">
-                            <label class="btn btn-sm btn-primary btn-block active">
-                                <input type="radio" name="options" id="option1" checked> только с фотографиями
+                            <label class="btn btn-sm btn-info btn-block active">
+                                <input type="checkbox" name="options" id="option1" checked> только с фотографиями
                             </label>
                         </div>
                     </div>
@@ -336,6 +336,57 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <div class="col-sm-12" style="margin-top: 10px">
+            <div class="row">
+                <div class="col-sm-12"><div class="row"><h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 5px">Дополнительная информация</h3></div></div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6" style="padding-top: 4px">
+                            <span style="padding-top: 2px">Тип объявления:</span>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-sm btn-primary active">
+                                    <input type="radio" name="options" id="option1" checked> собственник
+                                </label>
+                                <label class="btn btn-sm btn-primary">
+                                    <input type="radio" name="options" id="option2"> представитель собственника
+                                </label>
+                                <label class="btn btn-sm btn-primary">
+                                    <input type="radio" name="options" id="option3"> хозяин
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div class="contain-slct smm-sl">
+                                    <div id="search-time-advert-settings" class="select-int">
+                                        <div class="select">
+                                            <a href="javascript:;" class="slct">Искать за период</a>
+                                            <ul class="drop">
+                                                <li><span data-value="1">все время</span></li>
+                                                <li><span data-value="2">сегодня</span></li>
+                                                <li><span data-value="3">1 день</span></li>
+                                                <li><span data-value="4">3 дня</span></li>
+                                                <li><span data-value="5">неделя</span></li>
+                                                <li><span data-value="6">месяц</span></li>
+                                            </ul>
+                                            <?php //echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2" style="padding-top: 6px">
+                            c фото <input type="checkbox">
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="reset" class="btn btn-danger" value="Очистить">
+                            <input type="submit" class="btn btn-success" value="Найти">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
