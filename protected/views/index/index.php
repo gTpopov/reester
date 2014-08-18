@@ -13,90 +13,65 @@
                         <div class="col-sm-4 text-left">
                             <div class="row">
                                 <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-sm btn-primary active">
+                                    <label class="btn btn-primary active">
                                         <input type="radio" name="options" id="option1" checked> купить
                                     </label>
-                                    <label class="btn btn-sm btn-primary">
+                                    <label class="btn btn-primary">
                                         <input type="radio" name="options" id="option2"> снять
                                     </label>
-                                    <label class="btn btn-sm btn-primary">
+                                    <label class="btn btn-primary">
                                         <input type="radio" name="options" id="option3"> оценить
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 text-center">
+                        <div class="col-sm-3 text-center">
                             <div class="row">
                                 <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-sm btn-primary active">
+                                    <label class="btn btn-primary active">
                                         <input type="radio" name="options" id="option1" checked> квартира
                                     </label>
-                                    <label class="btn btn-sm btn-primary">
+                                    <label class="btn btn-primary">
                                         <input type="radio" name="options" id="option2"> апартаменты
                                     </label>
-                                    <label class="btn btn-sm btn-primary">
+                                    <label class="btn btn-primary">
                                         <input type="radio" name="options" id="option3"> дом
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 text-right">
+                        <div class="col-sm-3 text-right">
                             <div class="row">
                                 <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-sm btn-primary active">
+                                    <label class="btn btn-primary active">
                                         <input type="radio" name="options" id="option2"> вторичная
                                     </label>
-                                    <label class="btn btn-sm btn-primary">
+                                    <label class="btn btn-primary">
                                         <input type="radio" name="options" id="option3"> строящаяся
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <!--
-                            <div class="col-sm-2">
-                                <div class="row">
-                                    <div class="contain-slct smm-sl">
-                                        <div id="search-time-advert-settings" class="select-int">
-                                            <div class="select">
-                                                <a href="javascript:;" class="slct">Искать за период</a>
-                                                <ul class="drop">
-                                                    <li><span data-value="1">все время</span></li>
-                                                    <li><span data-value="2">сегодня</span></li>
-                                                    <li><span data-value="3">1 день</span></li>
-                                                    <li><span data-value="4">3 дня</span></li>
-                                                    <li><span data-value="5">неделя</span></li>
-                                                    <li><span data-value="6">месяц</span></li>
-                                                </ul>
-                                                <?php //echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
-                                            </div>
+                        <div class="col-sm-2">
+                            <div class="row">
+                                <div class="contain-slct smm-sl">
+                                    <div id="search-time-advert-settings" class="select-int">
+                                        <div class="select">
+                                            <a href="javascript:;" class="slct">Искать за период</a>
+                                            <ul class="drop">
+                                                <li><span data-value="1">все время</span></li>
+                                                <li><span data-value="2">сегодня</span></li>
+                                                <li><span data-value="3">1 день</span></li>
+                                                <li><span data-value="4">3 дня</span></li>
+                                                <li><span data-value="5">неделя</span></li>
+                                                <li><span data-value="6">месяц</span></li>
+                                            </ul>
+                                            <?php //echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-5">
-                                <div class="col-sm-4">
-                                    <div class="row text-right">
-                                        <small style="vertical-align: -3px;">амплитуда площади</small>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3" style="padding-right: 0">
-                                    <input class="form-control fm-sm" placeholder="от">
-                                </div>
-                                <div class="col-sm-1 text-left">
-                                    <div class="row">
-                                        <small style="vertical-align: -10px; margin-left: 5px; color: #999">m<sup>2</sup></small>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3" style="padding: 0">
-                                    <input class="form-control fm-sm" placeholder="до">
-                                </div>
-                                <div class="col-sm-1 text-left">
-                                    <div class="row">
-                                        <small style="vertical-align: -10px; margin-left: 5px; color: #999">m<sup>2</sup></small>
-                                    </div>
-                                </div>
-                            </div>
-                        -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -119,20 +94,11 @@
                         <div id="checks-rooms-number" class="col-sm-8"><div class="row"><div class='btn-group' data-toggle='buttons'></div></div></div>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-4">
                     <div class="row padding-horizontal-10-px">
-                        <div class="btn-group" style="width: 100%" data-toggle="buttons">
-                            <label class="btn btn-sm btn-info btn-block active">
-                                <input type="checkbox" name="options" id="option1" checked> только с фотографиями
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="row padding-horizontal-10-px">
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <div class="row text-right">
-                                <small style="vertical-align: -3px;">площаь</small>
+                                <small style="vertical-align: -3px;">площадь</small>
                             </div>
                         </div>
                         <div class="col-sm-3" style="padding-right: 0">
@@ -143,7 +109,7 @@
                                 <small style="vertical-align: -10px; margin-left: 5px; color: #999">m<sup>2</sup></small>
                             </div>
                         </div>
-                        <div class="col-sm-3" style="padding: 0">
+                        <div class="col-sm-4" style="padding: 0">
                             <input class="form-control fm-sm" placeholder="до">
                         </div>
                         <div class="col-sm-1 text-left">
@@ -153,15 +119,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4" style="padding-left: 0">
+                <div class="col-sm-5" style="padding-left: 0">
                     <div class="col-sm-4">
                         <div class="row padding-horizontal-10-px">
                             <div class="contain-slct smm-sl">
                                 <div id="search-price-type" class="select-int">
                                     <div class="select">
-                                        <a href="javascript:;" class="slct">цена за об.</a>
+                                        <a href="javascript:;" class="slct">цена за объект</a>
                                         <ul class="drop">
-                                            <li><span data-value="1">цена за об.</span></li>
+                                            <li><span data-value="1">цена за объект</span></li>
                                             <li><span data-value="2">цена за м<sup>2</sup></span></li>
                                         </ul>
                                         <input type="hidden" id="selected-time-to-underground-station" />
@@ -344,44 +310,24 @@
                 <div class="col-sm-12"><div class="row"><h3 class="text-left" style="margin-top: 0; font-weight: 200; border-bottom: 1px solid #DDD; padding-bottom: 5px">Дополнительная информация</h3></div></div>
                 <div class="col-sm-12">
                     <div class="row">
-                        <div class="col-sm-6" style="padding-top: 4px">
+                        <div class="col-sm-6 col-sm-offset-1" style="padding-top: 4px">
                             <span style="padding-top: 2px">Тип объявления:</span>
                             <div class="btn-group" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary active">
+                                <label class="btn btn-primary active">
                                     <input type="radio" name="options" id="option1" checked> собственник
                                 </label>
-                                <label class="btn btn-sm btn-primary">
+                                <label class="btn btn-primary">
                                     <input type="radio" name="options" id="option2"> представитель собственника
                                 </label>
-                                <label class="btn btn-sm btn-primary">
+                                <label class="btn btn-primary">
                                     <input type="radio" name="options" id="option3"> хозяин
                                 </label>
                             </div>
                         </div>
-                        <div class="col-sm-2">
-                            <div class="row">
-                                <div class="contain-slct smm-sl">
-                                    <div id="search-time-advert-settings" class="select-int">
-                                        <div class="select">
-                                            <a href="javascript:;" class="slct">Искать за период</a>
-                                            <ul class="drop">
-                                                <li><span data-value="1">все время</span></li>
-                                                <li><span data-value="2">сегодня</span></li>
-                                                <li><span data-value="3">1 день</span></li>
-                                                <li><span data-value="4">3 дня</span></li>
-                                                <li><span data-value="5">неделя</span></li>
-                                                <li><span data-value="6">месяц</span></li>
-                                            </ul>
-                                            <?php //echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-2" style="padding-top: 6px">
+                        <div class="col-sm-2" style="padding-top: 9px">
                             c фото <input type="checkbox">
                         </div>
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 text-right" style="padding-top: 3px">
                             <input type="reset" class="btn btn-danger" value="Очистить">
                             <input type="submit" class="btn btn-success" value="Найти">
                         </div>
