@@ -9,34 +9,7 @@
     box-shadow: 0 25px 45px rgba(68, 83, 101, 0.3);
     margin-bottom: 120px;
 }
-.bts-cont-mar-offset{
-    margin-right: 5px;
-}
-#add-obj-fl-ap-nw-sale > div > div > div.col-sm-2 > div > div > label:nth-child(2){
-    padding-right: 16px;
-}
-#search-time-advert-settings > div > a,
-#search-time-advert-settings > div > ul li,
-#search-currency-type > div > a,
-#search-currency-type > div > ul li,
-#search-price-type > div > a,
-#search-price-type > div > ul li
-{
-    font-size: 13px !important;
-    padding: 4px 10px !important;
-    background-position: 97% 13px;
-}
-#search-object-state-settings > div > a,
-#search-object-state-settings > div > ul li{
-    font-size: 13px !important;
-    padding: 4px 10px 5px !important;
-    background-position: 97% 13px;
-}
-.fm-sm{
-    font-size: 13px !important;
-    padding: 4px 10px 5px!important;
-    height: 28px;
-}
+
 
 
 #add-obj-fl-ap-nw-sale > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) label,
