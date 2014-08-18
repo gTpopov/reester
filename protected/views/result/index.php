@@ -1,5 +1,154 @@
 <?php
 
+function typeEstate($typeEstate){
+
+    switch($typeEstate) {
+        case 4 : $typeHouse = "квартира";     break;
+        case 3 : $typeHouse = "аппартаменты"; break;
+        default: $typeHouse = "дом";          break;
+    }
+    return $typeHouse;
+}
+
+function operations($operations){
+
+    switch($operations) {
+        case 1 : $operations = "продать";    break;
+        case 2 : $operations = "арендовать"; break;
+    }
+    return $operations;
+}
+
+function market($market){
+
+    switch($market) {
+        case 6 : $market = "вторычный рынок";    break;
+        case 7 : $market = "строящиеся объекты"; break;
+    }
+    return $market;
+}
+
+function window($window){
+
+    switch($window) {
+        case 1 : $window = "двор";         break;
+        case 2 : $window = "улица";        break;
+        case 3 : $window = "двор + улица"; break;
+        default: $window = "";             break;
+    }
+    return $window;
+}
+
+function sanitare($sanitare){
+
+    switch($sanitare) {
+        case 1 : $sanitare = "раздельный";  break;
+        case 2 : $sanitare = "совмещенный"; break;
+        case 3 : $sanitare = " 2+ санузла"; break;
+        default: $sanitare = "";            break;
+    }
+    return $sanitare;
+}
+
+function metroWay($metroWay){
+
+    switch($metroWay) {
+        case 1 : $metroWay = "пешком";    break;
+        case 2 : $metroWay = "на машине"; break;
+    }
+    return $metroWay;
+}
+
+function classHome($classHome) {
+
+    switch($classHome) {
+        case 1 : $classHome = "эконом";    break;
+        case 2 : $classHome = "бизнес";    break;
+        case 3 : $classHome = "элитный";   break;
+    }
+    return $classHome;
+}
+
+function typeAccount($typeAccount){
+
+    switch($typeAccount) {
+        case 1 : $typeAccount = "собственник"; break;
+        case 2 : $typeAccount = "представитель собственника"; break;
+        case 3 : $typeAccount = "риелтор";     break;
+    }
+    return $typeAccount;
+}
+
+function stageName($stageName){
+
+    switch($stageName) {
+        case 1 : $stageName = "нулевой цикл";      break;
+        case 2 : $stageName = "первые этажи";      break;
+        case 3 : $stageName = "средние этажи";     break;
+        case 4 : $stageName = "последние этажи";   break;
+        case 5 : $stageName = "отделка";           break;
+        case 6 : $stageName = "благоустройство";   break;
+        case 7 : $stageName = "выдача ключей";     break;
+    }
+    return $stageName;
+}
+
+function typeWall($typeWall){
+
+    switch($typeWall) {
+        case 1 : $typeWall = "кирпичный";          break;
+        case 2 : $typeWall = "монолитный";         break;
+        case 3 : $typeWall = "монолитно-кирпичный";break;
+        case 4 : $typeWall = "панельный";          break;
+        case 5 : $typeWall = "дерево";             break;
+        case 6 : $typeWall = "природный кемень";   break;
+    }
+    return $typeWall;
+}
+
+function district($district) {
+    $district = Yii::app()->db->createCommand("SELECT name FROM s_district WHERE fk_district=".$district."")->queryRow();
+    return $district['name'];
+}
+
+function region($region){
+    $region = Yii::app()->db->createCommand("SELECT name FROM s_region WHERE id = ".$region."")->queryRow();
+    return $region['name'];
+}
+
+function undeground($undeground){
+    $undeground = Yii::app()->db->createCommand("SELECT name FROM s_undeground WHERE id = ".$undeground."")->queryRow();
+    return $undeground['name'];
+}
+
+function photos($photos,$houseID) {
+    if($photos!=0) {
+        $img = Yii::app()->db->createCommand("SELECT source FROM s_images WHERE fk_house = ".$houseID."")->queryRow();
+        if(file_exists('files/'.Yii::app()->user->id.'/'.$houseID.'/'.$img['source'].'')) {
+            $photos = "<img width='50' src='/files/".Yii::app()->user->id."/".$houseID."/".$img['source']."'>";
+        }
+    } else {
+            $photos = "<img width='50' src='/img/project-style/settings_img_additional_info.png'>";
+    }
+    return $photos;
+}
+
+function balcony($balcony)           { return ($balcony!=0)?'есть':'нет'; } //балкон
+function parking($parking)           { return ($parking!=0)?'есть':'нет'; } //паркинг
+function placeCars($placeCars)       { return ($placeCars!=0)?'есть':'нет'; } //машиноместо
+function coveredSpace($coveredSpace) { return ($coveredSpace!=0)?'есть':'нет'; } //огороженая територия
+function clubType($clubType)         { return ($clubType!=0)?'есть':'нет'; } //клубный тип
+function discount($discount)         { return ($discount!=0)?'есть':'нет'; } //акции и скидки
+function mortgage($mortgage)         { return ($mortgage!=0)?'есть':'нет'; } // ипотека
+function deadline($deadline)         { return ($deadline!=0)?$deadline:'нет'; } // срок сдачи
+function developer($developer)       { return ($developer!='0')?$developer:'нет';} // застройщик
+function fz_214($fz_214)             { return ($fz_214!=0)?'есть':'нет'; } // регистрация нвостройки
+function finished($finished)         { return ($finished!=0)?'есть':'нет'; } // с отделкой
+function metroTime($metroTime)       { return ($metroTime!=0)?$metroTime:'нет'; } // до метро
+
+
+
+
 
 
 if(isset($dataProvider) && $act == 1) {
@@ -22,140 +171,44 @@ if(isset($dataProvider) && $act == 1) {
                 'name'=>'houseID',
                 'header'=> 'Характеристика',
                 'value' => function($data,$row,$column){
-
-                    $connection = Yii::app()->db;
-
-                    switch($data["typeEstate"]) {
-                         case 4 : $typeHouse = "квартира";     break;
-                         case 3 : $typeHouse = "аппартаменты"; break;
-                         default: $typeHouse = "дом";          break;
-                    }
-                    switch($data["operations"]) {
-                        case 1 : $operations = "продать";    break;
-                        case 2 : $operations = "арендовать"; break;
-                    }
-                    switch($data["market"]) {
-                        case 6 : $market = "вторычный рынок";    break;
-                        case 7 : $market = "строящиеся объекты"; break;
-                    }
-                    switch($data["window"]) {
-                        case 1 : $window = "двор";         break;
-                        case 2 : $window = "улица";        break;
-                        case 3 : $window = "двор + улица"; break;
-                        default: $window = "";             break;
-                    }
-                    switch($data["sanitare"]) {
-                        case 1 : $sanitare = "раздельный";  break;
-                        case 2 : $sanitare = "совмещенный"; break;
-                        case 3 : $sanitare = " 2+ санузла"; break;
-                        default: $sanitare = "";            break;
-                    }
-                    switch($data["metroWay"]) {
-                        case 1 : $metroWay = "пешком";    break;
-                        case 2 : $metroWay = "на машине"; break;
-                    }
-                    switch($data["classHome"]) {
-                        case 1 : $classHome = "эконом";    break;
-                        case 2 : $classHome = "бизнес";    break;
-                        case 3 : $classHome = "элитный";   break;
-                    }
-                    switch($data["typeAccount"]) {
-                        case 1 : $typeAccount = "собственник";    break;
-                        case 2 : $typeAccount = "представитель собственника"; break;
-                        case 3 : $typeAccount = "риелтор";   break;
-                    }
-                    switch($data["stageName"]) {
-                        case 1 : $stageName = "нулевой цикл";      break;
-                        case 2 : $stageName = "первые этажи";      break;
-                        case 3 : $stageName = "средние этажи";     break;
-                        case 4 : $stageName = "последние этажи";   break;
-                        case 5 : $stageName = "отделка";           break;
-                        case 6 : $stageName = "благоустройство";   break;
-                        case 7 : $stageName = "выдача ключей";     break;
-                    }
-                    switch($data["typeWall"]) {
-                        case 1 : $typeWall = "кирпичный";          break;
-                        case 2 : $typeWall = "монолитный";         break;
-                        case 3 : $typeWall = "монолитно-кирпичный";break;
-                        case 4 : $typeWall = "панельный";          break;
-                        case 5 : $typeWall = "дерево";             break;
-                        case 6 : $typeWall = "природный кемень";   break;
-                    }
-
-
-                    $district = $connection->createCommand("
-                        SELECT name FROM s_district WHERE fk_district = ".$data["district"]."")->queryRow();
-
-                    $region = $connection->createCommand("
-                        SELECT name FROM s_region WHERE id = ".$data["region"]."")->queryRow();
-
-                    $undeground = $connection->createCommand("
-                        SELECT name FROM s_undeground WHERE id = ".$data["undeground"]."")->queryRow();
-
-                    $balcony   = ($data["balcony"]!=0)?'есть':'нет'; //балкон
-                    $parking   = ($data["parking"]!=0)?'есть':'нет'; //паркинг
-                    $placeCars = ($data["placeCars"]!=0)?'есть':'нет'; //машиноместо
-                    $coveredSpace = ($data["coveredSpace"]!=0)?'есть':'нет'; //огороженая територия
-                    $clubType  = ($data["clubType"]!=0)?'есть':'нет'; //клубный тип
-                    $discount  = ($data["discount"]!=0)?'есть':'нет'; //акции и скидки
-                    $mortgage  = ($data["mortgage"]!=0)?'есть':'нет'; // ипотека
-                    $deadline  = ($data["deadline"]!=0)?$data["deadline"]:'нет'; // срок сдачи
-                    $developer = ($data["developer"]!='0')?$data["developer"]:'нет'; // застройщик
-                    $fz_214    = ($data["fz_214"]!=0)?'есть':'нет'; // регистрация нвостройки
-                    $finished  = ($data["finished"]!=0)?'есть':'нет'; // с отделкой
-                    $metroTime = ($data["metroTime"]!=0)?$data["metroTime"]:'нет'; // до метро
-
-                    if($data["photos"]!=0) {
-
-                        $img = $connection->createCommand("
-                        SELECT source FROM s_images WHERE fk_house = ".$data["houseID"]."")->queryRow();
-
-                        if(file_exists('files/'.Yii::app()->user->id.'/'.$data["houseID"].'/'.$img['source'].'')) {
-                            $photos = "<img width='50' src='/files/".Yii::app()->user->id."/".$data["houseID"]."/".$img['source']."'>";
-                        }
-                    } else {
-                        $photos = "<img width='50' src='/img/project-style/settings_img_additional_info.png'>";
-                    }
-
                     return "<b>houseID:</b> ".$data["houseID"]."<br>".
-                            "<b>Тип недвижимости:</b> ".$typeHouse."<br>".
-                            "<b>Операция:</b> ".$operations."<br>".
-                            "<b>Рынок:</b> ".$market."<br>".
+                            "<b>Тип недвижимости:</b> ".typeEstate($data["typeEstate"])."<br>".
+                            "<b>Операция:</b> ".operations($data["operations"])."<br>".
+                            "<b>Рынок:</b> ".market($data["market"])."<br>".
                             "<b>Валюта:</b> ".$data["currencyName"]."<br>".
                             "<b>Кол-во комнат:</b> ".$data["room"]."<br>".
                             "<b>Общая площадь:</b> ".$data["generalArea"]."<br>".
                             "<b>Цена за м2:</b> ".$data["priceM2"]."<br>".
                             "<b>Цена объекта:</b> ".$data["price"]."<br>".
-                            "<b>Тип стен:</b> ".$typeWall."<br>".
-                            "<b>Стадия строительства:</b> ".$stageName."<br>".
+                            "<b>Тип стен:</b> ".typeWall($data["typeWall"])."<br>".
+                            "<b>Стадия строительства:</b> ".stageName($data["stageName"])."<br>".
                             "<b>Email:</b> ".$data["email"]."<br>".
                             "<b>Имя:</b> ".$data["lastName"]."<br>".
                             "<b>Phone:</b> ".$data["phone"]."<br>".
-                            "<b>Window:</b> ".$window."<br>".
-                            "<b>Balcony:</b> ".$balcony."<br>".
-                            "<b>Parking:</b> ".$parking."<br>".
-                            "<b>Машиноместо:</b> ".$placeCars."<br>".
-                            "<b>Закрытая територия:</b> ".$coveredSpace."<br>".
-                            "<b>Клубный тип:</b> ".$clubType."<br>".
-                            "<b>Акции и скидки:</b> ".$discount."<br>".
-                            "<b>Ипотека:</b> ".$mortgage."<br>".
-                            "<b>Санузел:</b> ".$sanitare."<br>".
+                            "<b>Window:</b> ".window($data["window"])."<br>".
+                            "<b>Balcony:</b> ".balcony($data["balcony"])."<br>".
+                            "<b>Parking:</b> ".parking($data["parking"])."<br>".
+                            "<b>Машиноместо:</b> ".placeCars($data["placeCars"])."<br>".
+                            "<b>Закрытая територия:</b> ".coveredSpace($data["coveredSpace"])."<br>".
+                            "<b>Клубный тип:</b> ".clubType($data["clubType"])."<br>".
+                            "<b>Акции и скидки:</b> ".discount($data["discount"])."<br>".
+                            "<b>Ипотека:</b> ".mortgage($data["mortgage"])."<br>".
+                            "<b>Санузел:</b> ".sanitare($data["sanitare"])."<br>".
                             "<b>Дата создания:</b> ".$data["createData"]."<br>".
-                            "<b>Срок сдачи:</b> ".$deadline."<br>".
-                            "<b>Застройщик:</b> ".$developer."<br>".
-                            "<b>Fz_214:</b> ".$fz_214."<br>".
-                            "<b>С отделкой:</b> ".$finished."<br>".
-                            "<b>Photos:</b> ".$photos."<br>".
-
+                            "<b>Срок сдачи:</b> ".deadline($data["deadline"])."<br>".
+                            "<b>Застройщик:</b> ".developer($data["developer"])."<br>".
+                            "<b>Fz_214:</b> ".fz_214($data["fz_214"])."<br>".
+                            "<b>С отделкой:</b> ".finished($data["finished"])."<br>".
+                            "<b>Photos:</b> ".photos($data["photos"],$data["houseID"])."<br>".
                             "<b>Этажность дома:</b> ".$data["floors"]."<br>".
                             "<b>Город:</b> ".$data["cityName"]."<br>".
-                            "<b>Округ:</b> ".$district['name']."<br>".
-                            "<b>Регион:</b> ".$region['name']."<br>".
-                            "<b>Метро:</b> ".$undeground['name']."<br>".
-                            "<b>До метро:</b> ".$metroTime." мин.<br>".
-                            "<b>Как добраться до метро:</b> ".$metroWay."<br>".
-                            "<b>Класс дома:</b> ".$classHome."<br>".
-                            "<b>Тип аккаунта:</b> ".$typeAccount."<br>".
+                            "<b>Округ:</b> ".district($data["district"])."<br>".
+                            "<b>Регион:</b> ".region($data["region"])."<br>".
+                            "<b>Метро:</b> ".undeground($data["undeground"])."<br>".
+                            "<b>До метро:</b> ".metroTime($data["metroTime"])." мин.<br>".
+                            "<b>Как добраться до метро:</b> ".metroWay($data["metroWay"])."<br>".
+                            "<b>Класс дома:</b> ".classHome($data["classHome"])."<br>".
+                            "<b>Тип аккаунта:</b> ".typeAccount($data["typeAccount"])."<br>".
                             "<b>Street:</b> ".$data["streetName"]."<br>";
 
                     },

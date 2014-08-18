@@ -34,7 +34,7 @@ class ResultController extends Controller {
         $_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
         $_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
         $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
-        //$_POST['level']        = 1;    // любой этаж +
+        //$_POST['level']        = 1;  // любой этаж +
         $_POST['level_from']   = 1;    // этаж квартиры от +
         $_POST['level_to']     = 10;   // этаж квартиры до +
         $_POST['level_last']   = 1;    // Не последний этаж +
@@ -42,7 +42,9 @@ class ResultController extends Controller {
         $_POST['stage'][0]     = 1;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
         $_POST['stage'][1]     = 2;
         $_POST['stage'][2]     = 3;
-        $_POST['window']       = 2;    // 1-двор  2-улица 3-двор +улица +
+        $_POST['window'][0]    = 1;    // 1-двор  2-улица 3-двор +улица +
+        $_POST['window'][1]    = 2;
+        $_POST['window'][2]    = 3;
         $_POST['balcony']      = 1;    // 1-лоджия или балкон +
         $_POST['parking']      = 1;    // 1-паркинг +
         $_POST['place_cars']   = 1;    // 1-машиноместо +
@@ -258,7 +260,14 @@ class ResultController extends Controller {
 
         // Окна +
         if(isset(Yii::app()->session['window'])){
-            $condition .= " AND r.window = ".(int) Yii::app()->session['window']."";
+
+            $window = '';
+            foreach(Yii::app()->session['window'] as $val_window) {
+                $window .= trim($val_window.',');
+            }
+            $window = substr($window,0,strlen($window)-1);
+            $condition .= " AND r.window IN (".$window.")";
+
         }
 
         // Балкон или лоджия +
@@ -520,11 +529,9 @@ class ResultController extends Controller {
                     u.phone        AS phone,
                     u.type_account AS typeAccount,
 
-
                     currency.name  AS currencyName,
                     city.name      AS cityName,
                     street.name    AS streetName
-
 
               FROM real_estate AS r
               INNER JOIN s_house AS h            ON h.id = r.fk_house_id
@@ -608,7 +615,7 @@ class ResultController extends Controller {
                 //'defaultOrder'=>'price ASC',
             ),
             'pagination'=>array(
-                'pageSize'=>5,
+                'pageSize'=>15,
             ),
         ));
 
