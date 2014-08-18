@@ -215,13 +215,13 @@
                         </label>
                     </div>
                     <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-sm btn-warning">
+                        <label class="btn btn-sm btn-success">
                             <input type="radio" name="options" id="option2"> любой материал стен
                         </label>
                     </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h4 class="text-center">выбор этажа</h4>
                     <div class="row">
                         <div class="col-sm-6">
@@ -242,13 +242,13 @@
                         </div>
                     </div>
                     <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-sm btn-warning">
+                        <label class="btn btn-sm btn-success">
                             <input type="radio" name="options" id="option2"> любая этажность
                         </label>
                     </div>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h4 class="text-center">санузел</h4>
                     <div class="padding-horizontal-10-px" style="padding-top: 0">
                         <div class="btn-group" data-toggle="buttons">
@@ -264,14 +264,14 @@
                         </div>
                     </div>
                     <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-sm btn-warning">
+                        <label class="btn btn-sm btn-success">
                             <input type="radio" name="options" id="option2"> любой санузел
                         </label>
                     </div>
                 </div>
 
-                <div class="col-sm-3">
-                    <h4 class="text-center">расположение окон</h4>
+                <div class="col-sm-2">
+                    <h4 class="text-center">окона</h4>
                     <div class="padding-horizontal-10-px" style="padding-top: 0">
                         <div class="btn-group" style="margin-top: 0px" data-toggle="buttons">
                             <label class="btn btn-sm btn-primary">
@@ -286,13 +286,14 @@
                         </div>
                     </div>
                     <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-sm btn-warning">
-                            <input type="radio" name="options" id="option2"> любое расположение окон
+                        <label class="btn btn-sm btn-success">
+                            <input type="radio" name="options" id="option2"> любое расположение
                         </label>
                     </div>
                 </div>
 
-                <div class="col-sm-9">
+                <div class="col-sm-3">
+                    <h4 class="text-center">разное</h4>
                     <div class="row padding-horizontal-10-px" style="padding-top: 0">
                         <div class="btn-group" style="margin-top: 0px" data-toggle="buttons">
                             <label class="btn btn-sm btn-primary">

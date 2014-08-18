@@ -91,3 +91,12 @@
     padding: 10px !important;
     border-radius: 4px;
 }
+
+#add-obj-fl-ap-nw-sale > div:nth-child(2) > div > div:nth-child(6) > div > div{
+    width: 100%;
+}
+#add-obj-fl-ap-nw-sale > div:nth-child(2) > div > div:nth-child(6) > div > div label{
+    width: 100%;
+    border-radius: 2px;
+    margin: 4px 0;
+}
