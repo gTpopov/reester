@@ -96,15 +96,15 @@
 
                             }).call(this);
                         </script>
-                        <div class="col-sm-4" style="padding-top: 6px">Комнат</div>
+                        <div class="col-sm-3 text-left" style="padding-top: 6px; padding-left: 2px">Комнат</div>
                         <div id="checks-rooms-number" class="col-sm-8"><div class="row"><div class='btn-group' data-toggle='buttons'></div></div></div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="row padding-horizontal-10-px">
                         <div class="col-sm-2">
-                            <div class="row text-right">
-                                <small style="vertical-align: -6px;">площадь</small>
+                            <div class="row text-left">
+                                <small style="vertical-align: -6px;">площадью</small>
                             </div>
                         </div>
                         <div class="col-sm-3" style="padding-right: 0">
@@ -115,7 +115,7 @@
                                 <small style="vertical-align: -10px; margin-left: 5px; color: #999">m<sup>2</sup></small>
                             </div>
                         </div>
-                        <div class="col-sm-4" style="padding: 0">
+                        <div class="col-sm-3" style="padding: 0">
                             <input class="form-control fm-sm" placeholder="до">
                         </div>
                         <div class="col-sm-1 text-left">
@@ -310,7 +310,7 @@
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-7 col-sm-offset-1" style="padding-top: 4px">
-                            <span style="padding-top: 2px">Источник объявления:</span>
+                            <span style="padding-top: 3px; padding-right: 6px">Источник объявления:</span>
                             <div class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-primary active">
                                     <input type="radio" name="options" id="option1" checked> собственник
