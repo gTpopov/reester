@@ -192,141 +192,126 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12">
+                <div class="col-sm-3">
+                    <h4 class="text-center">материал стен</h4>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-primary active">
+                            <input type="checkbox" name="options" id="option2"> кирпичный
+                        </label>
+                        <label class="btn btn-sm btn-primary">
+                            <input type="checkbox" name="options" id="option2"> монолитный
+                        </label>
+                        <label class="btn btn-sm btn-primary">
+                            <input type="checkbox" name="options" id="option2"> монолитно-кирпичный
+                        </label>
+                        <label class="btn btn-sm btn-primary">
+                            <input type="checkbox" name="options" id="option2"> панельный
+                        </label>
+                        <label class="btn btn-sm btn-primary">
+                            <input type="checkbox" name="options" id="option2"> дерево
+                        </label>
+                        <label class="btn btn-sm btn-primary">
+                            <input type="checkbox" name="options" id="option2"> природный камень
+                        </label>
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-warning">
+                            <input type="radio" name="options" id="option2"> любой материал стен
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <h4 class="text-center">выбор этажа</h4>
                     <div class="row">
-                        <div class="col-sm-3" style="padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
-                            <h4 style="margin-top: 0; font-weight: 300" class="text-center">материал стен</h4>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary">
-                                    <input type="radio" name="options" id="option3"> панель
-                                </label>
-                            </div>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary">
-                                    <input type="radio" name="options" id="option3"> дерево
-                                </label>
-                            </div>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary active">
-                                    <input type="radio" name="options" id="option1" checked=""> кирпичный
-                                </label>
-                            </div>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary">
-                                    <input type="radio" name="options" id="option2"> монолитный
-                                </label>
-                            </div>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary">
-                                    <input type="radio" name="options" id="option3"> природный кемень
-                                </label>
-                            </div>
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-primary">
-                                    <input type="radio" name="options" id="option3"> кирпично-монолитный
-                                </label>
-                            </div>
-                            <hr style="margin: 2px 0 5px 0; border-color: #ddd">
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-warning">
-                                    <input type="radio" name="options" id="option3"> материал либого типа
-                                </label>
-                            </div>
+                        <div class="col-sm-6">
+                            <input class="form-control" placeholder="от">
                         </div>
-                        <div class="col-sm-4 col-sm-offset-1" style="padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
-                            <h4 style="margin-top: 0; font-weight: 300" class="text-center">выбор этажа</h4>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 50%">
-                                    <input type="radio" name="options" id="option3"> не первый
-                                </label>
-                                <label class="btn btn-sm btn-primary" style="width: 50%">
-                                    <input type="radio" name="options" id="option3"> не последний
-                                </label>
-                            </div>
-                            <div>
-                                <div class="row"><span style="margin-top: 4px; font-weight: 300; width: 100%; font-size: 13px; margin-bottom: 2px" class="text-center col-sm-12">укажите желаемую этажность</span></div>
-                                <input class="form-control fm-sm" placeholder="нап: от 12" style="margin-bottom: 4px; width: 49%; float: left">
-                                <input class="form-control fm-sm" placeholder="нап: до 24" style="margin-bottom: 4px; width: 49%; margin-left: 1.8%;  float: left">
-                            </div>
-                            <div class="contain-slct smm-sl">
-                                <div id="search-object-state-settings" class="select-int">
-                                    <div class="select">
-                                        <a href="javascript:;" class="slct">состояние объекта</a>
-                                        <ul class="drop" style="width: 350px">
-                                            <li><span data-value="0">любое</span></li>
-                                            <li><span data-value="1">дизайнпроект</span></li>
-                                            <li><span data-value="2">отличное состояние</span></li>
-                                            <li><span data-value="4">среднее состояние</span></li>
-                                            <li><span data-value="3">свежий ремонт</span></li>
-                                            <li><span data-value="8">косметический ремонт</span></li>
-                                            <li><span data-value="6">первичная отделка</span></li>
-                                            <li><span data-value="5">без отделки</span></li>
-                                            <li><span data-value="7">требует ремонт</span></li>
-                                        </ul>
-                                        <?php //echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="margin: 5px 0 8px 0; border-color: #ddd">
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-warning">
-                                    <input type="radio" name="options" id="option3"> любая этажность
-                                </label>
-                            </div>
-                            <hr style="margin: 2px 0 6px 0; border-color: #ddd">
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> ипотека
-                                </label>
-                            </div>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> акции и скидки
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-sm-offset-1" style="padding-top: 10px; padding-bottom: 10px; border-radius: 4px">
-                            <h4 style="margin-top: 0; font-weight: 300" class="text-center">санузел</h4>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> 2 + санузла
-                                </label>
-                            </div>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> раздельный
-                                </label>
-                            </div>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> совмещенный
-                                </label>
-                            </div>
-                            <hr style="margin: 0 0 3px 0; border-color: #ddd">
-                            <div class="btn-group" style="width: 100%; margin-bottom: 5px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-block btn-warning">
-                                    <input type="radio" name="options" id="option3"> любой санузел
-                                </label>
-                            </div>
-                            <hr style="margin: -1px 0 0 0; border-color: #ddd">
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%; margin-top: 3px" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> закрытая территория
-                                </label>
-                            </div>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> клубного типа
-                                </label>
-                            </div>
-                            <div class="btn-group" style="margin-bottom: 5px; width: 100%" data-toggle="buttons">
-                                <label class="btn btn-sm btn-primary" style="width: 100%;">
-                                    <input type="radio" name="options" id="option3"> балкон / лоджия
-                                </label>
-                            </div>
+                        <div class="col-sm-6">
+                            <input class="form-control" placeholder="от">
                         </div>
                     </div>
+                    <div class="padding-horizontal-10-px">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Не последний
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Не первый
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-warning">
+                            <input type="radio" name="options" id="option2"> любая этажность
+                        </label>
+                    </div>
+                </div>
 
+                <div class="col-sm-3">
+                    <h4 class="text-center">санузел</h4>
+                    <div class="padding-horizontal-10-px" style="padding-top: 0">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Раздельный
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Совмещенный
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> 2 + санузла
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-warning">
+                            <input type="radio" name="options" id="option2"> любой санузел
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <h4 class="text-center">расположение окон</h4>
+                    <div class="padding-horizontal-10-px" style="padding-top: 0">
+                        <div class="btn-group" style="margin-top: 0px" data-toggle="buttons">
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Улица
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Двор
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Улица + Двор
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-sm btn-warning">
+                            <input type="radio" name="options" id="option2"> любое расположение окон
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-sm-9">
+                    <div class="row padding-horizontal-10-px" style="padding-top: 0">
+                        <div class="btn-group" style="margin-top: 0px" data-toggle="buttons">
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Балкон / Лоджия
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Закрытая территория
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Акции и скидки
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Ипотека
+                            </label>
+                            <label class="btn btn-sm btn-primary">
+                                <input type="checkbox" name="options" id="option2"> Клубного типа
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
             </div>
