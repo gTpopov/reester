@@ -11,6 +11,7 @@ class ResultController extends Controller {
 
         $connection = Yii::app()->db;
 
+        // Clear session criteria
         foreach(Yii::app()->session as $key=>$value) {
             unset(Yii::app()->session[''.$key.'']);
         }
@@ -61,7 +62,6 @@ class ResultController extends Controller {
         $_POST['fz_214']       = 1;    // регистрация новостройки +
         $_POST['finished']     = 1;    // с отделкой +
         //$_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото +
-        $_POST['floors']          = 15;   // этажность дома +
         $_POST['city']            = 1;    // город +
         $_POST['district'][0]     = 98;   // округ +
         $_POST['district'][1]     = 97;
@@ -69,10 +69,14 @@ class ResultController extends Controller {
         $_POST['region'][0]       = 73;   // регион +
         $_POST['region'][1]       = 74;
         $_POST['region'][2]       = 75;
-        $_POST['street']          = 1001; // улица +
+        $_POST['region'][3]       = 18;
+        $_POST['street'][0]       = 1001; // улица +
+        $_POST['street'][1]       = 1800;
+        $_POST['street'][2]       = 1801;
         $_POST['undeground'][0]   = 9;    // метро +
         $_POST['undeground'][1]   = 10;
         $_POST['undeground'][2]   = 11;
+        $_POST['undeground'][3]   = 23;
         $_POST['metro_time']      = 15;   // до метро +
         $_POST['metro_way'][0]    = 1;    // 1-пешком, 2-транспортом +
         $_POST['metro_way'][1]    = 2;
@@ -86,20 +90,20 @@ class ResultController extends Controller {
         $_POST['type_account'][2] = 2;
         $_POST['type_account'][3] = 3;
 
-
         ### --- END --- ###
-
-
 
         // Сохраняем переданные параметры фильтра в сессии
         foreach($_POST as $key => $val) {
             Yii::app()->session[''.$key.''] = $val;
         }
 
-
-        $condition = '';
+        //echo '<pre>';
+        //print_r($_SESSION);
+        //echo '</pre>';
 
         ### - BEGIN CONDITION SQL ---
+
+        $condition = '';
 
         // Тип недвижимости +
         if(isset(Yii::app()->session['type_estate'])){
@@ -412,6 +416,19 @@ class ResultController extends Controller {
 
         }
 
+        //  Улица +
+        if(isset(Yii::app()->session['street'])){
+
+            $list_street = '';
+            foreach(Yii::app()->session['street'] as $val_street)
+            {
+                $list_street .= trim($val_street.',');
+            }
+            $list_street = substr($list_street,0,strlen($list_street)-1);
+            $condition .= " AND h.street IN (".$list_street.")";
+
+        }
+
         //  До метро +
         if(isset(Yii::app()->session['metro_time'])){
 
@@ -503,7 +520,6 @@ class ResultController extends Controller {
                     r.finished     AS finished,
                     r.photos       AS photos,
                     r.stage        AS stageName,
-
                     h.id           AS houseID,
                     h.house_number AS houseNumber,
                     h.floors       AS floors,
@@ -514,24 +530,20 @@ class ResultController extends Controller {
                     h.metro_way    AS metroWay,
                     h.class_home   AS classHome,
                     h.type_house   AS typeWall,
-
                     u.uid          AS userID,
                     u.sub_email    AS email,
                     u.last_name    AS lastName,
                     u.phone        AS phone,
                     u.type_account AS typeAccount,
-
                     currency.name  AS currencyName,
                     city.name      AS cityName,
                     street.name    AS streetName
-
               FROM real_estate AS r
               INNER JOIN s_house AS h            ON h.id = r.fk_house_id
               INNER JOIN users AS u              ON r.fk_uid = u.uid
               INNER JOIN s_currency AS currency  ON r.currency = currency.id
               INNER JOIN s_city  AS city         ON h.city = city.id
               INNER JOIN s_street  AS street     ON h.street = street.id
-
               WHERE ".$condition."
               ORDER BY r.apart_id DESC";
 
@@ -539,10 +551,6 @@ class ResultController extends Controller {
 
         }
 
-        //
-        // window.name    AS windowName
-        //
-        // INNER JOIN s_window AS window     ON r.window = window.id
 
         #### --- Продать -> Вторичная -> Дом (Ф-2): 1 - 6 - 5
         if((isset(Yii::app()->session['type_estate']) && (Yii::app()->session['type_estate'] == 5)) &&
@@ -610,12 +618,6 @@ class ResultController extends Controller {
                 'pageSize'=>15,
             ),
         ));
-
-        //echo '<pre>';
-        //print_r($_SESSION);
-        //echo '</pre>';
-
-
 
         $this->render('index',array(
             'dataProvider'=>!empty($dataProvider)?$dataProvider:null,

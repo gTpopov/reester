@@ -150,9 +150,8 @@ function metroTime($metroTime)       { return ($metroTime!=0)?$metroTime:'нет
 
 
 
-
+#### -- Продать -> Строящаяся -> Квартира и Аппартаменты (Ф-1): 1 - 7 - 4(3)
 if(isset($dataProvider) && $act == 1) {
-
 
     $this->widget('zii.widgets.grid.CGridView', array(
         'dataProvider'=>$dataProvider,
@@ -222,7 +221,6 @@ if(isset($dataProvider) && $act == 1) {
                             "<b>Тип аккаунта:</b> ".typeAccount($data["typeAccount"])."<br>".
                             "<b>Street:</b> ".$data["streetName"]."";
 
-
                 },
                 'type' =>  'raw',
                 'headerHtmlOptions'=>array('width'=>400),
@@ -240,22 +238,26 @@ if(isset($dataProvider) && $act == 1) {
         'pagerCssClass'=>'pagination',
     ));
 }
+#### --- Продать -> Вторичная -> Дом (Ф-2): 1 - 6 - 5
 else if(isset($dataProvider) && $act == 2) {
 
     // Новый виджет для формы 2
     print 2;
 }
+#### --- Продать -> Вторичная -> Квартира и Аппартаменты (Ф-3): 1 - 6 - 4(3)
 else if(isset($dataProvider) && $act == 3) {
 
     // Новый виджет для формы 3
     print 3;
 }
+#### --- Аренда -> Вторичная -> Квартира и Аппартаменты (Ф-4): 2 - 6 - 4(3)
 else if(isset($dataProvider) && $act == 4) {
 
     // Новый виджет для формы 4
     print 4;
 
 }
+#### --- Аренда -> Вторичная -> Дом (Ф-5): 2 - 6 - 5
 else  {
 
     // Новый виджет для формы 5
