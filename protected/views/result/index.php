@@ -141,7 +141,7 @@ function clubType($clubType)         { return ($clubType!=0)?'есть':'нет'
 function discount($discount)         { return ($discount!=0)?'есть':'нет'; } //акции и скидки
 function mortgage($mortgage)         { return ($mortgage!=0)?'есть':'нет'; } // ипотека
 function deadline($deadline)         { return ($deadline!=0)?$deadline:'нет'; } // срок сдачи
-function developer($developer)       { return ($developer!='0')?$developer:'нет';} // застройщик
+function developer($developer)       { return ($developer!='')?$developer:'нет';} // застройщик
 function fz_214($fz_214)             { return ($fz_214!=0)?'есть':'нет'; } // регистрация нвостройки
 function finished($finished)         { return ($finished!=0)?'есть':'нет'; } // с отделкой
 function metroTime($metroTime)       { return ($metroTime!=0)?$metroTime:'нет'; } // до метро
@@ -193,14 +193,25 @@ if(isset($dataProvider) && $act == 1) {
                             "<b>Клубный тип:</b> ".clubType($data["clubType"])."<br>".
                             "<b>Акции и скидки:</b> ".discount($data["discount"])."<br>".
                             "<b>Ипотека:</b> ".mortgage($data["mortgage"])."<br>".
-                            "<b>Санузел:</b> ".sanitare($data["sanitare"])."<br>".
+                            "<b>Санузел:</b> ".sanitare($data["sanitare"])."";
+
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>500),
+            ),
+            array(
+                'name'=>'userID',
+                'header'=> 'Харктеристики',
+                'value' => function($data,$row,$column){
+
+                   return   "<b>Этаж:</b> ".$data["store"]."<br>".
+                            "<b>Этажность дома:</b> ".$data["floors"]."<br>".
                             "<b>Дата создания:</b> ".$data["createData"]."<br>".
                             "<b>Срок сдачи:</b> ".deadline($data["deadline"])."<br>".
                             "<b>Застройщик:</b> ".developer($data["developer"])."<br>".
                             "<b>Fz_214:</b> ".fz_214($data["fz_214"])."<br>".
                             "<b>С отделкой:</b> ".finished($data["finished"])."<br>".
                             "<b>Photos:</b> ".photos($data["photos"],$data["houseID"])."<br>".
-                            "<b>Этажность дома:</b> ".$data["floors"]."<br>".
                             "<b>Город:</b> ".$data["cityName"]."<br>".
                             "<b>Округ:</b> ".district($data["district"])."<br>".
                             "<b>Регион:</b> ".region($data["region"])."<br>".
@@ -209,16 +220,10 @@ if(isset($dataProvider) && $act == 1) {
                             "<b>Как добраться до метро:</b> ".metroWay($data["metroWay"])."<br>".
                             "<b>Класс дома:</b> ".classHome($data["classHome"])."<br>".
                             "<b>Тип аккаунта:</b> ".typeAccount($data["typeAccount"])."<br>".
-                            "<b>Street:</b> ".$data["streetName"]."<br>";
+                            "<b>Street:</b> ".$data["streetName"]."";
 
-                    },
-                'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>500),
-            ),
-            array(
-                'name'=>'userID',
-                'header'=> 'userID',
-                'value' => '$data["userID"]',
+
+                },
                 'type' =>  'raw',
                 'headerHtmlOptions'=>array('width'=>400),
             ),

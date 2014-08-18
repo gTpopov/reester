@@ -36,7 +36,7 @@ class ResultController extends Controller {
         $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
         //$_POST['level']        = 1;  // любой этаж +
         $_POST['level_from']   = 1;    // этаж квартиры от +
-        $_POST['level_to']     = 10;   // этаж квартиры до +
+        $_POST['level_to']     = 15;   // этаж квартиры до +
         $_POST['level_last']   = 1;    // Не последний этаж +
         $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
         $_POST['stage'][0]     = 1;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
@@ -194,8 +194,8 @@ class ResultController extends Controller {
         if(!isset(Yii::app()->session['level']) && (
                 !empty(Yii::app()->session['level_to'])   ||
                 !empty(Yii::app()->session['level_from']) ||
-                isset(Yii::app()->session['level_last']) ||
-                isset(Yii::app()->session['level_first'])))
+                 isset(Yii::app()->session['level_last']) ||
+                 isset(Yii::app()->session['level_first'])))
         {
 
             // если отмечено в полях ДО - ОТ
@@ -225,11 +225,7 @@ class ResultController extends Controller {
                 // НЕ ПОСЛЕДНИЙ ЭТАЖ
                 if(isset(Yii::app()->session['level_last']) && !isset(Yii::app()->session['level_first']))
                 {
-                    $condition .= " AND r.store < (SELECT MAX(store)
-                                                   FROM real_estate
-                                                   WHERE type_estate = ".(int) Yii::app()->session['type_estate']." AND
-                                                         operations  = ".(int) Yii::app()->session['operations']."  AND
-                                                         market      = ".(int) Yii::app()->session['market'].")";
+                    $condition .= " AND r.store < h.floors";
                 }
                 //КРОМЕ 1-ГО ЭТАЖА
                 else if(isset(Yii::app()->session['level_first']) && !isset(Yii::app()->session['level_last']))
@@ -237,11 +233,7 @@ class ResultController extends Controller {
                     $condition .= " AND r.store > 1";
                 }
                 else {
-                    $condition .= " AND r.store > 1 AND r.store < (SELECT MAX(store)
-                                                                   FROM real_estate
-                                                                   WHERE type_estate = ".(int) Yii::app()->session['type_estate']." AND
-                                                                         operations  = ".(int) Yii::app()->session['operations']."  AND
-                                                                         market      = ".(int) Yii::app()->session['market'].")";
+                    $condition .= " AND r.store > 1 AND r.store < h.floors";
                 }
             }
         }
