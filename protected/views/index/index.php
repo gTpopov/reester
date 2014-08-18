@@ -100,9 +100,9 @@
                         <div id="checks-rooms-number" class="col-sm-8"><div class="row"><div class='btn-group' data-toggle='buttons'></div></div></div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="row padding-horizontal-10-px">
-                        <div class="col-sm-2">
+                        <div class="col-sm-3">
                             <div class="row text-left">
                                 <small style="vertical-align: -6px;">площадью</small>
                             </div>
@@ -125,8 +125,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5" style="padding-left: 0">
-                    <div class="col-sm-4">
+                <div class="col-sm-6" style="padding-left: 0">
+                    <div class="col-sm-3">
                         <div class="row padding-horizontal-10-px">
                             <div class="contain-slct smm-sl">
                                 <div id="search-price-type" class="select-int">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="padding-horizontal-10-px">
                             <input class="form-control fm-sm" placeholder="от">
                         </div>
