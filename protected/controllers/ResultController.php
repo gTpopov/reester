@@ -29,7 +29,13 @@ class ResultController extends Controller {
         $_POST['room'][1]     = 2;
         $_POST['room'][2]     = 1;
         $_POST['general_area_from'] = 20;   // общая площадь min ++
-        $_POST['general_area_to']   = 150;   // общая площадь max ++
+        $_POST['general_area_to']   = 150;  // общая площадь max ++
+        //$_POST['human_area_from'] = 5;     // жилая площадь min ++ (Ф-2)
+        //$_POST['human_area_to']   = 12;     // жилая площадь max ++ (Ф-2)
+        //$_POST['kitchen_area_from'] = 3;     // кухня min ++ (Ф-2)
+        //$_POST['kitchen_area_to']   = 6;     // кухня max ++ (Ф-2)
+        //$_POST['plot_area_from'] = 10;     // площадь участка min ++ (Ф-2)
+        //$_POST['plot_area_to']   = 30;     // площадь участка max ++ (Ф-2)
         $_POST['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
         $_POST['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
         $_POST['price_from']        = 200000;// стоимость объекта min ++
@@ -91,6 +97,20 @@ class ResultController extends Controller {
         $_POST['type_account'][0] = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор +
         $_POST['type_account'][2] = 2;
         $_POST['type_account'][3] = 3;
+        //$_POST['part_house']      = 1; // Часть дома (Ф-2)
+        // Состояние квартиры (Ф-2): 0-любое 1- дизайнпроект 2-отличное состояние 3-свежий ремонт 4-среднее состояние 5-без отделки 6-первичная отделка 7-требует ремонт 8-косметический ремонт
+        //$_POST['status'][0]       = 5;
+        //$_POST['status'][1]       = 3;
+        //$_POST['status'][2]       = 7;
+        //$_POST['free_sale'][0]    = 1; // 1-Свободная продажа, 2-альтернатива (Ф-2)
+        //$_POST['free_sale'][1]    = 2;
+        //$_POST['ownership']       = 1; // Более трех лет (Ф-2)
+        //$_POST['water']           = 1; // Вода (Ф-2)
+        //$_POST['heating']         = 1; // Отопление (Ф-2)
+        //$_POST['gas']             = 1; // Газ (Ф-2)
+        //$_POST['electricity']     = 1; // Электричество (Ф-2)
+        //$_POST['sewage']          = 1; // Центральная канализация (Ф-2)
+        //$_POST['septic']          = 1; // Септик (Ф-2)
 
         ### --- END --- ###
 
@@ -132,7 +152,6 @@ class ResultController extends Controller {
         if(isset(Yii::app()->session['currency'])){
             $condition .= " AND r.currency = ".(int) Yii::app()->session['currency']."";
         }
-
         // Общая площадь +
         if(!empty(Yii::app()->session['general_area_from']) || !empty(Yii::app()->session['general_area_to']))
         {
@@ -156,8 +175,46 @@ class ResultController extends Controller {
                 //print 'general_area_to';
             }
         }
-
-
+        // Жилая площадь (Ф-2) +
+        if(!empty(Yii::app()->session['human_area_from']) || !empty(Yii::app()->session['human_area_to']))
+        {
+            if(!empty(Yii::app()->session['human_area_from']) && !empty(Yii::app()->session['human_area_to']))
+            {
+                $human_area_from   = intval(Yii::app()->session['human_area_from']);
+                $human_area_to     = intval(Yii::app()->session['human_area_to']);
+                $condition .= " AND r.human_area BETWEEN ".$human_area_from." AND ".$human_area_to."";
+            }
+            else if(!empty(Yii::app()->session['human_area_from']) && empty(Yii::app()->session['human_area_to']))
+            {
+                $human_area_from = intval(Yii::app()->session['human_area_from']);
+                $condition .= " AND r.human_area >= ".$human_area_from."";
+            }
+            if(empty(Yii::app()->session['human_area_from']) && !empty(Yii::app()->session['human_area_to']))
+            {
+                $human_area_to = intval(Yii::app()->session['human_area_to']);
+                $condition .= " AND r.human_area <=".$human_area_to."";
+            }
+        }
+        // Кухня (Ф-2)+
+        if(!empty(Yii::app()->session['kitchen_area_from']) || !empty(Yii::app()->session['kitchen_area_to']))
+        {
+            if(!empty(Yii::app()->session['kitchen_area_from']) && !empty(Yii::app()->session['kitchen_area_to']))
+            {
+                $kitchen_area_from   = intval(Yii::app()->session['kitchen_area_from']);
+                $kitchen_area_to     = intval(Yii::app()->session['kitchen_area_to']);
+                $condition .= " AND r.kitchen_area BETWEEN ".$kitchen_area_from." AND ".$kitchen_area_to."";
+            }
+            else if(!empty(Yii::app()->session['kitchen_area_from']) && empty(Yii::app()->session['kitchen_area_to']))
+            {
+                $kitchen_area_from = intval(Yii::app()->session['kitchen_area_from']);
+                $condition .= " AND r.kitchen_area >= ".$kitchen_area_from."";
+            }
+            if(empty(Yii::app()->session['kitchen_area_from']) && !empty(Yii::app()->session['kitchen_area_to']))
+            {
+                $kitchen_area_to = intval(Yii::app()->session['kitchen_area_to']);
+                $condition .= " AND r.kitchen_area <=".$kitchen_area_to."";
+            }
+        }
         // Цена за 1м2 +
         if(!empty(Yii::app()->session['price_of_m2_from']) || !empty(Yii::app()->session['price_of_m2_to']))
         {
@@ -178,8 +235,6 @@ class ResultController extends Controller {
                 $condition .= " AND r.price_of_m2 <=".$price_of_m2_to."";
             }
         }
-
-
         // Цена за объект +
         if(!empty(Yii::app()->session['price_from']) || !empty(Yii::app()->session['price_to']))
         {
@@ -200,7 +255,6 @@ class ResultController extends Controller {
                 $condition .= " AND r.price <=".$price_to."";
             }
         }
-
         // Этажность квартиры
         if(!isset(Yii::app()->session['level']) && (
                 !empty(Yii::app()->session['level_to'])   ||
@@ -217,19 +271,16 @@ class ResultController extends Controller {
                     $level_to   = intval(Yii::app()->session['level_to']);
                     $level_from = intval(Yii::app()->session['level_from']);
                     $condition .= " AND r.store BETWEEN ".$level_from." AND ".$level_to."";
-                    //print 'level_to && level_from';
                 }
                 else if(!empty(Yii::app()->session['level_to']) && empty(Yii::app()->session['level_from']))
                 {
                     $level_to   = intval(Yii::app()->session['level_to']);
                     $condition .= " AND r.store <= ".$level_to."";
-                    //print 'level_to';
                 }
                 else if(empty(Yii::app()->session['level_to']) && !empty(Yii::app()->session['level_from']))
                 {
                     $level_from   = intval(Yii::app()->session['level_from']);
                     $condition .= " AND r.store >= ".$level_from."";
-                    //print 'level_from';
                 }
             }
             else {
@@ -248,8 +299,6 @@ class ResultController extends Controller {
                 }
             }
         }
-
-
         // Свободная планировка, студия
         if(isset(Yii::app()->session['plan'])) {
 
@@ -260,7 +309,6 @@ class ResultController extends Controller {
             $plan = substr($plan,0,strlen($plan)-1);
             $condition .= " AND r.plan IN (".$plan.")";
         }
-
         // Окна +
         if(isset(Yii::app()->session['window'])){
 
@@ -272,42 +320,34 @@ class ResultController extends Controller {
             $condition .= " AND r.window IN (".$window.")";
 
         }
-
         // Балкон или лоджия +
         if(isset(Yii::app()->session['balcony'])){
             $condition .= " AND r.balcony = ".(int) Yii::app()->session['balcony']."";
         }
-
         // Паркинг +
         if(isset(Yii::app()->session['parking'])){
             $condition .= " AND r.parking = ".(int) Yii::app()->session['parking']."";
         }
-
         // Машиноместо +
         if(isset(Yii::app()->session['place_cars'])){
             $condition .= " AND r.place_cars = ".(int) Yii::app()->session['place_cars']."";
         }
-
         // Огороженая територия +
         if(isset(Yii::app()->session['covered_space'])){
             $condition .= " AND r.covered_space = ".(int) Yii::app()->session['covered_space']."";
         }
-
         // Клубный тип +
         if(isset(Yii::app()->session['club_type'])){
             $condition .= " AND r.club_type = ".(int) Yii::app()->session['club_type']."";
         }
-
         // Акции и скидки +
         if(isset(Yii::app()->session['discount'])){
             $condition .= " AND r.discount = ".(int) Yii::app()->session['discount']."";
         }
-
         //  Ипотека +
         if(isset(Yii::app()->session['mortgage'])){
             $condition .= " AND r.mortgage = ".(int) Yii::app()->session['mortgage']."";
         }
-
         // Санузел
         if(isset(Yii::app()->session['sanitare'])) {
 
@@ -318,7 +358,6 @@ class ResultController extends Controller {
             $sanitare = substr($sanitare,0,strlen($sanitare)-1);
             $condition .= " AND r.sanitare IN (".$sanitare.")";
         }
-
         // Искать за период +
         if(isset(Yii::app()->session['create_data']) && Yii::app()->session['create_data']!=0)
         {
@@ -342,37 +381,30 @@ class ResultController extends Controller {
 
             $condition .= ' AND r.create_data >=NOW()-INTERVAL '.$period.' DAY';
         }
-
         //  Срок сдачи +
         if(isset(Yii::app()->session['deadline'])){
             $condition .= " AND r.deadline = ".(int) Yii::app()->session['deadline']."";
         }
-
         //  Застройщик +
         if(isset(Yii::app()->session['developer'])){
             $condition .= " AND r.developer != '0'";
         }
-
         //  Регистрация нвостройки +
         if(isset(Yii::app()->session['fz_214'])){
             $condition .= " AND r.fz_214 = ".(int) Yii::app()->session['fz_214']."";
         }
-
         //  С отделкой +
         if(isset(Yii::app()->session['finished'])){
             $condition .= " AND r.finished = ".(int) Yii::app()->session['finished']."";
         }
-
         //  С фото +
         if(isset(Yii::app()->session['photos'])){
             $condition .= " AND r.photos = ".(int) Yii::app()->session['photos']."";
         }
-
         //  Этажность дома +
         if(isset(Yii::app()->session['floors'])){
             $condition .= " AND h.floors = ".(int) Yii::app()->session['floors']."";
         }
-
         //  Стадия строительства +
         if(isset(Yii::app()->session['stage'])){
 
@@ -384,7 +416,6 @@ class ResultController extends Controller {
             $stage_house = substr($stage_house,0,strlen($stage_house)-1);
             $condition .= " AND r.stage IN (".$stage_house.")";
         }
-
         //  Округ +
         if(isset(Yii::app()->session['district'])){
 
@@ -396,7 +427,6 @@ class ResultController extends Controller {
             $district_house = substr($district_house,0,strlen($district_house)-1);
             $condition .= " AND h.district IN (".$district_house.")";
         }
-
         //  Регион +
         if(isset(Yii::app()->session['region'])){
 
@@ -409,7 +439,6 @@ class ResultController extends Controller {
             $condition .= " AND h.region IN (".$region_house.")";
 
         }
-
         //  Метро +
         if(isset(Yii::app()->session['undeground'])){
 
@@ -422,7 +451,6 @@ class ResultController extends Controller {
             $condition .= " AND h.undeground IN (".$metro_under.")";
 
         }
-
         //  Улица +
         if(isset(Yii::app()->session['street'])){
 
@@ -435,14 +463,12 @@ class ResultController extends Controller {
             $condition .= " AND h.street IN (".$list_street.")";
 
         }
-
         //  До метро +
         if(isset(Yii::app()->session['metro_time'])){
 
             $metro_to = intval(Yii::app()->session['metro_time']);
             $condition .= " AND h.metro_time <=".$metro_to."";
         }
-
         // Пешком или транспортом до метро
         if(isset(Yii::app()->session['metro_way'])) {
 
@@ -453,7 +479,6 @@ class ResultController extends Controller {
             $metro_way = substr($metro_way,0,strlen($metro_way)-1);
             $condition .= " AND h.metro_way IN (".$metro_way.")";
         }
-
         // Класс дома
         if(isset(Yii::app()->session['class_home'])) {
 
@@ -464,8 +489,7 @@ class ResultController extends Controller {
             $class_home = substr($class_home,0,strlen($class_home)-1);
             $condition .= " AND h.class_home IN (".$class_home.")";
         }
-
-        // Тип стен дома
+        // Тип стен дома (тип дома)
         if(isset(Yii::app()->session['type_house'])) {
 
             $type_house = '';
@@ -475,8 +499,6 @@ class ResultController extends Controller {
             $type_house = substr($type_house,0,strlen($type_house)-1);
             $condition .= " AND h.type_house IN (".$type_house.")";
         }
-
-
         // Тип желаемой учетной записи
         if(isset(Yii::app()->session['type_account'])) {
 
@@ -487,6 +509,84 @@ class ResultController extends Controller {
             $type_account = substr($type_account,0,strlen($type_account)-1);
             $condition .= " AND u.type_account IN (".$type_account.")";
         }
+
+        ### --- Параметры для Ф-2 --- ###
+
+        // Часть дома (Ф-2) +
+        if(isset(Yii::app()->session['part_house'])){
+            $condition .= " AND h.part_house = ".(int) Yii::app()->session['part_house']."";
+        }
+        // Состояние квартиры
+        if(isset(Yii::app()->session['status'])) {
+
+            $status = '';
+            foreach(Yii::app()->session['status'] as $val_status) {
+                $status .= trim($val_status.',');
+            }
+            $status = substr($status,0,strlen($status)-1);
+            $condition .= " AND r.status IN (".$status.")";
+        }
+        // Свободная продажа или альтернатива
+        if(isset(Yii::app()->session['free_sale'])) {
+
+            $free_sale = '';
+            foreach(Yii::app()->session['free_sale'] as $val_free_sale) {
+                $free_sale .= trim($val_free_sale.',');
+            }
+            $free_sale = substr($free_sale,0,strlen($free_sale)-1);
+            $condition .= " AND r.free_sale IN (".$free_sale.")";
+        }
+        // Более 3-х лет +
+        if(isset(Yii::app()->session['ownership'])){
+            $condition .= " AND r.ownership = ".(int) Yii::app()->session['ownership']."";
+        }
+        // Вода +
+        if(isset(Yii::app()->session['water'])){
+            $condition .= " AND h.water = ".(int) Yii::app()->session['water']."";
+        }
+        // Отопление +
+        if(isset(Yii::app()->session['heating'])){
+            $condition .= " AND h.heating = ".(int) Yii::app()->session['heating']."";
+        }
+        // Газ +
+        if(isset(Yii::app()->session['gas'])){
+            $condition .= " AND h.gas = ".(int) Yii::app()->session['gas']."";
+        }
+        // Электричество +
+        if(isset(Yii::app()->session['electricity'])){
+            $condition .= " AND h.electricity = ".(int) Yii::app()->session['electricity']."";
+        }
+        // Центр. канализация +
+        if(isset(Yii::app()->session['sewage'])){
+            $condition .= " AND h.sewage = ".(int) Yii::app()->session['sewage']."";
+        }
+        // Септик +
+        if(isset(Yii::app()->session['septic'])){
+            $condition .= " AND h.septic = ".(int) Yii::app()->session['septic']."";
+        }
+        // Площадь участка +
+        if(!empty(Yii::app()->session['plot_area_from']) || !empty(Yii::app()->session['plot_area_to']))
+        {
+            if(!empty(Yii::app()->session['plot_area_from']) && !empty(Yii::app()->session['plot_area_to']))
+            {
+                $plot_area_from   = intval(Yii::app()->session['plot_area_from']);
+                $plot_area_to     = intval(Yii::app()->session['plot_area_to']);
+                $condition .= " AND h.plot BETWEEN ".$plot_area_from." AND ".$plot_area_to."";
+            }
+            else if(!empty(Yii::app()->session['plot_area_from']) && empty(Yii::app()->session['plot_area_to']))
+            {
+                $plot_area_from = intval(Yii::app()->session['plot_area_from']);
+                $condition .= " AND h.plot >= ".$plot_area_from."";
+            }
+            if(empty(Yii::app()->session['plot_area_from']) && !empty(Yii::app()->session['plot_area_to']))
+            {
+                $plot_area_to = intval(Yii::app()->session['plot_area_to']);
+                $condition .= " AND h.plot <=".$plot_area_to."";
+            }
+        }
+
+
+
 
 
 

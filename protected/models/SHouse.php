@@ -96,7 +96,7 @@ class SHouse extends CActiveRecord
                 'message' => '{attribute} не заполнен(а)'
             ),
             array(
-                'metro_time',
+                'metro_time, plot',
                 'numerical',
                 'on'         =>  self::SCENARIO_ADD_OBJECT_TWO,
                 'integerOnly'=> true,

@@ -7,8 +7,6 @@ Yii::app()->clientScript
 
     <script type="text/javascript">
 
-
-
         /*
          * операция + рынок + тип недвижимости
          *
