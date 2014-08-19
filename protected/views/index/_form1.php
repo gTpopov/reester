@@ -12,8 +12,8 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
                 <div class="col-sm-3 text-left">
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary" onclick="redirect(1,'obj-operation')">
-                                <input type="radio" name="options" id="option1" value="1"> купить
+                            <label class="btn btn-primary active" onclick="redirect(1,'obj-operation')">
+                                <input type="radio" name="options" id="option1" value="1" checked> купить
                             </label>
                             <label class="btn btn-primary" onclick="redirect(2,'obj-operation')">
                                 <input type="radio" name="options" id="option2" value="2"> снять
@@ -27,8 +27,8 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
                 <div class="col-sm-3 text-left">
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary" onclick="redirect(4,'obj-type')">
-                                <input type="radio" name="options" id="option1" value="4"> квартира
+                            <label class="btn btn-primary active" onclick="redirect(4,'obj-type')">
+                                <input type="radio" name="options" id="option1" value="4" checked> квартира
                             </label>
                             <label class="btn btn-primary" onclick="redirect(3,'obj-type')">
                                 <input type="radio" name="options" id="option2" value="3"> апартаменты
@@ -45,8 +45,8 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
                             <label class="btn btn-primary" onclick="redirect(6,'obj-market')">
                                 <input type="radio" name="options" id="option2" value="6"> вторичная
                             </label>
-                            <label class="btn btn-primary" onclick="redirect(7,'obj-market')">
-                                <input type="radio" name="options" id="option3" value="7"> строящаяся
+                            <label class="btn btn-primary active" onclick="redirect(7,'obj-market')">
+                                <input type="radio" name="options" id="option3" value="7" checked> строящаяся
                             </label>
                         </div>
                     </div>
