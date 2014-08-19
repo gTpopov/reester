@@ -55,7 +55,7 @@
 <script type="text/javascript">
     //Active select config ---
     $(function(){
-        var object_type   = $.cookie('object_type');
+        var object_type   = $.cookie('obj_type');
         var obj_state     = $.cookie('obj_state');
         var sale_rent_op  = $.cookie('sale_rent_op');
 

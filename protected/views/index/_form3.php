@@ -4,37 +4,22 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
 ?>
 
 <div id="add-obj-fl-ap-nw-sale" class="col-sm-12">
-
+Купить -> Вторичная -> Квартира (Аппартаменты)
 <div class="col-sm-12">
-    <div class="row padding-horizontal-10-px">
+    <div class="row padding-horizontal-10-px" id="select-combination">
         <div class="col-sm-12">
             <div class="row" style="border-bottom: 1px solid #DDD; padding-bottom: 10px">
                 <div class="col-sm-3 text-left">
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary active">
-                                <input type="radio" name="options" id="option1" checked> купить
+                            <label class="btn btn-primary" onclick="redirect(1,'obj-operation')">
+                                <input type="radio" name="options" id="option1" value="1"> купить
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="options" id="option2"> снять
+                            <label class="btn btn-primary" onclick="redirect(2,'obj-operation')">
+                                <input type="radio" name="options" id="option2" value="2"> снять
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="options" id="option3"> оценить
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3 text-left">
-                    <div class="row">
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary active">
-                                <input type="radio" name="options" id="option1" checked> квартира
-                            </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="options" id="option2"> апартаменты
-                            </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="options" id="option3"> дом
+                            <label class="btn btn-primary" onclick="redirect(8,'obj-operation')">
+                                <input type="radio" name="options" id="option3" value="8"> оценить
                             </label>
                         </div>
                     </div>
@@ -42,11 +27,26 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
                 <div class="col-sm-3 text-left">
                     <div class="row">
                         <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-primary active">
-                                <input type="radio" name="options" id="option2"> вторичная
+                            <label class="btn btn-primary" onclick="redirect(4,'obj-type')">
+                                <input type="radio" name="options" id="option1" value="4"> квартира
                             </label>
-                            <label class="btn btn-primary">
-                                <input type="radio" name="options" id="option3"> строящаяся
+                            <label class="btn btn-primary" onclick="redirect(3,'obj-type')">
+                                <input type="radio" name="options" id="option2"  value="3"> апартаменты
+                            </label>
+                            <label class="btn btn-primary" onclick="redirect(5,'obj-type')">
+                                <input type="radio" name="options" id="option3" value="5"> дом
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-left">
+                    <div class="row">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-primary" onclick="redirect(6,'obj-market')">
+                                <input type="radio" name="options" id="option2" value="6"> вторичная
+                            </label>
+                            <label class="btn btn-primary" onclick="redirect(7,'obj-market')">
+                                <input type="radio" name="options" id="option3" value="7"> строящаяся
                             </label>
                         </div>
                     </div>
