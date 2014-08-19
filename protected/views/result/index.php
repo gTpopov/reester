@@ -69,6 +69,15 @@ function classHome($classHome) {
     return $classHome;
 }
 
+function freeSale($freeSalee) {
+
+    switch($freeSalee) {
+        case 1 : $freeSale  = "свободная продажа";  break;
+        case 2 : $freeSale  = "альтернатива";       break;
+    }
+    return $freeSale;
+}
+
 function typeAccount($typeAccount){
 
     switch($typeAccount) {
@@ -77,6 +86,21 @@ function typeAccount($typeAccount){
         case 3 : $typeAccount = "риелтор";     break;
     }
     return $typeAccount;
+}
+
+function statusAppart($statusAppart){
+
+    switch($statusAppart) {
+        case 1 : $statusAppart = "дизайнпроект";        break;
+        case 2 : $statusAppart = "отличное состояние";   break;
+        case 3 : $statusAppart = "свежий ремонт";        break;
+        case 4 : $statusAppart = "среднее состояние";    break;
+        case 5 : $statusAppart = "без отделки";          break;
+        case 6 : $statusAppart = "первичная отделка";    break;
+        case 7 : $statusAppart = "требует ремонт";       break;
+        case 8 : $statusAppart = "косметический ремонт"; break;
+    }
+    return $statusAppart;
 }
 
 function stageName($stageName){
@@ -149,6 +173,16 @@ function developer($developer)       { return ($developer!='')?$developer:'не�
 function fz_214($fz_214)             { return ($fz_214!=0)?'есть':'нет'; } // регистрация нвостройки
 function finished($finished)         { return ($finished!=0)?'есть':'нет'; } // с отделкой
 function metroTime($metroTime)       { return ($metroTime!=0)?$metroTime:'нет'; } // до метро
+function partHouse($partHouse)       { return ($partHouse!=0)?'да':'нет'; } // часть дома
+function ownership($ownership)       { return ($ownership!=0)?'да':'нет'; } // более 3-х лет
+function water($water)               { return ($water!=0)?'да':'нет'; } // вода
+function heating($heating)           { return ($heating!=0)?'да':'нет'; } // отопление
+function gas($gas)                   { return ($gas!=0)?'да':'нет'; } // газ
+function electricity($electricity)   { return ($electricity!=0)?'да':'нет'; } // электричество
+function sewage($sewage)             { return ($sewage!=0)?'да':'нет'; } // центр. канализация
+function septic($septic)             { return ($septic!=0)?'да':'нет'; } // септик
+
+
 
 ?>
 
@@ -292,27 +326,24 @@ if(isset($dataProvider) && $act == 1) {
     ));
 }
 
-
-
 #### --- Продать -> Вторичная -> Дом (Ф-2): 1 - 6 - 5
 else if(isset($dataProvider) && $act == 2) {
 
-    // Новый виджет для формы 2
     $this->widget('zii.widgets.grid.CGridView', array(
         'dataProvider'=>$dataProvider,
         'enablePagination' => true,
         'emptyText'=>'Data empty',
         'summaryText' => "",
-        'columns'=>array(
+        'columns'=> array(
             array(
                 'name'=>'apartID',
-                'header'=> 'apartID',
+                'header'=> 'ID',
                 'value' => '$data["apartID"]',
                 'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>50),
+                'headerHtmlOptions'=>array('width'=>20),
             ),
             array(
-                'name'=>'houseID',
+                'name'  => 'houseID',
                 'header'=> 'Адрес объекта',
                 'value' => function($data,$row,$column){
                         return "".photos($data["photos"],$data["houseID"])."<br>".
@@ -325,61 +356,99 @@ else if(isset($dataProvider) && $act == 2) {
                         "Объявление размещено: ". implode('.',array_reverse(explode('-',$data["createData"])));
                     },
                 'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>500),
+                'headerHtmlOptions'=>array('width'=>200),
             ),
-
             array(
                 'name'=>'houseID',
-                'header'=> 'Характеристика',
+                'header'=> 'Комнат',
                 'value' => function($data,$row,$column){
-                        return "<b>houseID:</b> ".$data["houseID"]."<br>".
-                        "<b>Тип недвижимости:</b> ".typeEstate($data["typeEstate"])."<br>".
-                        "<b>Операция:</b> ".operations($data["operations"])."<br>".
-                        "<b>Рынок:</b> ".market($data["market"])."<br>".
-                        "<b>Валюта:</b> ".$data["currencyName"]."<br>".
-                        "<b>Кол-во комнат:</b> ".$data["room"]."<br>".
-                        "<b>Общая площадь:</b> ".$data["generalArea"]."<br>".
-                        "<b>Цена за м2:</b> ".$data["priceM2"]."<br>".
-                        "<b>Цена объекта:</b> ".$data["price"]."<br>".
-                        "<b>Тип стен:</b> ".typeWall($data["typeWall"])."<br>".
-                        "<b>Стадия строительства:</b> ".stageName($data["stageName"])."<br>".
-                        "<b>Email:</b> ".$data["email"]."<br>".
-                        "<b>Имя:</b> ".$data["lastName"]."<br>".
-                        "<b>Phone:</b> ".$data["phone"]."<br>".
-                        "<b>Window:</b> ".window($data["window"])."<br>".
-                        "<b>Balcony:</b> ".balcony($data["balcony"])."<br>".
-                        "<b>Parking:</b> ".parking($data["parking"])."<br>".
-                        "<b>Машиноместо:</b> ".placeCars($data["placeCars"])."<br>".
-                        "<b>Закрытая територия:</b> ".coveredSpace($data["coveredSpace"])."<br>".
-                        "<b>Клубный тип:</b> ".clubType($data["clubType"])."<br>".
-                        "<b>Акции и скидки:</b> ".discount($data["discount"])."<br>".
-                        "<b>Ипотека:</b> ".mortgage($data["mortgage"])."<br>".
-                        "<b>Санузел:</b> ".sanitare($data["sanitare"])."";
-
+                        return  $data["room"];
                     },
                 'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>500),
+                'headerHtmlOptions'=>array('width'=>50),
             ),
             array(
-                'name'=>'userID',
-                'header'=> 'Харктеристики',
+                'name'=>'houseID',
+                'header'=> 'Этаж',
                 'value' => function($data,$row,$column){
-
-                        return   "<b>Этаж:</b> ".$data["store"]."<br>".
-                        "<b>Этажность дома:</b> ".$data["floors"]."<br>".
-                        "<b>Срок сдачи:</b> ".deadline($data["deadline"])."<br>".
-                        "<b>Застройщик:</b> ".developer($data["developer"])."<br>".
-                        "<b>Fz_214:</b> ".fz_214($data["fz_214"])."<br>".
-                        "<b>С отделкой:</b> ".finished($data["finished"])."<br>".
-                        "<b>Класс дома:</b> ".classHome($data["classHome"])."<br>".
-                        "<b>Тип аккаунта:</b> ".typeAccount($data["typeAccount"])."<br>";
-
+                        return   $data["store"]."/".$data["floors"];
                     },
                 'type' =>  'raw',
-                'headerHtmlOptions'=>array('width'=>400),
+                'headerHtmlOptions'=>array('width'=>50),
             ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Тип',
+                'value' => function($data,$row,$column){
+                        return   typeWall($data["typeWall"]);
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Общ., м2',
+                'value' => function($data,$row,$column){
+                        return   $data["generalArea"];
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Жил.',
+                'value' => function($data,$row,$column){
+                        return   $data["humanArea"];
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Столовая',
+                'value' => function($data,$row,$column){
+                        return   $data["kitchenArea"];
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'С/У',
+                'value' => function($data,$row,$column){
+                        return   sanitare($data["sanitare"]);
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Окна',
+                'value' => function($data,$row,$column){
+                        return   window($data["window"]);
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+            ),
+            array(
+                'name'=>'houseID',
+                'header'=> 'Цена, P $ &euro;',
+                'value' => function($data,$row,$column){
+
+                        return   $data["price"]." ".$data["currencyName"]."<br>".
+                        $data["priceM2"]." ".$data["currencyName"]." за м2<br><br>".
+                        operations($data["operations"])."<br>".
+                        $data["lastName"]."<br>".
+                        $data["phone"]."<br>";
+                    },
+                'type' =>  'raw',
+                'headerHtmlOptions'=>array('width'=>50),
+                'htmlOptions' => array('class'=>'test')
+            ),
+
+
         ),
-        'pager' => array(
+        'pager'  => array(
             'firstPageLabel'=>'начало',
             'prevPageLabel'=>'&larr;',
             'nextPageLabel'=>'&rarr;',
@@ -389,8 +458,9 @@ else if(isset($dataProvider) && $act == 2) {
             'cssFile'=>false,
         ),
         'pagerCssClass'=>'pagination',
+        'htmlOptions' => array('style'=>'padding:0;')
     ));
-    print 2;
+
 }
 #### --- Продать -> Вторичная -> Квартира и Аппартаменты (Ф-3): 1 - 6 - 4(3)
 else if(isset($dataProvider) && $act == 3) {

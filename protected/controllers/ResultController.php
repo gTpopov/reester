@@ -25,78 +25,78 @@ class ResultController extends Controller {
         $_POST['operations']  = 1; // Тип операции: 1 - продать 2 - арендовать
         $_POST['market']      = 7; // Рынок недвижимости: 6 - вторычный рынок 7 - строящиеся объекты
 
-        $_POST['room'][0]     = 3;    // кол-во комнат
-        $_POST['room'][1]     = 2;
-        $_POST['room'][2]     = 1;
-        $_POST['general_area_from'] = 20;   // общая площадь min ++
-        $_POST['general_area_to']   = 150;  // общая площадь max ++
+        //$_POST['room'][0]     = 3;    // кол-во комнат
+        //$_POST['room'][1]     = 2;
+        //$_POST['room'][2]     = 1;
+        //$_POST['general_area_from'] = 20;   // общая площадь min ++
+        //$_POST['general_area_to']   = 150;  // общая площадь max ++
         //$_POST['human_area_from'] = 5;     // жилая площадь min ++ (Ф-2)
         //$_POST['human_area_to']   = 12;     // жилая площадь max ++ (Ф-2)
         //$_POST['kitchen_area_from'] = 3;     // кухня min ++ (Ф-2)
         //$_POST['kitchen_area_to']   = 6;     // кухня max ++ (Ф-2)
         //$_POST['plot_area_from'] = 10;     // площадь участка min ++ (Ф-2)
         //$_POST['plot_area_to']   = 30;     // площадь участка max ++ (Ф-2)
-        $_POST['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
-        $_POST['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
-        $_POST['price_from']        = 200000;// стоимость объекта min ++
-        $_POST['price_to']          = 500000;// стоимость объекта max ++
-        $_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
-        $_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
-        $_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
+        //$_POST['price_of_m2_from']  = 2000;// стоимость за 1 м2 min ++
+        //$_POST['price_of_m2_to']    = 8000;// стоимость за 1 м2 max ++
+        //$_POST['price_from']        = 200000;// стоимость объекта min ++
+        //$_POST['price_to']          = 500000;// стоимость объекта max ++
+        //$_POST['currency']     = 2;    // валюта (1-руб, 2-доллар, 3-евро) ++
+        //$_POST['plan'][0]      = 1;    // студия - 2, своб.план - 1 +
+        //$_POST['plan'][1]      = 2;    // студия - 2, своб.план - 1 +
         //$_POST['level']        = 1;  // любой этаж +
-        $_POST['level_from']   = 1;    // этаж квартиры от +
-        $_POST['level_to']     = 15;   // этаж квартиры до +
-        $_POST['level_last']   = 1;    // Не последний этаж +
-        $_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
-        $_POST['stage'][0]     = 1;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
-        $_POST['stage'][1]     = 2;
-        $_POST['stage'][2]     = 3;
-        $_POST['window'][0]    = 1;    // 1-двор  2-улица 3-двор +улица +
-        $_POST['window'][1]    = 2;
-        $_POST['window'][2]    = 3;
-        $_POST['balcony']      = 1;    // 1-лоджия или балкон +
-        $_POST['parking']      = 1;    // 1-паркинг +
-        $_POST['place_cars']   = 1;    // 1-машиноместо +
-        $_POST['covered_space']= 1;    // 1-закрытая (огражденная) територия +
-        $_POST['club_type']    = 1;    // 1-клубного типа +
-        $_POST['discount']     = 1;    // 1-акции и скидки +
-        $_POST['mortgage']     = 1;    // 1-для ипотеки +
-        $_POST['sanitare'][0]  = 1;    // 1-раздельный 2-совмещенный 3-2+ санузла +
-        $_POST['sanitare'][1]  = 2;
-        $_POST['sanitare'][2]  = 3;
-        $_POST['create_data']  = 4;    // Искать за (все время - 0, сегодня (1 день), 3 дня, неделя, месяц +
-        $_POST['deadline']     = 2017; // срок сдачи (н/р 2017) +
-        $_POST['developer']    = 1;    // застройщик +
-        $_POST['fz_214']       = 1;    // регистрация новостройки +
-        $_POST['finished']     = 1;    // с отделкой +
+        //$_POST['level_from']   = 1;    // этаж квартиры от +
+        //$_POST['level_to']     = 15;   // этаж квартиры до +
+        //$_POST['level_last']   = 1;    // Не последний этаж +
+        //$_POST['level_first']  = 1;    // Кроме 1-го этажа (не первый) +
+        //$_POST['stage'][0]     = 1;    // стадия строительства (1-нулевой цикл, 2-первые этажи, 3-средние этажи, 4-последние этажи, 5-отделка, 6-благоустройство, 7-выдача ключей +
+        //$_POST['stage'][1]     = 2;
+        //$_POST['stage'][2]     = 3;
+        //$_POST['window'][0]    = 1;    // 1-двор  2-улица 3-двор +улица +
+        //$_POST['window'][1]    = 2;
+        //$_POST['window'][2]    = 3;
+        //$_POST['balcony']      = 1;    // 1-лоджия или балкон +
+        //$_POST['parking']      = 1;    // 1-паркинг +
+        //$_POST['place_cars']   = 1;    // 1-машиноместо +
+        //$_POST['covered_space']= 1;    // 1-закрытая (огражденная) територия +
+        //$_POST['club_type']    = 1;    // 1-клубного типа +
+        //$_POST['discount']     = 1;    // 1-акции и скидки +
+        //$_POST['mortgage']     = 1;    // 1-для ипотеки +
+        //$_POST['sanitare'][0]  = 1;    // 1-раздельный 2-совмещенный 3-2+ санузла +
+        //$_POST['sanitare'][1]  = 2;
+        //$_POST['sanitare'][2]  = 3;
+        //$_POST['create_data']  = 4;    // Искать за (все время - 0, сегодня (1 день), 3 дня, неделя, месяц +
+        //$_POST['deadline']     = 2017; // срок сдачи (н/р 2017) +
+        //$_POST['developer']    = 1;    // застройщик +
+        //$_POST['fz_214']       = 1;    // регистрация новостройки +
+        //$_POST['finished']     = 1;    // с отделкой +
         //$_POST['photos']       = 1;    // 1-с фото, 0-отсутствие фото +
-        $_POST['city']            = 1;    // город +
-        $_POST['district'][0]     = 98;   // округ +
-        $_POST['district'][1]     = 97;
-        $_POST['district'][2]     = 96;
-        $_POST['region'][0]       = 73;   // регион +
-        $_POST['region'][1]       = 74;
-        $_POST['region'][2]       = 75;
-        $_POST['region'][3]       = 18;
-        $_POST['street'][0]       = 1001; // улица +
-        $_POST['street'][1]       = 1800;
-        $_POST['street'][2]       = 1801;
-        $_POST['undeground'][0]   = 9;    // метро +
-        $_POST['undeground'][1]   = 10;
-        $_POST['undeground'][2]   = 11;
-        $_POST['undeground'][3]   = 23;
-        $_POST['metro_time']      = 15;   // до метро +
-        $_POST['metro_way'][0]    = 1;    // 1-пешком, 2-транспортом +
-        $_POST['metro_way'][1]    = 2;
-        $_POST['class_home'][0]   = 1;    // 1-эконом 2-бизнес 3-элитный +
-        $_POST['class_home'][1]   = 2;
-        $_POST['class_home'][3]   = 3;
-        $_POST['type_house'][0]   = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень +
-        $_POST['type_house'][1]   = 2;
-        $_POST['type_house'][2]   = 3;
-        $_POST['type_account'][0] = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор +
-        $_POST['type_account'][2] = 2;
-        $_POST['type_account'][3] = 3;
+        //$_POST['city']            = 1;    // город +
+        //$_POST['district'][0]     = 98;   // округ +
+        //$_POST['district'][1]     = 97;
+        //$_POST['district'][2]     = 96;
+        //$_POST['region'][0]       = 73;   // регион +
+        //$_POST['region'][1]       = 74;
+        //$_POST['region'][2]       = 75;
+        //$_POST['region'][3]       = 18;
+        //$_POST['street'][0]       = 1001; // улица +
+        //$_POST['street'][1]       = 1800;
+        //$_POST['street'][2]       = 1801;
+        //$_POST['undeground'][0]   = 9;    // метро +
+        //$_POST['undeground'][1]   = 10;
+        //$_POST['undeground'][2]   = 11;
+        //$_POST['undeground'][3]   = 23;
+        //$_POST['metro_time']      = 15;   // до метро +
+        //$_POST['metro_way'][0]    = 1;    // 1-пешком, 2-транспортом +
+        //$_POST['metro_way'][1]    = 2;
+        //$_POST['class_home'][0]   = 1;    // 1-эконом 2-бизнес 3-элитный +
+        //$_POST['class_home'][1]   = 2;
+        //$_POST['class_home'][3]   = 3;
+        //$_POST['type_house'][0]   = 1;    // 1-кирпичный 2-монолитный 3-монолитно-кирпичный 4-панельный 5-дерево 6-природный кемень +
+        //$_POST['type_house'][1]   = 2;
+        //$_POST['type_house'][2]   = 3;
+        //$_POST['type_account'][0] = 1;    // 1-Собственник 2-Представитель собственника 3-Риелтор +
+        //$_POST['type_account'][2] = 2;
+        //$_POST['type_account'][3] = 3;
         //$_POST['part_house']      = 1; // Часть дома (Ф-2)
         // Состояние квартиры (Ф-2): 0-любое 1- дизайнпроект 2-отличное состояние 3-свежий ремонт 4-среднее состояние 5-без отделки 6-первичная отделка 7-требует ремонт 8-косметический ремонт
         //$_POST['status'][0]       = 5;
@@ -666,7 +666,63 @@ class ResultController extends Controller {
            (isset(Yii::app()->session['market'])      &&  Yii::app()->session['market'] == 6))
         {
             // Новый SQL запрос
-            $sql = "SELECT * FROM real_estate";
+            $sql = "SELECT
+                    r.apart_id     AS apartID,
+                    r.type_estate  AS typeEstate,
+                    r.operations   AS operations,
+                    r.market       AS market,
+                    r.room         AS room,
+                    r.general_area AS generalArea,
+                    r.human_area   AS humanArea,
+                    r.kitchen_area AS kitchenArea,
+                    r.price_of_m2  AS priceM2,
+                    r.price        AS price,
+                    r.create_data  AS createData,
+                    r.store        AS store,
+                    r.deadline     AS deadline,
+                    r.photos       AS photos,
+                    r.window       AS window,
+                    r.balcony      AS balcony,
+                    r.parking      AS parking,
+                    r.place_cars   AS placeCars,
+                    r.covered_space AS coveredSpace,
+                    r.club_type    AS clubType,
+                    r.discount     AS discount,
+                    r.mortgage     AS mortgage,
+                    r.sanitare     AS sanitare,
+                    r.create_data  AS createData,
+                    r.deadline     AS deadline,
+                    r.developer    AS developer,
+                    r.fz_214       AS fz_214,
+                    r.finished     AS finished,
+                    r.photos       AS photos,
+                    r.stage        AS stageName,
+                    h.id           AS houseID,
+                    h.house_number AS houseNumber,
+                    h.floors       AS floors,
+                    h.district     AS district,
+                    h.region       AS region,
+                    h.undeground   AS undeground,
+                    h.metro_time   AS metroTime,
+                    h.metro_way    AS metroWay,
+                    h.class_home   AS classHome,
+                    h.type_house   AS typeWall,
+                    u.uid          AS userID,
+                    u.sub_email    AS email,
+                    u.last_name    AS lastName,
+                    u.phone        AS phone,
+                    u.type_account AS typeAccount,
+                    currency.name  AS currencyName,
+                    city.name      AS cityName,
+                    street.name    AS streetName
+              FROM real_estate AS r
+              INNER JOIN s_house AS h            ON h.id = r.fk_house_id
+              INNER JOIN users AS u              ON r.fk_uid = u.uid
+              INNER JOIN s_currency AS currency  ON r.currency = currency.id
+              INNER JOIN s_city  AS city         ON h.city = city.id
+              INNER JOIN s_street  AS street     ON h.street = street.id
+              WHERE ".$condition."
+              ORDER BY r.apart_id DESC";
 
             $act = 2; // признак выбора виджета
         }
