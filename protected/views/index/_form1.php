@@ -422,6 +422,12 @@ Yii::app()->clientScript->registerCssFile('/css/application/index/index.css')
         </div>
     </div>
 
+    <div class="col-sm-12">
+        <div class="row">
+
+        </div>
+    </div>
+
     <div class="col-sm-12" style="margin-top: 10px; border-top: 1px solid #DDD; padding-top: 5px">
         <div class="row">
             <div class="col-sm-12">
