@@ -424,7 +424,67 @@ FORM 1 Купить -> Строящаяся -> Квартира (Аппарта�
 
     </div>
 </div>
-
+<div class="col-sm-12"  style="min-height: 200px">
+    <div class="row">
+        <div class="col-sm-3">
+            <h2 class="text-center">Город</h2>
+            <div class="col-sm-12">
+                <div class="row">
+                    <input class="form-control" placeholder="Укажите город">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <h2 class="text-center">Округ</h2>
+            <div class="col-sm-12">
+                <div class="row">
+                    <input class="form-control" placeholder="Укажите округ">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <h2 class="text-center">Район</h2>
+            <div class="col-sm-12">
+                <div class="row">
+                    <input class="form-control" placeholder="Укажите район">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <h2 class="text-center">Метро</h2>
+            <div class="col-sm-12">
+                <div class="row">
+                    <input class="form-control" placeholder="Укажите метро">
+                    <div class="col-md-10" style="padding-top: 10px">
+                        <div class="row">
+                            <input class="form-control" placeholder="Время до метро">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row"><small class="pull-left"  style="padding-top: 28px; padding-left: 4px">мин.</small></div>
+                    </div>
+                    <div class="col-md-12" style="padding-top: 10px">
+                        <div class="row">
+                            <div class="contain-slct">
+                                <div id="time-to-underground-station" class="select-int">
+                                    <div class="select">
+                                        <a href="javascript:;" class="slct">Как добраться</a>
+                                        <ul class="drop">
+                                            <li><span data-value="1">пешком</span></li>
+                                            <li><span data-value="2">на машине</span></li>
+                                        </ul>
+                                        <input type="hidden" id="selected-time-to-underground-station" />
+                                        <?php // echo $form->hiddenField($modelH,'metro_way',array('id'=>'selected-underground-station','value'=>0)); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="col-sm-12" style="margin-top: 10px; border-top: 1px solid #DDD; padding-top: 5px">
     <div class="row">
         <div class="col-sm-12">
