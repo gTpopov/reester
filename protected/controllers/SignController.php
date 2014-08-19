@@ -231,6 +231,10 @@ class SignController extends Controller {
      */
     public function actionExit()
     {
+        unset(Yii::app()->request->cookies['object_type']);
+        unset(Yii::app()->request->cookies['sale_rent_op']);
+        unset(Yii::app()->request->cookies['obj_state']);
+
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
