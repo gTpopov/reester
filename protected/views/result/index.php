@@ -123,9 +123,13 @@ function undeground($undeground){
 
 function photos($photos,$houseID) {
     if($photos!=0) {
-        $img = Yii::app()->db->createCommand("SELECT source FROM s_images WHERE fk_house = ".$houseID."")->queryRow();
-        if(file_exists('files/'.Yii::app()->user->id.'/'.$houseID.'/'.$img['source'].'')) {
-            $photos = "<img width='50' src='/files/".Yii::app()->user->id."/".$houseID."/".$img['source']."'>";
+        $img = Yii::app()->db->createCommand("SELECT i.source AS source, u.uid AS uid
+                                              FROM s_images AS i,s_house AS h,real_estate AS r,users AS u
+                                              WHERE i.fk_house = ".$houseID." AND h.id = r.fk_house_id AND
+                                              r.fk_uid = u.uid")->queryRow();
+
+        if(file_exists('files/'.$img['uid'].'/'.$houseID.'/'.$img['source'].'')) {
+            $photos = "<img width='50' src='/files/".$img['uid']."/".$houseID."/".$img['source']."'>";
         }
     } else {
             $photos = "<img width='50' src='/img/project-style/settings_img_additional_info.png'>";
