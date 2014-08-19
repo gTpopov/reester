@@ -35,16 +35,11 @@ Yii::app()->clientScript
          *  @param obj_type      - (Аппартаменты:3,Квартира:4,Дом:5)
          */
 
-        function redirect() {
-
-            $.cookie('object_type',object_type,{ expires:0, path: '/'});
-            $.cookie('obj_state',obj_state,{ expires:0, path: '/'});
-            $.cookie('sale_rent_op',sale_rent_op,{ expires:0, path: '/'});
+        function redirect(val,item) {
 
             if(item==='obj-operation') { $.cookie('obj_operation',val,{ expires:0, path: '/'}); }
             else if(item==='obj-type') { $.cookie('obj_type',val,{ expires:0, path: '/'}); }
             else { $.cookie('obj_market',val,{ expires:0, path: '/'}); }
-
 
             var param = $.cookie('obj_operation')+'.'+$.cookie('obj_market')+'.'+$.cookie('obj_type');
 
