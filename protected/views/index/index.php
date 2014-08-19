@@ -69,6 +69,12 @@ Yii::app()->clientScript
             }
         }
 
+        if($.cookie('obj_operation')==null && $.cookie('obj_type')==null && $.cookie('obj_market')==null) {
+            $.cookie('obj_operation',1,{ expires:0, path: '/'});
+            $.cookie('obj_type',4,{ expires:0, path: '/'});
+            $.cookie('obj_market',7,{ expires:0, path: '/'});
+        }
+
         //Active select config ---
         $(function(){
             var obj_operation   = $.cookie('obj_operation');
