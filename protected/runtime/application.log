@@ -115,3 +115,74 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2014/08/19 12:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/08/19 13:10:33 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:154)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/index/index?act=1
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (154)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
+2014/08/19 13:43:01 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:397)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/index/index?act=1
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (397)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
+2014/08/19 13:43:06 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:397)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
+#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
+#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
+#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
+#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
+#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
+#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
+#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
+#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
+#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
+REQUEST_URI=/index/index?act=1
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (397)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
+in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
