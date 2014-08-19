@@ -115,74 +115,136 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
-2014/08/19 12:36:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php:286
+2014/08/19 12:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//6/06d3bc740e8ba0c8f64427649f537269.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
 Stack trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
-#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CApplication->run()
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//6/06d3bc...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
 #3 {main}
-REQUEST_URI=/favicon.ico
+REQUEST_URI=/files//6/06d3bc740e8ba0c8f64427649f537269.jpg
+HTTP_REFERER=http://house/result/
 ---
-2014/08/19 13:10:33 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:154)
+2014/08/19 12:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
 Stack trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
-#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
-#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
-#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
-#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
-#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
-#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
-#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
-#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
-#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
-REQUEST_URI=/index/index?act=1
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (154)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
-2014/08/19 13:43:01 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:397)
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//7/bd6661...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 12:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//4/453859528b76397a5a12a9d2f36ba702.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
 Stack trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
-#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
-#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
-#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
-#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
-#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
-#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
-#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
-#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
-#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
-REQUEST_URI=/index/index?act=1
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (397)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
-2014/08/19 13:43:06 [error] [php] Undefined variable: form (/Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php:397)
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//4/453859...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//4/453859528b76397a5a12a9d2f36ba702.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 12:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
 Stack trace:
-#0 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#1 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php(113): IndexController->renderPartial()
-#2 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(126): require()
-#3 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CBaseController.php(95): IndexController->renderInternal()
-#4 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(869): IndexController->renderFile()
-#5 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(782): IndexController->renderPartial()
-#6 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php(14): IndexController->render()
-#7 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
-#8 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(308): CInlineAction->runWithParams()
-#9 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(286): IndexController->runAction()
-#10 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CController.php(265): IndexController->runActionWithFilters()
-#11 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(282): IndexController->run()
-#12 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#13 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/framework/base/CApplication.php(180): CWebApplication->processRequest()
-#14 /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/index.php(14): CWebApplication->run()
-REQUEST_URI=/index/index?act=1
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/_form1.php (397)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/views/index/index.php (113)
-in /Applications/XAMPP/xamppfiles/htdocs/reester.dev/www/protected/controllers/IndexController.php (14)
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//1/87d07f...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 12:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//3/a49fe8914df0eada4d4b7d530d7fa5ba.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//3/a49fe8...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//3/a49fe8914df0eada4d4b7d530d7fa5ba.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:00:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//7/bd6661...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//1/87d07f...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//4/453859528b76397a5a12a9d2f36ba702.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//4/453859...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//4/453859528b76397a5a12a9d2f36ba702.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//7/bd6661...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//6/06d3bc740e8ba0c8f64427649f537269.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//6/06d3bc...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//6/06d3bc740e8ba0c8f64427649f537269.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//3/a49fe8914df0eada4d4b7d530d7fa5ba.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//3/a49fe8...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//3/a49fe8914df0eada4d4b7d530d7fa5ba.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//7/bd6661...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//4/453859528b76397a5a12a9d2f36ba702.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//4/453859...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//4/453859528b76397a5a12a9d2f36ba702.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//1/87d07f...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//1/87d07f90f10c40ed8075f45c042fe6f6.jpg
+HTTP_REFERER=http://house/result/
+---
+2014/08/19 13:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg".' in D:\xampp\public_html\house\framework\web\CWebApplication.php:287
+Stack trace:
+#0 D:\xampp\public_html\house\framework\web\CWebApplication.php(142): CWebApplication->runController('files//7/bd6661...')
+#1 D:\xampp\public_html\house\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\public_html\house\www\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/files//7/bd6661231506e0fe52c15a3a77ecc1e7.jpg
+---
