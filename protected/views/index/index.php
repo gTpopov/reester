@@ -69,6 +69,7 @@ Yii::app()->clientScript
             }
         }
 
+        // Default value cookie ---
         if($.cookie('obj_operation')==null && $.cookie('obj_type')==null && $.cookie('obj_market')==null) {
             $.cookie('obj_operation',1,{ expires:0, path: '/'});
             $.cookie('obj_type',4,{ expires:0, path: '/'});
@@ -92,8 +93,8 @@ Yii::app()->clientScript
 
 
 <?php
-// Include block management forms --
 
+// Include block management forms --
 if(isset($_GET['act'])) {
 
     switch($_GET['act']) {
